@@ -26,6 +26,15 @@ async function init() {
     STATE.supplyChain    = scData.chains || {};
     STATE.watchlist      = wlData.stocks || [];
 
+    // 載入使用者自行加入的追蹤股票（localStorage）
+    try {
+      const extra = JSON.parse(localStorage.getItem('watchlist_extra') || '[]');
+      extra.forEach(code => {
+        if(!STATE.watchlist.some(s => s.code === code))
+          STATE.watchlist.push({ code, name: code, type: 'stock', market: 'TW', tags: [] });
+      });
+    } catch(e) {}
+
     const today  = formatDate(new Date());
     const target = STATE.availableDates.includes(today)
       ? today
@@ -34,6 +43,7 @@ async function init() {
     setupDatePicker();
     setupNewsFilters();
     setupSubTabs();
+    setupWatchlistAdd();
     await loadDate(target);
   } catch(e) {
     console.error(e);
@@ -485,6 +495,70 @@ function setupNewsFilters() {
     e.target.classList.add('active');
     filterNews(e.target.dataset.filter);
   });
+}
+
+// ── 加入追蹤 ──────────────────────────────
+function setupWatchlistAdd() {
+  const btn   = document.getElementById('add-stock-btn');
+  const input = document.getElementById('add-stock-input');
+
+  const doAdd = () => {
+    const code = input.value.trim().toUpperCase();
+    if(!code) return;
+
+    // 已在 watchlist
+    if(STATE.watchlist.some(s => s.code === code)) {
+      showToast(`${code} 已在追蹤清單中`, 'warn');
+      input.value = '';
+      return;
+    }
+
+    // 加入 watchlist state
+    STATE.watchlist.push({ code, name: code, type: 'stock', market: 'TW', tags: [] });
+
+    // 存到 localStorage 保留下次開啟
+    try {
+      const saved = JSON.parse(localStorage.getItem('watchlist_extra') || '[]');
+      if(!saved.includes(code)) { saved.push(code); localStorage.setItem('watchlist_extra', JSON.stringify(saved)); }
+    } catch(e) {}
+
+    // 若當日報告有此股，立即加入 tab
+    const stocks = STATE.report?.stocks || {};
+    if(stocks[code]) {
+      renderStockTabs(stocks);
+      selectStock(code);
+      showToast(`✓ ${code} 已加入追蹤`, 'ok');
+    } else {
+      showToast(`${code} 已記錄，下次報告更新時會顯示`, 'info');
+    }
+    input.value = '';
+  };
+
+  btn.addEventListener('click', doAdd);
+  input.addEventListener('keydown', e => { if(e.key === 'Enter') doAdd(); });
+}
+
+function showToast(msg, type = 'info') {
+  let toast = document.getElementById('toast');
+  if(!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.style.cssText = `
+      position:fixed; bottom:24px; left:50%; transform:translateX(-50%);
+      background:var(--bg3); border:1px solid var(--border);
+      color:var(--text); padding:10px 20px; border-radius:8px;
+      font-size:14px; z-index:300; transition:opacity 0.3s;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    `;
+    document.body.appendChild(toast);
+  }
+  const color = type === 'ok' ? 'var(--sell)' : type === 'warn' ? 'var(--buy)' : 'var(--accent)';
+  toast.style.borderColor = color;
+  toast.style.color = color;
+  toast.textContent = msg;
+  toast.style.opacity = '1';
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => { toast.style.opacity = '0'; }, 2500);
 }
 
 // ── Helpers ───────────────────────────────
