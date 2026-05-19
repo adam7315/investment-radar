@@ -1,0 +1,40 @@
+{
+  "updated": "2026-05-19",
+  "stocks": [
+    {
+      "code": "00403A",
+      "name": "統一台股升級50",
+      "type": "etf",
+      "market": "TW",
+      "tags": ["主動ETF", "台股核心"]
+    },
+    {
+      "code": "0050",
+      "name": "元大台灣50",
+      "type": "etf",
+      "market": "TW",
+      "tags": ["被動ETF", "壓艙石"]
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "type": "stock",
+      "market": "TW",
+      "tags": ["半導體", "成熟製程", "英特爾合作"]
+    },
+    {
+      "code": "5274",
+      "name": "信驊科技",
+      "type": "stock",
+      "market": "TWO",
+      "tags": ["BMC晶片", "AI伺服器", "高成長"]
+    },
+    {
+      "code": "3008",
+      "name": "大立光",
+      "type": "stock",
+      "market": "TW",
+      "tags": ["光學鏡頭", "Apple供應鏈", "CPO"]
+    }
+  ]
+}

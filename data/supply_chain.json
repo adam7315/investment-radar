@@ -1,0 +1,259 @@
+{
+  "maintained_by": "Claude",
+  "updated": "2026-05-19",
+  "chains": {
+    "5274": {
+      "name": "信驊科技",
+      "position": "BMC/IPMI管理晶片設計（Fabless）",
+      "moat": "全球BMC晶片市占率最高，技術門檻極高，替換成本大",
+      "upstream": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "market": "TW",
+          "role": "晶圓代工（主要製程節點：16nm/12nm）",
+          "dependency": "高",
+          "signal_rule": "台積電先進製程滿載 → 信驊出貨穩定"
+        },
+        {
+          "code": "ARM",
+          "name": "Arm Holdings",
+          "market": "NASDAQ",
+          "role": "處理器IP授權",
+          "dependency": "中",
+          "signal_rule": "Arm授權費調整影響信驊設計成本"
+        }
+      ],
+      "downstream": [
+        {
+          "code": "2382",
+          "name": "廣達電腦",
+          "market": "TW",
+          "role": "AI伺服器ODM客戶（Google/Meta訂單）",
+          "dependency": "高",
+          "signal_rule": "廣達AI伺服器出貨量 → 直接拉動信驊BMC需求"
+        },
+        {
+          "code": "3231",
+          "name": "緯創資通",
+          "market": "TW",
+          "role": "伺服器ODM客戶",
+          "dependency": "高",
+          "signal_rule": "緯創伺服器出貨數據是領先指標"
+        },
+        {
+          "code": "2356",
+          "name": "英業達",
+          "market": "TW",
+          "role": "伺服器ODM客戶",
+          "dependency": "中",
+          "signal_rule": "英業達AI伺服器比例提升有利信驊"
+        },
+        {
+          "code": "SMCI",
+          "name": "Super Micro Computer",
+          "market": "NASDAQ",
+          "role": "AI伺服器品牌客戶（重要）",
+          "dependency": "高",
+          "signal_rule": "SMCI庫存/出貨狀況是信驊最重要的砍單風險指標"
+        },
+        {
+          "code": "DELL",
+          "name": "Dell Technologies",
+          "market": "NYSE",
+          "role": "伺服器品牌客戶",
+          "dependency": "中",
+          "signal_rule": "Dell伺服器部門季報是信驊訂單能見度參考"
+        }
+      ],
+      "competitors": [
+        { "name": "Renesas BMC", "note": "主要競爭者，市占較小" },
+        { "name": "AMI（American Megatrends）", "note": "軟體BMC方案，非直接競品" }
+      ],
+      "key_risks": [
+        "SMCI庫存水位若偏高→砍單風險",
+        "AST2600到AST2700升級週期中的空窗期",
+        "台積電產能分配若緊張→出貨延誤"
+      ],
+      "next_catalysts": [
+        "AST2700 2027年放量（ASP預估提升20%）",
+        "AI伺服器複雜度持續提升→每台伺服器BMC數量增加",
+        "機器人/邊緣AI伺服器新市場"
+      ]
+    },
+    "2303": {
+      "name": "聯電",
+      "position": "成熟製程晶圓代工（12吋/8吋，28nm以上）",
+      "moat": "成熟製程全球前三大，客戶黏性高，英特爾合作差異化",
+      "upstream": [
+        {
+          "code": "6259",
+          "name": "台勝科",
+          "market": "TW",
+          "role": "矽晶圓供應商",
+          "dependency": "高",
+          "signal_rule": "聯電若擴產 → 台勝科訂單同步增加"
+        },
+        {
+          "code": "6488",
+          "name": "環球晶",
+          "market": "TW",
+          "role": "矽晶圓供應商",
+          "dependency": "高",
+          "signal_rule": "矽晶圓報價若上漲→聯電成本壓力增加"
+        },
+        {
+          "code": "信越化學",
+          "name": "信越化學（Shin-Etsu）",
+          "market": "TSE",
+          "role": "日本矽材料/光阻供應商",
+          "dependency": "中",
+          "signal_rule": "日圓匯率影響信越成本，間接影響聯電"
+        }
+      ],
+      "downstream": [
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "market": "TW",
+          "role": "IC設計客戶（4G/WiFi/TV晶片）",
+          "dependency": "高",
+          "signal_rule": "聯發科手機晶片訂單是聯電最重要收入來源之一"
+        },
+        {
+          "code": "2379",
+          "name": "瑞昱半導體",
+          "market": "TW",
+          "role": "網通晶片設計客戶",
+          "dependency": "中",
+          "signal_rule": "瑞昱網通晶片出貨量間接反映聯電產能利用率"
+        },
+        {
+          "code": "5347",
+          "name": "世界先進",
+          "market": "TW",
+          "role": "競爭對手（功率/類比製程）",
+          "dependency": "競品",
+          "signal_rule": "世界先進漲價若成立 → 聯電跟漲可能性提高"
+        }
+      ],
+      "competitors": [
+        { "name": "GlobalFoundries", "note": "美國成熟製程，英特爾合作潛在對手" },
+        { "name": "中芯國際（SMIC）", "note": "中國成熟製程，地緣風險" },
+        { "name": "世界先進（5347）", "note": "台灣成熟製程，功率元件重疊" }
+      ],
+      "key_risks": [
+        "成熟製程漲價若無法實現→毛利率難提升",
+        "中美貿易戰若波及成熟製程設備→擴產受阻",
+        "英特爾合作2027量產前無具體業績貢獻"
+      ],
+      "next_catalysts": [
+        "成熟製程漲價5~15%（若客戶接受）",
+        "英特爾合作12nm 2027年量產",
+        "汽車/工業用成熟製程需求復甦"
+      ]
+    },
+    "3008": {
+      "name": "大立光",
+      "position": "高階智慧型手機光學鏡頭（精密光學元件製造）",
+      "moat": "全球高階手機鏡頭市占約35~40%，技術壁壘極高",
+      "upstream": [
+        {
+          "code": "SCHOTT",
+          "name": "SCHOTT AG（德國）",
+          "market": "私有",
+          "role": "特殊光學玻璃供應",
+          "dependency": "高",
+          "signal_rule": "特殊玻璃供應若吃緊→大立光良率受影響"
+        },
+        {
+          "code": "信越化學",
+          "name": "信越化學",
+          "market": "TSE",
+          "role": "光學材料",
+          "dependency": "中",
+          "signal_rule": "日圓升值→原料成本上升"
+        }
+      ],
+      "downstream": [
+        {
+          "code": "AAPL",
+          "name": "Apple",
+          "market": "NASDAQ",
+          "role": "最大客戶，iPhone主鏡頭（估佔60~70%營收）",
+          "dependency": "極高",
+          "signal_rule": "iPhone出貨量與規格升級是大立光最重要指標"
+        },
+        {
+          "code": "2317",
+          "name": "鴻海",
+          "market": "TW",
+          "role": "Apple代工，間接客戶",
+          "dependency": "中",
+          "signal_rule": "鴻海iPhone組裝訂單反映大立光出貨時程"
+        }
+      ],
+      "competitors": [
+        { "name": "玉晶光（6491）", "note": "台灣第二大，毛利率差距大" },
+        { "name": "舜宇光學（2382.HK）", "note": "中國最大，中低階市場" }
+      ],
+      "key_risks": [
+        "Apple自製鏡頭模組風險",
+        "毛利率結構性下滑（57%→49%）",
+        "CPO量產時程延遲（2027~2028）"
+      ],
+      "next_catalysts": [
+        "iPhone 17可變光圈 Q3出貨",
+        "CPO/FAU矽光子2027~2028量產",
+        "茂鈺（林家）是否繼續加碼"
+      ]
+    },
+    "00403A": {
+      "name": "統一台股升級50",
+      "position": "主動式ETF，核心50大+潛力候補",
+      "moat": "主動選股差異化，但需持續驗證是否優於0050",
+      "upstream": [],
+      "downstream": [],
+      "top_holdings": [
+        { "code": "2330", "name": "台積電", "weight": "約35%" },
+        { "code": "2454", "name": "聯發科", "weight": "約8%" },
+        { "code": "2382", "name": "廣達", "weight": "約4%" },
+        { "code": "2317", "name": "鴻海", "weight": "約3%" },
+        { "code": "2303", "name": "聯電", "weight": "潛力候補" }
+      ],
+      "key_risks": [
+        "主動選股若持續落後0050→資金外流",
+        "溢價消化後若轉折價→短期套牢",
+        "基金經理人選股能力尚未驗證"
+      ],
+      "next_catalysts": [
+        "首季績效報告（觀察是否打敗0050）",
+        "10月首次配息（季配息設計）",
+        "若成分股調整納入強勢股→淨值提升"
+      ]
+    },
+    "0050": {
+      "name": "元大台灣50",
+      "position": "被動追蹤台灣市值前50大企業",
+      "moat": "規模最大、流動性最好的台股ETF",
+      "upstream": [],
+      "downstream": [],
+      "top_holdings": [
+        { "code": "2330", "name": "台積電", "weight": "約47%" },
+        { "code": "2454", "name": "聯發科", "weight": "約7%" },
+        { "code": "2382", "name": "廣達", "weight": "約4%" },
+        { "code": "2317", "name": "鴻海", "weight": "約3%" },
+        { "code": "2308", "name": "台達電", "weight": "約2%" }
+      ],
+      "key_risks": [
+        "高度集中台積電，台積電若回檔帶動整體下跌",
+        "台幣升值影響出口導向成分股"
+      ],
+      "next_catalysts": [
+        "台積電法說會（每季）",
+        "AI需求持續帶動科技成分股",
+        "半年配息（7月除息）"
+      ]
+    }
+  }
+}

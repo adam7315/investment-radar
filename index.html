@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>投資情報雷達</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="brand-icon">🔭</span>
+      <div>
+        <h1 class="brand-title">投資情報雷達</h1>
+        <span class="brand-sub" id="last-update">載入中...</span>
+      </div>
+    </div>
+    <div class="header-nav">
+      <button class="nav-btn" id="prev-date" title="上一天">&#8249;</button>
+      <input type="date" id="date-picker" class="date-input">
+      <button class="nav-btn" id="next-date" title="下一天">&#8250;</button>
+      <button class="nav-btn nav-today" id="goto-today">今日</button>
+    </div>
+  </div>
+</header>
+
+<!-- 更新時間狀態列 -->
+<div class="status-bar">
+  <div class="status-bar-inner">
+    <span class="status-item">
+      <span class="status-dot" id="status-dot"></span>
+      <span id="status-text">載入中...</span>
+    </span>
+    <span class="status-item">📅 資料日期：<strong id="status-date">—</strong></span>
+    <span class="status-item">🤖 分析時間：<strong id="status-analyzed">—</strong></span>
+    <span class="status-item">📡 原始資料收集：<strong id="status-collected">—</strong></span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- 今日 AI 洞察 -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">⚡ 今日 AI 洞察</h2>
+      <span class="section-sub">由 Claude 分析，非轉載他人觀點</span>
+    </div>
+    <div id="insights-container" class="insights-grid"></div>
+  </section>
+
+  <!-- 個股情報 -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">📊 個股情報</h2>
+      <div class="watchlist-manage">
+        <input type="text" id="add-stock-input" class="stock-input" placeholder="輸入股票代號（如 2330）">
+        <button id="add-stock-btn" class="add-btn">＋ 加入追蹤</button>
+      </div>
+    </div>
+    <div id="stocks-container" class="stocks-grid"></div>
+  </section>
+
+  <!-- 今日新聞 -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">📰 新聞聚合</h2>
+    </div>
+    <div class="news-filters" id="news-filters">
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="財報">財報</button>
+      <button class="filter-btn" data-filter="籌碼">籌碼</button>
+      <button class="filter-btn" data-filter="產業">產業</button>
+      <button class="filter-btn" data-filter="題材">題材</button>
+      <button class="filter-btn" data-filter="ETF">ETF</button>
+    </div>
+    <div id="news-container" class="news-list"></div>
+  </section>
+
+</main>
+
+<!-- 股票卡片 Modal（展開詳情） -->
+<div id="stock-modal" class="modal hidden">
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- 無資料提示 -->
+<div id="no-data" class="no-data hidden">
+  <div class="no-data-icon">📭</div>
+  <h3>這天還沒有分析報告</h3>
+  <p>每天與 Claude 完成分析後，記錄會出現在這裡</p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
