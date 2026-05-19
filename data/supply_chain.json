@@ -51,11 +51,11 @@
         },
         {
           "code": "SMCI",
-          "name": "Super Micro Computer",
+          "name": "Super Micro Computer（超微電腦，SMCI）",
           "market": "NASDAQ",
           "role": "AI伺服器品牌客戶（重要）",
           "dependency": "高",
-          "signal_rule": "SMCI庫存/出貨狀況是信驊最重要的砍單風險指標"
+          "signal_rule": "SMCI庫存/出貨狀況是信驊最重要的砍單風險指標；追蹤來源：SEC EDGAR 10-Q，搜尋 Inventories 欄位"
         },
         {
           "code": "DELL",
@@ -87,12 +87,12 @@
       "moat": "成熟製程全球前三大，客戶黏性高，英特爾合作差異化",
       "upstream": [
         {
-          "code": "6259",
+          "code": "6238",
           "name": "台勝科",
           "market": "TW",
           "role": "矽晶圓供應商",
           "dependency": "高",
-          "signal_rule": "聯電若擴產 → 台勝科訂單同步增加"
+          "signal_rule": "聯電若擴產 → 台勝科(6238)訂單同步增加"
         },
         {
           "code": "6488",

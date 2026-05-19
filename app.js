@@ -1,13 +1,18 @@
 /* ── 投資情報雷達 — app.js ───────────────── */
 
 const STATE = {
-  currentDate: '',
+  currentDate:    '',
   availableDates: [],
-  report: null,
-  supplyChain: null,
-  watchlist: null,
-  activeFilter: 'all'
+  report:         null,
+  supplyChain:    null,
+  watchlist:      null,
+  activeFilter:   'all',
+  activeStock:    null,
+  activeSubTab:   'analysis',
+  _allNews:       []
 };
+
+const STOCK_ORDER = ['5274', '2303', '3008', '00403A', '0050'];
 
 // ── 初始化 ────────────────────────────────
 async function init() {
@@ -21,13 +26,14 @@ async function init() {
     STATE.supplyChain    = scData.chains || {};
     STATE.watchlist      = wlData.stocks || [];
 
-    const today = formatDate(new Date());
+    const today  = formatDate(new Date());
     const target = STATE.availableDates.includes(today)
       ? today
       : (indexData.latest || STATE.availableDates.slice(-1)[0] || today);
 
     setupDatePicker();
     setupNewsFilters();
+    setupSubTabs();
     await loadDate(target);
   } catch(e) {
     console.error(e);
@@ -41,11 +47,10 @@ async function loadDate(date) {
   document.getElementById('date-picker').value = date;
   document.getElementById('no-data').classList.add('hidden');
 
-  // 狀態列設為 loading
   const dot  = document.getElementById('status-dot');
   const text = document.getElementById('status-text');
-  if(dot)  { dot.className = 'status-dot loading'; }
-  if(text) { text.textContent = '載入中...'; text.style.color = 'var(--text3)'; }
+  if(dot)  dot.className = 'status-dot loading';
+  if(text) { text.textContent = '載入中...'; text.style.color = ''; }
 
   showLoading();
   try {
@@ -58,7 +63,7 @@ async function loadDate(date) {
     } else {
       document.getElementById('no-data').classList.remove('hidden');
       document.getElementById('insights-container').innerHTML = '';
-      document.getElementById('stocks-container').innerHTML = '';
+      document.getElementById('stock-tab-bar').innerHTML = '';
       document.getElementById('news-container').innerHTML = '';
     }
   }
@@ -69,34 +74,29 @@ function renderAll() {
   const r = STATE.report;
   if(!r) return;
   renderInsights(r.key_insights || []);
-  renderStocks(r.stocks || {});
+  renderStockTabs(r.stocks || {});
   renderNewsList(r.stocks || {});
-  hideLoading();
   updateStatusBar(r);
 }
 
 function updateStatusBar(r) {
   const dot  = document.getElementById('status-dot');
   const text = document.getElementById('status-text');
-  const dateEl      = document.getElementById('status-date');
-  const analyzedEl  = document.getElementById('status-analyzed');
-  const collectedEl = document.getElementById('status-collected');
-
   const isToday = r.date === formatDate(new Date());
-  dot.className  = 'status-dot ok';
+  dot.className    = 'status-dot ok';
   text.textContent = isToday ? '✓ 今日報告已就緒' : `查看 ${r.date} 歷史記錄`;
-  text.style.color = 'var(--buy)';
+  text.style.color = 'var(--sell)';
 
-  dateEl.textContent      = r.date || '—';
-  analyzedEl.textContent  = r.generated_at || '—';
-  collectedEl.textContent = r.collected_at  || r.generated_at || '—';
+  document.getElementById('status-date').textContent      = r.date || '—';
+  document.getElementById('status-analyzed').textContent  = r.generated_at || '—';
+  document.getElementById('status-collected').textContent = r.collected_at || r.generated_at || '—';
 }
 
-// ── 渲染 AI 洞察 ──────────────────────────
+// ── AI 洞察 ───────────────────────────────
 function renderInsights(insights) {
   const el = document.getElementById('insights-container');
   if(!insights.length) {
-    el.innerHTML = '<p style="color:var(--text3);font-size:13px">今日尚無洞察記錄</p>';
+    el.innerHTML = '<p style="color:var(--text3);font-size:14px">今日尚無洞察記錄</p>';
     return;
   }
   el.innerHTML = insights.map(i => `
@@ -111,246 +111,318 @@ function renderInsights(insights) {
   `).join('');
 }
 
-// ── 渲染個股卡片 ──────────────────────────
-function renderStocks(stocks) {
-  const el = document.getElementById('stocks-container');
-
-  const order = ['5274','2303','3008','00403A','0050'];
-  const codes  = [...order.filter(c => stocks[c]),
-                  ...Object.keys(stocks).filter(c => !order.includes(c))];
+// ── 個股分頁 Tabs ─────────────────────────
+function renderStockTabs(stocks) {
+  const bar = document.getElementById('stock-tab-bar');
+  const codes = [
+    ...STOCK_ORDER.filter(c => stocks[c]),
+    ...Object.keys(stocks).filter(c => !STOCK_ORDER.includes(c))
+  ];
 
   if(!codes.length) {
-    el.innerHTML = '<p style="color:var(--text3);font-size:13px">今日尚無個股資料</p>';
+    bar.innerHTML = '<p style="color:var(--text3);font-size:14px">今日尚無個股資料</p>';
     return;
   }
 
-  el.innerHTML = codes.map(code => buildStockCard(code, stocks[code])).join('');
+  bar.innerHTML = codes.map(code => {
+    const data = stocks[code];
+    const sc   = STATE.supplyChain[code] || {};
+    const signalClass = getSignalClass(data.signal);
+    return `
+      <button class="stock-tab" data-code="${code}">
+        <div class="stab-top">
+          <span class="stab-code">${code}</span>
+          <span class="stab-name">${data.name || sc.name || code}</span>
+        </div>
+        <span class="signal-badge ${signalClass}">${data.signal_text || data.signal || '—'}</span>
+      </button>
+    `;
+  }).join('');
 
-  // 展開詳情按鈕
-  el.querySelectorAll('.card-expand-btn').forEach(btn => {
-    btn.addEventListener('click', () => openModal(btn.dataset.code, stocks[btn.dataset.code]));
+  bar.querySelectorAll('.stock-tab').forEach(btn => {
+    btn.addEventListener('click', () => selectStock(btn.dataset.code));
+  });
+
+  // 預設選第一個
+  const firstActive = STATE.activeStock && stocks[STATE.activeStock]
+    ? STATE.activeStock : codes[0];
+  selectStock(firstActive);
+}
+
+function selectStock(code) {
+  STATE.activeStock = code;
+  const stocks = STATE.report?.stocks || {};
+  const data   = stocks[code];
+  if(!data) return;
+
+  // 更新 tab active 狀態
+  document.querySelectorAll('.stock-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.code === code);
+  });
+
+  // 渲染所有子面板
+  renderPanelAnalysis(code, data);
+  renderPanelSupply(code, data);
+  renderPanelChips(data);
+  renderPanelNews(data);
+
+  // 回到上次選的子分頁
+  switchSubTab(STATE.activeSubTab);
+}
+
+// ── 子分頁切換 ────────────────────────────
+function setupSubTabs() {
+  document.getElementById('sub-tab-bar').addEventListener('click', e => {
+    const btn = e.target.closest('.sub-tab');
+    if(!btn) return;
+    switchSubTab(btn.dataset.panel);
   });
 }
 
-function buildStockCard(code, data) {
-  const sc   = STATE.supplyChain[code] || {};
-  const wl   = (STATE.watchlist || []).find(s => s.code === code) || {};
-  const tags = wl.tags || [];
+function switchSubTab(panelName) {
+  STATE.activeSubTab = panelName;
+  document.querySelectorAll('.sub-tab').forEach(b => {
+    b.classList.toggle('active', b.dataset.panel === panelName);
+  });
+  document.querySelectorAll('.panel-body').forEach(p => {
+    p.classList.toggle('active', p.id === `panel-${panelName}`);
+  });
+}
 
-  const signalClass = { buy:'signal-buy', sell:'signal-sell', hold:'signal-hold', watch:'signal-watch' }[data.signal] || 'signal-watch';
-  const insiderHl   = data.insider && data.insider.includes('⭐') ? 'highlight' : '';
+// ── 面板：AI 分析 ─────────────────────────
+function renderPanelAnalysis(code, data) {
+  const el  = document.getElementById('panel-analysis');
+  const sc  = STATE.supplyChain[code] || {};
+  const wl  = (STATE.watchlist || []).find(s => s.code === code) || {};
+  const tags = (wl.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+  const signalClass = getSignalClass(data.signal);
 
-  // 供應鏈
-  const chainHTML = buildChainHTML(sc);
-
-  // 新聞（最多3條）
-  const newsHTML = (data.news || []).slice(0,3).map(n => `
-    <div class="news-item">
-      <span class="news-tag">${n.tag}</span>
-      <span class="news-title">${n.url
-        ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>`
-        : n.title}</span>
-      <span class="news-date">${n.date}</span>
-    </div>
-  `).join('');
-
-  // 法人
-  const inst = data.institutional || {};
-  const instHTML = buildInstHTML(inst);
-
-  return `
-    <div class="stock-card">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-code">${code}</span>
-          <span class="card-name">${data.name || sc.name || code}</span>
-          ${tags.map(t => `<span class="tag">${t}</span>`).join('')}
+  // SMCI 追蹤卡（僅 5274）
+  let smciTrackerHTML = '';
+  if(data.smci_tracker) {
+    const t = data.smci_tracker;
+    const proxiesHTML = (t.proxy_indicators || [])
+      .map(p => `<li>${p}</li>`).join('');
+    smciTrackerHTML = `
+      <div class="smci-tracker">
+        <div class="smci-tracker-header">
+          <span class="smci-tracker-label">📡 SMCI 庫存追蹤</span>
+          <span class="smci-status-badge">${t.status}</span>
         </div>
-        <span class="signal-badge ${signalClass}">${data.signal_text || data.signal}</span>
+        <div class="smci-tracker-note">${t.note}</div>
+        <div class="smci-tracker-meta">
+          <strong>資料來源：</strong>${t.data_source}<br>
+          <strong>查詢方式：</strong>${t.how_to_find}<br>
+          <strong>代理指標：</strong>
+          <ul class="smci-proxies">${proxiesHTML}</ul>
+        </div>
       </div>
+    `;
+  }
 
-      <div class="card-body">
-
-        <!-- AI 分析 -->
-        <div>
-          <div class="card-label">📌 今日判斷</div>
-          <div class="analysis-text">${truncate(data.analysis, 180)}</div>
-          <div class="analysis-reason">${data.signal_reason || ''}</div>
-        </div>
-
-        ${sc.name ? `
-        <!-- 供應鏈 -->
-        <div>
-          <div class="card-label">🔗 供應鏈脈絡</div>
-          ${chainHTML}
-        </div>` : ''}
-
-        <!-- 大戶動向 -->
-        <div>
-          <div class="card-label">🏦 大戶動向</div>
-          ${instHTML}
-        </div>
-
-        <!-- 董監 / 內部人 -->
-        <div>
-          <div class="card-label">👤 董監 / 內部人</div>
-          <div class="insider-box ${insiderHl}">${data.insider || '無最新申報異動'}</div>
-        </div>
-
-        ${newsHTML ? `
-        <!-- 新聞 -->
-        <div>
-          <div class="card-label">📰 最新新聞</div>
-          <div class="card-news">${newsHTML}</div>
-        </div>` : ''}
-
-        <button class="card-expand-btn" data-code="${code}">查看完整分析 ↓</button>
-      </div>
+  el.innerHTML = `
+    <div class="signal-row">
+      <span style="font-size:16px;font-weight:700">${data.name}</span>
+      <span class="signal-badge ${signalClass}">${data.signal_text || data.signal}</span>
+      <span class="signal-reason">${data.signal_reason || ''}</span>
+      ${tags ? `<div class="tags" style="margin-left:auto">${tags}</div>` : ''}
     </div>
+    <div class="analysis-full">${data.analysis || '尚無分析資料'}</div>
+    ${smciTrackerHTML}
   `;
 }
 
-function buildChainHTML(sc) {
-  const parts = [];
+// ── 面板：供應鏈 ──────────────────────────
+function renderPanelSupply(code, data) {
+  const el = document.getElementById('panel-supply');
+  const sc = STATE.supplyChain[code] || {};
 
-  if(sc.upstream && sc.upstream.length) {
-    const tags = sc.upstream.map(u =>
-      `<a class="chain-tag" href="https://tw.stock.yahoo.com/quote/${u.code}.TW" target="_blank" rel="noopener">
-        ↑ ${u.code} ${u.name}
-       </a>`
-    ).join('');
-    parts.push(`<div class="chain-row">
-      <span class="chain-direction">上游</span>
-      <div class="chain-tags">${tags}</div>
-    </div>`);
+  if(!sc.name) {
+    el.innerHTML = '<p style="color:var(--text3);font-size:14px">此股票無供應鏈資料</p>';
+    return;
   }
 
+  // 上游
+  let upstreamHTML = '';
+  if(sc.upstream && sc.upstream.length) {
+    const tags = sc.upstream.map(u => {
+      const url = getStockUrl(u);
+      const depClass = u.dependency === '高' || u.dependency === '極高' ? 'chain-dep-high' : 'chain-dep-med';
+      return `<a class="chain-tag ${depClass}" href="${url}" target="_blank" rel="noopener">
+        <span class="chain-tag-code">${u.code}</span>
+        <span>${u.name}</span>
+        <span style="font-size:11px;color:var(--text3)">依賴：${u.dependency}</span>
+      </a>`;
+    }).join('');
+    upstreamHTML = `
+      <div class="supply-group">
+        <div class="supply-group-label">↑ 上游供應商</div>
+        <div class="chain-tags">${tags}</div>
+      </div>
+    `;
+  }
+
+  // 下游
+  let downstreamHTML = '';
   if(sc.downstream && sc.downstream.length) {
     const tags = sc.downstream.map(d => {
-      const url = d.market === 'NASDAQ' || d.market === 'NYSE'
-        ? `https://finance.yahoo.com/quote/${d.code}`
-        : `https://tw.stock.yahoo.com/quote/${d.code}.TW`;
-      return `<a class="chain-tag" href="${url}" target="_blank" rel="noopener">↓ ${d.code} ${d.name}</a>`;
+      const url = getStockUrl(d);
+      const depClass = d.dependency === '高' || d.dependency === '極高' ? 'chain-dep-high' : 'chain-dep-med';
+      return `<a class="chain-tag ${depClass}" href="${url}" target="_blank" rel="noopener">
+        <span class="chain-tag-code">${d.code}</span>
+        <span>${d.name}</span>
+        <span style="font-size:11px;color:var(--text3)">依賴：${d.dependency}</span>
+      </a>`;
     }).join('');
-    parts.push(`<div class="chain-row">
-      <span class="chain-direction">下游</span>
-      <div class="chain-tags">${tags}</div>
-    </div>`);
-  }
-
-  if(sc.top_holdings && sc.top_holdings.length) {
-    const tags = sc.top_holdings.map(h =>
-      `<a class="chain-tag" href="https://tw.stock.yahoo.com/quote/${h.code}.TW" target="_blank" rel="noopener">
-        ${h.code} ${h.name} <span style="color:var(--text3)">${h.weight}</span>
-       </a>`
-    ).join('');
-    parts.push(`<div class="chain-row">
-      <span class="chain-direction">持股</span>
-      <div class="chain-tags">${tags}</div>
-    </div>`);
-  }
-
-  if(!parts.length) return '<span style="color:var(--text3);font-size:12px">ETF / 無供應鏈資料</span>';
-  return `<div class="supply-chain-section">${parts.join('')}</div>`;
-}
-
-function buildInstHTML(inst) {
-  if(!inst || Object.keys(inst).every(k => inst[k] === 'ETF，不適用')) {
-    return '<span style="color:var(--text3);font-size:12px">ETF，不適用法人買賣超</span>';
-  }
-  const items = [
-    { label:'外資', value: inst.foreign },
-    { label:'投信', value: inst.trust },
-    { label:'自營商', value: inst.dealer },
-    { label:'融資', value: inst.margin }
-  ].filter(i => i.value && !i.value.includes('不適用'));
-
-  return `<div class="institutional-grid">
-    ${items.map(i => {
-      const cls = i.value && (i.value.includes('+') ? 'positive' : i.value.includes('-') ? 'negative' : '');
-      return `<div class="inst-item">
-        <div class="inst-label">${i.label}</div>
-        <div class="inst-value ${cls}">${i.value}</div>
-      </div>`;
-    }).join('')}
-  </div>`;
-}
-
-// ── Modal 展開完整分析 ────────────────────
-function openModal(code, data) {
-  const sc   = STATE.supplyChain[code] || {};
-  const body = document.getElementById('modal-body');
-
-  const signalClass = { buy:'signal-buy', sell:'signal-sell', hold:'signal-hold', watch:'signal-watch' }[data.signal] || 'signal-watch';
-
-  // 供應鏈信號
-  const scSignals = (data.supply_chain_signals || []).map(s => {
-    const cls = s.includes('正面') ? 'positive' : s.includes('需') || s.includes('注意') ? 'negative' : '';
-    return `<div class="chain-signal-tag ${cls}">• ${s}</div>`;
-  }).join('');
-
-  // 關鍵風險
-  const risks = (sc.key_risks || []).map(r => `<li style="color:var(--sell);font-size:12px;margin-bottom:4px">${r}</li>`).join('');
-  const catalysts = (sc.next_catalysts || []).map(c => `<li style="color:var(--buy);font-size:12px;margin-bottom:4px">${c}</li>`).join('');
-
-  body.innerHTML = `
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
-      <span style="font-size:12px;color:var(--text3);background:var(--bg3);padding:2px 8px;border-radius:4px">${code}</span>
-      <span style="font-size:18px;font-weight:700">${data.name}</span>
-      <span class="signal-badge ${signalClass}">${data.signal_text || data.signal}</span>
-    </div>
-
-    <div style="margin-bottom:20px">
-      <div class="card-label" style="margin-bottom:8px">📌 完整分析</div>
-      <div style="font-size:13px;color:var(--text2);line-height:1.8;white-space:pre-line">${data.analysis || ''}</div>
-    </div>
-
-    ${scSignals ? `
-    <div style="margin-bottom:20px">
-      <div class="card-label" style="margin-bottom:8px">🔗 供應鏈今日信號</div>
-      <div style="display:flex;flex-direction:column;gap:4px">${scSignals}</div>
-    </div>` : ''}
-
-    ${risks ? `
-    <div style="margin-bottom:20px">
-      <div class="card-label" style="margin-bottom:8px">⚠️ 關鍵風險</div>
-      <ul style="list-style:none;padding:0">${risks}</ul>
-    </div>` : ''}
-
-    ${catalysts ? `
-    <div style="margin-bottom:20px">
-      <div class="card-label" style="margin-bottom:8px">🚀 未來觸媒</div>
-      <ul style="list-style:none;padding:0">${catalysts}</ul>
-    </div>` : ''}
-
-    <div style="margin-bottom:8px">
-      <div class="card-label" style="margin-bottom:8px">👤 董監 / 內部人動向</div>
-      <div class="insider-box ${data.insider && data.insider.includes('⭐') ? 'highlight' : ''}">${data.insider || '無最新申報'}</div>
-    </div>
-
-    ${(data.news||[]).length ? `
-    <div style="margin-top:16px">
-      <div class="card-label" style="margin-bottom:8px">📰 相關新聞</div>
-      <div class="card-news">
-        ${data.news.map(n => `
-          <div class="news-item">
-            <span class="news-tag">${n.tag}</span>
-            <span class="news-title">${n.url ? `<a href="${n.url}" target="_blank">${n.title}</a>` : n.title}</span>
-            <span class="news-date">${n.date}</span>
-          </div>
-        `).join('')}
+    downstreamHTML = `
+      <div class="supply-group">
+        <div class="supply-group-label">↓ 下游客戶</div>
+        <div class="chain-tags">${tags}</div>
       </div>
-    </div>` : ''}
+    `;
+  }
+
+  // ETF持股
+  let holdingsHTML = '';
+  if(sc.top_holdings && sc.top_holdings.length) {
+    const tags = sc.top_holdings.map(h => {
+      const url = `https://tw.stock.yahoo.com/quote/${h.code}.TW`;
+      return `<a class="chain-tag" href="${url}" target="_blank" rel="noopener">
+        <span class="chain-tag-code">${h.code}</span>
+        <span>${h.name}</span>
+        <span style="font-size:11px;color:var(--text3)">${h.weight}</span>
+      </a>`;
+    }).join('');
+    holdingsHTML = `
+      <div class="supply-group">
+        <div class="supply-group-label">主要持股</div>
+        <div class="chain-tags">${tags}</div>
+      </div>
+    `;
+  }
+
+  // 今日供應鏈信號
+  let signalsHTML = '';
+  if(data.supply_chain_signals && data.supply_chain_signals.length) {
+    const items = data.supply_chain_signals.map(s => {
+      const cls = s.includes('正面') ? 'positive' : (s.includes('需') || s.includes('注意') || s.includes('偏高')) ? 'negative' : '';
+      return `<div class="supply-signal ${cls}">• ${s}</div>`;
+    }).join('');
+    signalsHTML = `
+      <div class="supply-group">
+        <div class="supply-group-label">今日供應鏈信號</div>
+        <div class="supply-signals">${items}</div>
+      </div>
+    `;
+  }
+
+  // 關鍵風險 & 未來觸媒
+  const risks = (sc.key_risks || []).map(r => `<li>${r}</li>`).join('');
+  const catalysts = (sc.next_catalysts || []).map(c => `<li>${c}</li>`).join('');
+  const rcHTML = (risks || catalysts) ? `
+    <div class="risk-catalyst-row">
+      ${risks ? `<div class="risk-list">
+        <div class="risk-list-title">⚠️ 關鍵風險</div>
+        <ul>${risks}</ul>
+      </div>` : ''}
+      ${catalysts ? `<div class="catalyst-list">
+        <div class="catalyst-list-title">🚀 未來觸媒</div>
+        <ul>${catalysts}</ul>
+      </div>` : ''}
+    </div>
+  ` : '';
+
+  // 產業地位
+  const posHTML = sc.position ? `
+    <div class="supply-group">
+      <div class="supply-group-label">產業定位</div>
+      <div style="font-size:14px;color:var(--text2);line-height:1.6">
+        <strong>${sc.position}</strong><br>
+        <span style="color:var(--text3)">${sc.moat || ''}</span>
+      </div>
+    </div>
+  ` : '';
+
+  el.innerHTML = `
+    <div class="supply-section">
+      ${posHTML}
+      ${upstreamHTML}
+      ${downstreamHTML}
+      ${holdingsHTML}
+      ${signalsHTML}
+      ${rcHTML}
+    </div>
   `;
-
-  document.getElementById('stock-modal').classList.remove('hidden');
 }
 
-function closeModal() {
-  document.getElementById('stock-modal').classList.add('hidden');
+// ── 面板：籌碼 ────────────────────────────
+function renderPanelChips(data) {
+  const el   = document.getElementById('panel-chips');
+  const inst = data.institutional || {};
+  const isETF = Object.values(inst).every(v => v && v.includes('不適用'));
+
+  let instHTML = '';
+  if(isETF) {
+    instHTML = '<p style="color:var(--text3);font-size:14px">ETF，不適用法人買賣超</p>';
+  } else {
+    const items = [
+      { label:'外資',  value: inst.foreign },
+      { label:'投信',  value: inst.trust },
+      { label:'自營商', value: inst.dealer },
+      { label:'融資',  value: inst.margin }
+    ].filter(i => i.value && !i.value.includes('不適用'));
+
+    instHTML = `<div class="chips-grid">
+      ${items.map(i => {
+        const cls = i.value.includes('+') ? 'positive' : i.value.includes('-') ? 'negative' : '';
+        return `<div class="chip-card">
+          <div class="chip-label">${i.label}</div>
+          <div class="chip-value ${cls}">${i.value}</div>
+        </div>`;
+      }).join('')}
+    </div>`;
+  }
+
+  const insiderHL = data.insider && data.insider.includes('⭐') ? 'highlight' : '';
+
+  el.innerHTML = `
+    <div class="chips-section">
+      <div>
+        <div class="panel-sub-label">🏦 三大法人 / 融資</div>
+        ${instHTML}
+      </div>
+      <div>
+        <div class="panel-sub-label">👤 董監 / 內部人申報</div>
+        <div class="insider-box ${insiderHL}">${data.insider || '無最新申報異動'}</div>
+      </div>
+    </div>
+  `;
 }
 
-// ── 新聞列表 ──────────────────────────────
+// ── 面板：新聞 ────────────────────────────
+function renderPanelNews(data) {
+  const el    = document.getElementById('panel-news');
+  const news  = data.news || [];
+  if(!news.length) {
+    el.innerHTML = '<p style="color:var(--text3);font-size:14px">此股票暫無新聞記錄</p>';
+    return;
+  }
+  el.innerHTML = `
+    <div class="panel-news-list">
+      ${news.map(n => `
+        <div class="panel-news-item">
+          <span class="panel-news-tag">${n.tag}</span>
+          <span class="panel-news-title">${n.url
+            ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>`
+            : n.title}</span>
+          <span class="panel-news-date">${n.date}</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+// ── 跨股新聞聚合（底部） ──────────────────
 function renderNewsList(stocks) {
   STATE._allNews = [];
   Object.entries(stocks).forEach(([code, data]) => {
@@ -370,7 +442,7 @@ function filterNews(filter) {
     : STATE._allNews.filter(n => n.tag === filter);
 
   if(!items.length) {
-    el.innerHTML = '<div style="padding:20px;color:var(--text3);font-size:13px;text-align:center">此分類暫無新聞</div>';
+    el.innerHTML = '<div style="padding:20px;color:var(--text3);font-size:14px;text-align:center">此分類暫無新聞</div>';
     return;
   }
   el.innerHTML = items.map(n => `
@@ -399,7 +471,7 @@ function setupDatePicker() {
     if(idx < STATE.availableDates.length - 1) loadDate(STATE.availableDates[idx + 1]);
   });
   document.getElementById('goto-today').addEventListener('click', () => {
-    const today = formatDate(new Date());
+    const today  = formatDate(new Date());
     const target = STATE.availableDates.includes(today)
       ? today : STATE.availableDates.slice(-1)[0];
     if(target) loadDate(target);
@@ -415,11 +487,6 @@ function setupNewsFilters() {
   });
 }
 
-// ── Modal 事件 ────────────────────────────
-document.getElementById('modal-close').addEventListener('click', closeModal);
-document.getElementById('modal-overlay').addEventListener('click', closeModal);
-document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
-
 // ── Helpers ───────────────────────────────
 async function fetchJSON(url) {
   const r = await fetch(url + '?t=' + Date.now());
@@ -429,25 +496,32 @@ async function fetchJSON(url) {
 function formatDate(d) {
   return d.toISOString().slice(0,10);
 }
-function truncate(str, max) {
-  if(!str) return '';
-  return str.length > max ? str.slice(0, max) + '…' : str;
-}
 function getStockName(code) {
   if(!STATE.report) return code;
   const s = STATE.report.stocks[code];
   return s ? `${code} ${s.name}` : code;
 }
+function getSignalClass(signal) {
+  return { buy:'signal-buy', sell:'signal-sell', hold:'signal-hold', watch:'signal-watch' }[signal] || 'signal-watch';
+}
+function getStockUrl(item) {
+  if(item.market === 'NASDAQ' || item.market === 'NYSE')
+    return `https://finance.yahoo.com/quote/${item.code}`;
+  if(item.market === 'TWO')
+    return `https://tw.stock.yahoo.com/quote/${item.code}.TWO`;
+  return `https://tw.stock.yahoo.com/quote/${item.code}.TW`;
+}
 function showLoading() {
-  ['insights-container','stocks-container','news-container'].forEach(id => {
-    document.getElementById(id).innerHTML =
-      '<div class="loading"><div class="spinner"></div>載入中...</div>';
-  });
+  document.getElementById('insights-container').innerHTML =
+    '<div class="loading"><div class="spinner"></div>載入中...</div>';
+  document.getElementById('stock-tab-bar').innerHTML =
+    '<div class="loading"><div class="spinner"></div>載入中...</div>';
+  document.getElementById('news-container').innerHTML = '';
 }
 function hideLoading() {}
 function showError(msg) {
   document.getElementById('insights-container').innerHTML =
-    `<p style="color:var(--sell);font-size:13px">⚠️ ${msg}</p>`;
+    `<p style="color:var(--buy);font-size:14px">⚠️ ${msg}</p>`;
 }
 
 // ── 啟動 ──────────────────────────────────

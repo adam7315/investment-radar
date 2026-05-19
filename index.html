@@ -50,7 +50,7 @@
     <div id="insights-container" class="insights-grid"></div>
   </section>
 
-  <!-- 個股情報 -->
+  <!-- 個股情報（分頁式） -->
   <section class="section">
     <div class="section-header">
       <h2 class="section-title">📊 個股情報</h2>
@@ -59,10 +59,28 @@
         <button id="add-stock-btn" class="add-btn">＋ 加入追蹤</button>
       </div>
     </div>
-    <div id="stocks-container" class="stocks-grid"></div>
+
+    <!-- 個股選擇 tabs -->
+    <div class="stock-tab-bar" id="stock-tab-bar"></div>
+
+    <!-- 個股詳情面板 -->
+    <div class="stock-detail-wrap" id="stock-detail-wrap">
+      <!-- 子分頁 -->
+      <div class="sub-tab-bar" id="sub-tab-bar">
+        <button class="sub-tab active" data-panel="analysis">📌 AI分析</button>
+        <button class="sub-tab" data-panel="supply">🔗 供應鏈</button>
+        <button class="sub-tab" data-panel="chips">🏦 籌碼</button>
+        <button class="sub-tab" data-panel="news">📰 新聞</button>
+      </div>
+      <!-- 面板內容 -->
+      <div id="panel-analysis" class="panel-body active"></div>
+      <div id="panel-supply"   class="panel-body"></div>
+      <div id="panel-chips"    class="panel-body"></div>
+      <div id="panel-news"     class="panel-body"></div>
+    </div>
   </section>
 
-  <!-- 今日新聞 -->
+  <!-- 今日新聞（跨股聚合） -->
   <section class="section">
     <div class="section-header">
       <h2 class="section-title">📰 新聞聚合</h2>
@@ -79,15 +97,6 @@
   </section>
 
 </main>
-
-<!-- 股票卡片 Modal（展開詳情） -->
-<div id="stock-modal" class="modal hidden">
-  <div class="modal-overlay" id="modal-overlay"></div>
-  <div class="modal-content">
-    <button class="modal-close" id="modal-close">✕</button>
-    <div id="modal-body"></div>
-  </div>
-</div>
 
 <!-- 無資料提示 -->
 <div id="no-data" class="no-data hidden">
