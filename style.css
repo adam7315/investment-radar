@@ -730,3 +730,58 @@ a:hover { text-decoration: underline; }
   font-size: 14px;
   text-align: center;
 }
+
+/* ── 追蹤清單 ──────────────────────────────────── */
+.watched-list {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.watched-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.1s;
+}
+.watched-item:last-child { border-bottom: none; }
+.watched-item:hover { background: var(--bg3); }
+.watched-title {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+.watched-title a { color: var(--text2); }
+.watched-title a:hover { color: var(--accent2); }
+.watched-remove {
+  background: none;
+  border: none;
+  color: var(--text3);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+.watched-remove:hover { background: var(--buy-bg); color: var(--buy); }
+
+/* ── 📌 按鈕（出現在新聞項目旁）────────────────── */
+.news-watch-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  opacity: 0.25;
+  flex-shrink: 0;
+  transition: all 0.15s;
+  line-height: 1;
+}
+.news-watch-btn:hover { opacity: 0.8; transform: scale(1.15); }
+.news-watch-btn.on { opacity: 1; filter: drop-shadow(0 0 3px rgba(234,179,8,0.6)); }

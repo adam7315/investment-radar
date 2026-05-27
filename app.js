@@ -13,6 +13,7 @@ const STATE = {
   _newsPage:      1,
   _newsFilter:    { from: '', to: '', stock: 'all' },
   NEWS_PAGE_SIZE: 30,
+  _watchedCat:    'all',
 };
 
 function getTop10Codes(stocks) {
@@ -78,6 +79,10 @@ function formatNewsDate(d) {
   return '';
 }
 
+function escAttr(s) {
+  return String(s || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+}
+
 function fmtDateTime(dt) {
   if(!dt) return '—';
   // "2026-05-27T11:04" → "5月27日 11:04"
@@ -113,6 +118,7 @@ async function init() {
     setupDetailTabs();
     setupWatchlistAdd();
     setupNewsSection();
+    renderWatchedSection();
       await loadDate(target);
   } catch(e) {
     console.error(e);
@@ -168,6 +174,7 @@ function renderAll() {
   STATE._newsFilter = { from: STATE.currentDate, to: STATE.currentDate, stock: 'all' };
   STATE._newsPage   = 1;
   buildAndDisplayNews();
+  renderWatchedSection();
 }
 
 function updateStatusBar(r) {
@@ -537,6 +544,11 @@ function renderDPNews(code, data) {
           ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>`
           : n.title}</span>
         <span class="news-date">${formatNewsDate(n.date)}</span>
+        <button class="news-watch-btn ${isNewsWatched(n.url)?'on':''}"
+          data-code="${code}" data-sname="${escAttr(data.name)}"
+          data-title="${escAttr(n.title)}" data-url="${escAttr(n.url)}"
+          data-source="${escAttr(n.source||'')}" data-date="${n.date||''}"
+          onclick="watchFromBtn(this)" title="${isNewsWatched(n.url)?'取消追蹤':'加入追蹤'}">📌</button>
       </div>`).join('')}
     </div>`;
 }
@@ -653,6 +665,11 @@ function renderNewsPage(all) {
         ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>`
         : n.title}</span>
       <span class="news-all-date">${formatNewsDate(n.date) || isoToDisplay(n.reportDate)}</span>
+      <button class="news-watch-btn ${isNewsWatched(n.url)?'on':''}"
+        data-code="${n.code}" data-sname="${escAttr(n.stockName)}"
+        data-title="${escAttr(n.title)}" data-url="${escAttr(n.url)}"
+        data-source="${escAttr(n.source||'')}" data-date="${n.date||n.reportDate||''}"
+        onclick="watchFromBtn(this)" title="${isNewsWatched(n.url)?'取消追蹤':'加入追蹤'}">📌</button>
     </div>`).join('');
   }
   const pgEl = document.getElementById('news-pagination');
@@ -819,6 +836,93 @@ async function restoreLiveStocks() {
   STATE._newsFilter.to   = STATE.currentDate;
   STATE._newsPage = 1;
   buildAndDisplayNews();
+}
+
+// ── 追蹤新聞：localStorage ──────────────────────────────
+function loadWatched() {
+  try { return JSON.parse(localStorage.getItem('news_watched') || '[]'); }
+  catch(e) { return []; }
+}
+function saveWatched(arr) {
+  localStorage.setItem('news_watched', JSON.stringify(arr));
+}
+function isNewsWatched(url) {
+  if(!url) return false;
+  return loadWatched().some(w => w.url === url);
+}
+function toggleNewsWatch(item) {
+  const arr = loadWatched();
+  const idx = arr.findIndex(w => w.url === item.url);
+  if(idx >= 0) {
+    arr.splice(idx, 1);
+    saveWatched(arr);
+    showToast('已取消追蹤', 'info');
+    return false;
+  }
+  arr.unshift({ ...item, id: Date.now(), bookmarked_at: new Date().toISOString() });
+  saveWatched(arr);
+  showToast(`📌 已加入追蹤`, 'ok');
+  return true;
+}
+function watchFromBtn(btn) {
+  const item = {
+    code:      btn.dataset.code,
+    stockName: btn.dataset.sname,
+    title:     btn.dataset.title,
+    url:       btn.dataset.url,
+    source:    btn.dataset.source,
+    date:      btn.dataset.date,
+  };
+  const watched = toggleNewsWatch(item);
+  btn.classList.toggle('on', watched);
+  btn.title = watched ? '取消追蹤' : '加入追蹤';
+  renderWatchedSection();
+}
+function removeWatched(url) {
+  const arr = loadWatched().filter(w => w.url !== url);
+  saveWatched(arr);
+  renderWatchedSection();
+  document.querySelectorAll(`.news-watch-btn`).forEach(btn => {
+    if(btn.dataset.url === url) { btn.classList.remove('on'); btn.title = '加入追蹤'; }
+  });
+}
+function setWatchedCat(cat) {
+  STATE._watchedCat = cat;
+  renderWatchedSection();
+}
+function renderWatchedSection() {
+  const arr    = loadWatched();
+  const cntEl  = document.getElementById('watched-count');
+  if(cntEl) cntEl.textContent = arr.length ? `${arr.length} 則` : '';
+  const sec = document.getElementById('watched-section');
+  if(sec) sec.style.display = arr.length ? '' : 'none';
+  if(!arr.length) return;
+  // 個股分類 tabs
+  const codes = [...new Set(arr.map(w => w.code))];
+  const cat   = STATE._watchedCat || 'all';
+  const tabs  = document.getElementById('watched-tabs');
+  if(tabs) {
+    tabs.innerHTML = `<button class="nfbtn ${cat==='all'?'active':''}" onclick="setWatchedCat('all')">全部 (${arr.length})</button>
+      ${codes.map(c => {
+        const cnt  = arr.filter(w => w.code === c).length;
+        const name = arr.find(w => w.code === c)?.stockName || c;
+        return `<button class="nfbtn ${cat===c?'active':''}" onclick="setWatchedCat('${c}')">${name} (${cnt})</button>`;
+      }).join('')}`;
+  }
+  const el    = document.getElementById('watched-list');
+  if(!el) return;
+  const items = cat === 'all' ? arr : arr.filter(w => w.code === cat);
+  el.innerHTML = items.map(w => `<div class="watched-item">
+    <span class="news-stock-badge" onclick="selectStock('${w.code}')" style="cursor:pointer">
+      ${w.code}<br><small>${w.stockName}</small>
+    </span>
+    <span class="news-src-badge">${w.source || ''}</span>
+    <span class="watched-title">${w.url
+      ? `<a href="${w.url}" target="_blank" rel="noopener">${w.title}</a>`
+      : w.title}</span>
+    <span class="news-all-date">${formatNewsDate(w.date)}</span>
+    <button class="watched-remove" onclick="removeWatched('${escAttr(w.url)}')" title="移除追蹤">✕</button>
+  </div>`).join('');
 }
 
 // ── Toast ─────────────────────────────────
