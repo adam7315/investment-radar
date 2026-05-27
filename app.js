@@ -531,7 +531,7 @@ function renderDPChips(code, data) {
 function renderDPNews(code, data) {
   const el    = document.getElementById('dp-news');
   const all   = data.news || [];
-  const news  = all.filter(n => n.date === STATE.currentDate && isRealNews(n));
+  const news  = all.filter(n => isRealNews(n));
   const badge = document.getElementById('news-count-badge');
   if(badge) badge.textContent = news.length || '';
   if(!news.length) {
