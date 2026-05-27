@@ -95,7 +95,6 @@ async function init() {
 async function loadDate(date) {
   STATE.currentDate = date;
   document.getElementById('date-picker').value = date;
-  document.getElementById('status-date').textContent = isoToDisplay(date);
   document.getElementById('last-update').textContent = isoToDisplay(date);
   document.getElementById('no-data').classList.add('hidden');
 
@@ -140,11 +139,13 @@ function updateStatusBar(r) {
   text.textContent = isToday ? '✓ 今日資料就緒' : `歷史 ${isoToDisplay(r.date)}`;
   text.style.color = 'var(--sell)';
 
-  const ana = r.analyzed_at  ? r.analyzed_at.slice(11,16)  : '—';
-  const col = r.collected_at ? r.collected_at.slice(11,16) : '—';
   document.getElementById('status-analyzed').textContent  = fmtDateTime(r.analyzed_at);
   document.getElementById('status-collected').textContent = fmtDateTime(r.collected_at);
-  document.getElementById('status-news-count').textContent = r.total_news != null ? r.total_news : '—';
+
+  // 品牌欄副標題：日期 + 收集時間（如 "2026年5月27日 11:04"）
+  const timeOnly = r.collected_at ? r.collected_at.slice(11, 16) : '';
+  document.getElementById('last-update').textContent =
+    isoToDisplay(r.date) + (timeOnly ? ' ' + timeOnly : '');
 }
 
 // ── 今日特別關注 ──────────────────────────
@@ -197,11 +198,10 @@ function setupCategoryTabs() {
 }
 
 function allSortedCodes(stocks) {
-  const extra = (STATE._extraCodes || []).filter(c => !STOCK_ORDER.includes(c));
+  // 只列出今日報告中有資料的股票（extra 股票今日無資料，不放入 grid）
   return [
     ...STOCK_ORDER.filter(c => stocks[c]),
-    ...Object.keys(stocks).filter(c => !STOCK_ORDER.includes(c) && !extra.includes(c)),
-    ...extra  // 使用者自訂追蹤（可能今日無資料）
+    ...Object.keys(stocks).filter(c => !STOCK_ORDER.includes(c))
   ];
 }
 
