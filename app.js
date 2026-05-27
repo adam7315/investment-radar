@@ -126,24 +126,13 @@ async function loadDate(date) {
 function renderAll() {
   const r = STATE.report;
   if(!r) return;
-  updateStatusBar(r);
   renderAttentionCards(r);
   renderStockGrid(r.stocks || {});
   renderNewsList(r.stocks || {});
 }
 
 function updateStatusBar(r) {
-  const dot  = document.getElementById('status-dot');
-  const text = document.getElementById('status-text');
-  const isToday = r.date === toIso(new Date());
-  dot.className    = 'status-dot ok';
-  text.textContent = isToday ? '✓ 今日資料就緒' : `歷史 ${isoToDisplay(r.date)}`;
-  text.style.color = 'var(--sell)';
-
-  document.getElementById('status-analyzed').textContent  = fmtDateTime(r.analyzed_at);
-  document.getElementById('status-collected').textContent = fmtDateTime(r.collected_at);
-
-  // 品牌欄副標題：日期 + 收集時間（如 "2026年5月27日 11:04"）
+  // 品牌欄副標題：日期 + 收集時間
   const timeOnly = r.collected_at ? r.collected_at.slice(11, 16) : '';
   document.getElementById('last-update').textContent =
     isoToDisplay(r.date) + (timeOnly ? ' ' + timeOnly : '');
