@@ -96,29 +96,6 @@
     </div>
   </section>
 
-  <!-- AI 投資問答 -->
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">🤖 AI 投資問答</h2>
-      <button class="nav-btn" onclick="openApiKeyModal()">⚙️ API Key</button>
-    </div>
-    <div style="background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm)">
-      <div class="ai-chat-title">
-        💬 以今日數據為背景，直接提問
-      </div>
-      <div class="ai-quick-btns" id="ai-quick-btns">
-        <button class="ai-quick-btn" onclick="setQ('今日哪支股票最值得關注？請列出前三名並說明原因')">今日必看個股</button>
-        <button class="ai-quick-btn" onclick="setQ('請分析今日外資動向，外資買超最多的股票有何投資含義？')">外資動向</button>
-        <button class="ai-quick-btn" onclick="setQ('今日有哪些重大消息或題材？背後的邏輯是什麼？')">重大消息解析</button>
-        <button class="ai-quick-btn" onclick="setQ('從供應鏈角度分析，今日哪些個股可能受惠或受害？')">供應鏈連動</button>
-      </div>
-      <div id="ai-response" class="ai-response"></div>
-      <div class="ai-input-row" style="margin-top:10px">
-        <input type="text" id="ai-input" class="ai-input" placeholder="問任何關於今日個股的問題，例如：大立光今天適合買入嗎？">
-        <button id="ai-send-btn" class="ai-send-btn" onclick="sendAiQuestion()">送出</button>
-      </div>
-    </div>
-  </section>
 
   <!-- 新聞聚合 -->
   <section class="section">
@@ -137,21 +114,6 @@
   <p>每天 06:00 自動更新</p>
 </div>
 
-<!-- API Key Modal -->
-<div id="modal-apikey" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-title">🔑 設定 Claude API Key</div>
-    <p class="modal-desc">
-      API Key 僅存在您的瀏覽器（localStorage），不會上傳至任何伺服器。<br>
-      前往 <a href="https://console.anthropic.com/" target="_blank" rel="noopener">console.anthropic.com</a> 取得 Key。
-    </p>
-    <input type="password" id="modal-apikey-input" class="modal-input" placeholder="sk-ant-...">
-    <div class="modal-btns">
-      <button class="modal-cancel" onclick="closeApiKeyModal()">取消</button>
-      <button class="modal-save" onclick="saveApiKey()">儲存</button>
-    </div>
-  </div>
-</div>
 
 <script src="app.js"></script>
 </body>

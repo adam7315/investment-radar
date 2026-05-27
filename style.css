@@ -526,107 +526,6 @@ a:hover { text-decoration: underline; }
 .chip-value.pos { color: var(--buy); }
 .chip-value.neg { color: var(--sell); }
 
-/* ── AI 對話（詳情內） ───────────────────────── */
-.ai-chat-section { margin-top: 20px; }
-.ai-chat-title {
-  font-size: 13px; font-weight: 700; color: var(--text2);
-  margin-bottom: 10px;
-  display: flex; align-items: center; gap: 6px;
-}
-.ai-api-btn {
-  font-size: 11px; color: var(--text3); background: none;
-  border: 1px solid var(--border); border-radius: 4px;
-  padding: 2px 7px; cursor: pointer; margin-left: auto;
-}
-.ai-api-btn:hover { border-color: var(--border2); color: var(--text2); }
-
-.ai-quick-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
-.ai-quick-btn {
-  font-size: 12px; color: var(--accent);
-  background: var(--accent-bg); border: 1px solid #bee3f8;
-  border-radius: 14px; padding: 4px 12px;
-  cursor: pointer; transition: all 0.12s;
-}
-.ai-quick-btn:hover { background: #bee3f8; }
-
-.ai-input-row { display: flex; gap: 8px; }
-.ai-input {
-  flex: 1;
-  background: var(--bg3);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 9px 14px;
-  font-size: 14px;
-  color: var(--text);
-  font-family: inherit;
-  resize: none;
-  transition: border-color 0.15s;
-  line-height: 1.5;
-}
-.ai-input:focus { outline: none; border-color: var(--accent2); background: var(--bg2); }
-.ai-send-btn {
-  background: var(--accent2);
-  color: #fff;
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: 9px 18px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s;
-  white-space: nowrap;
-}
-.ai-send-btn:hover { background: var(--accent); }
-.ai-send-btn:disabled { background: var(--text3); cursor: not-allowed; }
-
-.ai-response {
-  margin-top: 14px;
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  font-size: 14px;
-  color: var(--text2);
-  line-height: 1.75;
-  white-space: pre-wrap;
-  display: none;
-}
-.ai-response.visible { display: block; }
-.ai-response.loading { color: var(--text3); }
-
-/* API Key Modal */
-.modal-overlay {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: 200;
-  display: flex; align-items: center; justify-content: center;
-  display: none;
-}
-.modal-overlay.visible { display: flex; }
-.modal-box {
-  background: var(--bg2);
-  border-radius: var(--radius);
-  padding: 24px;
-  width: 420px;
-  box-shadow: var(--shadow-lg);
-}
-.modal-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
-.modal-desc { font-size: 13px; color: var(--text2); margin-bottom: 16px; line-height: 1.6; }
-.modal-input {
-  width: 100%;
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 9px 12px;
-  font-size: 14px;
-  font-family: monospace;
-  margin-bottom: 12px;
-  color: var(--text);
-  background: var(--bg3);
-}
-.modal-input:focus { outline: none; border-color: var(--accent2); }
-.modal-btns { display: flex; gap: 8px; justify-content: flex-end; }
-.modal-cancel { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 7px 16px; cursor: pointer; font-size: 14px; }
-.modal-save { background: var(--accent2); color: #fff; border: none; border-radius: var(--radius-sm); padding: 7px 16px; cursor: pointer; font-size: 14px; font-weight: 600; }
 
 /* ── 全站新聞區 ──────────────────────────────── */
 .news-filter-bar { display: flex; gap: 6px; flex-wrap: wrap; }
@@ -726,5 +625,4 @@ a:hover { text-decoration: underline; }
   .risk-catalyst-row { grid-template-columns: 1fr; }
   .detail-body { padding: 16px; }
   .chips-grid { grid-template-columns: 1fr 1fr; }
-  .ai-input-row { flex-direction: column; }
 }
