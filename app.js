@@ -509,7 +509,8 @@ function renderDPChips(code, data) {
 // ── 詳情：新聞 ────────────────────────────
 function renderDPNews(code, data) {
   const el    = document.getElementById('dp-news');
-  const news  = data.news || [];
+  const all   = data.news || [];
+  const news  = all.filter(n => n.date === STATE.currentDate);
   const badge = document.getElementById('news-count-badge');
   if(badge) badge.textContent = news.length || '';
   if(!news.length) {
