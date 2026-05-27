@@ -233,18 +233,19 @@ function renderCard(code, d, cats) {
     <div class="card-row1">
       ${fire ? `<span class="card-fire">${fire}</span>` : ''}
       <span class="card-name">${d.name}</span>
-      <button class="tag-btn${userCat === 'watch' ? ' active-watch' : ''}"
-        onclick="event.stopPropagation();toggleCardCat('${code}','watch')" title="關注">⭐</button>
-      <button class="tag-btn${userCat === 'own' ? ' active-own' : ''}"
-        onclick="event.stopPropagation();toggleCardCat('${code}','own')" title="持股">💼</button>
     </div>
     <div class="card-row2">
       <span class="card-code">${code}</span>
-      ${newsN ? `<span class="card-news-count">📰${newsN}</span>` : ''}
+      <span class="card-actions">
+        ${newsN ? `<span class="card-news-count">📰${newsN}</span>` : ''}
+        <button class="card-tag-sm${userCat === 'watch' ? ' active-watch' : ''}"
+          onclick="event.stopPropagation();toggleCardCat('${code}','watch')">⭐</button>
+        <button class="card-tag-sm${userCat === 'own' ? ' active-own' : ''}"
+          onclick="event.stopPropagation();toggleCardCat('${code}','own')">💼</button>
+      </span>
     </div>
   </div>`;
 }
-
 function renderStockGrid(stocks) {
   const grid = document.getElementById('stock-grid');
   updateCatCounts(stocks);
