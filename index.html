@@ -25,6 +25,7 @@
       </label>
       <button class="nav-btn" id="next-date" title="下一天">&#8250;</button>
       <button class="nav-btn nav-today" id="goto-today">今日</button>
+      <button class="nav-btn nav-settings" onclick="openSettings()" title="追蹤設定">⚙️</button>
     </div>
   </div>
 </header>
@@ -136,6 +137,17 @@
   <p>每天 06:00 自動更新</p>
 </div>
 
+
+<!-- 設定面板 -->
+<div id="settings-panel" class="settings-overlay" style="display:none" onclick="if(event.target===this)closeSettings()">
+  <div class="settings-modal">
+    <div class="settings-header">
+      <h2 class="settings-title">⚙️ 追蹤新聞管理</h2>
+      <button class="settings-close" onclick="closeSettings()">✕</button>
+    </div>
+    <div id="settings-body" class="settings-body"></div>
+  </div>
+</div>
 
 <script src="app.js"></script>
 </body>

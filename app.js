@@ -1,5 +1,7 @@
 /* ── 投資情報雷達 — app.js ───────────────── */
 
+const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyBxm2DGCnKScXLOentEVitcjoh-pdNRVVMU206SyQnTYjhC4QEffm2OBT2SJIBC8un/exec';
+
 const STATE = {
   currentDate:    '',
   availableDates: [],
@@ -850,17 +852,29 @@ function isNewsWatched(url) {
   if(!url) return false;
   return loadWatched().some(w => w.url === url);
 }
+function syncToSheet(item, action) {
+  try {
+    fetch(WEBHOOK_URL, {
+      method: 'POST', mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action, ...item }),
+    });
+  } catch(e) { /* 靜默失敗 */ }
+}
+
 function toggleNewsWatch(item) {
   const arr = loadWatched();
   const idx = arr.findIndex(w => w.url === item.url);
   if(idx >= 0) {
     arr.splice(idx, 1);
     saveWatched(arr);
+    syncToSheet(item, 'remove');
     showToast('已取消追蹤', 'info');
     return false;
   }
   arr.unshift({ ...item, id: Date.now(), bookmarked_at: new Date().toISOString() });
   saveWatched(arr);
+  syncToSheet(item, 'add');
   showToast(`📌 已加入追蹤`, 'ok');
   return true;
 }
@@ -923,6 +937,54 @@ function renderWatchedSection() {
     <span class="news-all-date">${formatNewsDate(w.date)}</span>
     <button class="watched-remove" onclick="removeWatched('${escAttr(w.url)}')" title="移除追蹤">✕</button>
   </div>`).join('');
+}
+
+// ── 設定面板 ──────────────────────────────
+function openSettings() {
+  const panel = document.getElementById('settings-panel');
+  if(!panel) return;
+  renderSettingsPanel();
+  panel.style.display = 'flex';
+}
+function closeSettings() {
+  const panel = document.getElementById('settings-panel');
+  if(panel) panel.style.display = 'none';
+}
+function renderSettingsPanel() {
+  const arr = loadWatched();
+  const el  = document.getElementById('settings-body');
+  if(!el) return;
+
+  // 統計：各股 bookmark 數
+  const byCodes = {};
+  arr.forEach(w => { byCodes[w.code] = byCodes[w.code] || []; byCodes[w.code].push(w); });
+
+  const sheetNote = `<div class="settings-sheet-note">
+    <span>📊 資料同步至 Google Sheets「投資追蹤新聞」試算表</span>
+    <a href="https://docs.google.com/spreadsheets/" target="_blank" class="settings-sheet-link">開啟 Google Sheets ↗</a>
+  </div>`;
+
+  if(!arr.length) {
+    el.innerHTML = sheetNote + '<div class="settings-empty">尚未追蹤任何新聞<br><small>在新聞右方點 📌 即可加入追蹤</small></div>';
+    return;
+  }
+
+  const rows = Object.entries(byCodes).map(([code, items]) => `
+    <div class="settings-stock-group">
+      <div class="settings-stock-label">
+        <span class="settings-stock-code">${code}</span>
+        <span class="settings-stock-name">${items[0].stockName || ''}</span>
+        <span class="settings-stock-cnt">${items.length} 則</span>
+      </div>
+      ${items.map(w => `
+        <div class="settings-news-item">
+          <div class="settings-news-meta">${w.date || ''} · ${w.source || ''}</div>
+          <a class="settings-news-title" href="${w.url || '#'}" target="_blank">${w.title || ''}</a>
+          <button class="settings-news-del" onclick="removeWatched('${escAttr(w.url)}');renderSettingsPanel()">✕</button>
+        </div>`).join('')}
+    </div>`).join('');
+
+  el.innerHTML = sheetNote + `<div class="settings-total">${arr.length} 則追蹤新聞</div>` + rows;
 }
 
 // ── Toast ─────────────────────────────────
