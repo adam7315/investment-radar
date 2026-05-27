@@ -8,6 +8,7 @@ import json
 import os
 import time
 import datetime
+import email.utils
 import requests
 import feedparser
 from pathlib import Path
@@ -23,6 +24,22 @@ NOW         = datetime.datetime.now(TZ_OFFSET)
 TODAY       = NOW.date().isoformat()
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+
+def parse_rss_date(entry):
+    """RSS published 欄位可能是 RFC 2822 或 ISO，統一轉成 YYYY-MM-DD"""
+    pub = entry.get("published") or entry.get("updated") or ""
+    if not pub:
+        return TODAY
+    # ISO 格式：開頭是 "2026-05-..."
+    if len(pub) >= 10 and pub[4:5] == "-":
+        return pub[:10]
+    # RFC 2822 格式：如 "Wed, 27 May 2026 10:00:00 +0800"
+    try:
+        parsed = email.utils.parsedate_to_datetime(pub)
+        return parsed.astimezone(TZ_OFFSET).date().isoformat()
+    except Exception:
+        pass
+    return TODAY
 
 # ── 8 個通用 RSS 新聞源（全抓，再用關鍵字篩選） ──────────────
 GENERAL_SOURCES = [
@@ -43,7 +60,7 @@ def prefetch_general_feeds():
         try:
             feed = feedparser.parse(src["url"])
             for entry in feed.entries:
-                pub = entry.get("published", "")[:10] if entry.get("published") else TODAY
+                pub = parse_rss_date(entry)
                 feeds.append({
                     "title":   entry.get("title", ""),
                     "summary": entry.get("summary", ""),
@@ -64,7 +81,7 @@ def fetch_google_news(code, name, max_items=8):
     try:
         feed = feedparser.parse(url)
         for entry in feed.entries[:max_items]:
-            pub = entry.get("published", "")[:10] if entry.get("published") else TODAY
+            pub = parse_rss_date(entry)
             found.append({
                 "title":   entry.get("title", ""),
                 "url":     entry.get("link", ""),

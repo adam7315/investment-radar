@@ -6,7 +6,7 @@ const STATE = {
   report:         null,
   supplyChain:    {},
   activeStock:    null,
-  activeCat:      'top10',
+  activeCat:      'all',
   activePanel:    'analysis',
   _allNews:       []
 };
@@ -38,6 +38,29 @@ function isoToDisplay(iso) {
   return `${y}年${parseInt(m)}月${parseInt(d)}日`;
 }
 
+function formatNewsDate(d) {
+  if(!d) return '';
+  // ISO "2026-05-27" → "5月27日"
+  if(/^\d{4}-\d{2}-\d{2}/.test(d)) {
+    const m   = parseInt(d.slice(5, 7));
+    const day = parseInt(d.slice(8, 10));
+    return `${m}月${day}日`;
+  }
+  return d;
+}
+
+function fmtDateTime(dt) {
+  if(!dt) return '—';
+  // "2026-05-27T11:04" → "5月27日 11:04"
+  if(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(dt)) {
+    const m   = parseInt(dt.slice(5, 7));
+    const day = parseInt(dt.slice(8, 10));
+    const hm  = dt.slice(11, 16);
+    return `${m}月${day}日 ${hm}`;
+  }
+  return dt;
+}
+
 // ── 初始化 ────────────────────────────────
 async function init() {
   try {
@@ -52,6 +75,9 @@ async function init() {
     const target = STATE.availableDates.includes(today)
       ? today
       : (indexData.latest || STATE.availableDates.slice(-1)[0] || today);
+
+    // 把 localStorage 中使用者額外加入的股票合入報告
+    STATE._extraCodes = JSON.parse(localStorage.getItem('watchlist_extra') || '[]');
 
     setupDatePicker();
     setupCategoryTabs();
@@ -116,8 +142,8 @@ function updateStatusBar(r) {
 
   const ana = r.analyzed_at  ? r.analyzed_at.slice(11,16)  : '—';
   const col = r.collected_at ? r.collected_at.slice(11,16) : '—';
-  document.getElementById('status-analyzed').textContent  = ana;
-  document.getElementById('status-collected').textContent = col;
+  document.getElementById('status-analyzed').textContent  = fmtDateTime(r.analyzed_at);
+  document.getElementById('status-collected').textContent = fmtDateTime(r.collected_at);
   document.getElementById('status-news-count').textContent = r.total_news != null ? r.total_news : '—';
 }
 
@@ -171,9 +197,11 @@ function setupCategoryTabs() {
 }
 
 function allSortedCodes(stocks) {
+  const extra = (STATE._extraCodes || []).filter(c => !STOCK_ORDER.includes(c));
   return [
     ...STOCK_ORDER.filter(c => stocks[c]),
-    ...Object.keys(stocks).filter(c => !STOCK_ORDER.includes(c))
+    ...Object.keys(stocks).filter(c => !STOCK_ORDER.includes(c) && !extra.includes(c)),
+    ...extra  // 使用者自訂追蹤（可能今日無資料）
   ];
 }
 
@@ -466,7 +494,7 @@ function renderDPNews(code, data) {
       <span class="news-title">${n.url
         ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>`
         : n.title}</span>
-      <span class="news-date">${n.date || ''}</span>
+      <span class="news-date">${formatNewsDate(n.date)}</span>
     </div>`).join('')}
   </div>`;
 }
@@ -514,7 +542,7 @@ function displayAllNews(f) {
     <span class="news-all-title">${n.url
       ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>`
       : n.title}</span>
-    <span class="news-all-date">${n.date || ''}</span>
+    <span class="news-all-date">${formatNewsDate(n.date)}</span>
   </div>`).join('');
 }
 
@@ -539,26 +567,37 @@ function setupDatePicker() {
   });
 }
 
-// ── 跳至個股 ──────────────────────────────
+// ── 新增追蹤 / 跳至個股 ──────────────────
 function setupWatchlistAdd() {
   const btn   = document.getElementById('add-stock-btn');
   const input = document.getElementById('add-stock-input');
 
-  const doGoto = () => {
+  const doAdd = () => {
     const code = input.value.trim().toUpperCase();
     if(!code) return;
     const stocks = STATE.report?.stocks || {};
     if(stocks[code]) {
+      // 今日資料已有此股 → 直接跳至
       selectStockAndScroll(code);
       showToast(`已切換到 ${code} ${stocks[code].name}`, 'ok');
     } else {
-      showToast(`${code} 今日無資料`, 'warn');
+      // 今日資料無此股 → 加入 localStorage 追蹤清單
+      try {
+        const saved = JSON.parse(localStorage.getItem('watchlist_extra') || '[]');
+        if(!saved.includes(code)) {
+          saved.push(code);
+          localStorage.setItem('watchlist_extra', JSON.stringify(saved));
+          showToast(`✓ ${code} 已加入追蹤，明日資料更新後顯示`, 'ok');
+        } else {
+          showToast(`${code} 已在追蹤清單中`, 'warn');
+        }
+      } catch(e) {}
     }
     input.value = '';
   };
 
-  btn.addEventListener('click', doGoto);
-  input.addEventListener('keydown', e => { if(e.key === 'Enter') doGoto(); });
+  btn.addEventListener('click', doAdd);
+  input.addEventListener('keydown', e => { if(e.key === 'Enter') doAdd(); });
 }
 
 // ── AI 問答 ───────────────────────────────
