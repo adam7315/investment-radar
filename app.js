@@ -47,6 +47,18 @@ function isoToDisplay(iso) {
   return `${y}年${parseInt(m)}月${parseInt(d)}日`;
 }
 
+function isRealNews(n) {
+  const t = n.title || '';
+  if(!t) return false;
+  // 過濾掉股票查詢頁、網站導覽標題（含「個股概覽」、「| 個股 - 股市」等）
+  if(/個股概覽|技術分析圖表|即時股價|行情報價/.test(t)) return false;
+  if(/\|\s*(個股|股市|技術分析|行情)/.test(t)) return false;
+  // 排除明顯的 CMoney / TradingView 頁面標題
+  const url = n.url || '';
+  if(/cmoney\.tw|tradingview\.com/.test(url) && /\|/.test(t)) return false;
+  return true;
+}
+
 function formatNewsDate(d) {
   if(!d) return '';
   // ISO "2026-05-27" → "2026年5月27日"
@@ -510,7 +522,7 @@ function renderDPChips(code, data) {
 function renderDPNews(code, data) {
   const el    = document.getElementById('dp-news');
   const all   = data.news || [];
-  const news  = all.filter(n => n.date === STATE.currentDate);
+  const news  = all.filter(n => n.date === STATE.currentDate && isRealNews(n));
   const badge = document.getElementById('news-count-badge');
   if(badge) badge.textContent = news.length || '';
   if(!news.length) {
@@ -588,7 +600,7 @@ function buildAndDisplayNews() {
     const r = STATE._reportCache[d];
     if(!r) continue;
     for(const [code, data] of Object.entries(r.stocks || {})) {
-      (data.news || []).forEach(n => {
+      (data.news || []).filter(isRealNews).forEach(n => {
         all.push({ ...n, code, stockName: data.name, reportDate: d });
       });
     }

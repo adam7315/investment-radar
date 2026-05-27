@@ -80,14 +80,20 @@ def fetch_google_news(code, name, max_items=8):
     found = []
     try:
         feed = feedparser.parse(url)
-        for entry in feed.entries[:max_items]:
+        for entry in feed.entries[:max_items * 2]:
+            title = entry.get("title", "")
+            link  = entry.get("link", "")
+            if not _is_real_news(title, link):
+                continue
             pub = parse_rss_date(entry)
             found.append({
-                "title":   entry.get("title", ""),
-                "url":     entry.get("link", ""),
+                "title":   title,
+                "url":     link,
                 "date":    pub,
                 "source":  "Google News",
             })
+            if len(found) >= max_items:
+                break
     except Exception as e:
         print(f"  [WARN] Google News 失敗 {code}: {e}")
     return found
@@ -122,6 +128,22 @@ def fetch_twse_announcements(code, market="TW"):
         return []
 
 
+_NON_NEWS_PATTERNS = [
+    "個股概覽", "技術分析圖表", "即時股價", "行情報價",
+    "| 個股 -", "| 股市 -", "| 技術分析",
+]
+_NON_NEWS_DOMAINS = ["cmoney.tw", "tradingview.com"]
+
+def _is_real_news(title, url=""):
+    for pat in _NON_NEWS_PATTERNS:
+        if pat in title:
+            return False
+    for dom in _NON_NEWS_DOMAINS:
+        if dom in url and "|" in title:
+            return False
+    return True
+
+
 # ── 從通用 feeds 篩選與個股相關新聞 ────────────────────────────
 def filter_news_for_stock(all_feeds, code, name, max_items=6):
     keywords = [code, name]
@@ -133,7 +155,7 @@ def filter_news_for_stock(all_feeds, code, name, max_items=6):
     for item in all_feeds:
         text = item["title"] + " " + item["summary"]
         if any(kw in text for kw in keywords):
-            if item["url"] not in seen_urls:
+            if item["url"] not in seen_urls and _is_real_news(item["title"], item["url"]):
                 seen_urls.add(item["url"])
                 found.append({
                     "title":  item["title"],
