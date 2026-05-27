@@ -145,6 +145,7 @@ async function loadDate(date) {
 function renderAll() {
   const r = STATE.report;
   if(!r) return;
+  updateStatusBar(r);
   renderAttentionCards(r);
   renderStockGrid(r.stocks || {});
   // 重置新聞篩選至當日
