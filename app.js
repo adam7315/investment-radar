@@ -95,6 +95,7 @@ async function init() {
 async function loadDate(date) {
   STATE.currentDate = date;
   document.getElementById('date-picker').value = date;
+  document.getElementById('date-display').textContent = isoToDisplay(date);
   document.getElementById('last-update').textContent = isoToDisplay(date);
   document.getElementById('no-data').classList.add('hidden');
 
@@ -241,34 +242,26 @@ function renderStockGrid(stocks) {
   }
 
   grid.innerHTML = codes.map(code => {
-    const d      = stocks[code];
-    const score  = d.attention_score || 0;
-    const dotCls = score >= 5 ? 's5' : score >= 4 ? 's4' : '';
-    const pct    = d.price?.change_pct;
-    const price  = d.price?.price;
-    const pctStr = pct != null ? `${pct > 0 ? '+' : ''}${pct.toFixed(2)}%` : '';
-    const pctCls = pct > 0 ? 'pos' : pct < 0 ? 'neg' : 'flat';
-    const newsN  = (d.news || []).length;
+    const d       = stocks[code];
+    const score   = d.attention_score || 0;
+    const newsN   = (d.news || []).length;
     const userCat = cats[code];
     const isActive = STATE.activeStock === code;
+    const fire = score >= 5 ? '🔥 ' : score >= 4 ? '⚡ ' : '';
 
     return `<div class="stock-card${isActive ? ' active' : ''}" data-code="${code}" onclick="selectStock('${code}')">
-      ${dotCls ? `<div class="card-score-dot ${dotCls}"></div>` : ''}
-      <div class="card-head">
-        <span class="card-code">${code}</span>
-        ${score >= 5 ? '<span class="card-fire">🔥</span>' : score >= 4 ? '<span class="card-fire">⚡</span>' : ''}
-        <span class="card-name">${d.name}</span>
-      </div>
-      <div class="${price ? 'card-price' : 'card-price na'}">${price ? 'NT$ ' + price.toLocaleString() : '—'}</div>
-      ${pctStr ? `<div class="card-pct ${pctCls}">${pctStr}</div>` : '<div class="card-pct flat">—</div>'}
-      <div class="card-footer">
-        <span class="card-news-count">📰 ${newsN}</span>
+      <div class="card-row1">
+        <span class="card-name">${fire}${d.name}</span>
         <div class="card-tags-row">
           <button class="tag-btn${userCat === 'watch' ? ' active-watch' : ''}"
-            onclick="event.stopPropagation();toggleCardCat('${code}','watch')" title="標記關注">⭐</button>
+            onclick="event.stopPropagation();toggleCardCat('${code}','watch')" title="關注">⭐</button>
           <button class="tag-btn${userCat === 'own' ? ' active-own' : ''}"
-            onclick="event.stopPropagation();toggleCardCat('${code}','own')" title="標記持股">💼</button>
+            onclick="event.stopPropagation();toggleCardCat('${code}','own')" title="持股">💼</button>
         </div>
+      </div>
+      <div class="card-row2">
+        <span class="card-code">${code}</span>
+        ${newsN ? `<span class="card-news-count">📰 ${newsN}</span>` : ''}
       </div>
     </div>`;
   }).join('');
@@ -550,6 +543,8 @@ function displayAllNews(f) {
 function setupDatePicker() {
   const picker = document.getElementById('date-picker');
   picker.addEventListener('change', () => loadDate(picker.value));
+  // 讓 📅 label 點選後真的開啟 date picker
+  document.querySelector('.date-picker-label')?.addEventListener('click', () => picker.showPicker?.());
 
   document.getElementById('prev-date').addEventListener('click', () => {
     const idx = STATE.availableDates.indexOf(STATE.currentDate);

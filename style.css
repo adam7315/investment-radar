@@ -88,16 +88,33 @@ a:hover { text-decoration: underline; }
   font-size: 13px;
   font-weight: 600;
 }
-.date-input {
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
+.date-display {
   font-size: 13px;
-  cursor: pointer;
+  font-weight: 600;
+  color: var(--text2);
+  padding: 0 4px;
 }
-.date-input::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.6; }
+.date-picker-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  padding: 4px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg3);
+}
+.date-picker-label:hover { background: var(--border); }
+.date-input-hidden {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+/* 點選 label 時觸發 hidden input */
+.date-picker-label:focus-within { border-color: var(--accent2); }
 
 /* ── Status Bar ──────────────────────────────── */
 .status-bar {
@@ -266,31 +283,22 @@ a:hover { text-decoration: underline; }
 .stock-card:hover { border-color: var(--accent2); box-shadow: var(--shadow); }
 .stock-card.active { border-color: var(--accent2); box-shadow: 0 0 0 3px rgba(49,130,206,0.12); background: #f0f7ff; }
 
-.card-head { display: flex; align-items: center; gap: 6px; }
-.card-code { font-size: 10px; color: var(--text3); font-family: monospace; background: var(--bg3); padding: 1px 5px; border-radius: 3px; }
-.card-fire { font-size: 12px; }
-.card-name { font-size: 14px; font-weight: 700; color: var(--text); }
-
-.card-price { font-size: 15px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
-.card-price.na { font-size: 13px; color: var(--text3); font-weight: 400; }
-
-.card-pct {
-  font-size: 12px; font-weight: 700;
-  padding: 2px 7px; border-radius: 4px;
-  display: inline-block; width: fit-content;
+.card-row1 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: space-between;
 }
-.card-pct.pos { color: var(--buy); background: var(--buy-bg); }
-.card-pct.neg { color: var(--sell); background: var(--sell-bg); }
-.card-pct.flat { color: var(--text3); background: var(--bg3); }
-
-.card-footer {
+.card-row2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 4px;
+  margin-top: 2px;
 }
-.card-news-count { font-size: 11px; color: var(--text3); }
-.card-tags-row { display: flex; gap: 4px; }
+.card-code { font-size: 10px; color: var(--text3); font-family: monospace; }
+.card-name { font-size: 13px; font-weight: 700; color: var(--text); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-news-count { font-size: 11px; color: var(--accent); }
+.card-tags-row { display: flex; gap: 3px; flex-shrink: 0; }
 
 .tag-btn {
   background: none;

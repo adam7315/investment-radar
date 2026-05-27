@@ -19,7 +19,10 @@
     </div>
     <div class="header-nav">
       <button class="nav-btn" id="prev-date" title="上一天">&#8249;</button>
-      <input type="date" id="date-picker" class="date-input">
+      <span id="date-display" class="date-display">—</span>
+      <label class="date-picker-label" title="選擇日期">
+        📅<input type="date" id="date-picker" class="date-input-hidden">
+      </label>
       <button class="nav-btn" id="next-date" title="下一天">&#8250;</button>
       <button class="nav-btn nav-today" id="goto-today">今日</button>
     </div>
