@@ -264,7 +264,7 @@ a:hover { text-decoration: underline; }
 /* ── Stock Cards Grid ────────────────────────── */
 .stock-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   gap: 5px;
 }
 .card-group-hdr {
@@ -323,8 +323,8 @@ a:hover { text-decoration: underline; }
 }
 .card-tag-sm:hover { opacity: 0.8; }
 .card-tag-sm.active-watch, .card-tag-sm.active-own { opacity: 1; }
-.card-code { font-size: 10px; color: var(--text3); font-family: monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; flex-shrink: 1; }
-.card-name { font-size: 11px; font-weight: 700; color: var(--text); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-code { font-size: 10px; color: var(--text3); font-family: monospace; flex-shrink: 0; white-space: nowrap; }
+.card-name { font-size: 11px; font-weight: 700; color: var(--text); flex: 1; overflow: hidden; }
 .card-news-count { font-size: 10px; color: var(--accent); }
 .card-tags-row { display: flex; gap: 3px; flex-shrink: 0; }
 

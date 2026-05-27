@@ -199,36 +199,68 @@ def fetch_price(code, market="TW"):
     return {}
 
 
-# ── FinMind 三大法人 ────────────────────────────────────────────
-def fetch_institutional(code, market="TW"):
+# ── 三大法人（TWSE + TPEX 免費 API，一次預載）──────────────────
+def prefetch_institutional_all():
+    """一次抓取所有上市／上櫃三大法人買賣超，回傳 {code: {foreign_net, trust_net, dealer_net}}"""
+    result = {}
+
+    def to_net(s):
+        try:
+            return int(str(s).replace(",", "").replace(" ", ""))
+        except Exception:
+            return 0
+
+    # ── 上市 TWSE T86 ──
     try:
-        token = os.environ.get("FINMIND_TOKEN", "")
-        if not token:
-            return {}
-        url = "https://api.finmindtrade.com/api/v4/data"
-        params = {
-            "dataset":    "TaiwanStockInstitutionalInvestorsBuySell",
-            "data_id":    code,
-            "start_date": TODAY,
-            "end_date":   TODAY,
-            "token":      token,
-        }
-        r    = requests.get(url, params=params, timeout=10)
-        data = r.json().get("data", [])
-        result = {}
-        for row in data:
-            name_r = row.get("name", "")
-            net    = (row.get("buy", 0) - row.get("sell", 0)) // 1000
-            if "外資" in name_r:
-                result["foreign_net"] = net
-            elif "投信" in name_r:
-                result["trust_net"] = net
-            elif "自營" in name_r:
-                result["dealer_net"] = net
-        return result
+        r = requests.get(
+            "https://www.twse.com.tw/fund/T86",
+            params={"response": "json", "date": NOW.date().strftime("%Y%m%d"),
+                    "selectType": "ALL", "_": int(time.time() * 1000)},
+            headers=HEADERS, timeout=15
+        )
+        data = r.json()
+        if data.get("stat") == "OK":
+            for row in data.get("data", []):
+                if len(row) < 17:
+                    continue
+                code = row[0].strip()
+                result[code] = {
+                    "foreign_net": to_net(row[4])  // 1000,
+                    "trust_net":   to_net(row[10]) // 1000,
+                    "dealer_net":  (to_net(row[13]) + to_net(row[16])) // 1000,
+                }
+            print(f"  TWSE 三大法人：{len(result)} 支")
+        else:
+            print(f"  [WARN] TWSE T86 stat={data.get('stat')}")
     except Exception as e:
-        print(f"  [WARN] 法人資料失敗 {code}: {e}")
-        return {}
+        print(f"  [WARN] TWSE T86 失敗: {e}")
+
+    # ── 上櫃 TPEX ──
+    tpex_n = 0
+    try:
+        r = requests.get(
+            "https://www.tpex.org.tw/web/stock/3insti/daily_trade/3itrade_hedge_result.php",
+            params={"d": NOW.date().strftime("%Y/%m/%d"), "se": "EW",
+                    "t": "D", "o": "json", "_": int(time.time() * 1000)},
+            headers=HEADERS, timeout=15
+        )
+        data = r.json()
+        for row in data.get("aaData", []):
+            if len(row) < 17:
+                continue
+            code = str(row[0]).strip()
+            if code and code not in result:
+                result[code] = {
+                    "foreign_net": to_net(row[4])  // 1000,
+                    "trust_net":   to_net(row[10]) // 1000,
+                    "dealer_net":  (to_net(row[13]) + to_net(row[16])) // 1000,
+                }
+                tpex_n += 1
+        print(f"  TPEX 三大法人：{tpex_n} 支")
+    except Exception as e:
+        print(f"  [WARN] TPEX 三大法人失敗: {e}")
+
+    return result
 
 
 # ── 主流程 ─────────────────────────────────────────────────────
@@ -239,6 +271,10 @@ def main():
     print("  預載通用 RSS feeds...")
     all_feeds = prefetch_general_feeds()
     print(f"  共取得 {len(all_feeds)} 則通用新聞")
+
+    print("  預載三大法人資料...")
+    inst_all = prefetch_institutional_all()
+    print(f"  共取得 {len(inst_all)} 支法人資料")
 
     report = {
         "date":         TODAY,
@@ -254,7 +290,7 @@ def main():
         print(f"  [{code}] {name}...")
 
         price_data = fetch_price(code, market)
-        inst_data  = fetch_institutional(code, market)
+        inst_data  = inst_all.get(code, {})
         news       = fetch_all_news(code, name, market, all_feeds)
         time.sleep(0.3)
 

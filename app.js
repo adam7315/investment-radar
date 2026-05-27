@@ -829,4 +829,29 @@ function showError(msg) {
 }
 
 // ── 啟動 ──────────────────────────────────
+// ── 自動更新：每 5 分鐘檢查今日是否有新報告 ──────────────────────
+function startAutoRefresh() {
+  setInterval(async () => {
+    try {
+      const today = toIso(new Date());
+      if(STATE.currentDate !== today) return;  // 非今日不自動刷
+      const idx = await fetchJSON('./data/reports/index.json');
+      const latest = idx.latest || '';
+      if(latest === today && !STATE.report) {
+        // 之前沒資料，現在有了
+        await loadDate(today);
+        showToast('今日資料已更新', 'ok');
+      } else if(latest === today && STATE.report) {
+        // 已有資料，確認 collected_at 是否更新
+        const fresh = await fetchJSON(`./data/reports/${today}.json`);
+        if(fresh.collected_at !== STATE.report.collected_at) {
+          STATE.report = fresh;
+          renderAll();
+          showToast('今日資料已重新整理', 'ok');
+        }
+      }
+    } catch(e) { /* 靜默失敗 */ }
+  }, 5 * 60 * 1000);
+}
 init();
+startAutoRefresh();

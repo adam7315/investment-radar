@@ -1,6 +1,6 @@
 {
   "maintained_by": "Claude",
-  "updated": "2026-05-19",
+  "updated": "2026-05-27",
   "chains": {
     "5274": {
       "name": "信驊科技",
@@ -67,8 +67,14 @@
         }
       ],
       "competitors": [
-        { "name": "Renesas BMC", "note": "主要競爭者，市占較小" },
-        { "name": "AMI（American Megatrends）", "note": "軟體BMC方案，非直接競品" }
+        {
+          "name": "Renesas BMC",
+          "note": "主要競爭者，市占較小"
+        },
+        {
+          "name": "AMI（American Megatrends）",
+          "note": "軟體BMC方案，非直接競品"
+        }
       ],
       "key_risks": [
         "SMCI庫存水位若偏高→砍單風險",
@@ -138,9 +144,18 @@
         }
       ],
       "competitors": [
-        { "name": "GlobalFoundries", "note": "美國成熟製程，英特爾合作潛在對手" },
-        { "name": "中芯國際（SMIC）", "note": "中國成熟製程，地緣風險" },
-        { "name": "世界先進（5347）", "note": "台灣成熟製程，功率元件重疊" }
+        {
+          "name": "GlobalFoundries",
+          "note": "美國成熟製程，英特爾合作潛在對手"
+        },
+        {
+          "name": "中芯國際（SMIC）",
+          "note": "中國成熟製程，地緣風險"
+        },
+        {
+          "name": "世界先進（5347）",
+          "note": "台灣成熟製程，功率元件重疊"
+        }
       ],
       "key_risks": [
         "成熟製程漲價若無法實現→毛利率難提升",
@@ -194,8 +209,14 @@
         }
       ],
       "competitors": [
-        { "name": "玉晶光（6491）", "note": "台灣第二大，毛利率差距大" },
-        { "name": "舜宇光學（2382.HK）", "note": "中國最大，中低階市場" }
+        {
+          "name": "玉晶光（6491）",
+          "note": "台灣第二大，毛利率差距大"
+        },
+        {
+          "name": "舜宇光學（2382.HK）",
+          "note": "中國最大，中低階市場"
+        }
       ],
       "key_risks": [
         "Apple自製鏡頭模組風險",
@@ -215,11 +236,31 @@
       "upstream": [],
       "downstream": [],
       "top_holdings": [
-        { "code": "2330", "name": "台積電", "weight": "約35%" },
-        { "code": "2454", "name": "聯發科", "weight": "約8%" },
-        { "code": "2382", "name": "廣達", "weight": "約4%" },
-        { "code": "2317", "name": "鴻海", "weight": "約3%" },
-        { "code": "2303", "name": "聯電", "weight": "潛力候補" }
+        {
+          "code": "2330",
+          "name": "台積電",
+          "weight": "約35%"
+        },
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "weight": "約8%"
+        },
+        {
+          "code": "2382",
+          "name": "廣達",
+          "weight": "約4%"
+        },
+        {
+          "code": "2317",
+          "name": "鴻海",
+          "weight": "約3%"
+        },
+        {
+          "code": "2303",
+          "name": "聯電",
+          "weight": "潛力候補"
+        }
       ],
       "key_risks": [
         "主動選股若持續落後0050→資金外流",
@@ -239,11 +280,31 @@
       "upstream": [],
       "downstream": [],
       "top_holdings": [
-        { "code": "2330", "name": "台積電", "weight": "約47%" },
-        { "code": "2454", "name": "聯發科", "weight": "約7%" },
-        { "code": "2382", "name": "廣達", "weight": "約4%" },
-        { "code": "2317", "name": "鴻海", "weight": "約3%" },
-        { "code": "2308", "name": "台達電", "weight": "約2%" }
+        {
+          "code": "2330",
+          "name": "台積電",
+          "weight": "約47%"
+        },
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "weight": "約7%"
+        },
+        {
+          "code": "2382",
+          "name": "廣達",
+          "weight": "約4%"
+        },
+        {
+          "code": "2317",
+          "name": "鴻海",
+          "weight": "約3%"
+        },
+        {
+          "code": "2308",
+          "name": "台達電",
+          "weight": "約2%"
+        }
       ],
       "key_risks": [
         "高度集中台積電，台積電若回檔帶動整體下跌",
@@ -253,6 +314,402 @@
         "台積電法說會（每季）",
         "AI需求持續帶動科技成分股",
         "半年配息（7月除息）"
+      ]
+    },
+    "6515": {
+      "name": "穎崴",
+      "position": "半導體 IC 測試介面（Socket）領導廠，高頻高速測試精密機械",
+      "moat": "先進封裝 Socket 技術壁壘高，客製化程度高，交期短，進入門檻極高",
+      "upstream": [],
+      "downstream": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "market": "TW",
+          "dependency": "極高"
+        },
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "market": "TW",
+          "dependency": "中"
+        },
+        {
+          "code": "3661",
+          "name": "世芯-KY",
+          "market": "TWO",
+          "dependency": "中"
+        }
+      ],
+      "key_risks": [
+        "半導體景氣循環影響晶圓廠資本支出",
+        "日系（Yamaichi）與美系（FormFactor）競爭"
+      ],
+      "next_catalysts": [
+        "CoWoS／SoIC 先進封裝測試 Socket 需求爆發",
+        "HBM 記憶體測試介面需求增加",
+        "2nm 製程導入帶動高階 Socket 換機"
+      ]
+    },
+    "7769": {
+      "name": "鴻勁",
+      "position": "AI 伺服器散熱解決方案，浸沒式液冷系統專業廠",
+      "moat": "浸沒式液冷技術門檻高，與 Meta／Google 超大規模資料中心深度合作",
+      "upstream": [],
+      "downstream": [
+        {
+          "code": "6669",
+          "name": "緯穎",
+          "market": "TW",
+          "dependency": "高"
+        },
+        {
+          "code": "2382",
+          "name": "廣達",
+          "market": "TW",
+          "dependency": "中"
+        }
+      ],
+      "key_risks": [
+        "散熱市場競爭激烈（奇鋐、雙鴻、建準）",
+        "浸沒式液冷標準尚未統一",
+        "客戶集中度偏高"
+      ],
+      "next_catalysts": [
+        "GB200 NVL72 強制液冷規格帶動浸沒式需求",
+        "超大規模 CSP 資料中心散熱升級",
+        "歐盟 PUE 法規推動液冷普及"
+      ]
+    },
+    "6223": {
+      "name": "旺矽",
+      "position": "探針卡（Probe Card）台灣龍頭，服務半導體晶圓測試前段",
+      "moat": "先進製程探針卡研發能力強，與台積電深度配合，進入障礙高",
+      "upstream": [],
+      "downstream": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "market": "TW",
+          "dependency": "極高"
+        },
+        {
+          "code": "2303",
+          "name": "聯電",
+          "market": "TW",
+          "dependency": "中"
+        }
+      ],
+      "key_risks": [
+        "台積電資本支出縮減直接衝擊採購量",
+        "日系（Micronics）與美系（FormFactor）競爭"
+      ],
+      "next_catalysts": [
+        "2nm N2 製程量產帶動高階探針卡換機",
+        "先進封裝（CoWoS）測試探針卡需求增加",
+        "台積電 CoWoS 擴產加速採購"
+      ]
+    },
+    "2383": {
+      "name": "台光電",
+      "position": "高階銅箔基板（CCL）製造商，AI 伺服器高頻低損耗基板全球市占第一",
+      "moat": "AI 伺服器用低損耗 CCL 技術領先，進入門檻極高，換機成本大",
+      "upstream": [],
+      "downstream": [
+        {
+          "code": "3037",
+          "name": "欣興電子",
+          "market": "TW",
+          "dependency": "高"
+        },
+        {
+          "code": "3044",
+          "name": "健鼎科技",
+          "market": "TW",
+          "dependency": "高"
+        }
+      ],
+      "key_risks": [
+        "CCL 需求與 AI 伺服器景氣高度連動",
+        "松下（Panasonic）等日系廠商競爭高端市場"
+      ],
+      "next_catalysts": [
+        "800G／1.6T 高速傳輸對低損耗 CCL 需求提升",
+        "AI 伺服器 PCB 層數增加帶動用量",
+        "CoWoS 封裝基板導入新材料規格"
+      ]
+    },
+    "3443": {
+      "name": "創意",
+      "position": "IC 設計服務（ASIC）及客製化晶片設計，台積電策略持股公司",
+      "moat": "台積電策略持股，優先取得先進製程產能，ASIC 設計門檻高",
+      "upstream": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "market": "TW",
+          "dependency": "極高"
+        }
+      ],
+      "downstream": [],
+      "key_risks": [
+        "Hyperscaler 客戶自建 IC 設計能力",
+        "AI ASIC 競爭激烈（Broadcom、Marvell）"
+      ],
+      "next_catalysts": [
+        "AI ASIC 客製化晶片訂單爆發",
+        "台積電 N3P／N2 新製程帶動設計服務需求",
+        "HPC 高效能運算客製化持續成長"
+      ]
+    },
+    "6669": {
+      "name": "緯穎",
+      "position": "AI／HPC 伺服器 ODM 龍頭，Microsoft Azure 首要供應商",
+      "moat": "與 Microsoft 長達十年以上深度合作，AI 伺服器整機設計整合能力強",
+      "upstream": [
+        {
+          "code": "5274",
+          "name": "信驊科技",
+          "market": "TWO",
+          "dependency": "高"
+        },
+        {
+          "code": "2383",
+          "name": "台光電",
+          "market": "TW",
+          "dependency": "中"
+        },
+        {
+          "code": "3017",
+          "name": "奇鋐",
+          "market": "TW",
+          "dependency": "中"
+        }
+      ],
+      "downstream": [],
+      "key_risks": [
+        "客戶集中度極高（Microsoft 佔比超過 70%）",
+        "NVIDIA GPU 供應鏈瓶頸影響出貨"
+      ],
+      "next_catalysts": [
+        "GB200 NVL72 大量出貨（2025H2）",
+        "Microsoft Azure 資料中心持續擴建",
+        "新一代 MGX 規格伺服器導入"
+      ]
+    },
+    "2059": {
+      "name": "川湖",
+      "position": "伺服器機櫃滑軌全球市占第一，資料中心精密機械零件",
+      "moat": "精密機械製造壁壘高，與 Dell／HPE 等大廠長期 ODM 合作，規格認證成本高",
+      "upstream": [],
+      "downstream": [
+        {
+          "code": "6669",
+          "name": "緯穎",
+          "market": "TW",
+          "dependency": "高"
+        },
+        {
+          "code": "2382",
+          "name": "廣達",
+          "market": "TW",
+          "dependency": "中"
+        },
+        {
+          "code": "2356",
+          "name": "英業達",
+          "market": "TW",
+          "dependency": "中"
+        }
+      ],
+      "key_risks": [
+        "資料中心建置放緩影響伺服器出貨",
+        "機殼廠（勤誠、緯創）競爭"
+      ],
+      "next_catalysts": [
+        "AI 伺服器出貨帶動高端重型滑軌需求",
+        "GB200 NVL72 機架設計帶動滑軌規格升級",
+        "資料中心新建投資維持高位"
+      ]
+    },
+    "2454": {
+      "name": "聯發科",
+      "position": "全球第二大手機 SoC 設計廠，積極布局 AI 邊緣運算與車用晶片",
+      "moat": "高整合度 SoC 設計能力，龐大研發團隊，中低階市場市占極高",
+      "upstream": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "market": "TW",
+          "dependency": "極高"
+        }
+      ],
+      "downstream": [],
+      "key_risks": [
+        "高通（Qualcomm）競爭旗艦 SoC 市場",
+        "中國手機市場成長趨緩"
+      ],
+      "next_catalysts": [
+        "AI 手機換機潮（On-device AI 需求）",
+        "Dimensity 9400 旗艦 SoC 市占擴大",
+        "車用晶片（Dimensity Auto）量產出貨"
+      ]
+    },
+    "3661": {
+      "name": "世芯-KY",
+      "position": "高效能運算 ASIC 客製化設計，服務全球頂級 CSP 雲端業者",
+      "moat": "與 Amazon AWS、Google 等 Hyperscaler 長期合作，先進製程資源優先",
+      "upstream": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "market": "TW",
+          "dependency": "極高"
+        }
+      ],
+      "downstream": [],
+      "key_risks": [
+        "客戶自建 ASIC 設計能力",
+        "地緣政治風險（開曼群島登記）",
+        "先進製程產能分配競爭"
+      ],
+      "next_catalysts": [
+        "AI ASIC 訂單量放（次世代 TPU／Trainium）",
+        "N3／N2 製程客製化晶片導入",
+        "CSP 雲端資本支出持續高成長"
+      ]
+    },
+    "2330": {
+      "name": "台積電",
+      "position": "全球先進製程晶圓代工絕對龍頭，N3／N2 製程與 CoWoS 先進封裝",
+      "moat": "先進製程技術領先競爭對手 2～3 年，AI 晶片客戶生態系護城河極深",
+      "upstream": [
+        {
+          "code": "ASML",
+          "name": "ASML（EUV 微影）",
+          "market": "NASDAQ",
+          "dependency": "極高"
+        }
+      ],
+      "downstream": [
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "market": "TW",
+          "dependency": "高"
+        },
+        {
+          "code": "3443",
+          "name": "創意",
+          "market": "TWO",
+          "dependency": "高"
+        },
+        {
+          "code": "3661",
+          "name": "世芯-KY",
+          "market": "TWO",
+          "dependency": "高"
+        }
+      ],
+      "key_risks": [
+        "地緣政治風險（台海情勢）",
+        "CoWoS 先進封裝產能若不足影響 AI 晶片出貨",
+        "Intel Foundry、三星追趕先進製程"
+      ],
+      "next_catalysts": [
+        "N2 製程 2025 年量產，良率提升",
+        "CoWoS 擴產滿足 NVIDIA H200／B200 需求",
+        "Arizona P2 廠量產（2026 年）"
+      ]
+    },
+    "2327": {
+      "name": "國巨",
+      "position": "全球第三大被動元件廠，高階車用／工業 MLCC 與電阻",
+      "moat": "高規格車用 AEC-Q200 MLCC 技術，長交期與高黏著度客戶",
+      "upstream": [],
+      "downstream": [],
+      "key_risks": [
+        "被動元件景氣循環性強，庫存修正壓力",
+        "日系廠商（村田、TDK）競爭激烈",
+        "中國大陸廠商低價競爭消費性市場"
+      ],
+      "next_catalysts": [
+        "電動車 MLCC 用量是燃油車 3～5 倍，長期結構性成長",
+        "工業 AI 設備升級帶動高階 MLCC 需求",
+        "庫存回補週期啟動"
+      ]
+    },
+    "3017": {
+      "name": "奇鋐",
+      "position": "AI 伺服器散熱，風冷＋液冷均衡布局，台灣本土散熱龍頭",
+      "moat": "與台灣 ODM 廠商深度整合，快速交期與客製化優勢",
+      "upstream": [],
+      "downstream": [
+        {
+          "code": "6669",
+          "name": "緯穎",
+          "market": "TW",
+          "dependency": "高"
+        },
+        {
+          "code": "2356",
+          "name": "英業達",
+          "market": "TW",
+          "dependency": "中"
+        },
+        {
+          "code": "2382",
+          "name": "廣達",
+          "market": "TW",
+          "dependency": "中"
+        }
+      ],
+      "key_risks": [
+        "浸沒式液冷若快速普及衝擊傳統風冷",
+        "散熱市場競爭激烈（雙鴻、建準、健策）"
+      ],
+      "next_catalysts": [
+        "GB200 NVL72 液冷散熱模組出貨",
+        "直接液冷（DLC）CDU 機組商機擴大"
+      ]
+    },
+    "8299": {
+      "name": "群聯",
+      "position": "全球第二大 NAND Flash 控制 IC 設計廠，自有品牌（Phison）",
+      "moat": "全端儲存解決方案，PCIe Gen5 技術領先，與 NAND Flash 廠緊密合作",
+      "upstream": [
+        {
+          "code": "MU",
+          "name": "美光（Micron）",
+          "market": "NASDAQ",
+          "dependency": "高"
+        }
+      ],
+      "downstream": [],
+      "key_risks": [
+        "NAND Flash 價格波動影響終端需求",
+        "Samsung 自研控制 IC 競爭"
+      ],
+      "next_catalysts": [
+        "AI 伺服器 PCIe Gen5 企業 SSD 需求爆發",
+        "PC AI 運算本地儲存需求增加"
+      ]
+    },
+    "3481": {
+      "name": "群創",
+      "position": "全球第四大 LCD 面板廠，大尺寸電視與 IT 面板",
+      "moat": "大尺寸 LCD 規模經濟，與品牌廠長期供貨關係",
+      "upstream": [],
+      "downstream": [],
+      "key_risks": [
+        "LCD 面板價格週期性劇烈波動",
+        "OLED 面板逐步替代中階 LCD",
+        "中國京東方（BOE）大規模擴產競爭"
+      ],
+      "next_catalysts": [
+        "IT 面板（監視器／筆電）需求回升",
+        "Mini LED 背光高階面板 ASP 提升",
+        "面板價格進入上行週期"
       ]
     }
   }
