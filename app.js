@@ -11,8 +11,13 @@ const STATE = {
   _allNews:       []
 };
 
-// 前十大高價股（固定）
-const TOP10 = ['5274','6515','7769','6223','2383','3443','6669','2059','2454','3661'];
+function getTop10Codes(stocks) {
+  return Object.entries(stocks)
+    .filter(([, d]) => d.price?.price)
+    .sort((a, b) => (b[1].price.price || 0) - (a[1].price.price || 0))
+    .slice(0, 10)
+    .map(([code]) => code);
+}
 
 // 全部顯示順序：高價股 → 個人持倉 → ETF
 const STOCK_ORDER = [
@@ -198,7 +203,10 @@ function allSortedCodes(stocks) {
 function filterByCat(stocks) {
   const cats  = loadUserCats();
   const codes = allSortedCodes(stocks);
-  if(STATE.activeCat === 'top10') return codes.filter(c => TOP10.includes(c));
+  if(STATE.activeCat === 'top10') {
+    const _ft10 = new Set(getTop10Codes(stocks));
+    return codes.filter(c => _ft10.has(c));
+  }
   if(STATE.activeCat === 'watch') return codes.filter(c => cats[c] === 'watch');
   if(STATE.activeCat === 'own')   return codes.filter(c => cats[c] === 'own');
   return codes;
@@ -207,7 +215,8 @@ function filterByCat(stocks) {
 function updateCatCounts(stocks) {
   const cats  = loadUserCats();
   const codes = allSortedCodes(stocks);
-  document.getElementById('cnt-top10').textContent = codes.filter(c => TOP10.includes(c)).length;
+  const _ct10 = new Set(getTop10Codes(stocks));
+  document.getElementById('cnt-top10').textContent = codes.filter(c => _ct10.has(c)).length;
   document.getElementById('cnt-watch').textContent = codes.filter(c => cats[c] === 'watch').length;
   document.getElementById('cnt-own').textContent   = codes.filter(c => cats[c] === 'own').length;
   document.getElementById('cnt-all').textContent   = codes.length;
@@ -242,10 +251,14 @@ function renderStockGrid(stocks) {
   const cats = loadUserCats();
 
   if(STATE.activeCat === 'all') {
-    const top10 = STOCK_ORDER.filter(c => TOP10.includes(c) && stocks[c]);
+    const _rt10 = new Set(getTop10Codes(stocks));
+    const top10 = [
+      ...STOCK_ORDER.filter(c => _rt10.has(c) && stocks[c]),
+      ...Array.from(_rt10).filter(c => !STOCK_ORDER.includes(c) && stocks[c])
+    ];
     const others = [
-      ...STOCK_ORDER.filter(c => !TOP10.includes(c) && stocks[c]),
-      ...Object.keys(stocks).filter(c => !STOCK_ORDER.includes(c))
+      ...STOCK_ORDER.filter(c => !_rt10.has(c) && stocks[c]),
+      ...Object.keys(stocks).filter(c => !STOCK_ORDER.includes(c) && !_rt10.has(c))
     ];
     let html = '';
     if(top10.length) {
