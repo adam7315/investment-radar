@@ -51,7 +51,14 @@ function formatNewsDate(d) {
     const day = parseInt(d.slice(8, 10));
     return `${m}月${day}日`;
   }
-  return d;
+  // Full RFC 2822 "Mon, 25 May 2026 ..." → "5月25日"
+  const _months = {jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12};
+  const _m = d.match(/(\d{1,2})\s+([A-Za-z]{3,})/);
+  if(_m) {
+    const month = _months[_m[2].slice(0,3).toLowerCase()];
+    if(month) return `${month}月${parseInt(_m[1])}日`;
+  }
+  return '';
 }
 
 function fmtDateTime(dt) {
