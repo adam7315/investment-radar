@@ -214,47 +214,64 @@ function updateCatCounts(stocks) {
 }
 
 // ── 個股卡片 Grid ────────────────────────
+function renderCard(code, d, cats) {
+  const score   = d.attention_score || 0;
+  const newsN   = (d.news || []).length;
+  const userCat = cats[code];
+  const isActive = STATE.activeStock === code;
+  const fire = score >= 5 ? '🔥' : score >= 4 ? '⚡' : '';
+  return `<div class="stock-card${isActive ? ' active' : ''}" data-code="${code}" onclick="selectStock('${code}')">
+    <div class="card-row1">
+      ${fire ? `<span class="card-fire">${fire}</span>` : ''}
+      <span class="card-name">${d.name}</span>
+      <button class="tag-btn${userCat === 'watch' ? ' active-watch' : ''}"
+        onclick="event.stopPropagation();toggleCardCat('${code}','watch')" title="關注">⭐</button>
+      <button class="tag-btn${userCat === 'own' ? ' active-own' : ''}"
+        onclick="event.stopPropagation();toggleCardCat('${code}','own')" title="持股">💼</button>
+    </div>
+    <div class="card-row2">
+      <span class="card-code">${code}</span>
+      ${newsN ? `<span class="card-news-count">📰${newsN}</span>` : ''}
+    </div>
+  </div>`;
+}
+
 function renderStockGrid(stocks) {
   const grid = document.getElementById('stock-grid');
   updateCatCounts(stocks);
-  const codes = filterByCat(stocks);
-  const cats  = loadUserCats();
+  const cats = loadUserCats();
 
-  if(!codes.length) {
-    const emptyMsg = STATE.activeCat === 'watch'
-      ? '尚未標記任何關注股票，點擊股票卡片右下角 ⭐ 來標記'
-      : STATE.activeCat === 'own'
-      ? '尚未標記任何持股，點擊股票卡片右下角 💼 來標記'
-      : '今日尚無個股資料';
-    grid.innerHTML = `<div style="grid-column:1/-1;padding:40px;color:var(--text3);font-size:14px;text-align:center">${emptyMsg}</div>`;
+  if(STATE.activeCat === 'all') {
+    const top10 = STOCK_ORDER.filter(c => TOP10.includes(c) && stocks[c]);
+    const others = [
+      ...STOCK_ORDER.filter(c => !TOP10.includes(c) && stocks[c]),
+      ...Object.keys(stocks).filter(c => !STOCK_ORDER.includes(c))
+    ];
+    let html = '';
+    if(top10.length) {
+      html += `<div class="card-group-hdr">前十大高價股</div>`;
+      html += top10.map(c => renderCard(c, stocks[c], cats)).join('');
+    }
+    if(others.length) {
+      html += `<div class="card-group-hdr">其他追蹤</div>`;
+      html += others.map(c => renderCard(c, stocks[c], cats)).join('');
+    }
+    if(!html) html = `<div style="grid-column:1/-1;padding:40px;color:var(--text3);font-size:14px;text-align:center">今日尚無個股資料</div>`;
+    grid.innerHTML = html;
     return;
   }
 
-  grid.innerHTML = codes.map(code => {
-    const d       = stocks[code];
-    const score   = d.attention_score || 0;
-    const newsN   = (d.news || []).length;
-    const userCat = cats[code];
-    const isActive = STATE.activeStock === code;
-    const fire = score >= 5 ? '🔥 ' : score >= 4 ? '⚡ ' : '';
-
-    return `<div class="stock-card${isActive ? ' active' : ''}" data-code="${code}" onclick="selectStock('${code}')">
-      <div class="card-row1">
-        <span class="card-name">${fire}${d.name}</span>
-        <div class="card-tags-row">
-          <button class="tag-btn${userCat === 'watch' ? ' active-watch' : ''}"
-            onclick="event.stopPropagation();toggleCardCat('${code}','watch')" title="關注">⭐</button>
-          <button class="tag-btn${userCat === 'own' ? ' active-own' : ''}"
-            onclick="event.stopPropagation();toggleCardCat('${code}','own')" title="持股">💼</button>
-        </div>
-      </div>
-      <div class="card-row2">
-        <span class="card-code">${code}</span>
-        ${newsN ? `<span class="card-news-count">📰 ${newsN}</span>` : ''}
-      </div>
-    </div>`;
-  }).join('');
+  const codes = filterByCat(stocks);
+  if(!codes.length) {
+    const msg = STATE.activeCat === 'watch' ? '點卡片右上角 ⭐ 來標記關注'
+              : STATE.activeCat === 'own'   ? '點卡片右上角 💼 來標記持股'
+              : '今日尚無個股資料';
+    grid.innerHTML = `<div style="grid-column:1/-1;padding:40px;color:var(--text3);font-size:14px;text-align:center">${msg}</div>`;
+    return;
+  }
+  grid.innerHTML = codes.map(c => renderCard(c, stocks[c], cats)).join('');
 }
+
 
 // ── 分類操作 ──────────────────────────────
 function toggleCardCat(code, cat) {
