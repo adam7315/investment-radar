@@ -120,6 +120,7 @@ async function loadDate(date) {
   try {
     STATE.report = await fetchJSON(`./data/reports/${date}.json`);
     renderAll();
+    restoreLiveStocks();
   } catch(e) {
     hideLoading();
     if(STATE.availableDates.includes(date)) {
@@ -583,37 +584,116 @@ function setupDatePicker() {
   });
 }
 
-// ── 新增追蹤 / 跳至個股 ──────────────────
+// ── 新增追蹤 / 即時搜尋 ──────────────────
 function setupWatchlistAdd() {
   const btn   = document.getElementById('add-stock-btn');
   const input = document.getElementById('add-stock-input');
-
-  const doAdd = () => {
+  const doAdd = async () => {
     const code = input.value.trim().toUpperCase();
     if(!code) return;
+    input.value = '';
     const stocks = STATE.report?.stocks || {};
     if(stocks[code]) {
-      // 今日資料已有此股 → 直接跳至
       selectStockAndScroll(code);
-      showToast(`已切換到 ${code} ${stocks[code].name}`, 'ok');
-    } else {
-      // 今日資料無此股 → 加入 localStorage 追蹤清單
-      try {
-        const saved = JSON.parse(localStorage.getItem('watchlist_extra') || '[]');
-        if(!saved.includes(code)) {
-          saved.push(code);
-          localStorage.setItem('watchlist_extra', JSON.stringify(saved));
-          showToast(`✓ ${code} 已加入追蹤，明日資料更新後顯示`, 'ok');
-        } else {
-          showToast(`${code} 已在追蹤清單中`, 'warn');
-        }
-      } catch(e) {}
+      showToast(`已跳至 ${code} ${stocks[code].name}`, 'ok');
+      return;
     }
-    input.value = '';
+    showToast(`🔍 搜尋 ${code} 中...`, 'info');
+    btn.disabled = true;
+    const data = await fetchStockLive(code);
+    btn.disabled = false;
+    if(!data) {
+      showToast(`找不到 ${code}，請確認代號是否正確`, 'warn');
+      return;
+    }
+    if(!STATE.report) return;
+    STATE.report.stocks[code] = data;
+    // 存入 localStorage
+    try {
+      const live = JSON.parse(localStorage.getItem('live_stocks') || '{}');
+      live[code] = { name: data.name, market: data._market || 'TW' };
+      localStorage.setItem('live_stocks', JSON.stringify(live));
+    } catch(e) {}
+    renderStockGrid(STATE.report.stocks);
+    renderNewsList(STATE.report.stocks);
+    selectStockAndScroll(code);
+    showToast(`✓ ${code} ${data.name} 已加入`, 'ok');
   };
-
   btn.addEventListener('click', doAdd);
   input.addEventListener('keydown', e => { if(e.key === 'Enter') doAdd(); });
+}
+
+// ── 即時抓取股票資料（TWSE MIS API）────────
+async function fetchStockLive(code) {
+  const tries = [
+    { market: 'TW',  ex: 'tse' },
+    { market: 'TWO', ex: 'otc' },
+  ];
+  for(const { market, ex } of tries) {
+    try {
+      const url = `https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=${ex}_${code.toLowerCase()}.tw&json=1&delay=0`;
+      const r = await fetch(url);
+      const d = await r.json();
+      const info = d?.msgArray?.[0];
+      if(!info || !info.n || info.n === '-') continue;
+      const rawZ = parseFloat(info.z);
+      const rawY = parseFloat(info.y);
+      const price  = isNaN(rawZ) ? rawY : rawZ;
+      const prev   = isNaN(rawY) ? price : rawY;
+      const change = isNaN(price) ? 0 : +(price - prev).toFixed(2);
+      const pct    = (prev && !isNaN(price)) ? +((change / prev) * 100).toFixed(2) : 0;
+      const name   = info.n;
+      const news   = await fetchNewsLive(code, name);
+      return {
+        name,
+        type: 'stock',
+        tags: ['即時查詢'],
+        price: (!isNaN(price) && price > 0) ? { price, change, change_pct: pct } : {},
+        institutional: {},
+        news,
+        attention_score: 0,
+        signal_type: '即時查詢',
+        attention_reason: '由使用者即時新增，新聞為 Google News 即時搜尋',
+        news_summary: '',
+        _market: market,
+        _live: true,
+      };
+    } catch(e) { /* try next */ }
+  }
+  return null;
+}
+
+// ── 即時抓取 Google News RSS（透過 CORS proxy）──
+async function fetchNewsLive(code, name) {
+  try {
+    const q = encodeURIComponent(`${name} 股票`);
+    const rss = `https://news.google.com/rss/search?q=${q}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant`;
+    const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(rss)}`;
+    const r = await fetch(proxy, { signal: AbortSignal.timeout(8000) });
+    const xml = await r.text();
+    const doc = new DOMParser().parseFromString(xml, 'text/xml');
+    return Array.from(doc.querySelectorAll('item')).slice(0, 8).map(item => ({
+      title:  item.querySelector('title')?.textContent  || '',
+      url:    item.querySelector('link')?.textContent   || '',
+      date:   item.querySelector('pubDate')?.textContent|| '',
+      source: 'Google News',
+    })).filter(n => n.title);
+  } catch(e) { return []; }
+}
+
+// ── 還原 localStorage 即時股票（每次載入報告後）──
+async function restoreLiveStocks() {
+  if(!STATE.report) return;
+  const live = JSON.parse(localStorage.getItem('live_stocks') || '{}');
+  const stocks = STATE.report.stocks;
+  const missing = Object.entries(live).filter(([c]) => !stocks[c]);
+  if(!missing.length) return;
+  for(const [code] of missing) {
+    const data = await fetchStockLive(code);
+    if(data) stocks[code] = data;
+  }
+  renderStockGrid(stocks);
+  renderNewsList(stocks);
 }
 
 // ── Toast ─────────────────────────────────
