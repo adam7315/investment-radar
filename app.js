@@ -45,18 +45,19 @@ function isoToDisplay(iso) {
 
 function formatNewsDate(d) {
   if(!d) return '';
-  // ISO "2026-05-27" → "5月27日"
+  // ISO "2026-05-27" → "2026年5月27日"
   if(/^\d{4}-\d{2}-\d{2}/.test(d)) {
+    const y   = d.slice(0, 4);
     const m   = parseInt(d.slice(5, 7));
     const day = parseInt(d.slice(8, 10));
-    return `${m}月${day}日`;
+    return `${y}年${m}月${day}日`;
   }
-  // Full RFC 2822 "Mon, 25 May 2026 ..." → "5月25日"
+  // RFC 2822 "Mon, 25 May 2026 ..." → "2026年5月25日"
   const _months = {jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12};
-  const _m = d.match(/(\d{1,2})\s+([A-Za-z]{3,})/);
+  const _m = d.match(/(\d{1,2})\s+([A-Za-z]{3,})\s+(\d{4})/);
   if(_m) {
     const month = _months[_m[2].slice(0,3).toLowerCase()];
-    if(month) return `${month}月${parseInt(_m[1])}日`;
+    if(month) return `${_m[3]}年${month}月${parseInt(_m[1])}日`;
   }
   return '';
 }
