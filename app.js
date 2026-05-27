@@ -203,10 +203,7 @@ function allSortedCodes(stocks) {
 function filterByCat(stocks) {
   const cats  = loadUserCats();
   const codes = allSortedCodes(stocks);
-  if(STATE.activeCat === 'top10') {
-    const _ft10 = new Set(getTop10Codes(stocks));
-    return codes.filter(c => _ft10.has(c));
-  }
+  if(STATE.activeCat === 'top10') return getTop10Codes(stocks).filter(c => stocks[c]);
   if(STATE.activeCat === 'watch') return codes.filter(c => cats[c] === 'watch');
   if(STATE.activeCat === 'own')   return codes.filter(c => cats[c] === 'own');
   return codes;
@@ -252,11 +249,8 @@ function renderStockGrid(stocks) {
   const cats = loadUserCats();
 
   if(STATE.activeCat === 'all') {
-    const _rt10 = new Set(getTop10Codes(stocks));
-    const top10 = [
-      ...STOCK_ORDER.filter(c => _rt10.has(c) && stocks[c]),
-      ...Array.from(_rt10).filter(c => !STOCK_ORDER.includes(c) && stocks[c])
-    ];
+    const top10 = getTop10Codes(stocks).filter(c => stocks[c]);
+    const _rt10 = new Set(top10);
     const others = [
       ...STOCK_ORDER.filter(c => !_rt10.has(c) && stocks[c]),
       ...Object.keys(stocks).filter(c => !STOCK_ORDER.includes(c) && !_rt10.has(c))
