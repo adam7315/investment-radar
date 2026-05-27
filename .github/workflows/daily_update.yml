@@ -1,4 +1,4 @@
-name: 每日資料蒐集
+name: 每日資料蒐集與AI分析
 
 on:
   schedule:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:  # 手動觸發
 
 jobs:
-  collect:
+  collect-and-analyze:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -24,15 +24,20 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Run data collection
+      - name: 收集新聞資料
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: python scripts/collect_data.py
+
+      - name: AI 分析（今日特別關注）
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/analyze.py
 
       - name: Commit & Push
         run: |
           git config user.name  "investment-radar-bot"
           git config user.email "bot@investment-radar"
           git add data/reports/
-          git diff --staged --quiet || git commit -m "📊 每日資料更新 $(date '+%Y-%m-%d')"
+          git diff --staged --quiet || git commit -m "📊 每日更新 $(date '+%Y-%m-%d') — 含AI分析"
           git push

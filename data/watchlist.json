@@ -1,40 +1,25 @@
 {
-  "updated": "2026-05-19",
+  "updated": "2026-05-27",
+  "note": "前十大高價股 + 個人持倉，重複取聯集，共19支",
   "stocks": [
-    {
-      "code": "00403A",
-      "name": "統一台股升級50",
-      "type": "etf",
-      "market": "TW",
-      "tags": ["主動ETF", "台股核心"]
-    },
-    {
-      "code": "0050",
-      "name": "元大台灣50",
-      "type": "etf",
-      "market": "TW",
-      "tags": ["被動ETF", "壓艙石"]
-    },
-    {
-      "code": "2303",
-      "name": "聯電",
-      "type": "stock",
-      "market": "TW",
-      "tags": ["半導體", "成熟製程", "英特爾合作"]
-    },
-    {
-      "code": "5274",
-      "name": "信驊科技",
-      "type": "stock",
-      "market": "TWO",
-      "tags": ["BMC晶片", "AI伺服器", "高成長"]
-    },
-    {
-      "code": "3008",
-      "name": "大立光",
-      "type": "stock",
-      "market": "TW",
-      "tags": ["光學鏡頭", "Apple供應鏈", "CPO"]
-    }
+    { "code": "5274",   "name": "信驊科技",       "type": "stock", "market": "TWO", "tags": ["高價股#1","BMC晶片","AI伺服器"] },
+    { "code": "6515",   "name": "穎崴",           "type": "stock", "market": "TWO", "tags": ["高價股#2","半導體測試"] },
+    { "code": "7769",   "name": "鴻勁",           "type": "stock", "market": "TWO", "tags": ["高價股#3","AI散熱"] },
+    { "code": "6223",   "name": "旺矽",           "type": "stock", "market": "TWO", "tags": ["高價股#4","探針卡","半導體"] },
+    { "code": "2383",   "name": "台光電",         "type": "stock", "market": "TW",  "tags": ["高價股#5","CCL基板","AI伺服器"] },
+    { "code": "3443",   "name": "創意",           "type": "stock", "market": "TWO", "tags": ["高價股#6","IC設計服務"] },
+    { "code": "6669",   "name": "緯穎",           "type": "stock", "market": "TW",  "tags": ["高價股#7","AI伺服器ODM"] },
+    { "code": "2059",   "name": "川湖",           "type": "stock", "market": "TW",  "tags": ["高價股#8","機櫃滑軌","資料中心"] },
+    { "code": "2454",   "name": "聯發科",         "type": "stock", "market": "TW",  "tags": ["高價股#9","IC設計","手機SoC"] },
+    { "code": "3661",   "name": "世芯-KY",        "type": "stock", "market": "TWO", "tags": ["高價股#10","ASIC設計","HPC"] },
+    { "code": "2330",   "name": "台積電",         "type": "stock", "market": "TW",  "tags": ["市值第一","先進製程","CoWoS"] },
+    { "code": "2327",   "name": "國巨",           "type": "stock", "market": "TW",  "tags": ["被動元件","MLCC"] },
+    { "code": "3017",   "name": "奇鋐",           "type": "stock", "market": "TW",  "tags": ["AI散熱","液冷"] },
+    { "code": "8299",   "name": "群聯",           "type": "stock", "market": "TWO", "tags": ["Flash控制IC","SSD"] },
+    { "code": "2303",   "name": "聯電",           "type": "stock", "market": "TW",  "tags": ["成熟製程","晶圓代工"] },
+    { "code": "3481",   "name": "群創",           "type": "stock", "market": "TW",  "tags": ["面板","LCD"] },
+    { "code": "3008",   "name": "大立光",         "type": "stock", "market": "TW",  "tags": ["光學鏡頭","Apple供應鏈"] },
+    { "code": "0050",   "name": "元大台灣50",     "type": "etf",   "market": "TW",  "tags": ["被動ETF","壓艙石"] },
+    { "code": "00403A", "name": "統一台股升級50", "type": "etf",   "market": "TW",  "tags": ["主動ETF","台股核心"] }
   ]
 }

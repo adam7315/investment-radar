@@ -743,6 +743,203 @@ a:hover { text-decoration: underline; }
 /* ── Divider ─────────────────────────────── */
 .divider { height: 1px; background: var(--border); margin: 12px 0; }
 
+/* ── 今日特別關注 ────────────────────────── */
+.attention-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.no-attention {
+  font-size: 14px;
+  color: var(--text3);
+  padding: 20px 0;
+}
+.attention-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.18s;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.attention-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+}
+.attention-card.score-5 { border-left: 3px solid var(--buy); }
+.attention-card.score-4 { border-left: 3px solid var(--watch); }
+.attention-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.att-code {
+  font-size: 11px;
+  font-family: monospace;
+  background: var(--bg3);
+  padding: 2px 7px;
+  border-radius: 4px;
+  color: var(--text3);
+}
+.att-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+.att-pct {
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: auto;
+}
+.att-pct.pos { color: var(--buy); }
+.att-pct.neg { color: var(--sell); }
+.att-stars {
+  font-size: 13px;
+  color: var(--watch);
+  letter-spacing: 1px;
+}
+.att-signal {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-bg);
+  padding: 2px 8px;
+  border-radius: 20px;
+  display: inline-block;
+  width: fit-content;
+}
+.att-reason {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.55;
+}
+
+/* ── Stock Tab: 注意標記與漲跌幅 ─────────── */
+.tab-fire, .tab-alert {
+  font-size: 12px;
+  line-height: 1;
+}
+.stab-pct {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+.stab-pct.pos { color: var(--buy);  background: var(--buy-bg); }
+.stab-pct.neg { color: var(--sell); background: var(--sell-bg); }
+
+/* ── AI 分析區塊 ─────────────────────────── */
+.analysis-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.analysis-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+.price-tag {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+.pct-tag {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.pct-tag.pos { color: var(--buy);  background: var(--buy-bg); }
+.pct-tag.neg { color: var(--sell); background: var(--sell-bg); }
+
+.ai-analysis-block {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ai-analysis-block.score-5 { border-left: 3px solid var(--buy); }
+.ai-analysis-block.score-4 { border-left: 3px solid var(--watch); }
+.ai-score-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.ai-stars {
+  font-size: 14px;
+  color: var(--watch);
+  letter-spacing: 1px;
+}
+.ai-signal-type {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-bg);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+.ai-reason {
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.55;
+}
+.ai-summary {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+/* ── 新聞來源 Badge（替換 tag） ──────────── */
+.panel-news-source {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(91,164,245,0.1);
+  color: var(--accent);
+  border: 1px solid rgba(91,164,245,0.2);
+  flex-shrink: 0;
+  margin-top: 2px;
+  white-space: nowrap;
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.news-list-source {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(91,164,245,0.08);
+  color: var(--accent);
+  border: 1px solid rgba(91,164,245,0.15);
+  flex-shrink: 0;
+  min-width: 60px;
+  max-width: 80px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── 漲跌幅通用色 ────────────────────────── */
+.pos { color: var(--buy); }
+.neg { color: var(--sell); }
+
 /* ── Responsive ──────────────────────────── */
 @media (max-width: 768px) {
   .main { padding: 16px; gap: 24px; }
