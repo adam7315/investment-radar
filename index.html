@@ -10,7 +10,7 @@
 
 <header class="header">
   <div class="header-inner">
-    <div class="header-brand">
+    <div class="brand">
       <span class="brand-icon">📈</span>
       <div>
         <h1 class="brand-title">投資情報雷達</h1>
@@ -26,7 +26,6 @@
   </div>
 </header>
 
-<!-- 狀態列 -->
 <div class="status-bar">
   <div class="status-bar-inner">
     <span class="status-item">
@@ -34,9 +33,9 @@
       <span id="status-text">載入中...</span>
     </span>
     <span class="status-item">📅 <strong id="status-date">—</strong></span>
-    <span class="status-item">🤖 AI分析：<strong id="status-analyzed">—</strong></span>
-    <span class="status-item">📡 資料收集：<strong id="status-collected">—</strong></span>
-    <span class="status-item">📰 今日新聞：<strong id="status-news-count">—</strong> 則</span>
+    <span class="status-item">🤖 AI：<strong id="status-analyzed">—</strong></span>
+    <span class="status-item">📡 收集：<strong id="status-collected">—</strong></span>
+    <span class="status-item">📰 新聞：<strong id="status-news-count">—</strong> 則</span>
   </div>
 </div>
 
@@ -46,46 +45,97 @@
   <section class="section">
     <div class="section-header">
       <h2 class="section-title">🔥 今日特別關注</h2>
-      <span class="section-sub" id="attention-subtitle">AI 每日自動判斷，評分 4~5 顯示</span>
+      <span class="section-sub" id="attention-subtitle">AI 評分 4~5 顯示</span>
     </div>
-    <div id="attention-container" class="attention-grid"></div>
+    <div id="attention-container" class="attention-strip"></div>
   </section>
 
-  <!-- 個股情報（分頁式） -->
+  <!-- 個股情報 -->
   <section class="section">
     <div class="section-header">
       <h2 class="section-title">📊 個股情報</h2>
       <div class="watchlist-manage">
-        <input type="text" id="add-stock-input" class="stock-input" placeholder="輸入代號（如 2330）">
-        <button id="add-stock-btn" class="add-btn">＋</button>
+        <input type="text" id="add-stock-input" class="stock-input" placeholder="跳至股票（如 2330）">
+        <button id="add-stock-btn" class="add-btn">跳至</button>
       </div>
     </div>
 
-    <div class="stock-tab-bar" id="stock-tab-bar"></div>
+    <div class="category-tabs" id="category-tabs">
+      <button class="cat-tab active" data-cat="top10">
+        前十大高價股 <span class="cat-count" id="cnt-top10">10</span>
+      </button>
+      <button class="cat-tab" data-cat="watch">
+        ⭐ 我的關注 <span class="cat-count" id="cnt-watch">0</span>
+      </button>
+      <button class="cat-tab" data-cat="own">
+        💼 我的持股 <span class="cat-count" id="cnt-own">0</span>
+      </button>
+      <button class="cat-tab" data-cat="all">
+        全部 <span class="cat-count" id="cnt-all">—</span>
+      </button>
+    </div>
 
-    <div class="stock-detail-wrap" id="stock-detail-wrap">
-      <div class="sub-tab-bar" id="sub-tab-bar">
-        <button class="sub-tab active" data-panel="analysis">📌 AI分析</button>
-        <button class="sub-tab" data-panel="supply">🔗 供應鏈</button>
-        <button class="sub-tab" data-panel="chips">🏦 籌碼</button>
-        <button class="sub-tab" data-panel="news">📰 新聞</button>
+    <div id="stock-grid" class="stock-grid"></div>
+
+    <!-- 個股詳情面板 -->
+    <div class="detail-panel" id="detail-panel">
+      <div class="detail-header">
+        <span class="detail-code" id="detail-code"></span>
+        <span class="detail-name" id="detail-name"></span>
+        <span class="detail-price" id="detail-price"></span>
+        <span class="detail-pct" id="detail-pct"></span>
+        <div style="margin-left:auto;display:flex;align-items:center;gap:8px;flex-shrink:0">
+          <button class="tag-btn" id="btn-watch" onclick="toggleCategory('watch')">⭐ 關注</button>
+          <button class="tag-btn" id="btn-own" onclick="toggleCategory('own')">💼 已買入</button>
+          <button class="detail-close" onclick="closeDetail()">✕</button>
+        </div>
       </div>
-      <div id="panel-analysis" class="panel-body active"></div>
-      <div id="panel-supply"   class="panel-body"></div>
-      <div id="panel-chips"    class="panel-body"></div>
-      <div id="panel-news"     class="panel-body"></div>
+      <div class="detail-tabs" id="detail-tabs">
+        <button class="dtab active" data-panel="analysis">📌 AI分析</button>
+        <button class="dtab" data-panel="supply">🔗 供應鏈</button>
+        <button class="dtab" data-panel="chips">🏦 籌碼</button>
+        <button class="dtab" data-panel="news">
+          📰 新聞 <span class="dtab-badge" id="news-count-badge"></span>
+        </button>
+      </div>
+      <div id="dp-analysis" class="detail-body active"></div>
+      <div id="dp-supply"   class="detail-body"></div>
+      <div id="dp-chips"    class="detail-body"></div>
+      <div id="dp-news"     class="detail-body"></div>
     </div>
   </section>
 
-  <!-- 新聞聚合（跨股） -->
+  <!-- AI 投資問答 -->
   <section class="section">
     <div class="section-header">
-      <h2 class="section-title">📰 新聞聚合</h2>
+      <h2 class="section-title">🤖 AI 投資問答</h2>
+      <button class="nav-btn" onclick="openApiKeyModal()">⚙️ API Key</button>
     </div>
-    <div class="news-filters" id="news-filters">
-      <button class="filter-btn active" data-filter="all">全部</button>
+    <div style="background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm)">
+      <div class="ai-chat-title">
+        💬 以今日數據為背景，直接提問
+      </div>
+      <div class="ai-quick-btns" id="ai-quick-btns">
+        <button class="ai-quick-btn" onclick="setQ('今日哪支股票最值得關注？請列出前三名並說明原因')">今日必看個股</button>
+        <button class="ai-quick-btn" onclick="setQ('請分析今日外資動向，外資買超最多的股票有何投資含義？')">外資動向</button>
+        <button class="ai-quick-btn" onclick="setQ('今日有哪些重大消息或題材？背後的邏輯是什麼？')">重大消息解析</button>
+        <button class="ai-quick-btn" onclick="setQ('從供應鏈角度分析，今日哪些個股可能受惠或受害？')">供應鏈連動</button>
+      </div>
+      <div id="ai-response" class="ai-response"></div>
+      <div class="ai-input-row" style="margin-top:10px">
+        <input type="text" id="ai-input" class="ai-input" placeholder="問任何關於今日個股的問題，例如：大立光今天適合買入嗎？">
+        <button id="ai-send-btn" class="ai-send-btn" onclick="sendAiQuestion()">送出</button>
+      </div>
     </div>
-    <div id="news-container" class="news-list"></div>
+  </section>
+
+  <!-- 新聞聚合 -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">📰 今日新聞聚合</h2>
+    </div>
+    <div class="news-filter-bar" id="news-filters"></div>
+    <div id="news-container" class="news-all-list"></div>
   </section>
 
 </main>
@@ -94,6 +144,22 @@
   <div class="no-data-icon">📭</div>
   <h3>這天還沒有資料</h3>
   <p>每天 06:00 自動更新</p>
+</div>
+
+<!-- API Key Modal -->
+<div id="modal-apikey" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-title">🔑 設定 Claude API Key</div>
+    <p class="modal-desc">
+      API Key 僅存在您的瀏覽器（localStorage），不會上傳至任何伺服器。<br>
+      前往 <a href="https://console.anthropic.com/" target="_blank" rel="noopener">console.anthropic.com</a> 取得 Key。
+    </p>
+    <input type="password" id="modal-apikey-input" class="modal-input" placeholder="sk-ant-...">
+    <div class="modal-btns">
+      <button class="modal-cancel" onclick="closeApiKeyModal()">取消</button>
+      <button class="modal-save" onclick="saveApiKey()">儲存</button>
+    </div>
+  </div>
 </div>
 
 <script src="app.js"></script>

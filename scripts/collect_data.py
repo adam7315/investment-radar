@@ -153,23 +153,33 @@ def fetch_all_news(code, name, market, all_feeds, max_total=12):
 
 # ── Yahoo Finance 股價 ───────────────────────────────────────────
 def fetch_price(code, market="TW"):
-    try:
-        if market in ("TW", "TWO"):
-            suffix  = ".TWO" if market == "TWO" else ".TW"
-            yf_code = code.upper() + suffix
-        else:
-            yf_code = code
-        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{yf_code}"
-        r   = requests.get(url, headers=HEADERS, timeout=10)
-        meta = r.json()["chart"]["result"][0]["meta"]
-        price  = meta.get("regularMarketPrice", 0)
-        prev   = meta.get("previousClose", 0)
-        change = round(price - prev, 2)
-        pct    = round((change / prev * 100) if prev else 0, 2)
-        return {"price": price, "change": change, "change_pct": pct}
-    except Exception as e:
-        print(f"  [WARN] 股價失敗 {code}: {e}")
-        return {}
+    # TWO 先試 .TWO，失敗再試 .TW（部分上櫃股 Yahoo 以 .TW 收錄）
+    if market == "TWO":
+        candidates = [code.upper() + ".TWO", code.upper() + ".TW"]
+    elif market == "TW":
+        candidates = [code.upper() + ".TW"]
+    else:
+        candidates = [code]
+
+    for yf_code in candidates:
+        try:
+            url    = f"https://query1.finance.yahoo.com/v8/finance/chart/{yf_code}"
+            r      = requests.get(url, headers=HEADERS, timeout=10)
+            data   = r.json()
+            result = (data.get("chart") or {}).get("result") or []
+            if not result:
+                continue
+            meta   = result[0]["meta"]
+            price  = meta.get("regularMarketPrice") or 0
+            prev   = meta.get("previousClose") or 0
+            if not price:
+                continue
+            change = round(price - prev, 2)
+            pct    = round((change / prev * 100) if prev else 0, 2)
+            return {"price": price, "change": change, "change_pct": pct}
+        except Exception as e:
+            print(f"  [WARN] 股價失敗 {yf_code}: {e}")
+    return {}
 
 
 # ── FinMind 三大法人 ────────────────────────────────────────────
