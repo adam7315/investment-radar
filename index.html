@@ -97,13 +97,25 @@
   </section>
 
 
-  <!-- 新聞聚合 -->
+  <!-- 新聞資料庫 -->
   <section class="section">
     <div class="section-header">
-      <h2 class="section-title">📰 今日新聞聚合</h2>
+      <h2 class="section-title">📰 新聞資料庫</h2>
+      <span class="section-sub" id="news-date-range-label">—</span>
+    </div>
+    <div class="news-date-bar">
+      <div class="news-filter-group">
+        <span class="news-filter-label">日期範圍</span>
+        <input type="date" id="news-from" class="news-date-input">
+        <span class="news-filter-sep">至</span>
+        <input type="date" id="news-to" class="news-date-input">
+      </div>
+      <button id="news-search-btn" class="news-search-btn">🔍 搜尋</button>
+      <button id="news-reset-btn" class="news-reset-btn">重置</button>
     </div>
     <div class="news-filter-bar" id="news-filters"></div>
     <div id="news-container" class="news-all-list"></div>
+    <div id="news-pagination" class="news-pagination"></div>
   </section>
 
 </main>

@@ -8,7 +8,11 @@ const STATE = {
   activeStock:    null,
   activeCat:      'all',
   activePanel:    'analysis',
-  _allNews:       []
+  _allNews:       [],
+  _reportCache:   {},
+  _newsPage:      1,
+  _newsFilter:    { from: '', to: '', stock: 'all' },
+  NEWS_PAGE_SIZE: 30,
 };
 
 function getTop10Codes(stocks) {
@@ -96,6 +100,7 @@ async function init() {
     setupCategoryTabs();
     setupDetailTabs();
     setupWatchlistAdd();
+    setupNewsSection();
       await loadDate(target);
   } catch(e) {
     console.error(e);
@@ -119,6 +124,7 @@ async function loadDate(date) {
   showLoading();
   try {
     STATE.report = await fetchJSON(`./data/reports/${date}.json`);
+    STATE._reportCache[date] = STATE.report;
     renderAll();
     restoreLiveStocks();
   } catch(e) {
@@ -141,7 +147,14 @@ function renderAll() {
   if(!r) return;
   renderAttentionCards(r);
   renderStockGrid(r.stocks || {});
-  renderNewsList(r.stocks || {});
+  // 重置新聞篩選至當日
+  const fromEl = document.getElementById('news-from');
+  const toEl   = document.getElementById('news-to');
+  if(fromEl) fromEl.value = STATE.currentDate;
+  if(toEl)   toEl.value   = STATE.currentDate;
+  STATE._newsFilter = { from: STATE.currentDate, to: STATE.currentDate, stock: 'all' };
+  STATE._newsPage   = 1;
+  buildAndDisplayNews();
 }
 
 function updateStatusBar(r) {
@@ -498,67 +511,157 @@ function renderDPNews(code, data) {
   const news  = data.news || [];
   const badge = document.getElementById('news-count-badge');
   if(badge) badge.textContent = news.length || '';
-
   if(!news.length) {
-    el.innerHTML = '<p style="color:var(--text3);font-size:14px">此股票今日無新聞</p>';
+    el.innerHTML = '<p class="dp-empty">此股票今日無新聞</p>';
     return;
   }
-  el.innerHTML = `<div class="news-item-list">
-    ${news.map(n => `<div class="news-item">
-      <span class="news-source">${n.source || ''}</span>
-      <span class="news-title">${n.url
-        ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>`
-        : n.title}</span>
-      <span class="news-date">${formatNewsDate(n.date)}</span>
-    </div>`).join('')}
-  </div>`;
+  el.innerHTML = `<div class="dp-news-header">${isoToDisplay(STATE.currentDate)} 收集的新聞</div>
+    <div class="news-item-list">
+      ${news.map(n => `<div class="news-item">
+        <span class="news-source">${n.source || ''}</span>
+        <span class="news-title">${n.url
+          ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>`
+          : n.title}</span>
+        <span class="news-date">${formatNewsDate(n.date)}</span>
+      </div>`).join('')}
+    </div>`;
 }
 
-// ── 全站新聞聚合 ──────────────────────────
-function renderNewsList(stocks) {
-  STATE._allNews = [];
-  const order = allSortedCodes(stocks);
-  for(const code of order) {
-    (stocks[code].news || []).forEach(n =>
-      STATE._allNews.push({ ...n, code, stockName: stocks[code].name })
-    );
+// ── 新聞資料庫：初始化日期篩選 ──────────────────
+function setupNewsSection() {
+  const dates = STATE.availableDates;
+  if(!dates.length) return;
+  const first = dates[0];
+  const last  = dates[dates.length - 1];
+  const fromEl = document.getElementById('news-from');
+  const toEl   = document.getElementById('news-to');
+  if(!fromEl || !toEl) return;
+  fromEl.min = first; fromEl.max = last;
+  toEl.min   = first; toEl.max   = last;
+  const label = document.getElementById('news-date-range-label');
+  if(label) label.textContent = `資料範圍：${isoToDisplay(first)} ～ ${isoToDisplay(last)}`;
+  document.getElementById('news-search-btn')?.addEventListener('click', () => {
+    STATE._newsFilter.from  = fromEl.value || last;
+    STATE._newsFilter.to    = toEl.value   || last;
+    STATE._newsFilter.stock = 'all';
+    STATE._newsPage = 1;
+    loadNewsRange(STATE._newsFilter.from, STATE._newsFilter.to);
+  });
+  document.getElementById('news-reset-btn')?.addEventListener('click', () => {
+    const cur = STATE.currentDate || last;
+    fromEl.value = cur; toEl.value = cur;
+    STATE._newsFilter = { from: cur, to: cur, stock: 'all' };
+    STATE._newsPage   = 1;
+    buildAndDisplayNews();
+  });
+}
+
+// ── 新聞資料庫：載入跨日期報告 ──────────────────
+async function loadNewsRange(from, to) {
+  const dates   = STATE.availableDates.filter(d => d >= from && d <= to);
+  const missing = dates.filter(d => !STATE._reportCache[d]);
+  if(missing.length) {
+    const btn = document.getElementById('news-search-btn');
+    if(btn) { btn.disabled = true; btn.textContent = '載入中...'; }
+    try {
+      await Promise.all(missing.map(async d => {
+        try {
+          STATE._reportCache[d] = await fetchJSON(`./data/reports/${d}.json`);
+        } catch(e) { /* skip */ }
+      }));
+    } finally {
+      const btn2 = document.getElementById('news-search-btn');
+      if(btn2) { btn2.disabled = false; btn2.textContent = '🔍 搜尋'; }
+    }
   }
-  STATE._allNews.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  buildAndDisplayNews();
+}
 
-  const bar = document.getElementById('news-filters');
-  bar.innerHTML = `<button class="nfbtn active" data-f="all">全部 (${STATE._allNews.length})</button>
-    ${order.map(c => {
-      const cnt = STATE._allNews.filter(n => n.code === c).length;
-      return cnt ? `<button class="nfbtn" data-f="${c}">${stocks[c].name} (${cnt})</button>` : '';
+// ── 新聞資料庫：組合並渲染 ─────────────────────
+function buildAndDisplayNews() {
+  const { from, to } = STATE._newsFilter;
+  const dates = STATE.availableDates.filter(d => d >= from && d <= to);
+  let all = [];
+  for(const d of dates) {
+    const r = STATE._reportCache[d];
+    if(!r) continue;
+    for(const [code, data] of Object.entries(r.stocks || {})) {
+      (data.news || []).forEach(n => {
+        all.push({ ...n, code, stockName: data.name, reportDate: d });
+      });
+    }
+  }
+  all.sort((a, b) => (b.date || b.reportDate || '').localeCompare(a.date || a.reportDate || ''));
+  STATE._allNews = all;
+  _renderNewsChips(all);
+  renderNewsPage(all);
+}
+
+function _renderNewsChips(all) {
+  const { stock } = STATE._newsFilter;
+  const bar   = document.getElementById('news-filters');
+  const codes = [...new Set(all.map(n => n.code))];
+  bar.innerHTML = `<button class="nfbtn ${stock === 'all' ? 'active' : ''}" data-f="all">全部 (${all.length})</button>
+    ${codes.map(c => {
+      const cnt  = all.filter(n => n.code === c).length;
+      const name = all.find(n => n.code === c)?.stockName || c;
+      return cnt ? `<button class="nfbtn ${stock === c ? 'active' : ''}" data-f="${c}">${name} (${cnt})</button>` : '';
     }).join('')}`;
-
   bar.querySelectorAll('.nfbtn').forEach(btn => {
     btn.addEventListener('click', () => {
       bar.querySelectorAll('.nfbtn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      displayAllNews(btn.dataset.f);
+      STATE._newsFilter.stock = btn.dataset.f;
+      STATE._newsPage = 1;
+      renderNewsPage(STATE._allNews);
     });
   });
-  displayAllNews('all');
 }
 
-function displayAllNews(f) {
-  const el    = document.getElementById('news-container');
-  const items = f === 'all' ? STATE._allNews : STATE._allNews.filter(n => n.code === f);
-  if(!items.length) {
-    el.innerHTML = '<div style="padding:20px;color:var(--text3);font-size:14px;text-align:center">此分類暫無新聞</div>';
+function renderNewsPage(all) {
+  const { stock } = STATE._newsFilter;
+  const page     = STATE._newsPage;
+  const pageSize = STATE.NEWS_PAGE_SIZE;
+  const items    = stock === 'all' ? all : all.filter(n => n.code === stock);
+  const total    = items.length;
+  const totalPgs = Math.ceil(total / pageSize) || 1;
+  const slice    = items.slice((page - 1) * pageSize, page * pageSize);
+  const el       = document.getElementById('news-container');
+  if(!slice.length) {
+    el.innerHTML = '<div class="news-empty">此條件暫無新聞</div>';
+  } else {
+    el.innerHTML = slice.map(n => `<div class="news-all-item">
+      <span class="news-stock-badge" onclick="selectStock('${n.code}')" style="cursor:pointer">
+        ${n.code}<br><small>${n.stockName}</small>
+      </span>
+      <span class="news-src-badge">${n.source || ''}</span>
+      <span class="news-all-title">${n.url
+        ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>`
+        : n.title}</span>
+      <span class="news-all-date">${formatNewsDate(n.date) || isoToDisplay(n.reportDate)}</span>
+    </div>`).join('');
+  }
+  const pgEl = document.getElementById('news-pagination');
+  if(!pgEl) return;
+  if(totalPgs <= 1) {
+    pgEl.innerHTML = total ? `<span class="pg-info">共 ${total} 筆</span>` : '';
     return;
   }
-  el.innerHTML = items.map(n => `<div class="news-all-item">
-    <span class="news-stock-badge" onclick="selectStock('${n.code}')" style="cursor:pointer">
-      ${n.code}<br><small>${n.stockName}</small>
-    </span>
-    <span class="news-src-badge">${n.source || ''}</span>
-    <span class="news-all-title">${n.url
-      ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>`
-      : n.title}</span>
-    <span class="news-all-date">${formatNewsDate(n.date)}</span>
-  </div>`).join('');
+  let pgs = `<button class="pg-btn" ${page===1?'disabled':''} onclick="newsGoPage(${page-1})">‹</button>`;
+  const s = Math.max(1, page - 2);
+  const e = Math.min(totalPgs, page + 2);
+  if(s > 1) pgs += `<button class="pg-btn" onclick="newsGoPage(1)">1</button>${s > 2 ? '<span class="pg-ellipsis">…</span>' : ''}`;
+  for(let i = s; i <= e; i++) pgs += `<button class="pg-btn${i===page?' on':''}" onclick="newsGoPage(${i})">${i}</button>`;
+  if(e < totalPgs) pgs += `${e < totalPgs-1 ? '<span class="pg-ellipsis">…</span>' : ''}<button class="pg-btn" onclick="newsGoPage(${totalPgs})">${totalPgs}</button>`;
+  pgs += `<button class="pg-btn" ${page===totalPgs?'disabled':''} onclick="newsGoPage(${page+1})">›</button>`;
+  pgs += `<span class="pg-info">${(page-1)*pageSize+1}–${Math.min(page*pageSize,total)} / ${total} 筆</span>`;
+  pgEl.innerHTML = pgs;
+}
+
+function newsGoPage(p) {
+  STATE._newsPage = p;
+  renderNewsPage(STATE._allNews);
+  document.getElementById('news-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // ── 日期導航 ──────────────────────────────
@@ -614,8 +717,12 @@ function setupWatchlistAdd() {
       live[code] = { name: data.name, market: data._market || 'TW' };
       localStorage.setItem('live_stocks', JSON.stringify(live));
     } catch(e) {}
+    STATE._reportCache[STATE.currentDate] = STATE.report;
     renderStockGrid(STATE.report.stocks);
-    renderNewsList(STATE.report.stocks);
+    STATE._newsFilter.from = STATE.currentDate;
+    STATE._newsFilter.to   = STATE.currentDate;
+    STATE._newsPage = 1;
+    buildAndDisplayNews();
     selectStockAndScroll(code);
     showToast(`✓ ${code} ${data.name} 已加入`, 'ok');
   };
@@ -692,8 +799,12 @@ async function restoreLiveStocks() {
     const data = await fetchStockLive(code);
     if(data) stocks[code] = data;
   }
+  STATE._reportCache[STATE.currentDate] = STATE.report;
   renderStockGrid(stocks);
-  renderNewsList(stocks);
+  STATE._newsFilter.from = STATE.currentDate;
+  STATE._newsFilter.to   = STATE.currentDate;
+  STATE._newsPage = 1;
+  buildAndDisplayNews();
 }
 
 // ── Toast ─────────────────────────────────

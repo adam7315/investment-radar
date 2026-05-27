@@ -626,3 +626,107 @@ a:hover { text-decoration: underline; }
   .detail-body { padding: 16px; }
   .chips-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ── 新聞資料庫：日期篩選列 ───────────────────── */
+.news-date-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+.news-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.news-filter-label {
+  font-size: 12px;
+  color: var(--text3);
+  white-space: nowrap;
+}
+.news-filter-sep {
+  font-size: 12px;
+  color: var(--text3);
+}
+.news-date-input {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 5px 8px;
+  font-size: 12px;
+  background: var(--bg3);
+  color: var(--text);
+  cursor: pointer;
+}
+.news-date-input:focus { outline: none; border-color: var(--accent2); }
+.news-search-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 6px 16px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.15s;
+}
+.news-search-btn:hover { opacity: 0.85; }
+.news-search-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.news-reset-btn {
+  background: var(--bg3);
+  color: var(--text2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.news-reset-btn:hover { background: var(--border); }
+
+/* ── 新聞資料庫：分頁 ─────────────────────────── */
+.news-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 0 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pg-btn {
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  cursor: pointer;
+  color: var(--text2);
+  transition: all 0.15s;
+}
+.pg-btn:hover:not(:disabled) { background: var(--accent); color: white; border-color: var(--accent); }
+.pg-btn.on { background: var(--accent); color: white; border-color: var(--accent); }
+.pg-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.pg-ellipsis { font-size: 12px; color: var(--text3); padding: 0 2px; }
+.pg-info { font-size: 11px; color: var(--text3); margin-left: 8px; }
+
+/* ── 個股詳情：新聞 header ──────────────────────── */
+.dp-news-header {
+  font-size: 11px;
+  color: var(--text3);
+  padding: 4px 0 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+  letter-spacing: 0.03em;
+}
+.dp-empty { color: var(--text3); font-size: 14px; padding: 8px 0; }
+.news-empty {
+  padding: 20px;
+  color: var(--text3);
+  font-size: 14px;
+  text-align: center;
+}
