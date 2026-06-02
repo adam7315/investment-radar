@@ -18,9 +18,15 @@ const STATE = {
   _watchedCat:    'all',
 };
 
+const US_CODES = new Set(['NVDA','AAPL','MSFT','TSM','AMZN','MU','TSLA','DELL']);
+function isUSStock(code, d) {
+  if(d?.market === 'NASDAQ' || d?.market === 'NYSE') return true;
+  return US_CODES.has(code);
+}
+
 function getTop10Codes(stocks) {
   return Object.entries(stocks)
-    .filter(([, d]) => d.price?.price)
+    .filter(([code, d]) => d.price?.price && !isUSStock(code, d))
     .sort((a, b) => (b[1].price.price || 0) - (a[1].price.price || 0))
     .slice(0, 10)
     .map(([code]) => code);
@@ -250,6 +256,7 @@ function filterByCat(stocks) {
   if(STATE.activeCat === 'top10') return getTop10Codes(stocks).filter(c => stocks[c]);
   if(STATE.activeCat === 'watch') return codes.filter(c => cats[c] === 'watch');
   if(STATE.activeCat === 'own')   return codes.filter(c => cats[c] === 'own');
+  if(STATE.activeCat === 'us')    return codes.filter(c => isUSStock(c, stocks[c]));
   return codes;
 }
 
@@ -261,6 +268,8 @@ function updateCatCounts(stocks) {
   document.getElementById('cnt-watch').textContent = codes.filter(c => cats[c] === 'watch').length;
   document.getElementById('cnt-own').textContent   = codes.filter(c => cats[c] === 'own').length;
   document.getElementById('cnt-all').textContent   = codes.length;
+  const usEl = document.getElementById('cnt-us');
+  if(usEl) usEl.textContent = codes.filter(c => isUSStock(c, stocks[c])).length;
 }
 
 // ── 個股卡片 Grid ────────────────────────
@@ -295,18 +304,25 @@ function renderStockGrid(stocks) {
   if(STATE.activeCat === 'all') {
     const top10 = getTop10Codes(stocks).filter(c => stocks[c]);
     const _rt10 = new Set(top10);
-    const others = [
-      ...STOCK_ORDER.filter(c => !_rt10.has(c) && stocks[c]),
-      ...Object.keys(stocks).filter(c => !STOCK_ORDER.includes(c) && !_rt10.has(c))
+    const allCodes = [
+      ...STOCK_ORDER.filter(c => stocks[c]),
+      ...Object.keys(stocks).filter(c => !STOCK_ORDER.includes(c))
     ];
+    const twOthers = allCodes.filter(c => !_rt10.has(c) && !isUSStock(c, stocks[c]));
+    const usAll    = allCodes.filter(c => isUSStock(c, stocks[c]));
+
     let html = '';
     if(top10.length) {
       html += `<div class="card-group-hdr">前十大高價股</div>`;
       html += top10.map(c => renderCard(c, stocks[c], cats)).join('');
     }
-    if(others.length) {
-      html += `<div class="card-group-hdr">其他追蹤</div>`;
-      html += others.map(c => renderCard(c, stocks[c], cats)).join('');
+    if(twOthers.length) {
+      html += `<div class="card-group-hdr">台股追蹤</div>`;
+      html += twOthers.map(c => renderCard(c, stocks[c], cats)).join('');
+    }
+    if(usAll.length) {
+      html += `<div class="card-group-hdr">🇺🇸 美股追蹤</div>`;
+      html += usAll.map(c => renderCard(c, stocks[c], cats)).join('');
     }
     if(!html) html = `<div style="grid-column:1/-1;padding:40px;color:var(--text3);font-size:14px;text-align:center">今日尚無個股資料</div>`;
     grid.innerHTML = html;
