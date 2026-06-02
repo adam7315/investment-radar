@@ -18,7 +18,7 @@ TODAY       = datetime.datetime.now(TZ_OFFSET).date().isoformat()
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
-    f"gemini-2.0-flash:generateContent?key={GEMINI_KEY}"
+    f"gemini-2.5-flash:generateContent?key={GEMINI_KEY}"
 )
 
 SIGNAL_TYPES_TW = [
