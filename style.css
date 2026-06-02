@@ -176,54 +176,55 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--border);
 }
 
-/* ── 今日特別關注 ─────────────────────────────── */
-.attention-strip {
+/* ── 今日特別關注（簡報文字式）──────────────────── */
+.briefing-wrap {
   display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding-bottom: 4px;
-  scrollbar-width: thin;
+  flex-direction: column;
+  gap: 6px;
 }
-.attention-strip::-webkit-scrollbar { height: 4px; }
-.attention-strip::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
-
-.attention-card {
-  background: var(--bg2);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  min-width: 200px;
-  max-width: 220px;
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: all 0.18s;
-  box-shadow: var(--shadow-sm);
+.briefing-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.7;
+  flex-wrap: wrap;
 }
-.attention-card:hover { border-color: var(--accent2); box-shadow: var(--shadow); transform: translateY(-1px); }
-.attention-card.score-5 { border-left: 3px solid var(--buy); }
-.attention-card.score-4 { border-left: 3px solid var(--watch); }
-
-.att-head { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
-.att-code { font-size: 11px; color: var(--text3); font-family: monospace; background: var(--bg3); padding: 1px 5px; border-radius: 3px; }
-.att-name { font-size: 14px; font-weight: 700; color: var(--text); }
-.att-pct { margin-left: auto; font-size: 12px; font-weight: 700; }
-.att-pct.pos { color: var(--buy); }
-.att-pct.neg { color: var(--sell); }
-.att-stars { font-size: 12px; color: var(--watch); margin-bottom: 4px; }
-.att-signal-pill {
-  display: inline-block;
-  font-size: 10px;
+.briefing-row-label {
+  font-size: 11px;
   font-weight: 700;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 1px solid #bee3f8;
-  padding: 1px 7px;
-  border-radius: 10px;
-  margin-bottom: 6px;
+  color: var(--text3);
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
 }
-.att-reason { font-size: 12px; color: var(--text2); line-height: 1.5; }
-
-.no-attention { font-size: 14px; color: var(--text3); padding: 16px 0; }
+.briefing-quiet { font-size: 13px; color: var(--text3); }
+.b-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 1px 0;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.15s;
+}
+.b-chip:hover { border-bottom-color: var(--accent2); }
+.b-chip-name { font-weight: 600; color: var(--text); font-size: 13px; }
+.b-chip-code { font-size: 10px; color: var(--text3); }
+.b-chip-pct  { font-size: 12px; font-weight: 700; }
+.b-chip-pct.pos { color: var(--buy); }
+.b-chip-pct.neg { color: var(--sell); }
+.b-chip-reason {
+  font-size: 12px;
+  color: var(--text2);
+  max-width: 280px;
+}
+.b-sep { color: var(--border2); font-size: 11px; margin: 0 2px; }
+.b-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2px 0;
+}
 
 /* ── 分類 Tabs ────────────────────────────────── */
 .category-tabs {
