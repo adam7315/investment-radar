@@ -265,7 +265,7 @@ function updateCatCounts(stocks) {
 // ── 個股卡片 Grid ────────────────────────
 function renderCard(code, d, cats) {
   const score   = d.attention_score || 0;
-  const newsN   = (d.news || []).length;
+  const newsN   = (d.news || []).filter(n => n.date === STATE.currentDate && isRealNews(n)).length;
   const userCat = cats[code];
   const isActive = STATE.activeStock === code;
   const fire = score >= 5 ? '🔥' : score >= 4 ? '⚡' : '';
