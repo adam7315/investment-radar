@@ -193,7 +193,7 @@ function updateStatusBar(r) {
     isoToDisplay(r.date) + (timeOnly ? ' ' + timeOnly : '');
 }
 
-// ── 今日特別關注（文字簡報式）────────────────────
+// ── 今日特別關注（清單式）────────────────────────
 function renderAttentionCards(r) {
   const el   = document.getElementById('attention-container');
   const sub  = document.getElementById('attention-subtitle');
@@ -202,20 +202,21 @@ function renderAttentionCards(r) {
 
   const owned   = Object.entries(stks).filter(([c]) => cats[c] === 'own');
   const notable = Object.entries(stks)
-    .filter(([, d]) => (d.attention_score || 0) >= 4)
+    .filter(([c, d]) => (d.attention_score || 0) >= 4 && cats[c] !== 'own')
     .sort((a, b) => (b[1].attention_score||0) - (a[1].attention_score||0))
     .slice(0, 6);
 
-  function chipHtml(code, d) {
-    const pct    = d.price?.change_pct;
-    const pctStr = pct != null
-      ? `<span class="b-chip-pct ${pct>0?'pos':pct<0?'neg':''}">${pct>0?'+':''}${pct.toFixed(2)}%</span>`
-      : '';
+  function lineHtml(code, d) {
+    const pct = d.price?.change_pct;
+    const pctStr = pct != null ? `${pct > 0 ? '+' : ''}${pct.toFixed(2)}%` : '—';
+    const pctCls = pct > 0 ? 'pos' : pct < 0 ? 'neg' : '';
     const reason = d.attention_reason || d.news_summary || '';
-    return `<span class="b-chip" onclick="selectStockAndScroll('${code}')">
-      <span class="b-chip-name">${d.name}</span><span class="b-chip-code">${code}</span>${pctStr}
-      ${reason ? `<span class="b-chip-reason">— ${reason}</span>` : ''}
-    </span>`;
+    return `<div class="briefing-line" onclick="selectStockAndScroll('${code}')">
+      <span class="bl-name">${d.name}</span>
+      <span class="bl-code">${code}</span>
+      <span class="bl-pct ${pctCls}">${pctStr}</span>
+      <span class="bl-reason">${reason}</span>
+    </div>`;
   }
 
   if(!owned.length && !notable.length) {
@@ -224,27 +225,25 @@ function renderAttentionCards(r) {
     return;
   }
 
-  let parts = [];
-
+  let groups = [];
   if(owned.length) {
-    const chips = owned.map(([c,d]) => chipHtml(c,d)).join('<span class="b-sep">·</span>');
-    parts.push(`<div class="briefing-row">
-      <span class="briefing-row-label">💼 持股</span>${chips}
+    groups.push(`<div class="briefing-group">
+      <div class="briefing-group-label">💼 持股動態</div>
+      ${owned.map(([c,d]) => lineHtml(c,d)).join('')}
     </div>`);
   }
-
-  if(owned.length && notable.length) parts.push('<hr class="b-divider">');
-
   if(notable.length) {
-    const chips = notable.map(([c,d]) => chipHtml(c,d)).join('<span class="b-sep">·</span>');
-    parts.push(`<div class="briefing-row">
-      <span class="briefing-row-label">🔥 熱點</span>${chips}
+    groups.push(`<div class="briefing-group">
+      <div class="briefing-group-label">🔥 今日熱點</div>
+      ${notable.map(([c,d]) => lineHtml(c,d)).join('')}
     </div>`);
   }
 
-  el.innerHTML = `<div class="briefing-wrap">${parts.join('')}</div>`;
-  const total = new Set([...owned.map(([c])=>c), ...notable.map(([c])=>c)]).size;
-  sub.textContent = `${owned.length ? `持股 ${owned.length}` : ''}${owned.length && notable.length ? ' · ' : ''}${notable.length ? `熱點 ${notable.length}` : ''}`;
+  el.innerHTML = `<div class="briefing-wrap">${groups.join('')}</div>`;
+  sub.textContent = [
+    owned.length   ? `持股 ${owned.length}` : '',
+    notable.length ? `熱點 ${notable.length}` : '',
+  ].filter(Boolean).join(' · ');
 }
 
 // ── 分類 Tabs ─────────────────────────────

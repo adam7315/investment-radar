@@ -176,55 +176,33 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--border);
 }
 
-/* ── 今日特別關注（簡報文字式）──────────────────── */
-.briefing-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+/* ── 今日特別關注（清單式）──────────────────────── */
+.briefing-wrap { display: flex; flex-direction: column; gap: 0; }
+.briefing-group { display: flex; flex-direction: column; }
+.briefing-group + .briefing-group { margin-top: 6px; border-top: 1px solid var(--border); padding-top: 6px; }
+.briefing-group-label {
+  font-size: 10px; font-weight: 700; color: var(--text3);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  margin-bottom: 2px;
 }
-.briefing-row {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  font-size: 13px;
-  line-height: 1.7;
-  flex-wrap: wrap;
-}
-.briefing-row-label {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--text3);
-  white-space: nowrap;
-  flex-shrink: 0;
-  letter-spacing: 0.03em;
-}
-.briefing-quiet { font-size: 13px; color: var(--text3); }
-.b-chip {
-  display: inline-flex;
+.briefing-line {
+  display: grid;
+  grid-template-columns: 72px 44px 56px 1fr;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
+  padding: 4px 6px;
+  border-radius: 4px;
   cursor: pointer;
-  padding: 1px 0;
-  border-bottom: 1px dashed transparent;
-  transition: border-color 0.15s;
+  transition: background 0.12s;
 }
-.b-chip:hover { border-bottom-color: var(--accent2); }
-.b-chip-name { font-weight: 600; color: var(--text); font-size: 13px; }
-.b-chip-code { font-size: 10px; color: var(--text3); }
-.b-chip-pct  { font-size: 12px; font-weight: 700; }
-.b-chip-pct.pos { color: var(--buy); }
-.b-chip-pct.neg { color: var(--sell); }
-.b-chip-reason {
-  font-size: 12px;
-  color: var(--text2);
-  max-width: 280px;
-}
-.b-sep { color: var(--border2); font-size: 11px; margin: 0 2px; }
-.b-divider {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 2px 0;
-}
+.briefing-line:hover { background: var(--bg3); }
+.bl-name { font-size: 13px; font-weight: 600; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bl-code { font-size: 10px; color: var(--text3); font-family: monospace; }
+.bl-pct  { font-size: 12px; font-weight: 700; text-align: right; }
+.bl-pct.pos { color: var(--buy); }
+.bl-pct.neg { color: var(--sell); }
+.bl-reason { font-size: 12px; color: var(--text2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.briefing-quiet { font-size: 13px; color: var(--text3); padding: 4px 0; }
 
 /* ── 分類 Tabs ────────────────────────────────── */
 .category-tabs {
