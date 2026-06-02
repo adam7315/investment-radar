@@ -21,15 +21,22 @@ GEMINI_URL = (
     f"gemini-2.0-flash:generateContent?key={GEMINI_KEY}"
 )
 
-SIGNAL_TYPES = [
+SIGNAL_TYPES_TW = [
     "法說前", "法說後", "財報佳", "財報差", "外資買超", "外資賣超",
     "投信買超", "重大訊息", "題材炒作", "技術突破", "技術破位",
+    "供應鏈消息", "突發利多", "突發利空", "無特殊"
+]
+SIGNAL_TYPES_US = [
+    "Earnings前", "Earnings後", "財報佳", "財報差",
+    "題材炒作", "技術突破", "技術破位",
     "供應鏈消息", "突發利多", "突發利空", "無特殊"
 ]
 
 
 def analyze_stock(code: str, data: dict) -> dict:
     name       = data.get("name", code)
+    market     = data.get("market", "TW")
+    is_us      = market in ("NASDAQ", "NYSE")
     price_info = data.get("price", {})
     inst_info  = data.get("institutional", {})
     news_list  = data.get("news", [])
@@ -42,15 +49,24 @@ def analyze_stock(code: str, data: dict) -> dict:
         f"- [{n.get('source','')}] {n.get('title','')}" for n in news_list[:10]
     ) or "（今日無新聞）"
 
-    inst_text = ""
-    if f_net is not None:
-        inst_text += f"外資買賣超：{f_net:+}張  "
-    if t_net is not None:
-        inst_text += f"投信買賣超：{t_net:+}張"
+    if is_us:
+        signal_types = SIGNAL_TYPES_US
+        inst_text    = "（美股無三大法人揭露）"
+        role         = "美股投資分析師"
+        currency     = "USD"
+    else:
+        signal_types = SIGNAL_TYPES_TW
+        inst_text = ""
+        if f_net is not None:
+            inst_text += f"外資買賣超：{f_net:+}張  "
+        if t_net is not None:
+            inst_text += f"投信買賣超：{t_net:+}張"
+        role     = "台股投資分析師"
+        currency = "NTD"
 
-    prompt = f"""你是台股投資分析師。請根據以下資訊，評估今天是否需要特別關注此個股。
+    prompt = f"""你是{role}。請根據以下資訊，評估今天是否需要特別關注此個股。
 
-股票：{code} {name}
+股票：{code} {name}（{currency}計價）
 今日漲跌：{pct:+.2f}%
 {inst_text}
 
@@ -60,7 +76,7 @@ def analyze_stock(code: str, data: dict) -> dict:
 請用繁體中文回傳 JSON（只回 JSON，不要其他文字）：
 {{
   "attention_score": 整數1~5（1=無特殊，3=值得注意，5=今日必看），
-  "signal_type": 從此清單選最符合的一項：{SIGNAL_TYPES},
+  "signal_type": 從此清單選最符合的一項：{signal_types},
   "attention_reason": "30字以內，說明今天最值得關注的具體原因（若無特殊則說明近況）",
   "news_summary": "40字以內，今日新聞重點整理"
 }}"""

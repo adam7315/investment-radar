@@ -41,7 +41,7 @@ def parse_rss_date(entry):
         pass
     return TODAY
 
-# ── 8 個通用 RSS 新聞源（全抓，再用關鍵字篩選） ──────────────
+# ── 台股通用 RSS 新聞源 ───────────────────────────────────────
 GENERAL_SOURCES = [
     {"name": "鉅亨網台股",  "url": "https://news.cnyes.com/rss/tw/fnstockstw"},
     {"name": "鉅亨網科技",  "url": "https://news.cnyes.com/rss/tw/tech"},
@@ -53,10 +53,18 @@ GENERAL_SOURCES = [
     {"name": "工商時報",    "url": "https://ctee.com.tw/feed"},
 ]
 
-# ── 預先抓取所有通用 RSS（避免每支股票重複請求）─────────────
-def prefetch_general_feeds():
+# ── 美股通用 RSS 新聞源 ───────────────────────────────────────
+US_GENERAL_SOURCES = [
+    {"name": "Reuters Business", "url": "https://feeds.reuters.com/reuters/businessNews"},
+    {"name": "MarketWatch",      "url": "https://feeds.marketwatch.com/marketwatch/topstories/"},
+    {"name": "CNBC Markets",     "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html"},
+    {"name": "Reuters Tech",     "url": "https://feeds.reuters.com/reuters/technologyNews"},
+]
+
+# ── 預先抓取 RSS（避免每支股票重複請求）──────────────────────
+def _fetch_feeds_from_sources(sources):
     feeds = []
-    for src in GENERAL_SOURCES:
+    for src in sources:
         try:
             feed = feedparser.parse(src["url"])
             for entry in feed.entries:
@@ -72,11 +80,21 @@ def prefetch_general_feeds():
             print(f"  [WARN] RSS 失敗 {src['name']}: {e}")
     return feeds
 
+def prefetch_general_feeds():
+    return _fetch_feeds_from_sources(GENERAL_SOURCES)
+
+def prefetch_us_feeds():
+    return _fetch_feeds_from_sources(US_GENERAL_SOURCES)
+
 
 # ── Google News RSS 個股專屬搜尋 ─────────────────────────────
-def fetch_google_news(code, name, max_items=8):
-    query = f"{name} 股票"
-    url   = f"https://news.google.com/rss/search?q={quote(query)}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+def fetch_google_news(code, name, market="TW", max_items=8):
+    if market in ("NASDAQ", "NYSE"):
+        query = f"{code} {name} stock"
+        url   = f"https://news.google.com/rss/search?q={quote(query)}&hl=en-US&gl=US&ceid=US:en"
+    else:
+        query = f"{name} 股票"
+        url   = f"https://news.google.com/rss/search?q={quote(query)}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
     found = []
     try:
         feed = feedparser.parse(url)
@@ -169,12 +187,14 @@ def filter_news_for_stock(all_feeds, code, name, max_items=6):
 
 
 # ── 整合所有新聞來源 ────────────────────────────────────────────
-def fetch_all_news(code, name, market, all_feeds, max_total=12):
-    # 1. 從通用 feeds 篩選
-    general_news = filter_news_for_stock(all_feeds, code, name, max_items=6)
-    # 2. Google News 個股專搜
-    google_news  = fetch_google_news(code, name, max_items=6)
-    # 3. TWSE 重大公告（僅上市公司）
+def fetch_all_news(code, name, market, tw_feeds, us_feeds=None, max_total=12):
+    is_us = market in ("NASDAQ", "NYSE")
+    # 1. 從對應市場的通用 feeds 篩選
+    source_feeds = (us_feeds or []) if is_us else tw_feeds
+    general_news = filter_news_for_stock(source_feeds, code, name, max_items=6)
+    # 2. Google News 個股專搜（依市場切換語言）
+    google_news  = fetch_google_news(code, name, market=market, max_items=6)
+    # 3. TWSE 重大公告（僅台灣上市公司）
     twse_news = fetch_twse_announcements(code, market) if market in ("TW",) else []
 
     # 合併去重
@@ -290,9 +310,13 @@ def main():
     print(f"=== 投資情報雷達 資料蒐集 {TODAY} ===")
     watchlist = json.loads((DATA_DIR / "watchlist.json").read_text(encoding="utf-8"))["stocks"]
 
-    print("  預載通用 RSS feeds...")
+    print("  預載台股 RSS feeds...")
     all_feeds = prefetch_general_feeds()
-    print(f"  共取得 {len(all_feeds)} 則通用新聞")
+    print(f"  共取得 {len(all_feeds)} 則台股通用新聞")
+
+    print("  預載美股 RSS feeds...")
+    us_feeds = prefetch_us_feeds()
+    print(f"  共取得 {len(us_feeds)} 則美股通用新聞")
 
     print("  預載三大法人資料...")
     inst_all = prefetch_institutional_all()
@@ -313,11 +337,12 @@ def main():
 
         price_data = fetch_price(code, market)
         inst_data  = inst_all.get(code, {})
-        news       = fetch_all_news(code, name, market, all_feeds)
+        news       = fetch_all_news(code, name, market, all_feeds, us_feeds)
         time.sleep(0.3)
 
         report["stocks"][code] = {
             "name":          name,
+            "market":        market,
             "type":          stock.get("type", "stock"),
             "tags":          stock.get("tags", []),
             "price":         price_data,

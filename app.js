@@ -26,10 +26,11 @@ function getTop10Codes(stocks) {
     .map(([code]) => code);
 }
 
-// 全部顯示順序：高價股 → 個人持倉 → ETF
+// 全部顯示順序：台股高價股 → 個人持倉 → ETF → 美股
 const STOCK_ORDER = [
   '5274','6515','7769','6223','2383','3443','6669','2059','2454','3661',
-  '2330','2327','3017','8299','2303','3481','3008','0050','00403A'
+  '2330','2327','3017','8299','2303','3481','3008','2313','2308','0050','00403A',
+  'NVDA','AAPL','MSFT','TSM','AMZN','MU','TSLA','DELL',
 ];
 
 // ── 使用者分類（localStorage）────────────────
@@ -355,9 +356,13 @@ function selectStock(code) {
   // 填入詳情 header
   const pct   = data.price?.change_pct;
   const price = data.price?.price;
+  const isUS  = data.market === 'NASDAQ' || data.market === 'NYSE';
   document.getElementById('detail-code').textContent  = code;
   document.getElementById('detail-name').textContent  = data.name;
-  document.getElementById('detail-price').textContent = price ? `NT$ ${price.toLocaleString()}` : '';
+  document.getElementById('detail-price').textContent = price
+    ? (isUS ? `USD ${price.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}`
+             : `NT$ ${price.toLocaleString()}`)
+    : '';
   const pctEl = document.getElementById('detail-pct');
   if(pct != null) {
     pctEl.textContent = `${pct > 0 ? '+' : ''}${pct.toFixed(2)}%`;
@@ -513,7 +518,10 @@ function renderDPChips(code, data) {
   ].filter(i => i.value != null);
 
   if(!rows.length) {
-    el.innerHTML = '<p style="color:var(--text3);font-size:14px">三大法人資料今日未取得（非交易日或 ETF）</p>';
+    const isUS = data.market === 'NASDAQ' || data.market === 'NYSE';
+    el.innerHTML = `<p style="color:var(--text3);font-size:14px">${isUS
+      ? '美股無三大法人揭露制度，可參考 SEC Form 4（內部人申報）'
+      : '三大法人資料今日未取得（非交易日或 ETF）'}</p>`;
     return;
   }
   el.innerHTML = `<div class="chips-grid">
