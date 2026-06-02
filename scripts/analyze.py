@@ -5,6 +5,7 @@
 
 import json
 import os
+import re
 import time
 import datetime
 import requests
@@ -83,14 +84,16 @@ def analyze_stock(code: str, data: dict) -> dict:
 
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.1, "maxOutputTokens": 400},
+        "generationConfig": {"temperature": 0.1, "maxOutputTokens": 1024,
+                             "thinkingConfig": {"thinkingBudget": 0}},
     }
 
     try:
         r    = requests.post(GEMINI_URL, json=payload, timeout=25)
         text = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
-        # 移除 markdown code block
-        text = text.lstrip("```json").lstrip("```").rstrip("```").strip()
+        # 移除 markdown code block（```json ... ``` 或 ``` ... ```）
+        text = re.sub(r'^```(?:json)?\s*', '', text)
+        text = re.sub(r'\s*```$', '', text).strip()
         result = json.loads(text)
         # 確保欄位存在
         return {
