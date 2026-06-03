@@ -46,10 +46,13 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/analyze.py
 
+      - name: VIP 投資動向追蹤
+        run: python scripts/collect_vip_moves.py
+
       - name: Commit & Push
         run: |
           git config user.name  "investment-radar-bot"
           git config user.email "bot@investment-radar"
-          git add data/reports/
-          git diff --staged --quiet || git commit -m "📊 每日更新 $(date '+%Y-%m-%d') — 含AI分析"
+          git add data/reports/ data/vip_moves.json
+          git diff --staged --quiet || git commit -m "📊 每日更新 $(date '+%Y-%m-%d') — 含AI分析+VIP動向"
           git push

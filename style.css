@@ -805,6 +805,77 @@ a:hover { text-decoration: underline; }
   color: var(--text-muted); font-size: 18px; line-height: 1;
 }
 .settings-close:hover { color: var(--text); }
+
+/* ── VIP 投資動向 ────────────────────────────── */
+.vip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.vip-loading {
+  color: var(--text3);
+  font-size: 14px;
+  padding: 12px 0;
+  grid-column: 1 / -1;
+}
+.vip-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.vip-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg3);
+}
+.vip-icon { font-size: 22px; line-height: 1; flex-shrink: 0; }
+.vip-name { font-size: 15px; font-weight: 700; color: var(--text); }
+.vip-role { font-size: 11px; color: var(--text3); margin-top: 1px; }
+.vip-news-list {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0;
+  flex: 1;
+}
+.vip-news-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 7px 14px;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.vip-news-item:last-child { border-bottom: none; }
+.vip-news-item:hover { background: var(--bg3); }
+.vip-news-date {
+  font-size: 11px;
+  color: var(--text3);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.vip-news-title {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.vip-news-item:hover .vip-news-title { color: var(--accent2); }
+.vip-news-empty {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--text3);
+}
 .settings-body {
   flex: 1; overflow-y: auto; padding: 16px 20px;
 }

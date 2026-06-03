@@ -111,6 +111,7 @@ async function init() {
       fetchJSON('./data/reports/index.json'),
       fetchJSON('./data/supply_chain.json').catch(() => ({ chains: {} }))
     ]);
+    loadVipMoves();
     STATE.availableDates = indexData.dates || [];
     STATE.supplyChain    = scData.chains   || {};
 
@@ -1076,6 +1077,61 @@ function hideLoading() {
 function showError(msg) {
   document.getElementById('attention-container').innerHTML =
     `<p style="color:var(--buy);font-size:14px;padding:8px 0">⚠️ ${msg}</p>`;
+}
+
+// ── VIP 投資動向 ──────────────────────────
+async function loadVipMoves() {
+  const el = document.getElementById('vip-grid');
+  if(!el) return;
+  el.innerHTML = '<div class="vip-loading">載入中...</div>';
+  try {
+    const data = await fetchJSON('./data/vip_moves.json');
+    renderVipSection(data);
+  } catch(e) {
+    el.innerHTML = '<div class="vip-loading">暫無資料</div>';
+  }
+}
+
+function renderVipSection(data) {
+  const grid = document.getElementById('vip-grid');
+  const sub  = document.getElementById('vip-update-time');
+  if(!grid) return;
+
+  if(sub && data.updated_at) {
+    sub.textContent = '最後更新：' + fmtDateTime(data.updated_at);
+  }
+
+  const vips = data.vips || {};
+  if(!Object.keys(vips).length) {
+    grid.innerHTML = '<div class="vip-loading">等待下次更新...</div>';
+    return;
+  }
+
+  const ORDER = ['buffett', 'huang', 'trump', 'wei'];
+  const cards = ORDER.map(id => {
+    const v = vips[id];
+    if(!v) return '';
+    const newsHtml = (v.news || []).slice(0, 5).map(n => {
+      const dateStr = n.date ? `<span class="vip-news-date">${n.date.slice(5).replace('-', '/')}</span>` : '';
+      return `<a class="vip-news-item" href="${escAttr(n.url || '#')}" target="_blank" rel="noopener">
+        ${dateStr}
+        <span class="vip-news-title">${n.title || ''}</span>
+      </a>`;
+    }).join('') || '<div class="vip-news-empty">目前無最新消息</div>';
+
+    return `<div class="vip-card">
+      <div class="vip-card-header">
+        <span class="vip-icon">${v.icon || '👤'}</span>
+        <div>
+          <div class="vip-name">${v.name}</div>
+          <div class="vip-role">${v.title}</div>
+        </div>
+      </div>
+      <div class="vip-news-list">${newsHtml}</div>
+    </div>`;
+  }).join('');
+
+  grid.innerHTML = cards;
 }
 
 // ── 啟動 ──────────────────────────────────
