@@ -71,6 +71,28 @@ VIP_CONFIG = [
             "CC Wei TSMC insider transaction 2026",
         ],
     },
+    {
+        "id":    "su",
+        "name":  "蘇姿丰",
+        "title": "AMD CEO",
+        "icon":  "🔴",
+        "queries_tw": ["蘇姿丰 AMD 持股 申報 股票"],
+        "queries_en": [
+            "Lisa Su AMD insider transaction stock 2026",
+            "Lisa Su AMD investment stock sale 2026",
+        ],
+    },
+    {
+        "id":    "musk",
+        "name":  "馬斯克",
+        "title": "Tesla / SpaceX / X",
+        "icon":  "🚀",
+        "queries_tw": ["馬斯克 特斯拉 持股 賣出 申報 股票"],
+        "queries_en": [
+            "Elon Musk Tesla TSLA stock sale SEC filing 2026",
+            "Elon Musk investment holdings 2026",
+        ],
+    },
 ]
 
 

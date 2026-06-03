@@ -806,6 +806,44 @@ a:hover { text-decoration: underline; }
 }
 .settings-close:hover { color: var(--text); }
 
+/* ── 今日特別關注 / VIP 分頁切換 ────────────── */
+.hvtab-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.hvtab-tabs {
+  display: flex;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  gap: 2px;
+}
+.hvtab {
+  background: none;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+.hvtab.active {
+  background: var(--bg2);
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+.hvtab:hover:not(.active) { color: var(--text); background: rgba(0,0,0,0.03); }
+.hvtab-subs { flex-shrink: 0; font-size: 12px; color: var(--text3); }
+
 /* ── VIP 投資動向 ────────────────────────────── */
 .vip-grid {
   display: grid;

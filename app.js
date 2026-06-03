@@ -112,6 +112,7 @@ async function init() {
       fetchJSON('./data/supply_chain.json').catch(() => ({ chains: {} }))
     ]);
     loadVipMoves();
+    switchHVTab(localStorage.getItem('hvtab') || 'attention');
     STATE.availableDates = indexData.dates || [];
     STATE.supplyChain    = scData.chains   || {};
 
@@ -1079,6 +1080,21 @@ function showError(msg) {
     `<p style="color:var(--buy);font-size:14px;padding:8px 0">⚠️ ${msg}</p>`;
 }
 
+// ── 今日特別關注 / VIP 分頁切換 ─────────────
+function switchHVTab(tab) {
+  ['attention', 'vip'].forEach(t => {
+    const btn = document.getElementById('hvtab-' + t);
+    const panel = document.getElementById('hvpanel-' + t);
+    if(btn)   btn.classList.toggle('active', t === tab);
+    if(panel) panel.style.display = t === tab ? '' : 'none';
+  });
+  const subA = document.getElementById('attention-subtitle');
+  const subV = document.getElementById('vip-update-time');
+  if(subA) subA.style.display = tab === 'attention' ? '' : 'none';
+  if(subV) subV.style.display = tab === 'vip'       ? '' : 'none';
+  localStorage.setItem('hvtab', tab);
+}
+
 // ── VIP 投資動向 ──────────────────────────
 async function loadVipMoves() {
   const el = document.getElementById('vip-grid');
@@ -1107,7 +1123,7 @@ function renderVipSection(data) {
     return;
   }
 
-  const ORDER = ['buffett', 'huang', 'trump', 'wei'];
+  const ORDER = ['buffett', 'huang', 'trump', 'wei', 'su', 'musk'];
   const cards = ORDER.map(id => {
     const v = vips[id];
     if(!v) return '';

@@ -33,22 +33,24 @@
 
 <main class="main">
 
-  <!-- 今日特別關注 -->
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">🔥 今日特別關注</h2>
-      <span class="section-sub" id="attention-subtitle">AI 評分 4~5 顯示</span>
+  <!-- 今日特別關注 / VIP 投資動向（分頁） -->
+  <section class="section" id="hot-vip-section">
+    <div class="hvtab-bar">
+      <div class="hvtab-tabs">
+        <button class="hvtab active" id="hvtab-attention" onclick="switchHVTab('attention')">🔥 今日特別關注</button>
+        <button class="hvtab" id="hvtab-vip" onclick="switchHVTab('vip')">👁️ VIP 投資動向</button>
+      </div>
+      <div class="hvtab-subs">
+        <span class="section-sub" id="attention-subtitle">AI 評分 4~5 顯示</span>
+        <span class="section-sub" id="vip-update-time" style="display:none">載入中...</span>
+      </div>
     </div>
-    <div id="attention-container" class="attention-strip"></div>
-  </section>
-
-  <!-- VIP 投資動向 -->
-  <section class="section" id="vip-section">
-    <div class="section-header">
-      <h2 class="section-title">👁️ VIP 投資動向</h2>
-      <span class="section-sub" id="vip-update-time">載入中...</span>
+    <div id="hvpanel-attention">
+      <div id="attention-container" class="attention-strip"></div>
     </div>
-    <div id="vip-grid" class="vip-grid"></div>
+    <div id="hvpanel-vip" style="display:none">
+      <div id="vip-grid" class="vip-grid"></div>
+    </div>
   </section>
 
   <!-- 個股情報 -->
