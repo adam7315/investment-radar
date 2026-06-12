@@ -18,7 +18,7 @@ const STATE = {
   _watchedCat:    'all',
 };
 
-const US_CODES = new Set(['NVDA','AAPL','MSFT','TSM','AMZN','MU','TSLA','DELL']);
+const US_CODES = new Set(['NVDA','AAPL','MSFT','TSM','AMZN','MU','TSLA','DELL','SPCX']);
 function isUSStock(code, d) {
   if(d?.market === 'NASDAQ' || d?.market === 'NYSE') return true;
   return US_CODES.has(code);
@@ -36,7 +36,7 @@ function getTop10Codes(stocks) {
 const STOCK_ORDER = [
   '5274','6515','7769','6223','2383','3443','6669','2059','2454','3661',
   '2330','2327','3017','8299','2303','3481','3008','2313','2308','0050','00403A',
-  'NVDA','AAPL','MSFT','TSM','AMZN','MU','TSLA','DELL',
+  'NVDA','AAPL','MSFT','TSM','AMZN','MU','TSLA','DELL','SPCX',
 ];
 
 // ── 使用者分類（localStorage）────────────────
