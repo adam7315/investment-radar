@@ -49,7 +49,9 @@ function saveUserCats(cats) {
 }
 
 // ── 日期格式 ──────────────────────────────
-function toIso(d) { return d.toISOString().slice(0, 10); }
+function toIso(d) {
+  return [d.getFullYear(), String(d.getMonth()+1).padStart(2,'0'), String(d.getDate()).padStart(2,'0')].join('-');
+}
 
 function isoToDisplay(iso) {
   if(!iso || iso.length < 10) return iso || '—';
