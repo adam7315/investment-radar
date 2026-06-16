@@ -1,7 +1,7 @@
 {
   "date": "2026-06-16",
-  "collected_at": "2026-06-16T20:10",
-  "total_news": 208,
+  "collected_at": "2026-06-16T22:26",
+  "total_news": 207,
   "stocks": {
     "5274": {
       "name": "信驊科技",
@@ -59,7 +59,7 @@
       "attention_score": 5,
       "signal_type": "突發利多",
       "attention_reason": "多則新聞指出信驊訂單爆滿至2027年，AI伺服器需求強勁，獲利預期大幅上修。",
-      "news_summary": "信驊訂單爆滿至2027年，AI伺服器需求強勁，獲利預期上修，股價創天價。"
+      "news_summary": "信驊訂單爆滿至2027年，AI伺服器需求推升獲利預期，股價創天價，考慮拆股。"
     },
     "6515": {
       "name": "穎崴",
@@ -74,11 +74,7 @@
         "change": 20.0,
         "change_pct": 0.2
       },
-      "institutional": {
-        "foreign_net": -81,
-        "trust_net": 4,
-        "dealer_net": 15
-      },
+      "institutional": {},
       "news": [
         {
           "title": "【股后萬歲2】穎崴散戶翻倍衝進場 年初提前下車投資人「1張少賺830萬元」 - Yahoo股市",
@@ -117,10 +113,10 @@
           "source": "Google News"
         }
       ],
-      "attention_score": 3,
+      "attention_score": 4,
       "signal_type": "題材炒作",
-      "attention_reason": "近期股價飆漲，市場高度關注其高價股特性與獲利能力，但外資小幅賣超。",
-      "news_summary": "穎崴近期股價飆升成萬金股，市場熱議其高獲利與員工高薪，並探討其產業邏輯。"
+      "attention_reason": "穎崴近期股價飆漲，成為市場焦點，新聞多圍繞其高價與獲利能力，散戶與投資人高度關注。",
+      "news_summary": "穎崴股價飆漲成萬元股，獲利驚人，引發市場熱議與散戶追捧，但也有急跌風險提醒。"
     },
     "7769": {
       "name": "鴻勁",
@@ -135,16 +131,18 @@
         "change": 155.0,
         "change_pct": 2.15
       },
-      "institutional": {
-        "foreign_net": 182,
-        "trust_net": -139,
-        "dealer_net": 16
-      },
+      "institutional": {},
       "news": [
         {
           "title": "鴻勁明年產能拚增5成 CPO設備Q4送樣驗證 - news.cnyes.com",
           "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE51Q0xqaUJrLVlkczBmUUo1TTE1cFcyaXlDYkZJRnFvRTBzZGxaRklSNFJXb09iMEFkeFpzbzRQT3kyNGRXd3AwRXk4SWhDVWs?oc=5",
           "date": "2026-06-15",
+          "source": "Google News"
+        },
+        {
+          "title": "中華電小金雞、鴻勁上市滿半年 證交所：6/3開始融資融券 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxOUFd1SUVEcXhtQVYwSTVnZEd3a2RMNVhOQnhsQ2dTM19XdVBwRnJycy1MUGFpenctcmg2c1lhdk52dnI3YURfczBsdHVuYzFxVS1BNXFPMlp4RjhNQTUwYjFnUzFNVmJwTGtrNzZOSWxpRjBaMGpmOUQ1a0hJMzBfVmZ6aVNEUWVuREc4dGxNdWExVmFaazRRUDRySFdxOUQ1QU5UZUZYYVRSMGstaFd2a1JBV19JeklJLWk2Zm4yWU1Sd2ZuQzh2VEpja0hId3laY3ZLRmlQQ1BNTkhodllob0ZReWdKVHlIOTJhOXRpNEFHVndZVk12R2dZalJnMDZGX1Rlam51NWhMaWVWU0RyckJzX1loT3FGdlFHbTBXRXlQU0JnLWRrc1ZxanhKZTh0VnA5T1FITU9MNHJfOUhveS12LU5BT2tEb2dfVWdOZjJqS1ROUjRJcVhPT01xeTduWjdnNzhqbHc2UEFCZW5DYU9TbDBVRXlCV1JlUjJsRQ?oc=5",
+          "date": "2026-06-02",
           "source": "Google News"
         },
         {
@@ -170,18 +168,12 @@
           "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTWZHY1E1b2RxWE9KVC1OeDNreHdJcUozNFM3d0c0OXlLNUlvVUZGNUlSLW5XbklFUnpDbDJkQWNtaFJfRE1jMXVUcFB0ei1YUnN3ejFIcDdEZmxlWFVqSkoxaTlFTEVVWWhEa2pZU0NHdnY1VzRhdTAwaEZLV1hIVnBBWVhEZzhLQzJvUFVHREV1cDdiNkhxekFLdUUzU0VYc1F6NDhWWEJNd1I3TVhLbEotTDdzU211RXprY051UUpZWjJCdWFUcjZUQWNvVlpu?oc=5",
           "date": "2026-05-13",
           "source": "Google News"
-        },
-        {
-          "title": "股價黑馬1／不到2年股價翻10倍！第3高價股鴻勁 訂單滿載羽球場變產線 - Yahoo新聞",
-          "url": "https://news.google.com/rss/articles/CBMitwNBVV95cUxQMnNUQmswNXM1cmQxQWtqUURRUlZVMEhCc1V5NHJCZGhiekdFVmxCTXY3RXBIOUxQTHR3YlhlMFZzMGhBRDNHS3ZtNjRJemxzSmRTNVZicW5zQl9GQXJZTVBnMUljbW1zc1RaQlptMlFBSnNlVS0yWnk3UEt4dE1DVTVCR3N6akhMU01MUTFrTjJQYWYyMnJRXzJ1RkxwSDR6ak9jbmxZdXVQam9XTG90UVN4aW43M0tOV0xwN2dYVUNiYXBuUjNTdC02d2FXYURNSDhiNW1waUtxWjl2UTFQak9wZjhaOWgtOWNmLWhSQ0g5NFFyRExKeXptNy0zSV9fNzlLbTdwNmc0ZnV6cHpnQmNzOXc0RG1sekUxOVQ1TDhOSlNBWmdhSlg5U2dQaFlXYWpZSE40c21vbFJTcklWYV9TRklxeTE1T25iMWo0dmtTUG1oV0VXc0lmSElQZDZodG1lYy1ybXRFWFlVVzFjeUlROW1ybXZPWk4yeDlrel9mdDRXMHUwQkFsOURSUWlBOUQtbWNQLUN2bUlvbTZfcVo3WlpEd1JfZVNlR0VFbkNWNGFZeVlr?oc=5",
-          "date": "2026-06-10",
-          "source": "Google News"
         }
       ],
       "attention_score": 4,
-      "signal_type": "題材炒作",
-      "attention_reason": "多方利多消息持續發酵，外資買超，但投信賣超，需留意籌碼變化。",
-      "news_summary": "鴻勁明年產能拚增五成，CPO設備Q4送樣，法人看好，股價兩年漲十倍，員工身價暴漲。"
+      "signal_type": "突發利多",
+      "attention_reason": "多重利多消息齊發，包含營收成長、產能擴增、CPO設備送樣驗證，且外資喊出高目標價。",
+      "news_summary": "鴻勁5月營收年增87%，明年產能拚增5成，CPO設備Q4送樣，外資喊價12000元。"
     },
     "6223": {
       "name": "旺矽",
@@ -206,27 +198,9 @@
           "source": "Google News"
         },
         {
-          "title": "【06/04 申報轉讓】旺矽(6223)董事高進棖於04日申報轉讓旺矽股票76張-CMoney 小編 - CMoney投資網誌",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTEhMQW9qX0tWWTFRNVpkendvOVRwRmZJREJDbERidmc3eFQ0NVhKSXpXMFFWeUFucXpUcG5LSThqVTBvWGdKZng2MGNDUHhxVWlYTlpMSHVpRWZGLWRWSlVqX1dyVkpJV2k4RHBTbHlOMVdRZzIxTVR3Q2V0Q1hYbUVQZFZLeGtkTXc?oc=5",
-          "date": "2026-06-04",
-          "source": "Google News"
-        },
-        {
-          "title": "注意股：15日55檔穎崴、旺矽、禾伸堂、尖點、華通等- 上市櫃 - 旺得富理財網",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9wZlFNZG9tN1gzbk1MRGt1Ml82SlB0SWZybnBRcmFTc2lKUldKZTBmMWxKU0ZYNDB5NzU2SWYxVVp5MjNkVHZFS2tvUTl2c3doRmJVeEJNYnhaakl6dWFyOEFBUEI4aThSSUE?oc=5",
-          "date": "2026-06-15",
-          "source": "Google News"
-        },
-        {
-          "title": "AI探針卡雙雄營收噴發！旺矽、穎崴搶搭先進封裝大浪潮【豐學PRIME盤後精選】｜豐雲學堂2026 年 06 月 - sinotrade.com.tw",
-          "url": "https://news.google.com/rss/articles/CBMi2wNBVV95cUxOaldhUU1zTVlmR0lmUUZQRTROd0VZZGVtbkxvTU1BQXZDWGZhMzVRaUcxRzhhZFVnMDlUUHF2Zm5uam44LXZrelVQVEZoR09YOVpPRUJiSnk2dlp2Z19Hb2VzazQzOU9YVVEyaGJ3c2JBY2NWOHhqMkJPUWdKOGJyOFotNXYwMVRmNmgxTzVpRXNsdGFDT1BQNzB3czlfM0hHQnZTWk1tWmZjSDAyWXZnY3NLM2ZWc0hQc2FmMmhyaFlraHVQR0hWaDZLNzJaZnRnTXFhb1hQWk1kdkxxV3BPU0RYdDdqQzgtcXRrRUZ2R2tMNXI0ZlpXd3NzcXI2TjN0RGxuQXlLZWNMREo4OTZVU3NqOWVNckpEYnZxWDRuRmJNNHVQZVd4Nms1eFU0cVY5cDhreEZDSzNYbnB0R0NsZnhMaU1CNENYTFpodlNzdHA4SW11eTVBZV9aZkZ0VmhVXzdBdERnRkNFakNLVGQzR01aZ0VQd2wwUlRlQzU2VTF6SDhYeXBlRWJhSFdGMEQ1RFNwMHR0Nkp4Qkh1eWFLdFZ4ZEl0VFJmbU9ydDFybFM3RjVnY3ZLLS1PTExPczczNVNnc0VZMTRjR2pQRHFaazliUzRBWG9vWl9J?oc=5",
-          "date": "2025-12-09",
-          "source": "Google News"
-        },
-        {
-          "title": "唯一綠燈千金股...旺矽第三季獲利創新高卻慘跌停 分析師揭3關鍵 - Yahoo股市",
-          "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxOLU4tTHdsTVdFV1Y2ajVFLVBFMkNBcGxtZzM4b0h2MTNweWxLTk9xdUpyaXdEY3Nya1lZVkppZmxmYlZGTl9GQUdhcHQ3WkROQXRFQWp3d3k1SWo4RnFhNnFaQlh0dU50WXVDZjZjYlRoQU5hWGFBakFzSlpldTBSUEFYb2NlNWl4SXRDS2Z5Q0hCNkVkUzUta2g4bEQzWGxtZ2RFandUNmtaX24xZXBxLWhlVzZDZFJlRExqLW01Y1RlYlZOdkhYalpyMlI0QzBBQ01qdzR4dElrcmZiNUpMOVNRTXd5eHkyMG53ZGVzOUxfY1F5MVRpaFV6VUtmSWQ4MWdvZGZNNU4waGhSR1NySDhjQklucVdwNENGQ29FSllwbmI3M200OEN6TThFSnhkaVZ4cE0zVkM2M181dG1saG5QMjhqMVQwblZ1dF9CQUVOSnluQ2lKMVYxd2FscnVLWmVweVNSU25yaXRTdDZJNTkxNVlOak4yYVgxWnpBZEVTY00zLWZaN29fZzhQTUhiWUxOcVR3NnV1V054WUdTLU1R?oc=5",
-          "date": "2025-11-10",
+          "title": "單月狂賺4.23億元「年增91.4%」！旺矽受惠AI、高速運算帶旺 EPS衝上4.31元 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNajdwbjViYlBnQ2xYTFh6WXJ5QWZvR1paMVROdnBIZVVqT1BjRnhIMEMzelhTWURUODVFOF9xUC12OUx4UU03cl9WRGg3N2o1Vlp1MmVCamhoTENwTnEweDZvQUZpaFJKWWlYbmx0azhKVW9udjB0cWpYNDZURTc5MDk3WnkwRUc0Y0RMUlpkb0pDMlR5cGlRU3VqU0hNWXlfSFZraE1RX1lFUTUyRFhmTndkQXR1d0ZHZER6dVhyOUpuZWJIQ1VGYWZCVk9GWXNTdVdwLTM0cXBLVmdTTFBDLVNTOHNKU21QNU1yVG1zb3Blc2dpblhIc1FPRQ?oc=5",
+          "date": "2026-03-16",
           "source": "Google News"
         },
         {
@@ -234,12 +208,30 @@
           "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1hY1luN2xaVExXOV90WmhhUTBzYVpSYzROMlJHd0E4Mk1VNlg5c0xRdXdoR1dITjdWaXhrMVlXUEUxN3l0TV9MS2RELW5ING8xU014ZU1oN1U?oc=5",
           "date": "2026-06-08",
           "source": "Google News"
+        },
+        {
+          "title": "外資逆風力挺2檔強股！智邦前5月營收飆破1261億、旺矽吃下TPU商機 法人喊：後市還有戲 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMi7ANBVV95cUxPZlpXa09hTV9JODI3dXp4dF95MEh1TlNkY1hjN2phNUlCa1BUMjkwZlMyQ3JhQ2hMTkRXSUV2UV9uVEZaZnRrTVBSWTlCX0FqRE4ycTFQUi1JUi0yV1lqUVZDY3ozWVBrSU9KdU9FU1RCalk4Nl9ZR091TUpwa1RDSUFDYjBfVTdzM1VMbDh2anNvSTM0azRDZTVfcHIxclhQYVZRdENES2IxRDZfMzFNQ0pCOHlJeFRZUG5UYWZSM3M1RzBXbkQ1TDQ2TzdqQjJfYjY0UW1JWmtKc184bG1pMmZmYmlsTlpzMTV2cWtXbFZRR2JpZ2NieDVJWVlaUFNXMDZueDFsckdPeDdBSTVPaHZvbWlDbVltNEpOLVE3VlI0STVPSWd2VGxyNlJMcE40M1dLMG5BQWw0d1Y3VEcyenpjN3p5Y2EzU3VHaHhRbkhRbnZ3Njg3SW1xUlA3N1ZlcFRTT0NrVXVHT0VJR0NCcTVPelFSOThWTmR4NGJCaHBxNktfbXJhZkxfM1l3NTdtRE9CRWJwejM2TGdZYmJNVTJycndwMFFodG4wSU02VjhzNmlIQXNwM3J3b3o3Y3lVZDNQaERqRDc4WTFkRGJuNElPRUwyN2NsTTA5ZFE1ZUQ5S3pQWlNhdC1TdWk?oc=5",
+          "date": "2026-06-11",
+          "source": "Google News"
+        },
+        {
+          "title": "6223 旺矽- 旺矽六可轉債不安因素- 股市爆料同學會 - CMoney",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5ZT1hiSmg0enVYLWRYdFJkc3ZSVS1pNEFhWjdCOWtfcDZEc1oySS10N2UybUE1VmpXLXJTbWowejhkMzkwc1NiTFdraldxYS1HVVIxbWRSQko?oc=5",
+          "date": "2026-06-04",
+          "source": "Google News"
+        },
+        {
+          "title": "唯一綠燈千金股...旺矽第三季獲利創新高卻慘跌停 分析師揭3關鍵 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxOLU4tTHdsTVdFV1Y2ajVFLVBFMkNBcGxtZzM4b0h2MTNweWxLTk9xdUpyaXdEY3Nya1lZVkppZmxmYlZGTl9GQUdhcHQ3WkROQXRFQWp3d3k1SWo4RnFhNnFaQlh0dU50WXVDZjZjYlRoQU5hWGFBakFzSlpldTBSUEFYb2NlNWl4SXRDS2Z5Q0hCNkVkUzUta2g4bEQzWGxtZ2RFandUNmtaX24xZXBxLWhlVzZDZFJlRExqLW01Y1RlYlZOdkhYalpyMlI0QzBBQ01qdzR4dElrcmZiNUpMOVNRTXd5eHkyMG53ZGVzOUxfY1F5MVRpaFV6VUtmSWQ4MWdvZGZNNU4waGhSR1NySDhjQklucVdwNENGQ29FSllwbmI3M200OEN6TThFSnhkaVZ4cE0zVkM2M181dG1saG5QMjhqMVQwblZ1dF9CQUVOSnluQ2lKMVYxd2FscnVLWmVweVNSU25yaXRTdDZJNTkxNVlOak4yYVgxWnpBZEVTY00zLWZaN29fZzhQTUhiWUxOcVR3NnV1V054WUdTLU1R?oc=5",
+          "date": "2025-11-10",
+          "source": "Google News"
         }
       ],
-      "attention_score": 3,
-      "signal_type": "重大訊息",
-      "attention_reason": "董事申報轉讓股票，且有違約交割新聞，需留意籌碼面變化。",
-      "news_summary": "旺矽董事申報轉讓股票，並有違約交割新聞，同時AI探針卡題材持續發酵，但股價波動大。"
+      "attention_score": 4,
+      "signal_type": "財報佳",
+      "attention_reason": "旺矽單月獲利大幅成長，受惠AI與高速運算，但有違約交割與可轉債等潛在不確定因素。",
+      "news_summary": "旺矽單月獲利年增91.4%，EPS達4.31元，受惠AI與高速運算，但有違約交割與可轉債消息。"
     },
     "2383": {
       "name": "台光電",
@@ -255,11 +247,7 @@
         "change": 90.0,
         "change_pct": 1.79
       },
-      "institutional": {
-        "foreign_net": 648,
-        "trust_net": -38,
-        "dealer_net": 162
-      },
+      "institutional": {},
       "news": [
         {
           "title": "財經青紅燈》台光電市值輾壓金控股的啟示 - 自由時報",
@@ -274,15 +262,15 @@
           "source": "Google News"
         },
         {
-          "title": "導讀摩根大通被動元件 PCB 研報：國巨、台光電、欣興點名增持，目標價全說了 - 鏈新聞 ABMedia",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5Lc1I5bW9OdHJyNHM4LU55aGh6U3ByMnpiaGN6X2l0MVlvOENTS1hYeUdTeVY3dVV6eFF5T3BDRVlQR2U3MlNmVHRrbXNpSjFDZlFneXBKdEZFdTdtQkdQaFg4YTNWanZDOVV2S2JlTVQ0Tldf?oc=5",
-          "date": "2026-06-16",
-          "source": "Google News"
-        },
-        {
           "title": "台光電創高後今挫8%校正回歸...分析師卻喊「安啦」揭買點 - Yahoo股市",
           "url": "https://news.google.com/rss/articles/CBMi_AJBVV95cUxPWG1qYmRyWWViak91N19oM2RGQU5iX1lsMXRDNWhJaFowVEZacWQzUlI3b3lIallhNDlVcGlTd1JWREQwclVLZFJLa3NJbVFRUUQyZVZTeVl1OGhweXNwRmpLWjVqLUNpSFp6NFdxODFDVVlyZC1GV09sajJhX0xFNDJsanN5dHBFZkVSODduMk5zdl9QaW5zOWhtZjFVM2MzUG1BUHVTeXhKOUlNSFFHQzdVWVFZTFVyWEtUb202ZzF5SFpQX19FV0VJcC1rakhwbm9zV0VwTURHYUp6YlJ1UUFNYTgtYzZYQm5ZNTJ0MThsMnNBNjBzVW9ienhPM1VMaEpfTnBkdmlFbUU3N0Q5MHJGZjBnZEt2TXhhNXlsdzA2VlpaM1M3dWtxa00tR3NxekxwWC13ZF9uRndGbkpHazJ6emxMVDFsVGdfZ1NKQ25RYV9UY1NTVUtBM2ZBY01tOUxUa203bnlCbkhrTUp4aF9WSUFHZUU3Y0dqaQ?oc=5",
           "date": "2026-04-27",
+          "source": "Google News"
+        },
+        {
+          "title": "導讀摩根大通被動元件 PCB 研報：國巨、台光電、欣興點名增持，目標價全說了 - 鏈新聞 ABMedia",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5Lc1I5bW9OdHJyNHM4LU55aGh6U3ByMnpiaGN6X2l0MVlvOENTS1hYeUdTeVY3dVV6eFF5T3BDRVlQR2U3MlNmVHRrbXNpSjFDZlFneXBKdEZFdTdtQkdQaFg4YTNWanZDOVV2S2JlTVQ0Tldf?oc=5",
+          "date": "2026-06-16",
           "source": "Google News"
         },
         {
@@ -299,9 +287,9 @@
         }
       ],
       "attention_score": 4,
-      "signal_type": "外資買超",
-      "attention_reason": "外資持續買超，且市場對其未來展望持樂觀態度，但股價波動大。",
-      "news_summary": "台光電近期股價創高後修正，但外資看好並點名增持，市場關注其市值與未來走勢。"
+      "signal_type": "題材炒作",
+      "attention_reason": "AI題材持續發酵，台光電股價創高後震盪，市場關注其後續走勢與評價。",
+      "news_summary": "台光電受AI題材激勵股價創高，近期震盪，分析師看法分歧，市場關注其未來表現。"
     },
     "3443": {
       "name": "創意",
@@ -316,16 +304,24 @@
         "change": 105.0,
         "change_pct": 2.18
       },
-      "institutional": {
-        "foreign_net": -422,
-        "trust_net": 117,
-        "dealer_net": 207
-      },
+      "institutional": {},
       "news": [
+        {
+          "title": "AI族群火力全開！創意「吃下Google大單」再躋身0050新兵 攜手2檔齊奔上漲停慶賀 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMitgNBVV95cUxOTDlMYUdnWlFNTDRDY3dvejVfejNLV2xReGRuWlNLb3p1NkV1RGlHR3BRLVZDN1h6X2dKeEY0V3Nlai1WNWYwcndTY2ZvRjhURnBXSzRHNTlvbzd3bVVrRUFuaDZHWnJFX0FLa0hvWDNBSlBWVW80NHNNN1VCblI1UVZ0M1MzT3Q2Q0lZUnRzWkZUd3IwQjF4dmc0SEM3RlBvUHlxRlB6SkVyZE1feFYwd0d3WnVWZGptUGNXZ1g3Y1NlZm9ZZi1LUE5ieV9KRDRocjF6b0dRTF82NUN2NGRxRWNDX2ZPRHBGVS1oR1MwdjdSY1pDelNpcUdIMGlkZ2c5UXBxcm5Sb21VX0gwTm1IcHN5TldOaWsyd0JCN0pZRXIzRWRJRE8tWEwyYWJWQTlTUXlDUkM0Wk1BQ0hFQ2xuSEVCcHJuWGNDamVSdGtiTDItWTBENlUxX3E2a2VYMVdrZ0FvY3FtMjVFTjNUQmpJb2Y3TXNhdzNEV1ZHSWpNaUVHN284SXFSdHJfckJjS3lKQlVES01XR2FSZFB4Wjg0MEx1RDFmbTJUMkREajBYRi15SVZVb2c?oc=5",
+          "date": "2026-06-15",
+          "source": "Google News"
+        },
         {
           "title": "創意(3443)、聯發科(2454)，Google ASIC 雙線開花，雲端轉骨故事的台股雙主角｜產業熱話｜豐雲學堂2026 年 06 月 - sinotrade.com.tw",
           "url": "https://news.google.com/rss/articles/CBMizgNBVV95cUxQYUdIaURFSHI5TkJWcU4tTXI0Y2Rnd2N3d01LTkZ6QWlvZUVNaWpwNmFHd0Z1ZjFVdExJY3B4X2ttUWUzbDdiQkxFVXdoN2JtUTNXeFhzaUVZLU43T0VnbGdUMzhxRlJ0TzNXM2tzNkszemhoazdxa2xONVkwYjRVWThvM1BXVTBmN3c4RFVGX3QxSGtZQVJxeTI4U2lMRjhvRW0zNmFFd21LNFJNWk1Zd0NDUjBKYV9tR2hPeTJBbDFGOER2OUthYndMSDlkZjRkazRjZi1pSldic2lGckpJRmFjaGliaV94YU9EdDFlMTBONUE1MVQ5NWQwYlVBNjBYX1lrcF9aVGl6YUpucnFIZGdmakVRWXNxOWtrWWU2ZnpVWkdrdHhWZVpBX1h6bVlnYS1sNTJqZklwNVdzalZianpnUWFYaHJSTEdRZVJYSG9BRTFoelJQTWUtM0EtbDNDeGtDa2ZHS1MyMThuMEhsUnlHSnk4dk5vRXdESVI0TjB3XzBOS1I2X3ZhS3dzM3h6cDN4LXlhSzBrNGo2czg5dnllSGt4VVhDSGwxZUxWOXptcEVHbDd1R1VMSDc2dTAyWmdMX0NWSGszU2xpZlE?oc=5",
           "date": "2026-05-28",
+          "source": "Google News"
+        },
+        {
+          "title": "3443 創意 - 創意疲軟引發市場疑慮- 股市爆料同學會 - CMoney",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBkdE45am1wcm4tREFhdFh3b0pDTnlCTjloRFFmbF9idVB6blVhUkZxZjlVV1RreHo4S2hTSjZrUUhNbVI4c3cwTHpQLXM1UmFmQjZEUzZlSXA?oc=5",
+          "date": "2026-06-07",
           "source": "Google News"
         },
         {
@@ -345,24 +341,12 @@
           "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPODZyUUdrNnlDSnBmTWJlVzNUdnNHem51V2VrNGhJYUF5T21LM01qcjd6OXY2V2tRbkoyR2NvRW9CZTBvamt4Vmc2YWJjNWdKaFN0RkNsVU9QREpzLV9SeFpzbTdfeUNodFNJSHRRWEQ4MTk3amlHMEVoVkotb2pNN25ZMENCdkF4VHJGNVNR?oc=5",
           "date": "2026-06-15",
           "source": "Google News"
-        },
-        {
-          "title": "3443 創意 - 創意疲軟引發市場疑慮- 股市爆料同學會 - CMoney",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBkdE45am1wcm4tREFhdFh3b0pDTnlCTjloRFFmbF9idVB6blVhUkZxZjlVV1RreHo4S2hTSjZrUUhNbVI4c3cwTHpQLXM1UmFmQjZEUzZlSXA?oc=5",
-          "date": "2026-06-07",
-          "source": "Google News"
-        },
-        {
-          "title": "0050大換血倒數！創意、南電等4檔有望入列 AI股強勢洗牌、雙千金呼之欲出 - Yahoo股市",
-          "url": "https://news.google.com/rss/articles/CBMirgNBVV95cUxOek5mRncwOV9jVjNXWlE0R2ZUOFRMN0dBZEtuZGxWR3dXZUtSaWFLNnUtQ0VrZTBfUjhYbktmS3pzRlV1TEkxM0M5N01KYV9rWU9yb1cyT2tHSFg0VGtIZktRaEhZTGdsSHUxMFFLcWxTU053dEhCV2IxTWlVaUFsNmxzaEZWaHZtWVBPR2IzSUtGYWJrNVdNc0U2SHRYdW5FelpyX3Bfc0JIMUgtOVRWOUxYNWJsT2NRZVZYQkFFSjQ0VDRCT21RRjAzODJZSTZ4emYwQVF2LUdCbGpPWFQ2aG4yaXc4MXYwUUc2UWlvZnRvemFudDhfRnozSGJiUTBLLUxjWTlxTFNFa3kyQ3o4TDlJX1lGTUJBVXZFX0EwRTgxVnpYb09iSkotbmh2QXVIeUxlTHBqMC1LcEVvQ1ZTNTNxZWotSnp3MnhOS1h4YTMyUzV6Z0VGMlZFSTFMQ1VKTW4zcC0xSzFvNXNvbkt3eWpZRGdqZ3pqWmU3Y1hYWjdXVkxSbTF3RXlqZ1Y1NC1Ddmh3RnlhSzRlV1ZwQVZqMF9pV3UzX2JTNDVka2pR?oc=5",
-          "date": "2026-05-29",
-          "source": "Google News"
         }
       ],
-      "attention_score": 4,
-      "signal_type": "題材炒作",
-      "attention_reason": "創意今日漲幅強勁，主要受Google ASIC題材與0050成分股納入預期帶動，但外資賣超需留意。",
-      "news_summary": "創意受Google ASIC題材與0050納入預期激勵，股價強勢上漲，但外資賣超。"
+      "attention_score": 5,
+      "signal_type": "重大訊息",
+      "attention_reason": "創意今日因入選0050成分股及傳出Google大單利多，股價強勢漲停，市場關注度極高。",
+      "news_summary": "創意入選0050成分股，傳獲Google大單，AI ASIC雙線開花，股價漲停重回各均線。"
     },
     "6669": {
       "name": "緯穎",
@@ -377,11 +361,7 @@
         "change": -20.0,
         "change_pct": -0.41
       },
-      "institutional": {
-        "foreign_net": -79,
-        "trust_net": -329,
-        "dealer_net": 126
-      },
+      "institutional": {},
       "news": [
         {
           "title": "緯穎股東會2》首度配發股票股利！洪麗寗：向「股王」請教，吸引更多投資人參與 - 財訊",
@@ -402,28 +382,28 @@
           "source": "Google News"
         },
         {
-          "title": "【00992A】06/16 操作日報｜經理人動作了！全數出清AI伺服器大廠緯穎 - CMoney投資網誌",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1EV21VUnNkMVRLYkRhcGF3TnpVa2dpSEdhSURfTkhKRW5LTjZWRWQ5aXNhZkRJb3lVZThkRTQ5ekVFaGtvTzVuRThxWF9aSlUxbXBYTGZQUTZzQW5HWjJUaFFjVVlDeUlzb25kY2hjc1VyaDV5SmVodzQtc2RNUQ?oc=5",
-          "date": "2026-06-16",
-          "source": "Google News"
-        },
-        {
           "title": "緯穎配現金股利145元＋股票股利20元 通吃CPU、GPU、ASIC AI商機 - 工商時報",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9KWEF2T3RqcHBhZHRBbnhscDVVdE9MSGhQTEEyenJ3cXZrLVp2bFJsanN5MThBRHNBUmYxNTRYNjdNV3dxQkg4UlNfV2haWW9DQS1Mb0toemQtU1YxZ293?oc=5",
           "date": "2026-05-25",
           "source": "Google News"
         },
         {
-          "title": "緯穎股東會決議配發每股 20 元股票股利及每股 145 元現金股利 - TechNews 科技新報",
-          "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQRGlMT05IenNIeFZFaWE0N3N1NGdQeWtIV0JSbjYyeG9wWDhoVEJORzhNX1JXVUJxdk81MF9JOFZZX2pYRFQ1SEtCbTFtMTVhdFdqQUljLW03LWo4VnhIWlc1c1VaaFM5bVZQUkxBZ2RYeVM0THhUT3FqSmZZcEhXMWYwYWkyT3dlODNScGpIeThqc2lDYkxBaHVzeFZKT2xub19lZzl6X0h3Vi15M0ctSDFXakZhTndfTHFvZVFjaHRhMU5tbTItbDBZRFVqRjdEc1ZxRmhVX1Q5aFROc2pyTmJaY2lqVUY3S2VpRHlVZGs?oc=5",
-          "date": "2026-05-25",
+          "title": "【00992A】06/16 操作日報｜經理人動作了！全數出清AI伺服器大廠緯穎 - CMoney投資網誌",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1EV21VUnNkMVRLYkRhcGF3TnpVa2dpSEdhSURfTkhKRW5LTjZWRWQ5aXNhZkRJb3lVZThkRTQ5ekVFaGtvTzVuRThxWF9aSlUxbXBYTGZQUTZzQW5HWjJUaFFjVVlDeUlzb25kY2hjc1VyaDV5SmVodzQtc2RNUQ?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "6669 緯穎- 今天法說宣布配股20元很多人有疑惑請AI來幫忙解答- 股市爆料同學會 - CMoney",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9FZ1ZBT3Y3R0dtYldzOVh0QU9ZdFl5N19abVBVMlZkdnp0SzRJWFdacmRWSlFZNWsxZDVsbmpabGM1WFdJZTZONVVyd3F4X1BQNEwtV0l2dkc?oc=5",
+          "date": "2026-02-26",
           "source": "Google News"
         }
       ],
       "attention_score": 4,
-      "signal_type": "重大訊息",
-      "attention_reason": "股東會決議高額股票股利與現金股利，並揭露AI訂單強勁，但法人賣超值得留意。",
-      "news_summary": "緯穎股東會決議高額股利，並透露AI訂單強勁，但法人賣超。"
+      "signal_type": "法說後",
+      "attention_reason": "股東會後宣布高額股利政策，並首次配發股票股利，對股價有潛在影響。",
+      "news_summary": "緯穎股東會後宣布高額現金股利與首次股票股利，董座看好AI需求但訂單挑戰大。"
     },
     "2059": {
       "name": "川湖",
@@ -439,11 +419,7 @@
         "change": -310.0,
         "change_pct": -4.45
       },
-      "institutional": {
-        "foreign_net": 111,
-        "trust_net": -189,
-        "dealer_net": 39
-      },
+      "institutional": {},
       "news": [
         {
           "title": "台股大屠殺仍有黑馬！「這9檔飆漲停」川湖、科嶠、倍微逆勢強攻 - Yahoo股市",
@@ -484,8 +460,8 @@
       ],
       "attention_score": 4,
       "signal_type": "法說後",
-      "attention_reason": "法說會釋出利多，但股價開高走低，籌碼面出現分歧，需觀察後續走勢。",
-      "news_summary": "川湖法說會釋出2025年EPS與毛利率創新高利多，但今日股價開高走低，外資買超、投信賣超。"
+      "attention_reason": "法說會釋出2025年EPS創高、毛利率突破76%的利多，但股價開高走低，需觀察後續走勢。",
+      "news_summary": "川湖法說會釋出2025年EPS與毛利率創新高利多，但股價開高走低，引發市場關注。"
     },
     "2454": {
       "name": "聯發科",
@@ -501,16 +477,18 @@
         "change": 90.0,
         "change_pct": 2.01
       },
-      "institutional": {
-        "foreign_net": 1460,
-        "trust_net": 65,
-        "dealer_net": 376
-      },
+      "institutional": {},
       "news": [
         {
           "title": "台積電(2330)從170元抱到2300元！他身價翻14倍「1天獲利比工作1年還多」：聯發科(2454)慘賠500萬後，我學會這件事 - 今周刊",
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUGxTaFhNOHNTZmxNRWVTaDBWM2hTcHV2bXl3SHg2cXZPOGFkeVNYbmdRSk9HN1dmUThINS1kYUpSNUFmbWZZTnlsMXQ4d2Z6RGQ1WGVycHhyZ0JtU1BjR0ZXV0tTTTczNnAyTnhuUGRPcGZFY2NWU1lKOEJaaWIydA?oc=5",
           "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "攜手聯發科搶攻Edge AI！「這檔」獲自營商瘋搶2.4千張重押1.84億元 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxQVFdFeWdpV3ZUOXVrMDR4TGFBNGMyVHhQNVQ5TmZoeFJaVUQwUE1CcXVuTXBtV2pwOGt5b1pTd1N1SXAzU0NPRWxwZFJveElBU0VuckZmaWtfV3VEeTA0aURpeDJjY2FIaTRfYm43S1RNN1hIa2FiMHVUaWVnMFhvbWdmMVUyaW91Y1RNZmNjVmxvanBNOUo1N0I1dkFmSHM2RGQ1aTZqcXMtT0RzbFNYbFdYcktyX2p1UWd3eGlwaXNaZThHb1VZTHBOSDJybXpkUEZwc2pPOWZmamtLV2tIQWYwV2xIbEJOTjhaUWliUVZkc2p5VTBVbVdodDF0c3Bfd3pxMkxHcV9jNTduNHFKQi1halJBejl6M29obko1NWlaMmZ0ZDVKQ1J1RTY0SV9yLWEwQkE5clRTeThfLXRsT2hwRllmUGZmR3B3UUtsWjA?oc=5",
+          "date": "2026-06-14",
           "source": "Google News"
         },
         {
@@ -520,9 +498,9 @@
           "source": "Google News"
         },
         {
-          "title": "台股重挫元凶是「外資砍台積電、聯發科」？ 網不買單狂酸：含淚高割韭菜 - Yahoo股市",
-          "url": "https://news.google.com/rss/articles/CBMisANBVV95cUxOdkh0VjJIMUhQNEJVZjdQM3BrY193OHpwNXd6Zmd3UmxJRVhDLWsyWU9ZTWR1bklReGVYeWJqRk12ZENaUVpZckYyR2lDUmJwb0RoTFF1MVNaV0s2SENCbm9Qd3phX2RiZVdaN1JRZ2RxRmNmcFFGaVdHZ295TjgxNHFtQkNabUpVcU4tSHM4TUpNOFo3a1JvV1UzN2Z0Y19tSnZUVThRQmRlYmtPRHJEWlFBUGFhbjBUWkY5ejBYZHRiZnk3UVF4dDJDaExNRXV3R1BzbV91MWVzR1M0YVdYWFVSbjVETWRSRTJFcUUwN2ZiQ2puWkRocFNxUDhkdno4VXVVbFZsOVY3MmJNdm5FUGlHdDdXbkxiRk01SUlGUVFzR2FaY1c3TTNfdDFIWS05QmNhenA4NkJYT0lXTGItT1o5NVpVQnRlUnpocXJaTG9JNkg2RFU3X2RHNktib29GNkNpYjJNaVBHWHE2SmZVTk11ZUItcWxCUlVwSlNucy1aN1Z6UEU1TWhwMC1zdzM2TUx0eHhkUHkyRTJwNWVaQUNjWUFBWWlyR0VZWFV5WUI?oc=5",
-          "date": "2026-06-13",
+          "title": "尾盤爆大單原因曝光！台積電、聯發科被神祕資金硬拉「明天將迎歷史級軋空行情？」外資拋售慘業名單竟然有它們- 上市櫃 - 旺得富理財網",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE41OXNlemVmTGNMUXBWZjhIX0QwTlZ6WUE3aTIzWDdtNTVXb3VfX1lYX0ZDTmsxc0pfWlM3QnNtX19td1NyQlZmWExnT1ZDaFhIVUxLT0JKZjNOdXZXTHNtWVZmakRObkpmNUE?oc=5",
+          "date": "2026-06-16",
           "source": "Google News"
         },
         {
@@ -532,34 +510,16 @@
           "source": "Google News"
         },
         {
-          "title": "06/15 主動式ETF共識｜聯發科4家強攻，半導體資金大換血 - CMoney投資網誌",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5ZNFlHMldwNTVRcllyem5BVmM5alJzZ01zWFJ3TnFDMWs3SVY1VTZsc1d1V0xtcVd0RTRIc0xYZ2Z6Zi1XeFRVTmZ4eDducHA2VDVicnB5cEFORm5kbHVjNXA4VGtxZ0VjdHI4ald1UDl5bmtvazVqczBraWhmQQ?oc=5",
+          "title": "聯發科狂漲175元！台積電開高50元、權值股紅通通 台股早盤大漲1269點重返45000關卡 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMizgNBVV95cUxPem5feHA4MHJwSjRyTExLQVdTMVBhcVZMRHhmZmVyOVVySUt5SnM2SWl0WXVqdTZ3Wmc3bWZoeTQzekdnVVo0dlYxeV8ybnFOekZVczRiclBvdmMxUW90eURVSFJQSFJKazREaEtTRUM0QllxVnVNTk85LVVDNUkzUG1fT296TXpGSy1FVkNseHdSSFRfd3gtc3FYZ2FZclRXdHJjRDZJc3ZRRGMtWWk5U28tX05kNWdnNVVJaGFrU01zSUdKTUU3MDFPMlhoLWdHdl9SU1ZJSk5XalhDVHVyOS1EbnBYMTdrb1R4Z01oTXRHTnBnaUVDam0ybWVIM0g4S3lHLUptZnVsYkszcDh1MjdhYklOUGJnQTBNTkZWNndQWUZVbk1zb2NPS0txal9Kelc1VktQWUpBS0lSMFNGN1FmN3AxSmxOOWxwSmktQjltVU1UaTlYYV9Qd0VjdC0xeTJoYV9NZ3dZSThqUV9LdTdVZXlvWjMwX2pNWjJEN2hPQjNGRERWUUxrNjMxNzB2SEdLd3JoOGludTdsM2llU19qV0tGVXViTDdwXzJKdy0tNTNZSEVEMWlrR0NrcmVHYV9QOE1xZXkxYlA2VVE?oc=5",
           "date": "2026-06-15",
           "source": "Google News"
-        },
-        {
-          "title": "尾盤爆大單原因曝光！台積電、聯發科被神祕資金硬拉「明天將迎歷史級軋空行情？」外資拋售慘業名單竟然有它們- 上市櫃 - 旺得富理財網",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE41OXNlemVmTGNMUXBWZjhIX0QwTlZ6WUE3aTIzWDdtNTVXb3VfX1lYX0ZDTmsxc0pfWlM3QnNtX19td1NyQlZmWExnT1ZDaFhIVUxLT0JKZjNOdXZXTHNtWVZmakRObkpmNUE?oc=5",
-          "date": "2026-06-16",
-          "source": "Google News"
-        },
-        {
-          "title": "【公告】寶島科最近一年累積處分有價證券達公告標準",
-          "url": "https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E5%AF%B6%E5%B3%B6%E7%A7%91%E6%9C%80%E8%BF%91-%E5%B9%B4%E7%B4%AF%E7%A9%8D%E8%99%95%E5%88%86%E6%9C%89%E5%83%B9%E8%AD%89%E5%88%B8%E9%81%94%E5%85%AC%E5%91%8A%E6%A8%99%E6%BA%96-111022603.html",
-          "date": "2026-06-16",
-          "source": "Yahoo財經"
-        },
-        {
-          "title": "【公告】中環取得有價證券",
-          "url": "https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E4%B8%AD%E7%92%B0%E5%8F%96%E5%BE%97%E6%9C%89%E5%83%B9%E8%AD%89%E5%88%B8-111008370.html",
-          "date": "2026-06-16",
-          "source": "Yahoo財經"
         }
       ],
       "attention_score": 4,
-      "signal_type": "外資買超",
-      "attention_reason": "外資大幅買超，且多篇新聞提及聯發科受外資關注，可能醞釀軋空行情。",
-      "news_summary": "外資買超聯發科，多篇新聞討論其股價表現與外資動向，部分提及軋空行情。"
+      "signal_type": "題材炒作",
+      "attention_reason": "聯發科今日漲幅逾2%，且多篇新聞提及AI題材與權值股拉抬，顯示市場對其未來展望抱持高度期待。",
+      "news_summary": "聯發科受惠AI題材與權值股拉抬，股價上漲，市場關注其Edge AI布局及神秘資金動向。"
     },
     "3661": {
       "name": "世芯-KY",
@@ -575,11 +535,7 @@
         "change": 65.0,
         "change_pct": 1.53
       },
-      "institutional": {
-        "foreign_net": 24,
-        "trust_net": -36,
-        "dealer_net": 51
-      },
+      "institutional": {},
       "news": [
         {
           "title": "台股一片慘綠他們卻狂飆？這「非科技股」瘋漲54% 聯發科、世芯-KY也進15檔注意股名單 - Yahoo股市",
@@ -619,9 +575,9 @@
         }
       ],
       "attention_score": 3,
-      "signal_type": "題材炒作",
-      "attention_reason": "近期被列入注意股名單，且有資金尋找起漲股的討論，顯示市場關注度提升。",
-      "news_summary": "世芯-KY被列入注意股名單，市場討論資金尋找起漲股，股價小幅上漲，外資小買投信小賣。"
+      "signal_type": "法說後",
+      "attention_reason": "法說會後毛利率創高，但市場對未來展望與資金流向仍有疑慮。",
+      "news_summary": "世芯-KY法說會後毛利率創歷史新高，3奈米出貨啟動，但同時被列入注意股名單，市場資金流向受關注。"
     },
     "2330": {
       "name": "台積電",
@@ -637,11 +593,7 @@
         "change": 25.0,
         "change_pct": 1.05
       },
-      "institutional": {
-        "foreign_net": -383,
-        "trust_net": 3848,
-        "dealer_net": 800
-      },
+      "institutional": {},
       "news": [
         {
           "title": "台積電前大將何麗梅李瑞華、勤誠董座陳美琪捐百張股票挺政大 總市值飆6億元 - Yahoo股市",
@@ -656,9 +608,21 @@
           "source": "Google News"
         },
         {
-          "title": "台積電「股價嚴重被低估」？ 外媒：18個月後恐爆漲 - Yahoo股市",
-          "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxQYy12LXQ0QTE1b3d3WVpuVElxdmY2bUxLMGpRNjJvUnNNNmhjSms5U2oybjZ5VVpndUJhNVFqd3lLLUdCTG82WnFLNXBjdjRMbDlRVzNITzRkb2Vpa0lBQm82V1llSzJiVlp1cld5RWg2dlJLcHFMQ1NHLWNEZHA2dEF6TEg0UGZDYllaQ05WeDFhTXpLbVctdHpDNFF0ZHQ4VkxLWVRYZFFwV2NFUmFRZXFCaTZJWFpRQmJkOHQxNHlISEVaUWR4VHVGSy1la0VXVW1zYjRLbmhLQjhncmhtd0hIa0taMGo3cG40dWh4ZEVfR0lCN1ZvMVVNRlBETGNrZlR1ellIVEVJUmdCeTBURUxzc29SNXUyeW1iOVhfN0JBQU9BZlp5LVloenlsMURDWFR4RVNYSW4yQQ?oc=5",
+          "title": "台積電何麗梅、 李瑞華各捐百張股票給政大 - MSN",
+          "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxNOHVIRHFud0g3dVNjRzdIMkkwNXhXRXB0eHN3WWdzUE9Zamp3SGJLd3p6WE9JT2ZsMGRFb3QyamFtUk1QSkMwd1Z5MjFyeVlvT3V6VzRPMXJ3eENoN0drSC1ldElXUkE2c1JIY2x1QzY5Q3RuZlgySVBQWG9wUG5UWUNFdmxGTXVUU19TQm1IUWVTVVY2QXVqOUF2Rm1Ma2xmeURtRnRxYl9hdXNtaENkZTlGTEUxdWFjTTBJYkZYTDlsX2htXzlTcm5DY0xXR2VYYXVpOG91Um1mM3RIdUxDNFRWQkFHdThfTGdrSXY1N2dZSjVtNmZsVjduLTRIZVFqZFM4cDRyblhsQmx0Z2dPaEpFUllIUDdFNDE1LWFTWndHUEZQUFhfTWlhVzFKTkFJbFlLNHczR2U3UUttUGJvZw?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "一小時狂吸355億元力壓台積電！「最強吸金機」國巨亮燈再飆940元新天價 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMiywNBVV95cUxQSmlyX1lxUUNxWTZMZ3o0WmNLOVpLbU1MUk81bzVIZ0Naa2dMcU1tYkwyNHRmanExdWR5eDNUT0tfS1BtbVFvek5VNVM4MU1JeGhzdEwxZG1nNGdWczc3U1lVb1RaZF90YkhBN2trZTd2cEhfRjV3NlYzNHlzWDJ4WGR5WjRETTM5T3MtRHhYbVpHQTdpLVR4c2U2Zkx0cmRJTk9US1B6a0UxTDF6S01HT01pNnJ2Ulo2UzJEbmlaM2xyMXFFTm9YN05iZ3NKYmxpQmF5elVJaG0tbVpRYUJ1MjBmUTgxektramNEUjV5OGhLT2U4Q3RLSDN2N3k3ZXhNeWttRUR2MkJ5WUgzeTRaNEFGMzRPM2dkLW0yWWwyWGp5Y1I1YjVWTUZFNXlfTTRvNVFwRjd4WHM5Rlo1V3U4V1JnUS1XTEtLbWVONHlMQVUyWk9wUnF3RjVFaXpTbUZFRmdaR2F6RjNJajN5ZFRjbl82SF9acXBzMXBaR3p0UGVBTlZ1bVVUT1Z0QTUwUjR6SEo0dlBIdElHaV9oSVBmS0s2cy1oSnczd000YzBUU1pGUDVvcDFoZVV1b1hDNUhDOGVkZHZ3NUptUzg?oc=5",
           "date": "2026-06-15",
+          "source": "Google News"
+        },
+        {
+          "title": "政大仲尼基金獲贈台積電、勤誠股票 市值逾6億 - 中央社 CNA",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ScG93eFlreDVwRnpfSUFFWTJuYW04cnBLUjVPWFlTMF9ybHkzWTZoZTN0S3RvWWtRdzRKSFhJWlJSdkRaa1QwRlhBaUpGZ1NpOU5qYkJZeWxkWEhySXFJ?oc=5",
+          "date": "2026-06-16",
           "source": "Google News"
         },
         {
@@ -668,28 +632,22 @@
           "source": "Google News"
         },
         {
-          "title": "投資優秀人才 政大仲尼基金獲贈台積電、勤誠股票「市值逾6億元」 - UDN",
-          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBYa3BoZC1JeC14NnFhdWVVbDdSY3pPcy0wVjJRQ0ZxcGtCQW1CSUt0ZWRKWW5tbzJJUEFIQW0xRW9rcjZHTU93dHg2Ql82eEFq?oc=5",
+          "title": "台積電遭「這1新星」超車！市值慘落全球第7名",
+          "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E9%81%AD-%E9%80%991%E6%96%B0%E6%98%9F-%E8%B6%85%E8%BB%8A-%E5%B8%82%E5%80%BC%E6%85%98%E8%90%BD%E5%85%A8%E7%90%83%E7%AC%AC7%E5%90%8D-125915789.html",
           "date": "2026-06-16",
-          "source": "Google News"
+          "source": "Yahoo財經"
         },
         {
-          "title": "市值逾6億元贈政大何 麗梅、李瑞華各捐100張台積電股票- 產業 - 工商時報",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB2ZmdDUGZ5c1k4MmUybTQzYzdUZ1kxaTNaZkxSWS1Hd0lIb1N5TFB2aEtlSFJObGJjMzNVM3o2WjhPQ29BTEVOam5xdVpQaDZRek82cl9FeUx5Sk41ODJR?oc=5",
-          "date": "2026-06-16",
-          "source": "Google News"
-        },
-        {
-          "title": "三大法人買超582億元 外資、投信同步力捧記憶體雙雄及金融股",
-          "url": "https://tw.stock.yahoo.com/news/%E4%B8%89%E5%A4%A7%E6%B3%95%E4%BA%BA%E8%B2%B7%E8%B6%85582%E5%84%84%E5%85%83-%E5%A4%96%E8%B3%87-%E6%8A%95%E4%BF%A1%E5%90%8C%E6%AD%A5%E5%8A%9B%E6%8D%A7%E8%A8%98%E6%86%B6%E9%AB%94%E9%9B%99%E9%9B%84%E5%8F%8A%E9%87%91%E8%9E%8D%E8%82%A1-111900847.html",
+          "title": "老後狂買「這1檔」！專家因「1關鍵變化」退休金暴增",
+          "url": "https://tw.stock.yahoo.com/news/%E8%80%81%E5%BE%8C%E7%8B%82%E8%B2%B7-%E9%80%991%E6%AA%94-%E5%B0%88%E5%AE%B6%E5%9B%A0-1%E9%97%9C%E9%8D%B5%E8%AE%8A%E5%8C%96-%E9%80%80%E4%BC%91%E9%87%91%E6%9A%B4%E5%A2%9E-121945672.html",
           "date": "2026-06-16",
           "source": "Yahoo財經"
         }
       ],
-      "attention_score": 3,
-      "signal_type": "投信買超",
-      "attention_reason": "投信大幅買超，顯示法人對台積電後市看好，值得關注。",
-      "news_summary": "台積電前高層捐贈股票予政大，外媒看好其AI王者地位與股價潛力。"
+      "attention_score": 2,
+      "signal_type": "無特殊",
+      "attention_reason": "今日漲幅溫和，新聞多為舊聞或非核心營運消息，無重大影響。",
+      "news_summary": "台積電前高管捐贈股票予政大，外媒點名AI王者，國巨吸金力道強勁。"
     },
     "2327": {
       "name": "國巨",
@@ -704,11 +662,7 @@
         "change": 10.0,
         "change_pct": 1.06
       },
-      "institutional": {
-        "foreign_net": -3389,
-        "trust_net": 3335,
-        "dealer_net": 1632
-      },
+      "institutional": {},
       "news": [
         {
           "title": "國巨(2327)漲到千元還能買？華新科(2492)、禾伸堂(3026)...下一檔被動元件飆股是它？分析師揭最佳買點 - 今周刊",
@@ -717,9 +671,9 @@
           "source": "Google News"
         },
         {
-          "title": "記憶體漲勢接班人是它？被動元件迎史上最大缺貨潮 國巨、華新科擴產備戰至2027 | 風傳媒 - LINE TODAY",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5qVThqSDJMS1ZlUGFmTWVJR0N3MUh4MWk4MDJDU2dkMXo5R2t0bnVjNWZEdjN5aUk5NzMtMFVrd3FhWG9EMlRCYWt3WG1nSXhIZURDRHRn?oc=5",
-          "date": "2026-06-15",
+          "title": "《台北股市》注意股：16日54檔國巨*.台光電.華通.環球晶.尖點等- 上市櫃 - 旺得富理財網",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5fVmp1Q0l0YTRCbWs5ZndWei1SNURCbWpGRGZkZWpxVEMxNFlSYkt2SFQ4YjlIaDk5ZEJCWEsyWDR0akJuQ19BS1hWRldDb2F1QnJfMmpDOGZ3NlZwNVNKdWtkSWoyWVV4Tmc?oc=5",
+          "date": "2026-06-16",
           "source": "Google News"
         },
         {
@@ -735,22 +689,22 @@
           "source": "Google News"
         },
         {
+          "title": "被動元件是什麼？2026漲價概念股名單、MLCC、產業鏈一次看懂 - 商周",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4tME9RbTAyTEpwOWdCNVNuaVp0cEc1RWFEZHlxVmVJeXlIY3djVVNHRHFadDNWeFlBMTZFYmthRElBSmhRbndrbUFmZldPbDJ2RjJDTEd0eUxUcG1fMFh2MEJyUWxWQQ?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
           "title": "凌華(6166)、國巨(2327)財報驚喜怎麼看？｜大戶投策略選股｜季報優於預期｜豐雲學堂2026 年 06 月 - sinotrade.com.tw",
           "url": "https://news.google.com/rss/articles/CBMisANBVV95cUxQYXYxQzZjTVVqeDZjck1GSWlLei1pZ05XSzZRWjB2VnJZa1BYVW5lM0plWEVxQzRBQ1ptay14cEFVUm1OVWhFcEJYUEwwT3NocFZKX3VITUdpOWd0bEtOb0NVQW1FVmdrSjYxQ2NEc2d1bHNRaUtCN3IwRGNMU3EyM2gtWUFLanJianJodEtZZ2hnN0JEdm1xcXBMTTRyZER6cXBkMEstSGhxVTY5WHdqWnNxZ3ZoQld5bnhKX25OSUJxdmpPVTBQQ2RjNHFzRjgzVndQTkVrY2pFVDVwel9GY3pXSEtkaG9ZYUFPaDFqaVcxU0l5d0s3VzRrcWZCbFRRMlhzWTJiaTF5RlZIZ0VuYTVIYkplMi04SEM0ZlRnRk1yR215NFVUcTdhZFMzQW5DOW9CeWhabG5TbW1DeWRFLUlZZXg5czBhVG51UkFjclZyMFhua1dLODJwODhqUHIxcFcweDNvV1ZuRUt5N3BvUW1FRFpmc3ZiVDdHREl0d0VtTEw3LXdYNFYyNnJzMEQwS3ZtbTczSFVxdWRJa2JlWDJ0MUZIQVBKaE4xeEkxWlU?oc=5",
           "date": "2026-06-15",
           "source": "Google News"
-        },
-        {
-          "title": "睽違8年！國巨股價再現1000元 也創下股票分割後新高 - 知新聞",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5adUphdjBnTXd6bnd1MWtjYV9Bc2xWb1VGZFpLMUVKUU5NeHNXRWw5LWE0d1dKbXk0OUZtVC04dGlFdnk3TlBTS3ZhTGE1b1JOV3cwYndiNEJ6UUdRR21fb2xEcE5lbXBfZks1dXVwYw?oc=5",
-          "date": "2026-06-16",
-          "source": "Google News"
         }
       ],
       "attention_score": 4,
-      "signal_type": "投信買超",
-      "attention_reason": "國巨股價重返千元，投信大買，市場對被動元件缺貨潮及AI動能抱持期待。",
-      "news_summary": "國巨股價重返千元，受惠AI動能及被動元件缺貨潮，市場關注後續漲勢及其他被動元件股。"
+      "signal_type": "題材炒作",
+      "attention_reason": "國巨股價衝上千元，市場關注AI動能及被動元件產業前景，但專家提醒千元關前勿追。",
+      "news_summary": "國巨股價衝千元，受惠AI動能，市場關注被動元件產業，但專家提醒追高風險。"
     },
     "3017": {
       "name": "奇鋐",
@@ -765,11 +719,7 @@
         "change": -40.0,
         "change_pct": -1.66
       },
-      "institutional": {
-        "foreign_net": 41,
-        "trust_net": -737,
-        "dealer_net": 188
-      },
+      "institutional": {},
       "news": [
         {
           "title": "奇鋐（3017）做什麼、法說有何重點？首季EPS創歷史新高達20.17元，散熱需求爆發推升全年展望樂觀｜股市話題 - sinotrade.com.tw",
@@ -810,8 +760,8 @@
       ],
       "attention_score": 4,
       "signal_type": "財報佳",
-      "attention_reason": "奇鋐首季EPS創歷史新高，全年展望樂觀，但投信大幅賣超值得留意。",
-      "news_summary": "奇鋐首季EPS創高，全年展望樂觀，訂單看到2028年，水冷散熱題材持續發酵。"
+      "attention_reason": "首季EPS創歷史新高，全年展望樂觀，但股價漲多遭列注意股。",
+      "news_summary": "奇鋐首季EPS創新高，全年展望樂觀，訂單看到2028年，水冷散熱商機爆發，但股價漲多遭列注意股。"
     },
     "8299": {
       "name": "群聯",
@@ -835,9 +785,21 @@
           "source": "Google News"
         },
         {
+          "title": "台股關鍵週來了！分析師拋「川普80大壽行情」點名記憶體：留意中長線布局 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMivwNBVV95cUxPbEJwVFZKS0JGeERFZXhPYm96aE16M1NGOGxnMkpGZDVPZi1PSzZhcGZtLW5XRFF6TUk2NmtHZzliUExPc3RsWlQ3d2JuWmdKZHYwbXBMcDBvT0doRnpmTlpCd1Bid04yelB2eG9yeDdwMENENzFVdTZ5YTU3ZmRWSy1KRFpzcVVOcXFyU3I1UkZxY0NOdm1DWEZibDdzZ0pOTFdEY1JGR2V0S28wX2o5TFN6OElNQVVhSFB5LUw0Uzd3dVhKUnVYZEplcHRIRDFxdk8xRVY5YWg4U05uZnFibjZjcERQRGplRzdpbGM1djBCbHFMbWQ1WnFsMDdQNWt5QVpHT0cycHNnR1czaWhGRFd0VmczalNwblVaOXU2ckl4R3hrNjRuYXp6TFZxV3Q3dEUxQmhoLURRel9OWEJLRWF1QkNCZUJLRnAxNWxpNDJ2OWFSTWZSc1cwRlA1SmtZTVA3Z1JlcURXclVucGx4aG5FOHdaNjdqSGVHNVJjMEF3OU9SZ0lpWHFTVk5sZWpqSVZvU1FxOVpfWmFHNzYzU3hnQ1U4UkttY2lEYTJTVVBKUjN2Q1JPOEZPc09KUms?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
           "title": "Factset 最新調查：群聯(8299-TW)EPS預估上修至317.9元，預估目標價為3000元｜新聞快訊｜豐雲學堂 - sinotrade.com.tw",
           "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5hLWstakcwYmE2S05sWU5pY25XWEJyYllCZ3Z3Z2NKU1BNM1RtNzZ0T18xWmtEc0NWYlQwMlZFOG9jVWF0RVZCOVJVTXVsZTdmckE4VC1fN2pxQkdNQnpReXBmU0NzZi1CVzR1ZEh1YW1hU1ZQWmc?oc=5",
           "date": "2026-06-14",
+          "source": "Google News"
+        },
+        {
+          "title": "8299 群聯- 群聯沒有了低價庫存，每年eps依然能300？ - 股市爆料同學會 - CMoney",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5rYnBXaUstMWl4bWlKakNBNHpMV1B1eC04Y1ZKNWN1QTdKT3JQSHBkSzBONUxvS243TWN2dXlZWE5nRDZ3YlpaYmVBRXJ4YkdlUHlvMzg1TWk?oc=5",
+          "date": "2026-06-05",
           "source": "Google News"
         },
         {
@@ -847,28 +809,16 @@
           "source": "Google News"
         },
         {
-          "title": "8299 群聯- 股市最新爆料，掌握股友們對眾個股股價、技術分析、新聞的第一手... - 股市爆料同學會 - CMoney",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA3ZFdZYmVYYkowSzQ5XzUyckxJNlptbDh4TUNLbGdiQi1uSXFrbmowbkU3dFRiM2pBQW9ZX2tJQk1rYlNyaGJCOFlmSmRpNjFRdTRVU19fV1c?oc=5",
-          "date": "2026-06-14",
-          "source": "Google News"
-        },
-        {
-          "title": "槓桿開太大？佳必琪爆近1.5億元巨額違約交割 群聯也被通報 - news.cnyes.com",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBRa3hLRV9za2lBMExTQ1FSTS1tTmItRmxCWjJHUjlXcXI4cjhFRlJSc1BjRU1NTERjT1hNNmJvS3psbm9sbjZIWDZLcE8tcnc?oc=5",
-          "date": "2026-06-09",
-          "source": "Google News"
-        },
-        {
-          "title": "群聯（8299）海外可轉債籌資8億美元，這1家「地緣券商」正在悄悄進場布局-蔡斯 - CMoney投資網誌",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNMFdyVXdCSkY4SnZ3dkxoa0dRV1ZoMHJ4NjJwVmhRRHJzQThCOXZsWlhmMnFWRTdMeFpHeUQwR3NOdVN1N1Q0S1VGOXlOQndhTkVJWEVCLU9BbUUxUGJkSFZhLUpfMmktWDFPdXdtNXZ4LVhUQXJYYWkwWDFuODBFSG1BYTk?oc=5",
-          "date": "2026-05-23",
+          "title": "8299 群聯- 群聯近期未來走勢研判- 股市爆料同學會 - CMoney",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5yMEZ2cHJZNXF5UXcwSktWbERwczFLUUxqRTRuX0t0OTM2WnM4Rkc5VElVVklyNXhFdFJwUXlIMmhNVFV5QmtuX1FfWTl0ZTNfQkdZWXAxNVM?oc=5",
+          "date": "2026-04-17",
           "source": "Google News"
         }
       ],
       "attention_score": 4,
       "signal_type": "重大訊息",
-      "attention_reason": "群聯今日爆出違約交割，且有海外可轉債籌資消息，需留意後續影響。",
-      "news_summary": "群聯爆違約交割逾1.7億元，同時有海外可轉債籌資8億美元，EPS預估上修至317.9元，目標價3000元。"
+      "attention_reason": "EPS預估大幅上修至317.9元，目標價上看3000元，但同時有違約交割消息。",
+      "news_summary": "群聯EPS預估上修至317.9元，目標價3000元，但爆出違約交割，大戶連4周砍股。"
     },
     "2303": {
       "name": "聯電",
@@ -883,11 +833,7 @@
         "change": -0.5,
         "change_pct": -0.35
       },
-      "institutional": {
-        "foreign_net": 28997,
-        "trust_net": 11348,
-        "dealer_net": 2734
-      },
+      "institutional": {},
       "news": [
         {
           "title": "【Hot台股】聯電爆27萬張成交量衝7%！網喊「半年後會後悔沒上車」 專家曝進場時機 - Yahoo股市",
@@ -920,16 +866,16 @@
           "source": "Google News"
         },
         {
-          "title": "00919換股「清倉」誰接走了？聯電賣壓解除 觸及漲停上月線 - UDN",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5ZZVViZGJfUGhOb1VEdFE1djBGWU9uSE9QaHVnU1g5UGIweUllbW9JR2xvZUhQbFFuTEE0aFpsaUoxTVJzVXRDX3FySXBVbTJRYlNB0gFYQVVfeXFMUFMxbkI5QnRQMXB2Mm42RmVudGhpNXFpZ0lkQmNOWk1pN1pzZG0yRzdvV25PNXJGWlZtV2JiczZJYTZSdTZTeU16ZlRsNTFaaHk5WW9kSU4tQw?oc=5",
-          "date": "2026-06-12",
+          "title": "五千億巨獸00919換股秀：「清倉」聯電剩一張、賣壓警報將解除 - 經濟日報",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12SVF5dTdJT0tiMlAzVFNBZVU0WUYwSmhLVkN2YkpOQzhlYVJVZ09VMElRaDdRN1NDalBPMXM2d3NXUzk3Ni12YUswZTlsRTRkMnFLOHI5VnF6UdIBX0FVX3lxTFA3TWlsWUhaOG9UcFRJbXZxNUUtTjc2dnNoSmo1SndwaGZ3VE02RUU5ZHBrTGhhdUFEalVDcnlqNW5EeTg2SzA2dDlPcXNxOXRtNHV3WGF1bGdQaE91UTZr?oc=5",
+          "date": "2026-06-15",
           "source": "Google News"
         }
       ],
       "attention_score": 4,
-      "signal_type": "外資買超",
-      "attention_reason": "聯電今日雖小跌，但外資與投信同步大買，且市場對其目標價有高度討論，顯示資金持續關注。",
-      "news_summary": "聯電爆量成交，外資投信大買，市場目標價喊高，但分析師提醒留意營收關鍵與回檔風險。"
+      "signal_type": "題材炒作",
+      "attention_reason": "聯電近期因法人喊高目標價及處分聯詠持股等消息，引發市場大量關注與交易。",
+      "news_summary": "聯電獲法人喊高目標價168元，爆量大漲，處分聯詠持股，但有分析師提醒營收關鍵與回檔風險。"
     },
     "3481": {
       "name": "群創",
@@ -944,22 +890,12 @@
         "change": 1.9,
         "change_pct": 3.7
       },
-      "institutional": {
-        "foreign_net": -12262,
-        "trust_net": 327,
-        "dealer_net": 130
-      },
+      "institutional": {},
       "news": [
         {
           "title": "【群創50元1】面板股鹹魚翻身？股民今年大豐收 抱一張報酬率逾2倍 - Yahoo股市",
           "url": "https://news.google.com/rss/articles/CBMisgNBVV95cUxPc3plYzBUTVc2dG50SHF5YW5kbGQ4aG9ncExLU01wdW5KVjRlWXFaN3pMMDkzVkFQQ21tNXVSQnVUanU0SnQxSm5tdzBEcTZfeVplc2RJc0hycUZvWmkyM2VJdUc0NXdxeG5sVFZaZGNnUjhyWGt2TXYzYnVBdVhpLXFkQm9CekQzREUyU2YwUEtrSmlzeFFISGR1NVNBRXhJbEc4bWlIV1A4azBiU2F4cWRBdFU2YjhCOC1FNk9UUmEza0FqcmR0a2xmRWoyV0FKVTNibnluOGRTOFltM0p2WFlKTzA3WllJMHhuQnU1RGhYWGR1a3NYLXRPam9lMDFQRjZPUTFaVG55aU1kc1ZoaU1oYmdIY05hR3QxZU1NbEJOeFZXZERqUkRnZWQ1UGJFY1FmQTBRNERjNkQ0ZUpsMXZkckdwMFB3YzhtRlFSY042MnRETG5XMW95Q21mYmlaZ0hXbWdZNWQwWnNTQVAxWlpzdE4ySmJaX1g1VmV3TnJFVGZuUnVRdlFqU21aNUhTVEtoQWhMUFdadnBrNnVRck5uX3ZvVklyeWcyVWQyNmxDQQ?oc=5",
           "date": "2026-05-30",
-          "source": "Google News"
-        },
-        {
-          "title": "台積電攜手揖斐電、群創推進玻璃基板封裝技術 CoPoS先進封裝驗證數據首度曝光 - TradingKey",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWjA5RkNOalAxTTQtejlmUnU5LVdpYnhtT04wUFNoQXJvcF9BbHpzbV90Yll4SF9NV2tadk45WlZncTFCdml2N2owRmZweHE4QWw5UWU0M2dxMDRGdXNsVHNzSk1fWjhlc0lKbnZ0N2VNbndWbTBHVjNCeEV0WkhRWEIwWEdkcUc3R0h1TTU0ZTJFYkVnOU9MdXFzdHNjVTFBMmJz?oc=5",
-          "date": "2026-06-16",
           "source": "Google News"
         },
         {
@@ -969,8 +905,8 @@
           "source": "Google News"
         },
         {
-          "title": "台股16日四大權值股盤中發威指數收在最高 群創再爆巨量連4 日收漲 - 理財周刊",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB6M3ZGb292R1kzUVNfLWZERXUtSGpSUkdRVUM1c3Z5M3pPS2lWVnlkUnJGekhnOHF0bGhrQ2l0OENMalU4bTVwaGh2TFZtWExNXzBUV19laVJQVkhkOVVXbWFGQV9kUU5VRnpkOWllWQ?oc=5",
+          "title": "台積電攜手揖斐電、群創推進玻璃基板封裝技術 CoPoS先進封裝驗證數據首度曝光 - TradingKey",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWjA5RkNOalAxTTQtejlmUnU5LVdpYnhtT04wUFNoQXJvcF9BbHpzbV90Yll4SF9NV2tadk45WlZncTFCdml2N2owRmZweHE4QWw5UWU0M2dxMDRGdXNsVHNzSk1fWjhlc0lKbnZ0N2VNbndWbTBHVjNCeEV0WkhRWEIwWEdkcUc3R0h1TTU0ZTJFYkVnOU9MdXFzdHNjVTFBMmJz?oc=5",
           "date": "2026-06-16",
           "source": "Google News"
         },
@@ -978,6 +914,12 @@
           "title": "處置股名單 0604／今日新增 12 檔，群創、新纖、彩晶、麗清等新入列，近期出關個股一文掌握｜股市話題 - sinotrade.com.tw",
           "url": "https://news.google.com/rss/articles/CBMiwgRBVV95cUxOODdoQm1TSGFjNVBEQ0Y4RDFGVUdaMmZMUDZONWptZjBPRHlfNVBXZmVXM0k5WkFlWExvVGlHM09wc2hTS1JxR0RNaU84aWhESE5STEZfRG1nZ3V4VkN1a1N6VTBCVG1VbFhnYVJESmhWektnbjNEanFRTEtqSWxrV0d5RF9DMmxScGFmLXRGWmtlWHl2U2l4RDA1YzhOR1c3RDhiM28tY2xkNUVrdmpUV3AzaVNfdlIyb2pYRXNaN2xEeWVDeEktcXEzRXBWbnp1T2lScndxMnIxa3lsX0p1RGU4V0FuMXZLQVgzdENqLVV2aTRaWngxUW4wTHVEQXVFczJmYzhyRXYyQkFqS0ZoMk45QWR2a0lVbEczc0RkWjlNM1h5eWxHX2V0TnRRUUh2elhlSHlJdW83VFJhQS1zQXB1cjRfSWFyZTRWNy1Nejk1ZExJTXdmRGJRSHRnRGRwWDN1SmtRUENfLTBTcGY2X0NTdWZxcVVOMjJXTm1IaUtYZnhESUlzZGVaQ0sxSlpja1dXOGNjd1YtYTdpMFZrdG1aYmNyc3ozcnA1RnpoSmh3cFhIZUs5LWxFVHVQUEl5eUZHN0RGWnNWMnpTM0t5anV0UEVQblljbC1udm1ob0FlQ0xmc0s0Tms2dmg3WDJoY0dDREwtR2RBYUpFWjBrMUp4WEJ1WWJGN2paTUxDS3JoZUl4WDJfRFJtR3VSVWFoYkNzVDhQZlRNSjJnRmFjNjB4NXlsLXhNUXgtWmZxOExSUQ?oc=5",
           "date": "2026-06-04",
+          "source": "Google News"
+        },
+        {
+          "title": "台股16日四大權值股盤中發威指數收在最高 群創再爆巨量連4 日收漲 - 理財周刊",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB6M3ZGb292R1kzUVNfLWZERXUtSGpSUkdRVUM1c3Z5M3pPS2lWVnlkUnJGekhnOHF0bGhrQ2l0OENMalU4bTVwaGh2TFZtWExNXzBUV19laVJQVkhkOVVXbWFGQV9kUU5VRnpkOWllWQ?oc=5",
+          "date": "2026-06-16",
           "source": "Google News"
         },
         {
@@ -989,8 +931,8 @@
       ],
       "attention_score": 4,
       "signal_type": "題材炒作",
-      "attention_reason": "群創今日股價大漲，伴隨巨量，市場對面板報價回升及玻璃基板技術有高度期待，但外資大賣超需留意。",
-      "news_summary": "群創股價大漲爆巨量，面板報價回升與玻璃基板技術受關注，但外資大賣超。"
+      "attention_reason": "面板報價與玻璃基板題材持續發酵，股價爆量且被列處置股，需關注籌碼變化。",
+      "news_summary": "群創受面板報價與玻璃基板題材激勵，股價爆量大漲，但被列處置股，需留意籌碼動向。"
     },
     "3008": {
       "name": "大立光",
@@ -1005,18 +947,8 @@
         "change": 440.0,
         "change_pct": 9.95
       },
-      "institutional": {
-        "foreign_net": -216,
-        "trust_net": 136,
-        "dealer_net": 98
-      },
+      "institutional": {},
       "news": [
-        {
-          "title": "光學雙雄攜手亮燈！大立光、先進光飆漲停 引爆「大帶小」 外溢效應 - 理財周刊",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE92cm1iRUdnWW1lT0hJNHhUWno1cU5oWHRMWFp0SUMwa0xnR0hQQzE5YnFsRXVXNEV0clhzM3I0bmp0cUZzMUtkSzZBaWdWcXJWc3dYdzdiU3FEOUNyQXNUbXRJcTJWNTM4T3lzM3JVWQ?oc=5",
-          "date": "2026-06-16",
-          "source": "Google News"
-        },
         {
           "title": "大立光股東會／CPO試產線9月啟動、第4季將比往年忙，外資大調目標價，今日股價直衝漲停｜股市話題 - sinotrade.com.tw",
           "url": "https://news.google.com/rss/articles/CBMi0gRBVV95cUxNOEoyRUM5bmhJYnVZd3hKMWljVWE1aEVKUU5WSWFLWXVvRkg4ZFkwck1hNVFwNFRsV0R5eXZiTFpMVGtiamxZVlhRMkRMazNYRXlaeHhBWFRSbGVDajJuamRnRFhDZ0E3ejA3cklCTFNjTjIybVEtXzU3MFRGQXV3Q0ZsbFUtVUFjRWo1MzJSbFU5NHlBRFJEbkpwX1VHelo5VmJTa25TOHJVZ0xhVlMwWTF4cVl2Qm1qVldMalQ1Z0I4YlVvejYtUElYaTQzaGgyaWlzemVDV2tjZ0tuaFNTNzA5aUxjUDRzeGE5cFNRWFRqQmZIbVo4RnQzY2ROQ3psUmpQelRIdzN6Yi1UQUhoYk82R25IUU8tZ045bGlYOXFzbXFuMUo3R1ZtQ21EUGZzbHM1U3dvZGhpaXM1ZHlFWmNTTU04TE1FSUVnQkZSbV9DUU11NjlMRTJHZW95cXp0UElDbEtka1Y1LTJmaGdjU2ltRllXMUVrdTFYbUJPb0Y0ZkpWLWpHZXlqdmhCa2ZTc2o1UWgycFdqWUhtcl9TRnN0SUIwUktVZTBDdGNqNE9rTzhwOTRVNlJSYk0wUkNQcmZpaDlBY09KVTI3VlN5cWdZZElwYmRLcVVIQmV0eTE5S1V3VFREZHVOVEhkOTBYWnY4WWp0QVp6WVZBVDNrWXJZRUVLTEdlNXRxYTBvTEZEc3c4MThLaFhIczJPUVlDbFhCS1FVRkpTanhVYzhid0EtSzRkSDNkck9QVF9tQTRCcDZFSVE3cnE5ODlFSm9hZkE?oc=5",
@@ -1024,9 +956,9 @@
           "source": "Google News"
         },
         {
-          "title": "大立光股東會秀CPO外資高喊5325元！股價飆漲停3885元鎖死 光學股集體亮燈 - Yahoo股市",
-          "url": "https://news.google.com/rss/articles/CBMisANBVV95cUxOR0MtUzVlUmdPWEdSMWNqcnFya0xNdmcwSlZWbWFtUTNOc0ZzcWhFalh5YmlKdXZQbkUzRVphWFlBUW15d2RkQ2lvTnZNQXBPTXFjc0R3dzNFWEk3MmJaX1hnanBpUHBBa3A1RjFMZkVFaHFsdWtLbTB3a29reV9VckdIT0FDaHNjdDM3Q1gtT1JsRWxqWWRlVTVLTlhXbTlMMmd3ajJmb1NybVZCY1FWS3VFRTVsa1QySFUzLXBVZDlkMjJPNlRJQUtiSDZUTF9FV2pHdVVKc1JnVjFzQ2VQNFo0Z0xfdXV3VmwteWdKWGM2ZUhGdUgyVHVhNXFFRUk2X0Vja08xaWdYM2tKTHlrVklENzlMT2R1b1lQM0VnNzVseDJ4WXJVOGtUUWRYaW95M0JHRTBESVg1M2FrbHoxOWItdFUwNXNGc2hiRmdiT1V1RGVwMEo4UVZzTXdlM1FEOTdaOC1odlFrdDdMdlpiSVFvN0E2dUF5bWdXRW16ZldlRmR1WUhTc3BlYlFWSENya3B6T3ZfTmlHNmhWdHJKUXZFRTRZdW5yQmIzTU5nVzk?oc=5",
-          "date": "2026-06-08",
+          "title": "光學雙雄攜手亮燈！大立光、先進光飆漲停 引爆「大帶小」 外溢效應 - 理財周刊",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE92cm1iRUdnWW1lT0hJNHhUWno1cU5oWHRMWFp0SUMwa0xnR0hQQzE5YnFsRXVXNEV0clhzM3I0bmp0cUZzMUtkSzZBaWdWcXJWc3dYdzdiU3FEOUNyQXNUbXRJcTJWNTM4T3lzM3JVWQ?oc=5",
+          "date": "2026-06-16",
           "source": "Google News"
         },
         {
@@ -1046,12 +978,18 @@
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbGFtMTZ1bTg2VWVRTGFsQ0JaVGJqbGtxa3RsMGFsN2hkY0ZNTk5ZY21GUkdDUnphR1NyM3N1V0Mwbjd4R3REcUNwQnI4b0JWRDBfdmhBQjBYOHJQXzBiTURJTWowNXBlOGRtc2JwMzNORDYwQVJ4cjhaUFRYZ1dLeQ?oc=5",
           "date": "2026-05-27",
           "source": "Google News"
+        },
+        {
+          "title": "大立光獲利報喜又見大股東加碼 早盤直奔漲停鎖死3615元 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxOQzRCX3Fld2RfamRjbXFkS1B0bldNREN4akQ1U1Z5blRoSnQwWDU1bzJXU29tcDgyeG5wVjhzcS1PYlBuYXZ1VnRiR0k5azNZQkFHZm4wMllJT1FSNnJ3SVpGak9PZHdnaVZLZWJUaEF4Qkt5VVcwYVBsMWd5S0xpWllwRy1wZ0NZLUhjVjZMRTZIeFZxeWJudmNsejNvdWVuSzFLWUR5NVplblYwLTlnTG9BbU1RQmwzaUQzcHB4S2NKR2I0NzJZSjd1ZEZqMF9UWV9oM3c5ay1zMjB6RFk0M3ZndFJ3bGNHajJIR3g0eWFIaHNwU0hwUTFydkhnT28zWXpXLUZ0TmZGcFFTZ2NtRjNXdlNxZkloemtlaDVRdTFvNFBCNDRVRmtvMUY0ZmVQTm4tWDAzN2VlX2xfWFUyYmlEU05DRmd3NkZVLVZ0ajE3a2tKTXBqSXU4VmFuRmhYYWVDWHpBN2ZleWJ0QXk0OWtiOUF5dw?oc=5",
+          "date": "2026-05-18",
+          "source": "Google News"
         }
       ],
       "attention_score": 5,
-      "signal_type": "重大訊息",
-      "attention_reason": "股東會釋出CPO試產線9月啟動、Q4將比往年忙等利多，外資調高目標價，引爆股價漲停。",
-      "news_summary": "大立光股東會釋出CPO利多，外資調高目標價，股價漲停，帶動光學股上漲。"
+      "signal_type": "突發利多",
+      "attention_reason": "大立光股東會釋出CPO試產線9月啟動、AI眼鏡等利多，獲外資調升目標價，股價直衝漲停。",
+      "news_summary": "大立光股東會釋出CPO、AI眼鏡等利多，獲外資調升目標價，股價漲停，創辦人家族也加碼。"
     },
     "2313": {
       "name": "華通",
@@ -1067,11 +1005,7 @@
         "change": -8.5,
         "change_pct": -3.3
       },
-      "institutional": {
-        "foreign_net": -4887,
-        "trust_net": -761,
-        "dealer_net": 924
-      },
+      "institutional": {},
       "news": [
         {
           "title": "SpaceX上市飆近2成！昇達科華通啟碁卻陷平盤震盪 分析師曝原因 - Yahoo股市",
@@ -1086,21 +1020,9 @@
           "source": "Google News"
         },
         {
-          "title": "華通被重新定價後，先別急著看目標價，這三條線更關鍵-陳柏宇 - CMoney投資網誌",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPalhPdUtmZGNzMEJJVWNOcnhxcnVuTDdFZzlMQlJaOURPblktSXFxQk5pc19YUV92SmNpY0MwWjZ4UmxPZGp6VlZOZTBKSU9ySklRWDRpTy1EMjB3NWhHSlRScUppdk1heFlwNTg3VzljMm1sT2oyU2JlY1JQa3JmQg?oc=5",
-          "date": "2026-06-13",
-          "source": "Google News"
-        },
-        {
           "title": "SpaceX上市倒數！敬鵬閃燈領軍華通兆赫漲半根 近30檔概念股逆風漲 - Yahoo股市",
           "url": "https://news.google.com/rss/articles/CBMinwNBVV95cUxPMXo5dmRuWklwczRXZHo3V0M3OWFkNDZjYWN0dlFoN3BPbnU2Q1BUTi1sbjZMV1NwcVhFQjdzMWE4anpoZ0gxTGpPMkpQYXlKcUxkaDdGUFlUYnNUY1hfLXlQQUhTaFpZNGx3dWJkQU96WVlzWXgzWlRhTXU5U0JXQkdHczF2X2VpaUFCWENSVUJ3Y191U1lzOWt5cHlYZnlMYnQ2UFIwS3F6Tm5ySFJzcU9NMzY5SlFKeWdpYmtwdGJ3M1RzUXZVV2NTa21aSEZpa05Vc3JYRnB1ZTVqMW02UVlOVGVXWlJ1WXUtd1JMQ0xUSUYzS0dadld6UVltVC1wRUE3WTRua0UzWk5wOWhranY3RXNTODZmTE5EVnpPV1RJc3BJUlJrRmdIS2dUUFdEMEtZb2J5aGNVNGFCMENIQzlHMWJpbnZBcmtqakwwQXlGZEVPTkhQT2ZHRzlpZkhNVTBBd0dWUGl2a3VxaUxCckJIWUYtVHhndWhucGdTclpXRnJ3dzdFbTEyc01zTHlhOXdENVh4dEQ0WHVUTWlj?oc=5",
           "date": "2026-06-11",
-          "source": "Google News"
-        },
-        {
-          "title": "SpaceX台灣怎麼買？兩管道參與！嫌麻煩就買SpaceX概念股：昇達科、華通、啟碁...這檔喊2000元 - 今周刊",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVG9Qai1kT05mZkhmOXhCT0FUaFBRbWEwN0NhZF80aTN0NG1VT1RjVXdxYnpsRndfcjVDWkhiRlFfekNFUWdveVowWEdWeWthRHFsMDc1RDVtaFg2STh3YTdlb2I5NHhrcnFod1Q0UXNVR2tVa0c3djNMMWxMNk9uag?oc=5",
-          "date": "2026-06-13",
           "source": "Google News"
         },
         {
@@ -1108,12 +1030,24 @@
           "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE8wRVRNS0FuMFEtZENWUEpJc2g1Um1zZzZHQ2VMNEs0dHZXZmVYVzE0eDRud3JpYlFTa193V2FQb25HWlVEbDRNNmo1bmtXRUhq0gFWQVVfeXFMUHRYSFZBRmswSUg0LThmeGI1cUZkMmg1X0pPdmxmeGNvZVNtUDJOZmpKZXdUUVdCMVdNNkZBVUkwLTJydnR0YVNGSWZtZ3NHaXU1bUhFS0E?oc=5",
           "date": "2026-05-26",
           "source": "Google News"
+        },
+        {
+          "title": "華通籌資案將在6/22除權 擬發現增股籌資84億元7月中完成 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMi7gJBVV95cUxNTTBBSnItLXJmZ1lldGRNelpRRFl0SEZSR2dpZVA3Mm5CQXkyZEJYVjlZVW96UHV3eDdDRXZLdnV1dml4ZGZaNjVfY0VudHZlTlpSdW80dWVZN1pFa2YwdGZ4cWlLdER3T3FVOEJnWlFiNW5vWWtReHJBbkc4Z1FqME9VbGpWcUVfVTVhOGdCejhsaWMtSW5BLU9HMWFpaVVydjJkQWJ0eWx2U3Zkc3VVb1pNUzdfSDVkWnNmYk9UenU0OEEzdnAzakJWTmFhWnZSWFp2YmJXd2hNNnJYeHRQX2xjbUstdV9JdXRXeTExOXZvRXFzSTNmRVJOaEstb2FYbVRndUNTQS1fSmNWMFhHTkhTdWdCU3FNeTY4c1ZLNWVzQkNqdnFULVNDdGdrNHlNSExhNmJGZkJmcGdzcWVTYnlId25wdFBVenY4cml1Mm1XeXJvRGoydDRCSk9acHdaQmMzZkdtT01FbEE4SlE?oc=5",
+          "date": "2026-06-04",
+          "source": "Google News"
+        },
+        {
+          "title": "華通歷來最大規模籌資申報生效 擬發行現增股4.2萬張籌資84億元 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMimwNBVV95cUxQaXhjVkZ6eVp2dHZJZE11SkNVRkV1cWZBZUxkSlpiOXQyaHBIeHJKWXZYYUxRWEdxVVk0M3ZVdUs2RXJkdnYwMnp6YW5RaGEzLXNzN1BuWjJFWFV2SERCWXY4a2hJVjJXLWpoVlpwbjNsOVhNWnBnajVkb2Qxalc4NENXVVdnRjdOa0k3X2RYRmhwQ01WNzM4R2kwV2hvSnA0dlZuU2ptcDVUa2d5OEM3M0xmeFh1c01pRnRLUjVOZ2gyNnhFWkpCOG9wY1o2Uzc5ZlgtM1g3dTBQUFk3eGE2alNpOThYNktlNEE5T3owODB6alRWbHNSczRjYm11RURudThDXzk3eDd0WTBSQ3BPOWhQbWE0eDBRYjFDSVJuVFFDZDNhSEFPdTNRX3Q1ZGdaWGdwR0s4ZlQydm9OeENxSS13d3Y5TVhFWTAtMFR3cWl6bXkwT3RzQXAxRk5UQ3FnWGFYVXc1STk3M2ZfNUVlRDl6UlhQNTNKaS0zNlp2LWl1dG5KQm5KV3FaUWdpTW1tcnQyRndOSmZqbUU?oc=5",
+          "date": "2026-06-03",
+          "source": "Google News"
         }
       ],
       "attention_score": 3,
-      "signal_type": "題材炒作",
-      "attention_reason": "SpaceX上市題材雖熱，但華通今日股價下跌且法人同步賣超，需觀察後續動能。",
-      "news_summary": "SpaceX上市題材熱，華通為概念股，但今日股價下跌，法人同步賣超。"
+      "signal_type": "重大訊息",
+      "attention_reason": "華通今日下跌，但有SpaceX上市題材與大規模籌資案，需觀察後續影響。",
+      "news_summary": "華通今日下跌，但受SpaceX上市題材影響，同時有大規模現增籌資案將除權。"
     },
     "2308": {
       "name": "台達電",
@@ -1130,22 +1064,12 @@
         "change": 20.0,
         "change_pct": 0.9
       },
-      "institutional": {
-        "foreign_net": 1793,
-        "trust_net": -810,
-        "dealer_net": 183
-      },
+      "institutional": {},
       "news": [
         {
           "title": "不燒火的發電廠：一篇搞懂SOFC，看懂台達電為什麼要花17 億買一張技術門票｜股市話題｜豐雲學堂2026 年 06 月 - sinotrade.com.tw",
           "url": "https://news.google.com/rss/articles/CBMimARBVV95cUxNZHhNYlFEOXE2cTlCcC1KWlRkSTJaYnFEdXlUZndwd3M2MUU1Z2pCalk0NkkxaFNrdk5HUzNCeUtpX0V2RHhDcTZuNzdQa19RcEdwNnM5RjE1eUhhcGlIUkxzQ0haSlBGQ2RsRVJHa05hNWJNV1k1ZzlydElOYmpEbGhLVGhGQ0R6UTBxaTAxRnp3cUNydGJKZUdwbDNKcl9nS09pVHJfTjJ6X3M0YXZZTllva25Ia2xKQi1sVWVSZldFdGVXT0w4R0hDeUxSS2czaEVibVRmNHhiY01CYXJqTGVTcG1BTlNZRHR2NVlRRGM4cy1SWXJOanlRSC1ndVlxQzBDSHkxeDNlN19uYWhQcU1GV1ZXUmk3bkZnaHMzbjZlYWZDWVo1cDZzdWVTVGV0RmxQQnJ3aTlKWmxVSENvaHpQeXFoa2d4NWNSSFFMS2lBVk10ZEF4Q2l6UEQ3eDc3UkQ2TTBlWjZWRU9nT0hZdTZ5TGw2S3REZGZiM3ZFWndmTld4VEoxYlNQcXBNRlRacTlXeGd0TjY2a0pmUU5NZWQ2c1lib1YxQXhXV29hQTdONTE1Qk1zSE5yWE5sSkl2WFQ3WjR3Q0pCd3lqUVJyODQ4RWd1X3YxTm1GdFBGMzl2QnBLcDA2S2d5MEllQm1adHRaakhmeWNSZWpQTWFfWVYxTmw4S3UydjZaTl9wNWFaY01pTlRaMQ?oc=5",
           "date": "2026-06-11",
-          "source": "Google News"
-        },
-        {
-          "title": "台達電(2308)太貴買不下手？華新(1605)、光寶科(2301)、華城(1519)...13檔電力黑馬買誰最賺？這檔訂單排到2028年 - 今周刊",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNjlsbHoyOFFEdGtRSmljWXJoR2J6NTZ4cWJiYWYzTzBzSU9LYWtnRUs3ZDEtUnUtN3ItdWJTX0QwVS14NVplNm5RdVpKdEhMMWRUdWtzQ1B2Q3lsNGFhOXotaU83VXl2M0hHakI2UmE1YTJkNWNZejlPTkJkU2hmdg?oc=5",
-          "date": "2026-06-16",
           "source": "Google News"
         },
         {
@@ -1171,12 +1095,18 @@
           "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQbEVXbE1FRWtXdUl2V2J2UEI0anVtQW1PcmlCVHFHVkpzczlBVnZXanlidUpkWTB5UGJMNkhSTkxid0hHSHRPTzBPcjdUNGxhdnU1bEVsNDgweTRYOENObFZObHF6YmhuRW5HZmhBS2VPRlk4MWROQkdxTmJRUnBhOFVVRF9pVFI2Z0FPVnl5dnpqNjFQSVJpV19weFVyUnpPSE5mcnp1QUhMOWlIamRHWTJudmhzUl90TVlST09WNGNfRVY2MWJqVGhRaW5UUHRNWVFIWm93bGh6STVlRzA1cFJ2RHhucEkwb0puQk1vMC1HMldOS3VpSFdsdFRyNkNQUk45QWQ2RUcwYkRLX3hWN3BlQmdlNVNZV1k2cHFGdEFaNzRJVTVNdUZqOXRSc3FsaDJQeEtKTTJhSV9UdHc?oc=5",
           "date": "2026-05-25",
           "source": "Google News"
+        },
+        {
+          "title": "黃仁勳一句話助陣？台達電亮燈飆2585元新天價 市值挑戰7兆元 - Yahoo股市",
+          "url": "https://news.google.com/rss/articles/CBMijwNBVV95cUxNWTJpeGdycVhIR2NNUmFTd1Fadk5OSzY2X0dRYXE4T0sybkE5YnVzelNial9iYllBRGx6dFljdGk0MzdIZ2V4ZGVTOUtSekF2TUNhM3c3S1ZJc0trdXk2SlNLaElkd2hzLW5rYW1yMk02LTJnbmtxOXNpc01mSmdRX3Y2d3FuR3d2RDVyVl9GLTlEeWJOYUdDTTZtUFNIRTFOQWdfb3ltRlg2U0Y2ZnM4OGtjQ2tOODY1cHpjbjZIX21YN1dUX0tvYWZUbDdZQmFCa1BXYXFNcGlkUWZFZ3U4TDlkeXNhT1ZrSGltaFYxMUZtdXZDN1RRNWtPb2lsM0RhZkpmY0Y4Z0lCb2V0X2FkSzBlVXR1UzF6dFd6MDI4Vmt5NFRkQWd1dWV0enJITWd2ekxmZWZVY0lCN3hONGR0OTd2RFdxcU9id2h0UklENS05U2RuVzYwYmFSSDRaRFJfSmNOYVZjQzhJLWdqS0hqZEFIOW5RU0FTeDJndXpLQXpmQkxxVXN2THFiNGNFQ3c?oc=5",
+          "date": "2026-05-26",
+          "source": "Google News"
         }
       ],
-      "attention_score": 4,
+      "attention_score": 5,
       "signal_type": "題材炒作",
-      "attention_reason": "台達電近期股價強勢，受SOFC等新技術題材及電力相關需求帶動，外資持續買超。",
-      "news_summary": "台達電股價近期飆漲，受SOFC技術與電力黑馬題材帶動，外資買超，投信賣超。"
+      "attention_reason": "受黃仁勳言論及SOFC題材帶動，股價近期飆漲創歷史新高，市場關注度極高。",
+      "news_summary": "台達電受黃仁勳言論及SOFC題材激勵，股價狂漲創歷史新高，市場熱烈討論。"
     },
     "0050": {
       "name": "元大台灣50",
@@ -1191,11 +1121,7 @@
         "change": 0.65,
         "change_pct": 0.62
       },
-      "institutional": {
-        "foreign_net": 6189,
-        "trust_net": 4000,
-        "dealer_net": 5951
-      },
+      "institutional": {},
       "news": [
         {
           "title": "0050 元大台灣50 - 近3年大賺488%，為何我勸你別把0050正2當核心持股- 股市爆料同學會 - CMoney",
@@ -1216,8 +1142,8 @@
           "source": "Google News"
         },
         {
-          "title": "0050配息配多少？最新換股名單公布！成分股、配息時間一次看－ETF指南 - 商周",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA4VDBlS05xcU9mQW5Jd3hVV2dhRlUzQlFIUTJoOFMtVzRzOV92SFdiQTVja2IzSmRiclpkOTJid2QzclRrbTlUSXUtcUZGRDFrT0Z1UUxDbWlHbHlhSUoxRE9LV25TQQ?oc=5",
+          "title": "台股震盪選股不慌張，五大ETF同步換股0050、006208、0051、0052、0056傳產讓位AI供應鏈｜股市話題 - sinotrade.com.tw",
+          "url": "https://news.google.com/rss/articles/CBMi4ANBVV95cUxORnR6RHFTTlZkNkFobGc1SUdPelZVaVRsd2xkM1RWRld6YkZrRUprUGJaNWZJdmMtUkh3bjg3cUJhbTNNanN3ZXBBWERfMTdZQ2tmbzhKTUoyMGZ6Qm10bDQ1bThGQzF2aE1md2ZBcmVWdGJubU9ZNGxFT211T3ROaFlJZlllR2l5NzltZ1ptU0h2OV9NdEtlYkpuWHhuS0g2SXFoTUtXUHhCV3E0VjBmZ2NYR0VkNmF0ZzU2RGVuR1kyWmJjeW9UTUhVXzlXZ0I3RlREUlNScnBJaTVoVXQ1U2Voc1c4bi1DZ05rd3l0VG1UU2RpZjNtTnJpN2lJdGlYNkZTbjc5WFJGMXpnY25aSDYxcEhkdDA2cmhmMV9pTnMxQWgzNVYxRUg0dWZNT2o2WW5nZmZaUEZnYS0zMWpyM2NpdUNrRHd3UHF6YzJZbzljSF9aZGZhdmpjbWVBUDRfOXU1Q3BjZ05HaFpkckV0N3V2dWJfY0ZnRzdxRmIwNHBlV1hpMU00S1M3OUMxSnRZUHhxUDJmS2dGMW91eEYtLUZKejI1Y0ZIUFh5SDhNU1piaUlhSnBVYnVtazI4OHM1TF84R0xUX3FPRUNUdXNWcUkwYTdvNFk5Z0JUcDJieHE?oc=5",
           "date": "2026-06-05",
           "source": "Google News"
         },
@@ -1228,28 +1154,16 @@
           "source": "Google News"
         },
         {
-          "title": "假設0050無分割現股價應該多少？不只收盤攻上三位數…而是「403.2元」 - UDN",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9IQWFMakliMmFCcXVwLVJSOUVQREc1RkJlczlZUmZsbHdLVzZkZk90WXRIblRkU1B2M2xiVHpYbVdzLTRJLThwMTdtQmxYYVlLVl9j0gFYQVVfeXFMTjJsSkNqNGc2cGVyd1VwS3BlNTE0UlVaS1M5bjdKcUhmWFNNYnJVRm1yV0xxRzZ4ZktpNlZoUDZiTGh5QnBWdFlXNkNRWkNuVFRXdGN0cjRDdg?oc=5",
-          "date": "2026-05-25",
+          "title": "台灣50正2增持權王 - 經濟日報",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9mODVNSHJ3YXdSNkpsclNKSEJKYXRHUDRuWk1CUFYwTmZmTmFWZTFvczJkYWFBLWFvRjRwclk4T3lDWkZXLVJOY0R3SFBTdWtEWHVPd0g1TUZZQdIBX0FVX3lxTE9xcml4NUdBaV9RTEFZdmhCQUdrN1o4RFpqT0d5TTNkYnFKN1ZCRHNKdWJyYzFlc0FpeHBmMV9ZWnk1aWFlMjV2c0FhSWVTZmpNQjdFTF81eGZDS01TY2hJ?oc=5",
+          "date": "2026-05-27",
           "source": "Google News"
-        },
-        {
-          "title": "國發基金百億平台投資突破200億　布局AI無人機與航太",
-          "url": "https://tw.stock.yahoo.com/news/%E5%9C%8B%E7%99%BC%E5%9F%BA%E9%87%91%E7%99%BE%E5%84%84%E5%B9%B3%E5%8F%B0%E6%8A%95%E8%B3%87%E7%AA%81%E7%A0%B4200%E5%84%84-%E5%B8%83%E5%B1%80ai%E7%84%A1%E4%BA%BA%E6%A9%9F%E8%88%87%E8%88%AA%E5%A4%AA-114434895.html",
-          "date": "2026-06-16",
-          "source": "Yahoo財經"
-        },
-        {
-          "title": "SpaceX市值衝2.5兆美元！專家1原因潑冷水",
-          "url": "https://tw.news.yahoo.com/spacex%E5%B8%82%E5%80%BC%E8%A1%9D2-5%E5%85%86%E7%BE%8E%E5%85%83-%E5%B0%88%E5%AE%B61%E5%8E%9F%E5%9B%A0%E6%BD%91%E5%86%B7%E6%B0%B4-113026251.html",
-          "date": "2026-06-16",
-          "source": "Yahoo財經"
         }
       ],
       "attention_score": 3,
-      "signal_type": "外資買超",
-      "attention_reason": "外資與投信同步買超，且0050近期受AI題材與換股效應影響，值得持續關注。",
-      "news_summary": "0050近期因AI題材與換股名單受關注，外資投信同步買超，股價表現強勁。"
+      "signal_type": "重大訊息",
+      "attention_reason": "0050今日漲幅0.62%，主要受換股名單影響，AI股入列，傳產股讓位。",
+      "news_summary": "0050換股名單出爐，AI股入列，傳產股被踢，帶動ETF定期定額狂飆。"
     },
     "00403A": {
       "name": "統一台股升級50",
@@ -1264,11 +1178,7 @@
         "change": 0.09,
         "change_pct": 0.85
       },
-      "institutional": {
-        "foreign_net": 151299,
-        "trust_net": 0,
-        "dealer_net": 2657
-      },
+      "institutional": {},
       "news": [
         {
           "title": "主動式ETF上市周年規模上看兆元！統一投信市占近6成躍居龍頭 - 自由財經",
@@ -1305,30 +1215,12 @@
           "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxORXNMV1NBQkhqRk9qUjBodHYtaGlsVndiaG9wY1VwMEdDWkd2R1dmM3hzZ0RuZDVMdnZUQ2pSVDlqNzZaUHl2ZFlkSXV2N3dYOUViVnZXb3YyRXpuS0d0elRTM1BfTFZ3dUY0MXVpN2JpaU1BdGZGSVZLQUxtODRFZWlIaERQemdaNEZGemUxY3cyWTgwX0NxekJHbzdCSzNTLVhDdWtyb3dEWTRZWUpwdlF4azVuZTlIRC1fbFdLUXRMc2Z0SmQzSjFJel8tdjlHY3hvWjFWVW9YX1J4dXNORndSX2pXRTY5N3VpTEMyT1d0WktWeDlPS2tZUkp2U0dzLVVIZUVNbnRIUzY3LTJ6ZEU3bEpCcklWZTZmZmRzY3RaNm9IcmtqUU5BSUxiVzJHU19yZ1JHZGxiREVZcnc?oc=5",
           "date": "2026-05-24",
           "source": "Google News"
-        },
-        {
-          "title": "【公告】統一期董事會通過辦理現金增資案",
-          "url": "https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E7%B5%B1-%E6%9C%9F%E8%91%A3%E4%BA%8B%E6%9C%83%E9%80%9A%E9%81%8E%E8%BE%A6%E7%90%86%E7%8F%BE%E9%87%91%E5%A2%9E%E8%B3%87%E6%A1%88-111020029.html",
-          "date": "2026-06-16",
-          "source": "Yahoo財經"
-        },
-        {
-          "title": "【公告】統一期盈餘轉增資發行新股案",
-          "url": "https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E7%B5%B1-%E6%9C%9F%E7%9B%88%E9%A4%98%E8%BD%89%E5%A2%9E%E8%B3%87%E7%99%BC%E8%A1%8C%E6%96%B0%E8%82%A1%E6%A1%88-111018770.html",
-          "date": "2026-06-16",
-          "source": "Yahoo財經"
-        },
-        {
-          "title": "【公告】統一期董事會決議召開115年股東臨時會",
-          "url": "https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E7%B5%B1-%E6%9C%9F%E8%91%A3%E4%BA%8B%E6%9C%83%E6%B1%BA%E8%AD%B0%E5%8F%AC%E9%96%8B115%E5%B9%B4%E8%82%A1%E6%9D%B1%E8%87%A8%E6%99%82%E6%9C%83-111016921.html",
-          "date": "2026-06-16",
-          "source": "Yahoo財經"
         }
       ],
       "attention_score": 4,
-      "signal_type": "外資買超",
-      "attention_reason": "外資今日大幅買超00403A，且主動式ETF市場規模持續擴大，顯示資金流入動能強勁。",
-      "news_summary": "主動式ETF市場規模破9000億，統一投信市占近6成。00403A今日漲幅亮眼，外資大買。"
+      "signal_type": "題材炒作",
+      "attention_reason": "00403A今日漲幅亮眼，且主動式ETF市場規模持續擴大，統一投信市占率高，市場關注度高。",
+      "news_summary": "主動式ETF市場規模破9000億，統一投信市占近6成，00403A今日漲幅強勁，受市場高度關注。"
     },
     "NVDA": {
       "name": "NVIDIA",
@@ -1340,15 +1232,21 @@
         "資料中心"
       ],
       "price": {
-        "price": 212.45,
-        "change": 7.26,
-        "change_pct": 3.54
+        "price": 209.36,
+        "change": -3.09,
+        "change_pct": -1.45
       },
       "institutional": {},
       "news": [
         {
-          "title": "Jim Cramer Asserts NVIDIA (NVDA), Not SpaceX, Is The “Key” To The Market - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOVmRhMHpiUXpLVENqMEs2c1NxdzNSdl9PY2J5eDNfQ2JkVFJibGlnOFhKT2ZGTmRKX3hYeEVfbm5SZ1hBTkZfMFJWSk9VcExfTDg5RW5LRmRBMXJJSHp5WU9OT2QwYXk2QTNoQVZ3MlE5SFl0NUJlcWdHb2dyYUJOYWthYzhNTjJwWUlHeFRvRGZpbVhIMmRuRkIzOA?oc=5",
+          "title": "If Jensen Huang Is Right About This One Thing, NVIDIA Stock Is a Steal at $200 - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOdUhkTEE5ZkpqU0FDM3NNRzNubTA1TVp3Z0U4eXY1bEI0M0Z1Q255bUpHXzB3YlNHN01LWks0eXBmV1hRVnd6Rll1YTZfRXdHVmVzaWNJSDIwYW5xam1QZEFoS2pjeW0ycHphcjR1TkVZZHZScW1Ga2swM3pKZkVCX1p6TDdTcnJXWFVIZ0ZmYy13dmxPR3piMk5jNmtCZlh5LWtUVUc0UHh1ZnZOQWtiVUhON0dRRjQxSUNwXw?oc=5",
+          "date": "2026-06-15",
+          "source": "Google News"
+        },
+        {
+          "title": "As Demand Continues To Grow, Nvidia (NVDA) Has 46% Upside According To Analysts - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUEpMWDlaZ2QxYmhaSEVZcFgwNXhJU0xySkc5OFdyR0NocGdaYXhWbElHbElYSEJ3QWhPaDJJNkFIbXh2dEVUTTBSdzBUNENDNlNzMFlLejc3bmhwNWNMLWxEbHM5YjZITy1JWUZETW1fVDJIdnV5M0VGMUgwUU9YM3dvRlJ0Ti1INElfSXM4MktmU1YxdTFBd29udHFCd0U?oc=5",
           "date": "2026-06-15",
           "source": "Google News"
         },
@@ -1365,28 +1263,22 @@
           "source": "Google News"
         },
         {
-          "title": "Nvidia Stock Retakes Key Level As Chipmaker Plans Bond Offering - Investor's Business Daily",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUGVBTFN5eEN5dW14XzhJRXlqeHYwU29PRWI5cG1VZ2xPUlIybmp3RmFYb2RDb1FqRzhJOFpkOGZLaWdxWm9NT01CN1FIcXZZT3I4Ri1Ba1RZeUhXdk9BUmpyUjI1NV9HOEM3akc5YTVja3RuVXpWYko1ZmFRU1N0Ti1CMU9XOGUwNDBZZDk5VFc?oc=5",
-          "date": "2026-06-16",
-          "source": "Google News"
-        },
-        {
-          "title": "Nvidia (NVDA) Receives a Rating Update from a Top Analyst - The Globe and Mail",
-          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPRERfcnhTSzBEV2JSdDV3elZtZ3EzRlB4T1V0RVdUR2hPeVhYbXV3S3EyVjhMOUozUGxJR2txTnZQQzJUdTJLaXV6endmRTd3QTZXVGlVRlNSODI3eEYwZWtqY2phajB2ZFpvNk1PQ3FjU2VjbmN6Z0xqYXlhSG1GS0lTbG5oTy1hTXFNcVhqcXNiUVl4WUs4LWlEMFR6ZkZWWndNOFFKaUg2b2xNVUVESzdudC1ERk12T0NMaEFhNUdaNEp3eUtmWkY1dHQtS3pIVnQ5aTBHUzFWUQ?oc=5",
-          "date": "2026-06-16",
-          "source": "Google News"
-        },
-        {
-          "title": "If Jensen Huang Is Right About This One Thing, NVIDIA Stock Is a Steal at $200 - 24/7 Wall St.",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOdUhkTEE5ZkpqU0FDM3NNRzNubTA1TVp3Z0U4eXY1bEI0M0Z1Q255bUpHXzB3YlNHN01LWks0eXBmV1hRVnd6Rll1YTZfRXdHVmVzaWNJSDIwYW5xam1QZEFoS2pjeW0ycHphcjR1TkVZZHZScW1Ga2swM3pKZkVCX1p6TDdTcnJXWFVIZ0ZmYy13dmxPR3piMk5jNmtCZlh5LWtUVUc0UHh1ZnZOQWtiVUhON0dRRjQxSUNwXw?oc=5",
+          "title": "What's Going On With NVIDIA Stock Monday? - Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQM3Z1MUNxc0U3RC1hTzRUUjUzR3BrV0Q2bVdVTGIzdHFCZFFJZElHYmxHeHB2dkpyeUgxSGpwQlktd2ctbDkxNHhCOUNEQjA3U1FRWkZ3eUZfaG1LbUxvb2NSWm1nTUJzMUJrZEpoaHRCUVVDY0ZrQ0NWdS1oNGZLZXRQTThaWTd1UFA1bF9DelRNckxIU2tlNW9n?oc=5",
           "date": "2026-06-15",
+          "source": "Google News"
+        },
+        {
+          "title": "Nvidia earnings takeaways: Data center revenue nearly doubles, report is strong but stock slides - CNBC",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1CUUVrUjdLbmR3YWtQZTEwZUt6Z1AyaEx3TGlUdG5hNl9uSFpwZFN2a21mcUFVcnZnQnRMbXV1dlhtUFhfNEdjQ1FzZEg0M1drc1NtMDZ3Rl9obHVzOVlYLWEwTUtZdVRzNEtWam9WNUVjWmE4aG5JSjN5UVrSAYIBQVVfeXFMTU5FY1pRQmVJTFR4Tlk3OFYwdGxfazhmZ1pyV1djakpUR0FfRjIySUFya280eVREVkYzU1BHd3kwMzJVSEYwZURsYXNFdzc3NTZpY0RuN2pwUHFoV1ZBWi1rdnJtaXFZVm5nS1NienNyamplSTktamlpVzBZUTBWa19PQQ?oc=5",
+          "date": "2026-05-20",
           "source": "Google News"
         }
       ],
-      "attention_score": 4,
-      "signal_type": "題材炒作",
-      "attention_reason": "市場對NVIDIA未來成長性及AI領導地位持續高度關注，分析師評價與債券發行皆為焦點。",
-      "news_summary": "NVIDIA今日上漲，市場熱議其AI關鍵地位，並計劃發行200億美元債券，分析師持續看好。"
+      "attention_score": 3,
+      "signal_type": "Earnings後",
+      "attention_reason": "財報表現強勁，但股價下跌，市場對未來展望及債券發行有不同解讀。",
+      "news_summary": "NVIDIA財報數據中心營收近翻倍，分析師看好，但股價下跌，並計畫發行200億美元債券。"
     },
     "AAPL": {
       "name": "Apple",
@@ -1398,34 +1290,34 @@
         "Apple生態"
       ],
       "price": {
-        "price": 296.42,
-        "change": 5.29,
-        "change_pct": 1.82
+        "price": 297.26,
+        "change": 0.84,
+        "change_pct": 0.28
       },
       "institutional": {},
       "news": [
         {
-          "title": "Wall Street’s Top Billionaires Are Changing Their Mind About Apple (AAPL) - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZnNHaGZrcTJ3YThZLTZmZ2V3UlRvSWVhWGN6Rk01T20wUF9Da1V6TnVPdnJ3czJqYVZPbVNYUTVJWThBeGMzc0tIVHZ1X1M5QmN5UmFTSnhrcktIcVR6TEtXRlhMeVRCOTJwZ0lqcUh1RmlQYXN0RDRCVU9EaUFqSlVIRVI4N0gwcEhiQi00RDZWaG1BaUloVXVnLWtRMEdIcG1MZw?oc=5",
+          "title": "Apple Is Mostly Sitting Out the AI Spending Arms Race. With AI Stocks Selling Off, That Suddenly Looks Smart. - The Motley Fool",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPaUQwSlEwY00xQ3R4YmprcmpDTG9Ha3ZNZldQVG5PRFV3azQ2RGx3cTVFSjFtek9HZDJsZmpmSVh1TEpXVEdvWXpYcEZIWkF4dWVPNUJ0NXZ1M0JBNmpjMzg3cmlJUEZXQnNMeXFSUmFJd21TS2NseUZIVUFyVFBOOXF1V0xyT2NFQVNIbTJvNEJrU0o5QmVlYQ?oc=5",
           "date": "2026-06-13",
-          "source": "Google News"
-        },
-        {
-          "title": "Apple Stock Analysis: Buy or Sell After WWDC? - The Motley Fool",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSThMRHFYdU1zaGU2T2gzRXBVTXZyeXJ6OHlsaTBlemU2T3k1RF9xX2lWNXUxWjVIZ1Rzdl91Mnk2NHczMzNza3JOZi1xZGM0WHhwVjhlNzNVRFlicTBuMGxJUmRwQnFPWmRrR2NHRW83ZWRYbUtEa2t1MzNmY2NFYVJVZmFsX1RSQW1US2FmOA?oc=5",
-          "date": "2026-06-14",
-          "source": "Google News"
-        },
-        {
-          "title": "TD Cowen, Maxim Reiterate Bullish Outlook on Apple Inc. (AAPL) Following WWDC26 - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOVFktcjE5YnI5NV9faFlycktUZFJMdmdNM0JmTGVRU180Rmp6VzZHbUlGQ0IyZ2ZRVFJleGVLOVVTUWVEUVJ0Y185RUtYUEhnaHN0T3F0c1o3elY1V2dHSGVCdEtQcGlOY1RTTHhISzVGdy16b1NQbHJCcDRhREVKRTZYV3dSYU16M2VtRldReEpmUjU3Z1VVY2U3TUVXZw?oc=5",
-          "date": "2026-06-16",
           "source": "Google News"
         },
         {
           "title": "Can Apple Stock Reach $400 by 2028? Wall Street Says Maybe - 24/7 Wall St.",
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZDNyakpmYUhuemx6VF9qZHN5U29MQXE2V1lkQ3didk5iM3BNNXEwRE1DMExOVmp4QmxrR0pSNWpCOXZRMXFqczJCdXM2U0Z3dFJoTXhrbWY5dl9LVmp1aDV6SzV3bXJtSE1uMVhsaWt2NFdIblZ6YUx1dDFlM3VsQm9FOV93TVpFQmhGYWZ4Wk5zckxOWllsNDBfcHA2RndLekE?oc=5",
           "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "Apple (AAPL) Stock Could Be Pricing In Too Much Growth After A 50% Run - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNMkF6aEVHalZHc1AzdVJFbFRJSDhLMjJNWGpMYjRBbWZTUG1OZlBEX0NzdVdnYzVRZ1pzX0RsYjJ0VnpZdjYyZXl0Z1hDdEdreV9HdWYwRTFMelFpbUNvRG9iOHB3ZWhoUk04VGM5YmR2RUt2eGhDdkVjU2J5Vl9ZQ3NTcWl6aHBPR3hCWXhNQjlLUGlKcjNTbGRHQQ?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "Apple Stock Analysis: Buy or Sell After WWDC? - The Motley Fool",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSThMRHFYdU1zaGU2T2gzRXBVTXZyeXJ6OHlsaTBlemU2T3k1RF9xX2lWNXUxWjVIZ1Rzdl91Mnk2NHczMzNza3JOZi1xZGM0WHhwVjhlNzNVRFlicTBuMGxJUmRwQnFPWmRrR2NHRW83ZWRYbUtEa2t1MzNmY2NFYVJVZmFsX1RSQW1US2FmOA?oc=5",
+          "date": "2026-06-14",
           "source": "Google News"
         },
         {
@@ -1441,10 +1333,10 @@
           "source": "Google News"
         }
       ],
-      "attention_score": 4,
+      "attention_score": 3,
       "signal_type": "題材炒作",
-      "attention_reason": "WWDC後市場對Apple AI策略及未來股價潛力高度關注，多數分析師持樂觀態度。",
-      "news_summary": "WWDC後分析師普遍看好Apple AI發展及股價潛力，討論其能否達400美元。"
+      "attention_reason": "WWDC後市場對Apple AI策略評價兩極，股價短期漲幅大，需關注後續發展。",
+      "news_summary": "WWDC後Apple AI策略受關注，市場對其AI支出與未來成長潛力看法分歧，股價短期漲幅大。"
     },
     "MSFT": {
       "name": "Microsoft",
@@ -1456,12 +1348,18 @@
         "企業軟體"
       ],
       "price": {
-        "price": 399.76,
-        "change": 9.02,
-        "change_pct": 2.31
+        "price": 392.525,
+        "change": -7.24,
+        "change_pct": -1.81
       },
       "institutional": {},
       "news": [
+        {
+          "title": "Why Is Microsoft Stock (MSFT) Trending Lower Today, 6/16/26? - TipRanks",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQNzI0djJ2emgyRWJWV1Y5R3g3NzRLQVNmaVlWalc1ZVEwOVBjNlh0MlJzSnhLSW5rVVNMZkt1UnNmWlpIOURWbVZKQUU3TkJLWlJMYWdPY1J4R0NFOUhkM2xHMi1JLW1YOXYtSXUxOFl3TnRzVkY3aDVIS0h2SHExWHJIVnBrZmZVSWVrOWN4OA?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
         {
           "title": "Microsoft (MSFT) Is A Value Stock To Benefit From The New Cloud Boom - Yahoo Finance",
           "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNFpfNTktQTRrbzNmME8tSmlja1NBZ0RNRGpoTHgyaV9YcWlyelI2U09WT0VPWXdkWEpCdEJmZTVmYmRPcGwteEFHRDZWcUZFNjRnRWs5TkF1dG5XMHpMdmw2YzBVbWhaSzIyTlBQWXRETVV4b3hMenF6ZDhDc0tBQW5ZSEhjR01jVFlvaHZSWkV6dWVWV0ViRGstMjVyUDc5?oc=5",
@@ -1487,22 +1385,16 @@
           "source": "Google News"
         },
         {
-          "title": "Why Is Microsoft Stock (MSFT) Trending Lower Today, 6/16/26? - TipRanks",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQNzI0djJ2emgyRWJWV1Y5R3g3NzRLQVNmaVlWalc1ZVEwOVBjNlh0MlJzSnhLSW5rVVNMZkt1UnNmWlpIOURWbVZKQUU3TkJLWlJMYWdPY1J4R0NFOUhkM2xHMi1JLW1YOXYtSXUxOFl3TnRzVkY3aDVIS0h2SHExWHJIVnBrZmZVSWVrOWN4OA?oc=5",
-          "date": "2026-06-16",
-          "source": "Google News"
-        },
-        {
-          "title": "Is Microsoft Corporation (MSFT) A Good Stock To Buy Now? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdzI3aDIxVGJLNDFVYlJmWXE2cDl1Y2czT3dUcUZoRXZILWJicEsxaDVyOHdGVjJFVGtWM0hnTm0xelFrUDlxTS1TcEtIdHlmZHR2MExQbUw0TGdIWGpZT2Zmall3REFMTGNPbTNPcWRQUG01aDBPaEhtOU8teFhOZUxrMHljZEpkd19HZWJXMEtsU3ZPd3pmV2M2ZUpLLVp3TjE0Tg?oc=5",
+          "title": "Microsoft (MSFT): The Top Strong Buy Stock to Invest In - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQaE1TeUx2ckU0WU5ocDloUFdIVXlzb2dBX0tOTFZjeGk2eEZRRXEzeHJuMjE0T3drQk44ZHRtc1JkdHpXRWxOcTkxVmJiR2Q1eWdkVW9uWUFpVkVqRVNuRkVkRnU5bU5WR2FDUk1ZYzFZSVRZTFNtQnJrN0EzQmx2b2xkWXVJb1FtWmpDb0x2TEZoX3VSM2ttVXBR?oc=5",
           "date": "2026-06-14",
           "source": "Google News"
         },
         {
-          "title": "Micron and Sandisk shares are phenomenally ‘overbought.’ Are memory stocks flying too close to the sun?",
-          "url": "https://www.marketwatch.com/story/micron-and-sandisk-shares-are-phenomenally-overbought-are-memory-stocks-flying-too-close-to-the-sun-b34766e8?mod=mw_rss_topstories",
+          "title": "SpaceX surges past Microsoft in market cap, becoming fourth-biggest U.S. company",
+          "url": "https://www.cnbc.com/2026/06/16/spacex-stock-rally-market-cap.html",
           "date": "2026-06-16",
-          "source": "MarketWatch"
+          "source": "CNBC Markets"
         },
         {
           "title": "CFTC chair Selig defends decision to approve ‘perps’ in U.S.",
@@ -1519,8 +1411,8 @@
       ],
       "attention_score": 3,
       "signal_type": "題材炒作",
-      "attention_reason": "今日漲幅顯著，且多篇新聞圍繞AI與雲端題材，市場對其未來成長性有分歧看法。",
-      "news_summary": "MSFT今日上漲，新聞聚焦AI與雲端成長潛力，但也有對估值過高的擔憂。"
+      "attention_reason": "股價下跌但市場對AI和雲端前景看法分歧，多空論戰激烈。",
+      "news_summary": "MSFT今日下跌，市場對AI和雲端業務前景看法分歧，多空論戰激烈，同時SpaceX市值超越MSFT。"
     },
     "TSM": {
       "name": "TSMC ADR",
@@ -1532,9 +1424,9 @@
         "先進製程"
       ],
       "price": {
-        "price": 441.4,
-        "change": 17.47,
-        "change_pct": 4.12
+        "price": 434.04,
+        "change": -7.36,
+        "change_pct": -1.67
       },
       "institutional": {},
       "news": [
@@ -1569,22 +1461,16 @@
           "source": "Google News"
         },
         {
-          "title": "Is It Worth Investing in TSMC (TSM) Based on Wall Street's Bullish Views? - Finviz",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQRnhXLU4zejJqdVVXWUNxbHFXVWlJTkRrLVE1dzhmTGVDYkY1bUJETXVyeVpZemVIaHZITEVsOGZlcUp6N2hOdjc0VE5UU05yQmUwWUhzVE92YXhtdFhxZ2ZGUVZKNUtkODJTU19mNWVkcEotQ2xHbW5kZlNENkJOUWFWWjNBeVhhNnpDMUo5Z3ZxY0RGTEhmcFdSYlgxSTQ3Nnc?oc=5",
-          "date": "2026-02-23",
+          "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM): Our Calculation of Intrinsic Value - The Acquirer's Multiple",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNVlheE5xWlZiZUFuSFdxOXdydHNBeDEtRFI0UDhWZU9wWFVnYmd0ZlpJUnNLOUtkek9GZ0F2OWRNWmhjcF9McWNGSHBYY3hZVG02eW56dlpkTHp1UUY3aXRkTG9TYU9PaDBEUE5zcmRQMDFzdkc2Y21vaXRmcmU4Si00c2J5SjVNeE51Y3pFRDlFMmRqNTF3YUJldlhqcVo5dDdJT0J4b3pjN1JlUWt4bV8wWmltWF8yOFlOVURlYl9MTXBFMzRR?oc=5",
+          "date": "2026-01-29",
           "source": "Google News"
-        },
-        {
-          "title": "Oil tumbles on US-Iran deal framework: How one trader is playing the move",
-          "url": "https://www.cnbc.com/2026/06/15/oil-tumbles-on-us-iran-deal-framework-how-one-trader-is-playing-the-move.html",
-          "date": "2026-06-16",
-          "source": "CNBC Markets"
         }
       ],
-      "attention_score": 4,
-      "signal_type": "突發利多",
-      "attention_reason": "多個利多消息推動股價上漲，包括預期變化、股息增加及AI題材。",
-      "news_summary": "TSM ADR溢價下降，但台北股價上漲。預期改善、股息增加17%，AI題材受關注，華爾街看好。"
+      "attention_score": 3,
+      "signal_type": "題材炒作",
+      "attention_reason": "ADR溢價下跌與台股上漲形成對比，但多數新聞仍看好其AI題材與投資價值。",
+      "news_summary": "ADR溢價跌至兩年低點，但多數分析師仍看好台積電AI前景、股息增長及投資價值。"
     },
     "AMZN": {
       "name": "Amazon",
@@ -1596,15 +1482,15 @@
         "AI"
       ],
       "price": {
-        "price": 246.02,
-        "change": 7.47,
-        "change_pct": 3.13
+        "price": 246.69,
+        "change": 0.59,
+        "change_pct": 0.24
       },
       "institutional": {},
       "news": [
         {
-          "title": "Amazon (AMZN) Stock After Recent AI And Cloud Investment Push Is There Still Value - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOR1A4WFlSSUtBbE1uUEZHZElxVmtHQU5XZzdPOHJHS1o4NC13U0x5SmozT0xkbzZva2VXV0c3S0k3dUpmNUJEMElzNnFKMVg3UjZzeFh0UjFuWFJ0UGlzbFM0U3VZNTg0ZmNfQ3lvc2MzLWhxd3Qxc3JKTnVkLXE0aWVWOVVkdGkzX21OZEUwNktUc19FWG5v?oc=5",
+          "title": "SpaceX Just Passed the Value of Amazon and Microsoft. At What Share Price Does it Become the World’s Most Valuable Company? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbXRMRnBhNzVkMFpUc3hjdzdMeFdDT1dEQ293cnJOS0oyLU5ieDJyZUp0dTVyZmFwUjFvekJJSFZ4Z0VkZ3k2cGZEWjFsM1U0MVBiWjJlQVlXYVJOTm51SkJYZ2Q1R0ItLXlJbmlhblpMVGU5dk9qZXJaNE42czBzZ3ktdEszYmVrOXBuZkI1dDFVUEc5QzZDZzc1anE?oc=5",
           "date": "2026-06-16",
           "source": "Google News"
         },
@@ -1621,6 +1507,12 @@
           "source": "Google News"
         },
         {
+          "title": "Amazon (AMZN) Stock After Recent AI And Cloud Investment Push Is There Still Value - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOR1A4WFlSSUtBbE1uUEZHZElxVmtHQU5XZzdPOHJHS1o4NC13U0x5SmozT0xkbzZva2VXV0c3S0k3dUpmNUJEMElzNnFKMVg3UjZzeFh0UjFuWFJ0UGlzbFM0U3VZNTg0ZmNfQ3lvc2MzLWhxd3Qxc3JKTnVkLXE0aWVWOVVkdGkzX21OZEUwNktUc19FWG5v?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
           "title": "What's Going On With Amazon Stock Monday? - Benzinga",
           "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOeC1KaVlWRDUtR0FEZzFWLXhSS1pPMTY3bnp4RWhBY2VzX3VrRWN4NEFPdk1lOTBOYjFkbEJmOVN5MFc0NGFYbzNCbDZpZ29GQVFiS3BqT3BCdVRPYXBFQ0RKYjQ2VFk3Z2g3cFh4VHdBdXJlWjVKTG1vbWRDWTVlSjVMcTdfMmlmRlVpbS1fSFNwaFNLaUJhR1dn?oc=5",
           "date": "2026-06-16",
@@ -1633,14 +1525,14 @@
           "source": "Google News"
         },
         {
-          "title": "AMZN stock jumps — Amazon announces multibillion-dollar data center expansion in Missouri - MSN",
-          "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQb1U1YWpEUF9rSC1oLXZ2Vkx4WkFPY0lQLUxHSE9RNTJ6RWtoNk5yZUlKV0tReFJMcXpvREZxSmVJTmZmQmxsMTFaSHRBQ3VFUFV1MC1oLXUwSWdEWEZvNXRLQ1c4LW9UWUF1TW1XX3B5d2RILUQ0UzhYeGJYLTRrTXRPS0lReTlmSnBFRVlUcVcyOG9OQk5iRTUybkw0cGdoNnFSTmdUQVlwMHF0UnZFV0JaSnNmVFpsZXQ4aFg4LWktUDlLZFVLYlcydVJBVmhtVU4wbnRwMjRBNE5Mb2J2SUU0SmpGVXN5bENVNlZtakdyNmhzOUFfMUM5VQ?oc=5",
+          "title": "As baby boomers turn 80, caregiving is the unexpected job more Americans face",
+          "url": "https://www.marketwatch.com/story/as-baby-boomers-turn-80-caregiving-is-the-unexpected-job-more-americans-face-fbd8ce6e?mod=mw_rss_topstories",
           "date": "2026-06-16",
-          "source": "Google News"
+          "source": "MarketWatch"
         },
         {
-          "title": "SpaceX overtakes Amazon as America’s fifth-largest company via overnight price spike",
-          "url": "https://www.marketwatch.com/story/overnight-price-spike-sees-spacex-overtake-amazon-as-americas-fifth-largest-company-259944cb?mod=mw_rss_topstories",
+          "title": "Americans’ 401(k) balances hit record levels last year. See how you compare.",
+          "url": "https://www.marketwatch.com/story/americans-401-k-balances-hit-record-levels-last-year-see-how-you-compare-facd32c4?mod=mw_rss_topstories",
           "date": "2026-06-16",
           "source": "MarketWatch"
         },
@@ -1661,18 +1553,12 @@
           "url": "https://www.cnbc.com/2026/06/16/2026-americas-top-states-business-rankings.html",
           "date": "2026-06-16",
           "source": "CNBC Markets"
-        },
-        {
-          "title": "Vance says 'a lot' of Iran deal details to figure out, but U.S. has 'all the cards'",
-          "url": "https://www.cnbc.com/2026/06/15/vance-iran-deal-negotiations-nuclear.html",
-          "date": "2026-06-16",
-          "source": "CNBC Markets"
         }
       ],
-      "attention_score": 4,
-      "signal_type": "突發利多",
-      "attention_reason": "AMZN今日大漲逾3%，主要受惠於AI與雲端投資推動，並宣布擴建資料中心。",
-      "news_summary": "AMZN股價因AI、雲端投資及資料中心擴建利多而上漲，市場關注其未來價值與成長潛力。"
+      "attention_score": 2,
+      "signal_type": "無特殊",
+      "attention_reason": "今日股價波動不大，新聞多為分析師對未來展望的討論，無重大突發事件。",
+      "news_summary": "新聞多聚焦AMZN未來股價潛力、AI與雲端投資價值，以及與SpaceX的市值比較。"
     },
     "MU": {
       "name": "Micron",
@@ -1684,27 +1570,33 @@
         "DRAM"
       ],
       "price": {
-        "price": 1087.99,
-        "change": 106.38,
-        "change_pct": 10.84
+        "price": 1078.83,
+        "change": -9.16,
+        "change_pct": -0.84
       },
       "institutional": {},
       "news": [
         {
-          "title": "Micron (MU) Shares Skyrocket, What You Need To Know - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQT1dOWUlQLUdTLXR6M3hNbU1OSGY3WWJKWHh5enhoWlkzeWdRRHpOVnJNdFFwRjZGSDdtVVg3UnF2Snhob1VJdE54VEFhS1ZlNEdRTjJDZTh2bTdwUWhabkVYLXN0Y2t2QTVUTFBJanRRM2pPNkZZeFdVa20wRkRCXzFBaHROM3Rsc0QyOGxvN01Sa2dRZ1puRzY3dFQ?oc=5",
+          "title": "Prediction: This Will Be Micron's Stock Price by Late 2027 (Hint: It Implies Big Gains) - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQQXN2Zks1OUxWdndJSXlUQ2NURmkyWUVzTFhzb0VkTmJJa1JRTEljeDNzbzF6aEw3aDdfZ0tvMHVNa1p0QlJpZ29kRGtrY1JzRnljbHhGRkpCcFJyaWFNd0prZGhhTXdrRFZsdEFzVWtlMXBiTkJ1b0NaOHlETzI4Tnl3Tl9pdDNDMlBSSmJtcTFWeUh1cFJuSTlOQllHVjdKalE?oc=5",
           "date": "2026-06-16",
           "source": "Google News"
         },
         {
-          "title": "Micron Stock Has Become Volatile, But Key Metric Hints at Further Gains - Benzinga",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQYVZmOVdNVk8xOFVXQjVLcnhmZ3NXZ09TNjZnLUhLUS1MNEVIMzJKQlFQb1hZY0VjRU5CVFoyZVg5Y0dKcjYxcEhSV1F3dlNJOFM4VmUzMm1fVGtXakg4YlJBeVJKU21YVnJ3TnM5eGlyanNra3hiQ2RoZW9wN1U3a2RNWXMzSDZ4UElOVk1NUkNFX1UyQ1RPc08yY0RxazJlaDcwN0ZHTUJvdTNnYnotdng1ckg4N2hibGZQc0V1T3BaaTQwRlE?oc=5",
-          "date": "2026-06-14",
+          "title": "Is Trending Stock Micron Technology, Inc. (MU) a Buy Now? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQUUVsQlBvZl9rdHotZF9IaDZLV0RSWHVUNmtlSE5QamdLNDFOYXg4elcyeU9zdTNCa3lxY3FHTlh6ZklYNXJNYmxZdEttZHdaZW10ME81dm05UWJPeHgyTVNFYzRVUFBZX1Y3bUlHdnFoLWZhZGk0MlluRnkzYzg1SzdmdWFEZEdWMVZIeUFxUF9yQndlel9hRWlKVFBtc0h3S2I0?oc=5",
+          "date": "2026-06-15",
           "source": "Google News"
         },
         {
-          "title": "Micron Stock Hits 52-Week High - Here's Why - Micron Technology (NASDAQ:MU) - Benzinga",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOcVdUZUp3WGxtU2EzdEpkT3owV21VVVMtLWctNDkwRnJoTVk3cVdVSU8zNV93N0xuaS1zbUVDdy1CVzFXYWd1RWhLaWhIeUI0WUt5dXk4Y1EyN0tyNEo5NG1oM2FiRkJFcFpQc1hlOTR1Ml9KNFNiQzVvNTV2dFRaT1k4R01lWk5rTGdGWDhfelRoamJ5NXhiaDFYRmFVanFNNTVkLTVvWDRQelh4RnczQWp6OA?oc=5",
+          "title": "Prediction: This Will Be Micron's Stock Price by Late 2027 (Hint: It Implies Big Gains) - The Motley Fool",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOa2doSGdNN3hHTzJIMk9xbm1CQUQydF92c1FHbE9fVjVXQnJnOW1QdmpvLXhmRWZvVm1ucFRFalNFMjFCdVVhNFlQM0VfdUVkM2ZaTWtudDdRbG5BV0dBcnppWjVSVVk1Y095S3FTUG5XRGlYbEtSNndfeUhGMFRlSHkzdVB0MVdEQlVDUEl3?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "Micron and Sandisk shares are phenomenally ‘overbought.’ Are memory stocks flying too close to the sun? - MarketWatch",
+          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPa0x4azNoZE1NdDBBS3RmRnJMbWtERElwaVFDX1JTWUlXdUNMQWk4bEFLV0ZpeEQ4TmFIdkszYi01UzZ1dm5ZNGVyUFNFbjBCRXdaZ29wNG1oSVhQay0tV0N1WmY4VDRTRGE2RW0tYTlrQlR5cnNlaHFVRkU4cjk4UHBOSGJmWXhRRjhSdEpfREZ0a3VEUG1zd1ByOVkyT0hheWtjTmRUdVZKOF93bm5jalZ4SGdLRXZONzE5SWllelJGU3lVVXU0cllodXNzY3p0MjVNSzljZ1hHdw?oc=5",
           "date": "2026-06-16",
           "source": "Google News"
         },
@@ -1715,22 +1607,16 @@
           "source": "Google News"
         },
         {
-          "title": "Prediction: This Will Be Micron's Stock Price by Late 2027 (Hint: It Implies Big Gains) - The Globe and Mail",
-          "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxORGxMUTVReTdzWi1KWC1zWm1NRkhzMGkzZ2JMSVJOeG9fSWNRb3pkMGMyS3hpdWQxLTFVTFFSS0xjMHktRGsxdTlsN0lHTHVEWDN3OFNabERBODZhaTFyTHVfOGJ5Sm90SHpBdURCVU9ud2NoOXlCU3ZtcmxDSEMxejI2LW95TFJYbDNPMlJBSEdkcDBPRml2cWhaSllZNVp1SU1yY2M1bnRTVnUzMG9LUERCZXIyYks3TS1Qcm5zM2pJYTdaVy1SUGRnampKRDd3eHgyMnc0SUViYWtkaUxDdWJ0d0ZqRFA5ZUEtZGx2UDZCbmotWUR4Rmt1b0o?oc=5",
+          "title": "Up 770% YTD, How High Can Micron Go? - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZm0tMmZDdHY4LTNJdlNxZDRoV2NjcjgwMVFnSlpBN2xOUnBhRUE3ZzZiaGVIWnBwdEJKV1czaTZZcjFiSG4ycjdWQ2k5T0pJQ1AwZGZwVlNnX1dRNkZwQlFTVjNJU2ZzbnpxSmhMS2lPMk83RDBNVXFXTGtFWFNGY1dZOA?oc=5",
           "date": "2026-06-16",
           "source": "Google News"
         },
         {
-          "title": "Why Micron Stock Is Sinking Today - AOL.com",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4ta29GeGhNa2xyTmFLYlpJNzBtaFloX1B1ZDhqZWZKZ2M0aDhjTHFNeUJTcldnaThkUmNINVRjUndfbDBTV2szOWM1RWpOTm1QLXQzSEVMT2FCZnVBQ3psLWY3ZFdBbmRBU3NuZUlERDhBWFc5ME1keTAxZ3BNaGs?oc=5",
+          "title": "SpaceX surges past Microsoft in market cap, becoming fourth-biggest U.S. company",
+          "url": "https://www.cnbc.com/2026/06/16/spacex-stock-rally-market-cap.html",
           "date": "2026-06-16",
-          "source": "Google News"
-        },
-        {
-          "title": "Micron and Sandisk shares are phenomenally ‘overbought.’ Are memory stocks flying too close to the sun?",
-          "url": "https://www.marketwatch.com/story/micron-and-sandisk-shares-are-phenomenally-overbought-are-memory-stocks-flying-too-close-to-the-sun-b34766e8?mod=mw_rss_topstories",
-          "date": "2026-06-16",
-          "source": "MarketWatch"
+          "source": "CNBC Markets"
         },
         {
           "title": "CFTC chair Selig defends decision to approve ‘perps’ in U.S.",
@@ -1745,10 +1631,10 @@
           "source": "CNBC Markets"
         }
       ],
-      "attention_score": 5,
+      "attention_score": 3,
       "signal_type": "題材炒作",
-      "attention_reason": "股價飆漲逾10%並創52週新高，市場對其未來獲利預期樂觀，但同時有過熱警訊。",
-      "news_summary": "美光股價飆漲創52週新高，市場預期未來獲利佳，但有分析師警告股票已嚴重超買。"
+      "attention_reason": "市場對美光未來股價預測與記憶體產業過熱討論，以及即將到來的財報。",
+      "news_summary": "多篇新聞預測美光未來股價大漲，但也有聲音質疑記憶體股過熱，並關注即將到來的財報。"
     },
     "TSLA": {
       "name": "Tesla",
@@ -1760,9 +1646,9 @@
         "儲能"
       ],
       "price": {
-        "price": 411.15,
-        "change": 4.72,
-        "change_pct": 1.16
+        "price": 403.14,
+        "change": -8.01,
+        "change_pct": -1.95
       },
       "institutional": {},
       "news": [
@@ -1779,15 +1665,21 @@
           "source": "Google News"
         },
         {
-          "title": "Tesla Stock And Two Founder-Led Giants With Unpriced Upside - simplywall.st",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQTE1rU1JBY3pfT0RMRllTRDNVY09DLUVkRl9TQnFUdEZZYk5FdF9kN1JNOUJ3eXE4MGs3YmU5S3JpaTczSEpIcXdvMmFMcGdDWXpiWnhWMmRDekFPSzJ4MFpzWk9oZnJzYWRLdlJQeEs5QTN5OHlTdHVETlVYT21mOXNKc213VUdhV3d2aDNWMkZFRDRFZG1ydHB5UUp0eF9sckl6Ym1wb1lNVlU1eXl5MlpmSnQ4d1NkWWF4SkxfRjg5M2JW0gHKAUFVX3lxTE9oYlJDanVfbFc1ME5tcXZHNDFDUkNQYktnX3R4SjJVdEtvMTlmY2lIdVB4bTBBaVllVGdTVGlQZ25ucVV5R180dXJ6TU9FdWp1NGE0NVU0ZmZPRWN6QldybTNqempzLUVyaDZqQW1IVDdvS0tfNEtra2Z5UXpQUDlfcmI3MWt4NlpRWmlUQWJNYjFNZk12czRqMXlVNmhiNnRidjFzQmF6NDlteVI2aWhZSUpNemZzUnBlMUxPU3I3LV9GWm5tN3lWcmc?oc=5",
+          "title": "Is Tesla, Inc. (TSLA) A Good Stock To Buy Now? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZzNISXNZSnlvQU9WSjZoLWVjamdyTXlIVTJ4MUhIWHdnZGUxQlRyNFZLM1ZPYTQyM0FZbThpTC1sclYyTkdvaERRX0NRSkNOakVmN3Z2QnY1NmhqY2RLbGFFbDVnZTV6U20wZWkxVVI5emZvVjR1LWZYOG9aMnFjVEcwRUdUbnVFTjVhSlRPUnA0QlRW?oc=5",
+          "date": "2026-06-15",
+          "source": "Google News"
+        },
+        {
+          "title": "Tesla Stock And Two Founder Led Giants One Premium Puzzle - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQkVqWHJZSkp3SnlDd2ZlVEdaR2tXSmdEODdwYWxPajBPaXlGeVZfVzRicU81VXoydkVKMXNNdTFodHNvd1VsY0tBSXdSRGlIWFNtWWNPLUMzRGg3Y0J2bUpMbFJmYjlVUVRTQ0xjNW0ydWNKcHZqZm44TmdJVktaV294c2hZZHRaMXduMFZCYW9pejY3ODVzbDZuNmdBSU5LVmFXejhtTHVybHN6Y1FqZnZFMENKSk9iSTdyVXlxVFdyQdIBxwFBVV95cUxNbE1KNnYtN1h3VHR4Z21sWng3VGY5U3JRa2llUEs1VHZEVGFJYVE5ZzBiVEhSUXUwd2t3dkhpdi0tN0NGWDRsUUFLWnJJZlBJcDV1UW5hMzFoWWdacTAyQ0VnUk9RNUdZNU5qNlE5WXNGcWctNEpFSU1TSXpmMjhfR2NPZ3liOE05QzJUSk05bEZBUU9VcWh6QnluUVhONmJaanJfTklSVlViNmtqazhjLVpzMFRnTl9mTlYxVDhBaDh2VkhBOXFR?oc=5",
           "date": "2026-06-16",
           "source": "Google News"
         },
         {
-          "title": "Is Tesla, Inc. (TSLA) A Good Stock To Buy Now? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZzNISXNZSnlvQU9WSjZoLWVjamdyTXlIVTJ4MUhIWHdnZGUxQlRyNFZLM1ZPYTQyM0FZbThpTC1sclYyTkdvaERRX0NRSkNOakVmN3Z2QnY1NmhqY2RLbGFFbDVnZTV6U20wZWkxVVI5emZvVjR1LWZYOG9aMnFjVEcwRUdUbnVFTjVhSlRPUnA0QlRW?oc=5",
-          "date": "2026-06-15",
+          "title": "Price Prediction: How Much Upside Is Left in Tesla? - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNQVpHVUxtb28ySU9xNHBIcTB1aURIRUQtQjNMcVNqSGFrOGFjUy1QdWNNZ0gwUmZLLVcyajR1cHppLXkzbVFkNllhTDNFeUVLUjNTYXc5NjhSRzE2S3JVNzE5a1EzUHYyaHc3WlRxTUtTSWlScjV6NjJIYV9jV2I2X1VDRUs3Zm9OZ1RWUXNGNjQ5Y3JwSFN1QQ?oc=5",
+          "date": "2026-06-16",
           "source": "Google News"
         },
         {
@@ -1797,28 +1689,16 @@
           "source": "Google News"
         },
         {
-          "title": "Tesla (TSLA) Shares Slip Amid Concerns Over Merger with SpaceX - GuruFocus",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUXJBR0kyVkdzWGdVYjFEUjV3OTBHUDlfaG5hbnBVTm5MQk9vakVQakczX3o3Vl9EV09jc3ljQkY5a01OV3RpNmw2YTJuR0NQMlJSZFh1Qm92R3NLVThTQXJjRXNCZUR4OWF2NFlkTTVOWjRPR1lzWjNYbWg2NmhiRnpIOWRwM3lWdVRhWEVxUU92TloxZVVXamFNdHllNEl5?oc=5",
-          "date": "2026-06-16",
-          "source": "Google News"
-        },
-        {
-          "title": "A veteran investor is kicking Tesla out of the ‘Magnificent Seven’ — replacing it with this tech giant",
+          "title": "Tesla booted from the ‘Magnificent Seven’ by a top fund manager. Here is the tech giant he’s crowned.",
           "url": "https://www.marketwatch.com/story/a-veteran-investor-is-kicking-tesla-out-of-the-magnificent-seven-replacing-it-with-this-tech-giant-a2828cec?mod=mw_rss_topstories",
           "date": "2026-06-16",
           "source": "MarketWatch"
-        },
-        {
-          "title": "Trump denies U.S. will put 'any money' into Iran, as he meets allies at G7 summit",
-          "url": "https://www.cnbc.com/2026/06/16/trump-g7-summit-iran-zelenskyy-macron.html",
-          "date": "2026-06-16",
-          "source": "CNBC Markets"
         }
       ],
       "attention_score": 3,
       "signal_type": "題材炒作",
-      "attention_reason": "多篇報導探討股價上漲原因，並有分析師將其移出「七巨頭」，顯示市場對其未來走向存在分歧。",
-      "news_summary": "特斯拉股價上漲，市場探討原因，部分分析師將其移出「七巨頭」，並關注其AI發展與中國市場策略。"
+      "attention_reason": "儘管今日下跌，但市場對TSLA的AI潛力與未來發展仍有高度關注，同時也有基金經理將其移出「七巨頭」的討論。",
+      "news_summary": "TSLA股價下跌，但市場對其AI潛力與未來發展仍有高度關注，同時有基金經理將其移出「七巨頭」。"
     },
     "DELL": {
       "name": "Dell",
@@ -1830,9 +1710,9 @@
         "PC"
       ],
       "price": {
-        "price": 409.07,
-        "change": 13.5,
-        "change_pct": 3.41
+        "price": 413.595,
+        "change": 4.53,
+        "change_pct": 1.11
       },
       "institutional": {},
       "news": [
@@ -1881,7 +1761,7 @@
       ],
       "attention_score": 4,
       "signal_type": "突發利多",
-      "attention_reason": "Dell獲得美國空軍與五角大廈大額合約，且AI伺服器營收強勁，推動股價上漲。",
+      "attention_reason": "Dell獲得美國空軍與五角大廈大額合約，且AI伺服器營收表現強勁。",
       "news_summary": "Dell獲美國空軍與五角大廈巨額合約，AI伺服器營收飆升，股價大漲。"
     },
     "SPCX": {
@@ -1895,27 +1775,27 @@
         "IPO新股"
       ],
       "price": {
-        "price": 192.5,
-        "change": 31.55,
-        "change_pct": 19.6
+        "price": 211.02,
+        "change": 18.52,
+        "change_pct": 9.62
       },
       "institutional": {},
       "news": [
         {
-          "title": "SpaceX stock jumps 20% in first full day of trading after record debut - CNBC",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE93R1dDa3dmQXJpTWNIUGo2eVRzWWNueS1HenFKclRaMVIwZHg2bnEwaTZhWGVHQ1VYVEZtVEZaN0pNQ1J3LU0wcloxSlA4V0g0ZmVySFBvUGhLTHg3c3dmM3RHdTRMeEhCNnkxOVJSZExWbGN20gF6QVVfeXFMT09QcFp5RndnNVR3ODdJLXE2MElQTW5UclJCeWpYbWEtU2xueUk4T3Z2eW12a0FOTFI1Mm5VazZpc0JwLTVzZmRlYVpreTB6c3JEekEycGh3TTF0bE9qZmhQN2YxcUtYcEdvaEY4Y29Fb3dWX25wWmNNYnc?oc=5",
-          "date": "2026-06-15",
-          "source": "Google News"
-        },
-        {
-          "title": "SpaceX stock jumps for second day, now up over 40% since debut - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPamxmU2h6REwzT1p3alJWMm1IOFZNQ2t2eUNWSWxfbS1ENEl3QzB6Qzk3RHpaUkZrMDNtbDE3eWo4RzVBdHVIb2N1ajg0T2kxcVREQkJhRVJSTnl2ZDhkdmpUdVg5c1FndzdOeXU2MExDSk9CcE5sTzBqNkR6cWt3WnhuRmt4S0ZfRlFFcHZzTDlqVkdUa2tNeWU2VXV6OFo4Z2NhNFdPTExNRlUwY3RheDE1MTZfbV95Y3ZHQS1veFV1dw?oc=5",
+          "title": "SpaceX IPO: What Your $5,000 Investment Could Be Worth - The Motley Fool",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTnBHVFRZUVJsX2NGMWFPaTJ5NnRLbGpoc00xa1dNTzV6OTdqZjBCQXRHQ21TQ0c5YlNaMHBNaXFOM1RzanNSSWpDeFRVNlVXbVAzV2l6Q3ZpREh4QUZuV01yX0JzMlhYVlBrY3libnVTRGM2ZDJ3WGpRNmhwczNoX2ItQmRZc0FmSmFzaU0tdVhvTXc?oc=5",
           "date": "2026-06-16",
           "source": "Google News"
         },
         {
-          "title": "SpaceX Stock Set for More Than 50% Jump in Just Three Sessions - Bloomberg",
+          "title": "SpaceX Set to Overtake Amazon in Value as It Soars for Third Day - Bloomberg",
           "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdmRMRzNrTVAxU2xRODNoVUFEOXo5YldkUnVPamd1bWFqd3ZKUUg5R0p3bHRIR3FSZnBVSHk0enFsMnJIMzNRaVN0b0d2TzlZLU5sYVBqVzB4cmdqR1pFWXVFSWg4T0owUGo1QWh3MzMyeXhuNUxLVzJVUUR0TjRPN0R5ZVFCVkk0WUU0N1VTREswNVZDRHNzWDVlTVprTkQ5UFh1TjZxRTFWZ0FnTXBqSXBkTTFPZU5R?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "SpaceX Bolsters AI Business With $60 Bil Deal. Musk Targets $1 Tril In Revenue. - Investor's Business Daily",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOb29IdnNsQm1OZVZjLTB5OEN2Tm1PNXBpckMyYVhNbWxuUFdQRVc1TjhuSFF3WGdfR0VMc1BvWWpLN1NWY2c5OGppV2NnbXlVQWN2TmZDSkpOVEVQejZKejFzd0FKTUdOa29OaW5TQ0FMV1g2WXRLTDViUUswUnU3OExXUXB5WFJJMHFMUnFhUTI2NjZYRnZ1cWwtcDdlRGxZbFlVRmM3cmhhYjdEcnAtNi12c1VQaFNRTTV5czB6V1k1c19iSXJ4NXNrdGplUQ?oc=5",
           "date": "2026-06-16",
           "source": "Google News"
         },
@@ -1926,14 +1806,14 @@
           "source": "Google News"
         },
         {
-          "title": "Friday's SpaceX IPO Was Bad News for Space Stocks. These Experts Thinks They Can Rise Again - Investopedia",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUU9uRG5aQ2J0MzVId0NKdTBJYkFWZWxHbWc3dV9tRzczbUdubXVieng0TldYclVmdi1feUZQOXFtSW5xc0VPd3VmRWR6MEpqNTRDWVpuYzRUV05RM2pDQ0NvWUU4VHpySWo5UDNYSDZKWm5VbGc4eHc0UHZrSW9BZC1MNDN3cklLQ3Z1NEJ5WEctcnRvS3o5TWhyYXpCajByUERDa04tUmxQVUpReWxlR0luZzFJQ01yRVJxN2psSG4zVHhyTlJJ?oc=5",
-          "date": "2026-06-16",
+          "title": "SpaceX: The $2 Trillion Valuation Makes No Sense (NASDAQ:SPCX) - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMmR6Q0ZUQ1ZsTlM1UGVmSG42MjdYUFZXa0I3bkFmLTFkYmhWb0pHMDUtbzhXLUZKREZISnQ5dzRfZDNscUhaZEl4UmVnclB2R3pTOXJpWTRUS2ozbFlYNS1KZmxlVmgybG9xcjVhMlQtMXBiMTllTWFEbHJIS1I1bmNMckZoVXQ5X3NaeEpPNEM?oc=5",
+          "date": "2026-06-15",
           "source": "Google News"
         },
         {
-          "title": "SpaceX IPO fuels $1.4 billion trading frenzy on Hyperliquid as SPCX perp becomes HIP-3's biggest market - The Block",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNejNoUUlvaGNzb2M5eFBsYkNISHRsMkdNZllYUVFJN1p4LXpQQzg4dlpVU0xocVplWFRFSm9UdU9KQy1zbFk4dGlEQlRyWUxFNFdBSDUtZVJ2QXJtVWVkSGl4dFhXOWg2T0p1MlhjZ1Y4SHdEVnJFWG42Rk85WXdKSEtsbUg0akh4dDBtNWdEVHVwNnItWUNzc3VUTHVWSGNvNVloTTdrRS1WdUQ3Sk5fQVhseTNERWxn?oc=5",
+          "title": "Friday's SpaceX IPO Was Bad News for Space Stocks. These Experts Thinks They Can Rise Again - Investopedia",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUU9uRG5aQ2J0MzVId0NKdTBJYkFWZWxHbWc3dV9tRzczbUdubXVieng0TldYclVmdi1feUZQOXFtSW5xc0VPd3VmRWR6MEpqNTRDWVpuYzRUV05RM2pDQ0NvWUU4VHpySWo5UDNYSDZKWm5VbGc4eHc0UHZrSW9BZC1MNDN3cklLQ3Z1NEJ5WEctcnRvS3o5TWhyYXpCajByUERDa04tUmxQVUpReWxlR0luZzFJQ01yRVJxN2psSG4zVHhyTlJJ?oc=5",
           "date": "2026-06-16",
           "source": "Google News"
         },
@@ -1944,10 +1824,16 @@
           "source": "MarketWatch"
         },
         {
-          "title": "SpaceX overtakes Amazon as America’s fifth-largest company via overnight price spike",
-          "url": "https://www.marketwatch.com/story/overnight-price-spike-sees-spacex-overtake-amazon-as-americas-fifth-largest-company-259944cb?mod=mw_rss_topstories",
+          "title": "SpaceX’s massive valuation may soon become its own worst enemy",
+          "url": "https://www.marketwatch.com/story/spacexs-massive-2-1-trillion-valuation-may-soon-become-its-own-worst-enemy-0efe05b8?mod=mw_rss_topstories",
           "date": "2026-06-16",
           "source": "MarketWatch"
+        },
+        {
+          "title": "SpaceX surges past Microsoft in market cap, becoming fourth-biggest U.S. company",
+          "url": "https://www.cnbc.com/2026/06/16/spacex-stock-rally-market-cap.html",
+          "date": "2026-06-16",
+          "source": "CNBC Markets"
         },
         {
           "title": "How Elon Musk's second-in-command Gwynne Shotwell helped turn SpaceX into an IPO giant",
@@ -1960,28 +1846,90 @@
           "url": "https://www.cnbc.com/2026/06/15/dicks-sporting-goods-expanding-lids-shops-to-100-locations.html",
           "date": "2026-06-16",
           "source": "CNBC Markets"
-        },
-        {
-          "title": "Wall Street's fear gauge tumbles as traders bid up SpaceX shares",
-          "url": "https://www.cnbc.com/2026/06/15/wall-streets-fear-gauge-tumbles-as-traders-bid-up-spacex-shares.html",
-          "date": "2026-06-16",
-          "source": "CNBC Markets"
         }
       ],
       "attention_score": 5,
       "signal_type": "題材炒作",
-      "attention_reason": "SPCX上市後連續兩日飆漲，市場對其估值與未來成長潛力高度關注。",
-      "news_summary": "SPCX上市後股價連續跳漲，兩日累計漲幅逾40%，市場熱烈追捧，並有分析師預期其營收目標。"
+      "attention_reason": "SpaceX IPO後股價飆漲，市場對其AI業務及營收目標高度關注，估值爭議大。",
+      "news_summary": "SpaceX IPO後股價連日飆漲，市場估值爭議，AI業務與營收目標成焦點。"
+    },
+    "GOOGL": {
+      "name": "Alphabet",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "搜尋引擎",
+        "Google Cloud",
+        "AI Gemini",
+        "廣告",
+        "YouTube"
+      ],
+      "price": {
+        "price": 371.535,
+        "change": 2.19,
+        "change_pct": 0.59
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "Alphabet (GOOGL) Stock After 109% Year Gain And AI Headlines Is It Still Reasonable Priced - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQRmdxWlhWelhRWDFaUlBrMldibVA5OVdBRUlHMG9FU1NBVDJOTDE3cEp3V2g1UmpnSEloTjhldm5ZeDlWR2tTelM5bXhDQldZVFdoem1NNXNaUVFsb0I5Vy1jbEJkd21CMjlFUnRfLTBuTFdzLTEwR0xHYjh5WFRrQ1JMSDZVcHNQQmVqeTRHc3VRb2N2cTRfUFdB?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "You Can Now Invest in Alphabet With a 6% Dividend Yield, but There's a Catch - The Motley Fool",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNWUxrNWFWWFpBd0E2NmdhcjlfbmxfQ3F0dmQtdmgyTmtlQTdmNnhZVE11cEFpVGNGWXp6Y2duTmRDY1FIeEpMZU1yUXlnVW5XNTVuSm1QU3lHUmVKY2JZWW1adVhpUTFqOEdxaTFZcHJQN1lySGRyX21YZVJvVkFrZFRsa3MyR0xFZXktbkVfQm51bUdyM1E?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "Why GOOGL Stock May Have More Room to Run Even After a 100% Rally - Barchart.com",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxON09adFVWa0VDYUM0d3BsT1RNQTVfMGVkbURiRF9GMElZWU9yNXdDMDlHSFQ2WF9xSmJQbEpJMTd2UmFkWVlES2pOZEk5RkFXUjRkXzhzelBQWUhQS095RVROUHIxRTJYY295RmRmV1AzUWtycjk3YTFSMVlaTjhHdDBScWtRRTlFWWR5Wl8weGRqOXVWTWlwYjRnNEkzZkZ1WXREQllCR2JOSjF0?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "What's Going On With Alphabet Stock Monday? - Alphabet (NASDAQ:GOOG), Alphabet (NASDAQ:GOOGL) - Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYjl2Tm4wSk5DQV9Nc1MzR2FWdXhnRkVLTnZQcjUxdUhwOEVEOEp1Y1VDT3NrZWFhM19RQnVpQXU1TktzRGd4U0xjT0ZJcDFBLTltWXJXc0c4WVpDNGhWNWRvdVRuY3dKT2tQM0sydjJaSmUxbFpTc2FMWEhZX3BQVHpLbTBncFNNV2NmbXkycXNfSGpNejFzR2FCZ3hSbUIzMlJGY2h2RQ?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "Alphabet: Still A Big Tech Pick To 'Buy' Now (NASDAQ:GOOGL) - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWlkxSEJ6akdfdXhzNlo5SjIzNURzU1pSaTdVN0l3VmxrLXBtcl9vc2VtbE4yTlpNTXNWM2M1NHZQRUtKc2RlUGFNdV90RjZ0RkR6YTF5ZEhmNEk4dGFIZGc1dHNtOV9wdWJHVVI2UkpMQ0ZSRURPNEp0VnlJeVNyMnlSYXAzdUx1WUE?oc=5",
+          "date": "2026-06-16",
+          "source": "Google News"
+        },
+        {
+          "title": "Alphabet Inc. $GOOGL Stock Position Trimmed by Evelyn Partners Investment Management LLP - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOZjdnOHRfWTdiSjZmMnZMRVRNSjJRbmNMaDZHN25jMVNZMWstbnFwdjN3YzVzN2tzUzJWYWF5Rm42anlNYkFFWVR6VXVGWHpiTTVFRHlQX3lDRDZaOVdMdG8wclAzLXNJREhTc0RmMTRlc295SDNKVUlZdjgxZW5xTlVtOXNNelpfUkZXYnU2SExSLW0wdE5fcXU5WjUzRGxtZk8wT2JhYmg1XzhDWnhzMzRXZGlwNTZvRUZ5X3Mzc0Y1dUJ4T0hYd0tOS3FLc2NMMmdqOTVtYk1ZbkljNkZ3SA?oc=5",
+          "date": "2026-06-14",
+          "source": "Google News"
+        },
+        {
+          "title": "The AI ‘bottleneck trade’ has run its course, says this hedge-fund manager and early SpaceX investor",
+          "url": "https://www.marketwatch.com/story/the-ai-bottleneck-trade-has-run-its-course-says-this-hedge-fund-manager-and-early-spacex-investor-90407fea?mod=mw_rss_topstories",
+          "date": "2026-06-16",
+          "source": "MarketWatch"
+        }
+      ],
+      "attention_score": 3,
+      "signal_type": "題材炒作",
+      "attention_reason": "多篇報導探討GOOGL在AI熱潮下的估值與未來潛力，市場對其AI發展持續關注。",
+      "news_summary": "多篇新聞關注GOOGL在AI熱潮下的估值、未來潛力及投資機會，但也有機構減持。"
     }
   },
   "top_attention": [
     "5274",
-    "3008",
-    "MU",
-    "SPCX",
-    "7769",
-    "2383",
     "3443",
+    "3008",
+    "2308",
+    "SPCX",
+    "6515",
+    "7769",
+    "6223",
+    "2383",
     "6669",
     "2059",
     "2454",
@@ -1990,13 +1938,8 @@
     "8299",
     "2303",
     "3481",
-    "2308",
     "00403A",
-    "NVDA",
-    "AAPL",
-    "TSM",
-    "AMZN",
     "DELL"
   ],
-  "analyzed_at": "2026-06-16T20:13"
+  "analyzed_at": "2026-06-16T22:27"
 }
