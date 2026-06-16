@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-13",
-  "note": "前十大高價股 + 個人持倉 + 美股追蹤，共30支",
+  "updated": "2026-06-16",
+  "note": "前十大高價股 + 個人持倉 + 美股追蹤，共31支",
   "stocks": [
     { "code": "5274",   "name": "信驊科技",       "type": "stock", "market": "TWO",    "tags": ["高價股#1","BMC晶片","AI伺服器"] },
     { "code": "6515",   "name": "穎崴",           "type": "stock", "market": "TWO",    "tags": ["高價股#2","半導體測試"] },
@@ -31,6 +31,7 @@
     { "code": "MU",     "name": "Micron",         "type": "stock", "market": "NASDAQ", "tags": ["記憶體","HBM","DRAM"] },
     { "code": "TSLA",   "name": "Tesla",          "type": "stock", "market": "NASDAQ", "tags": ["EV","自駕車","儲能"] },
     { "code": "DELL",   "name": "Dell",           "type": "stock", "market": "NYSE",   "tags": ["AI伺服器","企業IT","PC"] },
-    { "code": "SPCX",   "name": "SpaceX",         "type": "stock", "market": "NASDAQ", "tags": ["太空","Starlink","火箭","IPO新股"] }
+    { "code": "SPCX",   "name": "SpaceX",         "type": "stock", "market": "NASDAQ", "tags": ["太空","Starlink","火箭","IPO新股"] },
+    { "code": "GOOGL",  "name": "Alphabet",       "type": "stock", "market": "NASDAQ", "tags": ["搜尋引擎","Google Cloud","AI Gemini","廣告","YouTube"] }
   ]
 }

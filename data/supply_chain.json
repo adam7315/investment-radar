@@ -1,6 +1,6 @@
 {
   "maintained_by": "Claude",
-  "updated": "2026-05-27",
+  "updated": "2026-06-16",
   "chains": {
     "5274": {
       "name": "信驊科技",
@@ -710,6 +710,60 @@
         "IT 面板（監視器／筆電）需求回升",
         "Mini LED 背光高階面板 ASP 提升",
         "面板價格進入上行週期"
+      ]
+    },
+    "GOOGL": {
+      "name": "Alphabet（Google）",
+      "position": "全球最大搜尋引擎 + 數位廣告平台，雲端（Google Cloud）排名全球第三",
+      "moat": "搜尋引擎壟斷性市占（~90%）、Android 生態系、YouTube 最大影音平台、GCP 雲端基礎建設",
+      "upstream": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "market": "TW",
+          "role": "Google 自研 TPU（Tensor Processing Unit）晶圓代工",
+          "dependency": "高",
+          "signal_rule": "台積電先進製程（3nm/2nm）產能 → 影響 Google TPU v6/v7 出貨時程"
+        },
+        {
+          "code": "NVDA",
+          "name": "NVIDIA",
+          "market": "NASDAQ",
+          "role": "GPU 供應（H100/B200 用於 Google Cloud AI 加速）",
+          "dependency": "中",
+          "signal_rule": "NVIDIA GPU 供貨緊張 → GCP AI 算力擴張受限，但 Google 自研 TPU 為緩衝"
+        }
+      ],
+      "downstream": [
+        {
+          "code": "META",
+          "name": "Meta",
+          "market": "NASDAQ",
+          "role": "數位廣告市場最大競爭對手（FB/IG廣告 vs Google 搜尋廣告）",
+          "dependency": "競爭",
+          "signal_rule": "Meta 廣告 ARPU 上升 → 可能侵蝕 Google 廣告預算份額"
+        },
+        {
+          "code": "MSFT",
+          "name": "Microsoft",
+          "market": "NASDAQ",
+          "role": "Bing/Copilot 搜尋廣告競爭，Azure vs GCP 雲端競爭",
+          "dependency": "競爭",
+          "signal_rule": "Bing AI 搜尋市占變化 → 影響 Google 搜尋廣告 RPM"
+        }
+      ],
+      "key_risks": [
+        "AI Overviews（搜尋 AI 摘要）侵蝕點擊廣告收入（零點擊搜尋增加）",
+        "OpenAI/ChatGPT 搜尋入口替代風險",
+        "DOJ 反壟斷訴訟（搜尋引擎壟斷案）可能要求拆分",
+        "GCP 成長速度落後 AWS / Azure"
+      ],
+      "next_catalysts": [
+        "Google Cloud 季度成長率是否回升至 30%+",
+        "Gemini Ultra 2.0 商業化進展（企業版訂閱滲透率）",
+        "TPU v6 Trillium 大規模部署降低 NVIDIA 依賴",
+        "Waymo 自動駕駛商業化里程碑（新城市上線）",
+        "YouTube Shorts 廣告貨幣化率提升"
       ]
     }
   }
