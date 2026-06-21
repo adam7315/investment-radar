@@ -114,6 +114,7 @@ async function init() {
       fetchJSON('./data/supply_chain.json').catch(() => ({ chains: {} }))
     ]);
     loadVipMoves();
+    loadAdvice();
     switchHVTab(localStorage.getItem('hvtab') || 'attention');
     STATE.availableDates = indexData.dates || [];
     STATE.supplyChain    = scData.chains   || {};
@@ -137,6 +138,50 @@ async function init() {
     console.error(e);
     showError('載入失敗：' + e.message);
   }
+}
+
+// ── 今日我的建議 ──────────────────────────
+async function loadAdvice() {
+  try {
+    const blob = await fetchJSON('./data/daily-advice.json');
+    const sec  = document.getElementById('advice-section');
+    const cont = document.getElementById('advice-container');
+    const blocks = [], times = [];
+    [['tw', '台股'], ['us', '美股']].forEach(([k, label]) => {
+      const d = blob[k];
+      if (!d || !d.items || !d.items.length) return;
+      times.push(`${label} ${d.updated_at || ''}`);
+      const cards = d.items.map(renderAdviceCard).join('');
+      blocks.push(
+        `<div class="advice-block">
+           <div class="advice-block-head">${label}建議${d.market_note ? ` · <span class="advice-note-text">${d.market_note}</span>` : ''}</div>
+           <div class="advice-cards">${cards}</div>
+         </div>`);
+    });
+    if (!blocks.length) return;
+    cont.innerHTML = blocks.join('');
+    document.getElementById('advice-update-time').textContent = '更新：' + times.join('　|　');
+    sec.style.display = '';
+  } catch (e) { /* 靜默：尚無建議檔 */ }
+}
+
+function adviceActionClass(a) {
+  if (['買', '加碼'].includes(a)) return 'adv-buy';
+  if (['賣', '減碼'].includes(a)) return 'adv-sell';
+  return 'adv-hold';
+}
+
+function renderAdviceCard(it) {
+  const cls   = adviceActionClass(it.action || '');
+  const qty   = it.qty   ? `<span class="adv-qty">${it.qty}</span>`     : '';
+  const price = it.price ? `<span class="adv-price">@${it.price}</span>` : '';
+  const stop  = it.stop  ? `<div class="adv-stop-row">停損 ${it.stop}</div>` : '';
+  return `<div class="advice-card ${cls}">
+    <div class="adv-top"><span class="adv-name">${it.name || ''}</span><span class="adv-code">${it.code || ''}</span></div>
+    <div class="adv-action"><span class="adv-badge ${cls}">${it.action || ''}</span>${qty}${price}</div>
+    ${stop}
+    <div class="adv-reason">${it.reason || ''}</div>
+  </div>`;
 }
 
 // ── 載入指定日期 ──────────────────────────

@@ -1,0 +1,56 @@
+name: 每日操作建議（台股08:00 / 美股20:30）
+
+on:
+  schedule:
+    # 台灣時間 08:00 台股開盤前（UTC 00:00）→ 台股建議
+    - cron: '0 0 * * *'
+    # 台灣時間 20:30 美股開盤前（UTC 12:30）→ 美股建議
+    - cron: '30 12 * * *'
+  workflow_dispatch:
+    inputs:
+      market:
+        description: '手動測試市場 TW / US / ALL'
+        default: 'ALL'
+
+jobs:
+  advice:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: 決定市場
+        id: mkt
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "market=${{ github.event.inputs.market }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 0 * * *" ]; then
+            echo "market=TW" >> "$GITHUB_OUTPUT"
+          else
+            echo "market=US" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 產生每日建議
+        env:
+          GEMINI_API_KEY:         ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+          ADVICE_MARKET:          ${{ steps.mkt.outputs.market }}
+        run: python scripts/daily_advice.py
+
+      - name: Commit & Push
+        run: |
+          git config user.name  "investment-radar-bot"
+          git config user.email "bot@investment-radar"
+          git add data/daily-advice.json
+          git diff --staged --quiet || git commit -m "📋 每日建議 ${{ steps.mkt.outputs.market }} $(date '+%Y-%m-%d %H:%M')"
+          git push

@@ -962,3 +962,26 @@ a:hover { text-decoration: underline; }
   border-radius: 4px;
 }
 .settings-news-del:hover { background: var(--buy-bg); color: var(--buy); }
+
+/* ── 今日我的建議 ───────────────────────── */
+#advice-section .section-title { color: #ffd24d; }
+.advice-grid { display: flex; flex-direction: column; gap: 14px; }
+.advice-block-head { font-size: 14px; font-weight: 700; color: #cfd8e3; margin: 4px 0 8px; }
+.advice-note-text { font-weight: 400; color: #9aa7b5; font-size: 13px; }
+.advice-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.advice-card { background: #1b2330; border: 1px solid #2c3645; border-left: 4px solid #4a5568; border-radius: 10px; padding: 10px 12px; }
+.advice-card.adv-buy  { border-left-color: #e0413d; }
+.advice-card.adv-sell { border-left-color: #1aa86a; }
+.advice-card.adv-hold { border-left-color: #6b7686; }
+.adv-top { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+.adv-name { font-weight: 700; color: #eef2f7; font-size: 15px; }
+.adv-code { color: #8a97a6; font-size: 12px; }
+.adv-action { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.adv-badge { font-size: 13px; font-weight: 800; padding: 2px 10px; border-radius: 6px; color: #fff; }
+.adv-badge.adv-buy  { background: #e0413d; }
+.adv-badge.adv-sell { background: #1aa86a; }
+.adv-badge.adv-hold { background: #5a6675; }
+.adv-qty   { font-weight: 700; color: #ffd24d; font-size: 15px; }
+.adv-price { color: #cfd8e3; font-size: 14px; }
+.adv-stop-row { margin-top: 4px; font-size: 12px; color: #f0a04b; }
+.adv-reason { margin-top: 6px; font-size: 12.5px; color: #aeb9c6; line-height: 1.5; }

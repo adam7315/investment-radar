@@ -1,0 +1,29 @@
+name: 收盤市值更新（台股13:40 / 美股05:30）
+
+on:
+  schedule:
+    # 台灣時間 13:40 台股收盤後（UTC 05:40）
+    - cron: '40 5 * * *'
+    # 台灣時間 05:30 美股收盤後（UTC 21:30）
+    - cron: '30 21 * * *'
+  workflow_dispatch:
+
+jobs:
+  market-value:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: 更新台股+美股庫存市值
+        env:
+          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+        run: python scripts/update_market_value.py
