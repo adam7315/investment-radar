@@ -7,6 +7,7 @@
 """
 import os
 import re
+import time
 import json
 import datetime
 from pathlib import Path
@@ -74,40 +75,71 @@ def build_prompt(market, holdings, stocks):
                      f"| 近期：{s.get('attention_reason','')}｜{news}")
     unit = "台股以「張」為單位（1 張=1000 股），零股用「股」" if market == "TW" else "美股以「股」為單位"
     mkt  = "台股" if market == "TW" else "美股"
-    return f"""你是專業的{mkt}操盤手，依「持股現況＋最新消息」給出開盤前的具體操作建議。
+    return f"""你是 Adam 的專屬{mkt}操盤手，要拿出資深分析師等級的判斷力，給出開盤前可以直接執行的操作建議。
 
-【我的判斷框架，務必遵守】
-1. 催化劑分層：區分「已反映的已知催化劑」與「尚未定價的催化劑」；股價突破常是後者兌現。
-2. 目標價不是天花板：給賣出建議時，若仍有未定價催化劑，不可單純因「到目標價」就全賣。
-3. 賣出前先問：買進核心邏輯是否被否定？沒被否定的套牢不輕易停損。
-4. 部位紀律：單一個股不超過該市場部位 2 成；不過度集中。
-5. 重大財報前（記憶體/AI股）建議「觀望」，等財報表態。
-6. {unit}。建議要具體可執行、保守為上；不確定就「續抱」或「觀望」。
+【第一步：先上網查最新消息】
+針對下面每一檔持股，務必用 Google 搜尋查「最近 1~3 天」的即時消息：法說會、財報、外資/投信買賣超、內部人申報、訂單與題材、分析師目標價調整。不要只靠系統摘要（那可能過時），一定要找到當下的催化劑再下判斷。
 
-【我的{mkt}持股】
+【Adam 的判斷框架，務必嚴格遵守】
+1. 催化劑分層：把催化劑分成「已反映的已知催化劑」與「尚未定價的催化劑」；股價突破常是後者兌現。每檔都要判斷現在還有沒有未定價催化劑。
+2. 目標價不是天花板：到了分析師目標價，若仍有未定價催化劑，不可單純因「到價」就建議全賣。目標價是起點不是終點。
+3. 賣出決策：賣出前先問「買進核心邏輯是否被否定？未定價催化劑是否已全兌現？內部人是否申報賣出？」核心邏輯沒被否定的套牢不輕易停損。
+4. 內部人/籌碼：大股東「主動加碼」（非股利再投資）是強訊號，權重高於外資買超；閉鎖型家族公司加碼意義最大。
+5. 部位紀律：單一個股不超過該市場部位 2 成，不過度集中。
+6. 重大財報前（記憶體/AI 股）可「觀望」等財報表態，但要寫明等哪一場財報、大約哪一天。
+
+【決斷力要求──這是重點，違反就是失職】
+- 不准全部寫「續抱」交差。每一檔都要依查到的即時催化劑給出明確判斷。
+- 只要有明確催化劑或籌碼訊號，就要給可執行動作：買／賣／加碼／減碼。
+- 凡是「買／賣／加碼／減碼」，qty（張數或股數）、price（進出場價）、stop（停損價）三者都必須填，不可留空。
+- 真的沒有動作才用「續抱／觀望／觀察」，且 reason 要寫明「為什麼現在不動、要等什麼訊號或哪一天」。
+- reason 要具體點出催化劑或籌碼，不准寫「核心邏輯未變」「趨勢向上」這種空話。
+- {unit}。
+
+【Adam 的{mkt}持股】
 {chr(10).join(lines)}
 
-請回傳繁體中文 JSON（只回 JSON）：
+只輸出繁體中文 JSON，不要任何其他文字、不要 markdown 圍欄：
 {{
-  "market_note": "30字內，開盤前大盤/操作節奏提醒",
+  "market_note": "30字內，開盤前大盤與操作節奏提醒",
   "items": [
     {{"code":"代號","name":"股票名稱","action":"買/賣/加碼/減碼/續抱/觀望/觀察 擇一",
-      "qty":"如 1張 或 30股；續抱/觀望留空","price":"建議價格數字字串；無則空",
-      "stop":"停損價數字字串；無則空","reason":"40字內理由"}}
+      "qty":"如 1張 或 30股；續抱/觀望類留空","price":"建議價格數字字串；無則空",
+      "stop":"停損價數字字串；無則空","reason":"45字內，必須點出具體催化劑或籌碼訊號"}}
   ]
 }}
-items 需涵蓋每一檔{mkt}持股。"""
+items 需涵蓋每一檔{mkt}持股，順序同上。"""
 
 
-def ask_gemini(prompt):
+def ask_gemini(prompt, retries=3):
+    # 開啟 Google Search grounding（查即時催化劑）+ 讓模型思考（不再 thinkingBudget=0）
     payload = {"contents": [{"parts": [{"text": prompt}]}],
-               "generationConfig": {"temperature": 0.2, "maxOutputTokens": 4096,
-                                    "thinkingConfig": {"thinkingBudget": 0}}}
-    r = requests.post(GEMINI_URL, json=payload, timeout=60)
-    text = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
-    text = re.sub(r'^```(?:json)?\s*', '', text)
-    text = re.sub(r'\s*```$', '', text).strip()
-    return json.loads(text)
+               "tools": [{"google_search": {}}],
+               "generationConfig": {"temperature": 0.3, "maxOutputTokens": 8192}}
+    last_err = None
+    for attempt in range(1, retries + 1):
+        try:
+            r = requests.post(GEMINI_URL, json=payload, timeout=120)
+            data = r.json()
+            if "candidates" not in data:
+                raise RuntimeError(f"無 candidates：{str(data.get('error', data))[:200]}")
+            parts = data["candidates"][0].get("content", {}).get("parts", [])
+            text = "".join(p.get("text", "") for p in parts if "text" in p).strip()
+            if not text:
+                raise RuntimeError("回應為空")
+            text = re.sub(r'^```(?:json)?\s*', '', text)
+            text = re.sub(r'\s*```$', '', text).strip()
+            # grounding 可能夾帶說明文字，擷取第一個 { 到最後一個 }
+            m = re.search(r'\{.*\}', text, re.S)
+            if m:
+                text = m.group(0)
+            return json.loads(text)
+        except Exception as e:
+            last_err = e
+            print(f"  [WARN] Gemini 第 {attempt} 次失敗：{e}")
+            if attempt < retries:
+                time.sleep(8 * attempt)
+    raise RuntimeError(f"Gemini 連 {retries} 次失敗：{last_err}")
 
 
 def write_sheet(sh, items, date_str, src):
