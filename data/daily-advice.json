@@ -117,29 +117,29 @@
     ]
   },
   "us": {
-    "updated_at": "2026-06-22 08:49",
-    "date": "2026-06-22",
-    "market_note": "SpaceX IPO熱潮降溫，資金流向再平衡，AI股仍受關注但需留意估值。",
+    "updated_at": "2026-06-23 01:16",
+    "date": "2026-06-23",
+    "market_note": "AI概念股持續受關注，部分新上市個股面臨估值修正。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
-        "action": "減碼",
-        "qty": "3股",
+        "action": "加碼",
+        "qty": "5股",
         "price": "368.03",
-        "stop": "360.00",
-        "reason": "內部人持續賣出且散戶資金流出，短期承壓。",
+        "stop": "350.00",
+        "reason": "AI搜尋變現能力增強與雲端業務成長超預期，加上Intel合作確保TPU供應，獲分析師上調目標價。",
         "price_now": "368.03",
         "market": "US"
       },
       {
         "code": "NVDA",
         "name": "輝達 NVDA",
-        "action": "續抱",
+        "action": "觀望",
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "AI合作利好不斷，核心邏輯未變，等待8/26財報表態。",
+        "reason": "等待8月26日Q2財報，以評估Blackwell Ultra出貨狀況及實體AI策略對未來營收的具體影響。",
         "price_now": "210.69",
         "market": "US"
       },
@@ -149,19 +149,19 @@
         "action": "減碼",
         "qty": "20股",
         "price": "185.00",
-        "stop": "170.00",
-        "reason": "IPO後估值過高疑慮浮現，股價回落，獲利了結部分。",
+        "stop": "175.00",
+        "reason": "IPO後股價連續下跌，分析師對估值過高有疑慮，短期波動大，先獲利了結部分部位降低風險。",
         "price_now": "185.00",
         "market": "US"
       },
       {
         "code": "TSM",
         "name": "台積電ADR",
-        "action": "觀望",
+        "action": "續抱",
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "基本面強勁且與NVIDIA深化AI合作，等待7/16財報。",
+        "reason": "2nm製程節點進展順利，可能尚未完全反映在股價中，且5月銷售額增長30%顯示強勁基本面。",
         "price_now": "462.12",
         "market": "US"
       }
