@@ -50,14 +50,20 @@ def fetch_price(code, market):
     return None
 
 
-def update_tab(sh, tab, market, nrows, stamp_cell):
+def update_tab(sh, tab, market):
+    """動態更新：從第2列讀到「合計」為止，不寫死筆數；買新股自動納入。
+    「市值最後更新」時間戳寫回它所在那一列（位置會隨持股數變動）。"""
     ws = sh.worksheet(tab)
-    codes = ws.get(f"C2:C{1+nrows}")
-    updated, skipped = 0, []
-    for i, row in enumerate(codes):
+    rows = ws.get("A2:C80")
+    updated, skipped, stamp_row = 0, [], None
+    for i, r in enumerate(rows):
         rownum = i + 2
-        code = (row[0] if row else "").strip()
-        if not code:
+        r = (list(r) + ["", "", ""])[:3]
+        a, code = str(r[0]).strip(), str(r[2]).strip()
+        if a.startswith("市值最後更新"):
+            stamp_row = rownum
+            break
+        if a == "合計" or not code:
             continue
         price = fetch_price(code, market)
         if price is None:
@@ -69,15 +75,16 @@ def update_tab(sh, tab, market, nrows, stamp_cell):
         updated += 1
         time.sleep(0.4)
     stamp = NOW.strftime("%Y-%m-%d %H:%M")
-    ws.update_acell(stamp_cell, f"市值最後更新：{stamp}（Yahoo 現價）")
+    if stamp_row:
+        ws.update_acell(f"A{stamp_row}", f"市值最後更新：{stamp}（Yahoo 現價）")
     print(f"[OK] {tab}：更新 {updated} 檔，跳過 {skipped}")
 
 
 def main():
     gc = get_client()
     sh = gc.open_by_key(SHEET_ID)
-    update_tab(sh, "台股庫存", "TW", 10, "A14")
-    update_tab(sh, "美股庫存", "US", 4, "A7")
+    update_tab(sh, "台股庫存", "TW")
+    update_tab(sh, "美股庫存", "US")
     print(f"全部完成：{NOW.strftime('%Y-%m-%d %H:%M')}")
 
 

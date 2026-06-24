@@ -29,7 +29,7 @@ SA_ENV      = os.environ.get("GOOGLE_SERVICE_ACCOUNT", "")
 SA_FILE     = "D:/Claude Code/MCP/google-credentials/service-account.json"
 SCOPES      = ["https://www.googleapis.com/auth/spreadsheets"]
 
-TABS = {"TW": ("台股庫存", 10), "US": ("美股庫存", 4)}
+TABS = {"TW": "台股庫存", "US": "美股庫存"}
 
 
 def get_client():
@@ -41,15 +41,25 @@ def get_client():
 
 
 def read_holdings(sh, market):
-    tab, rows = TABS[market]
-    ws = sh.worksheet(tab)
-    data = ws.get(f"A2:K{1+rows}")
+    """動態讀取全部持股：從第2列讀到「合計」或空白為止，不再寫死筆數。
+    買新股 → 自動納入；某檔賣到 0 股（移除列或股數=0）→ 自動不給建議。"""
+    ws = sh.worksheet(TABS[market])
+    data = ws.get("A2:K60")
     out = []
     for r in data:
         r = r + [""] * (11 - len(r))
-        if not r[1].strip():
+        a, name = str(r[0]).strip(), str(r[1]).strip()
+        if a == "合計" or a.startswith("市值最後更新"):
+            break
+        if not name:
             continue
-        out.append({"name": r[1].strip(), "code": r[2].strip(), "shares": r[3],
+        try:
+            shares = float(str(r[3]).replace(",", "") or 0)
+        except ValueError:
+            shares = 0
+        if shares == 0:
+            continue  # 已無持股，不給建議
+        out.append({"name": name, "code": r[2].strip(), "shares": r[3],
                     "cost": r[4], "price": r[5], "pl": r[8], "roi": r[9], "be": r[10]})
     return out
 
