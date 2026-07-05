@@ -117,9 +117,9 @@
     ]
   },
   "us": {
-    "updated_at": "2026-07-04 22:09",
-    "date": "2026-07-04",
-    "market_note": "AI股財報與IPO股波動大，內部人賣壓需留意。",
+    "updated_at": "2026-07-05 22:16",
+    "date": "2026-07-05",
+    "market_note": "AI股財報與資本支出影響市場情緒，SpaceX IPO後續動態與TSMC漲價題材為焦點。",
     "items": [
       {
         "code": "GOOGL",
@@ -127,41 +127,41 @@
         "action": "減碼",
         "qty": "5股",
         "price": "359.91",
-        "stop": "345.00",
-        "reason": "內部人John Kent Walker近期申報賣出大量持股，降低部分持股以管理風險。",
+        "stop": "355.00",
+        "reason": "內部人申報賣出，且AI資本支出高於預期，短期承壓。",
         "price_now": "359.91",
         "market": "US"
       },
       {
         "code": "NVDA",
-        "name": "輝達 NVDA",
-        "action": "觀望",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "內部人持續大量賣出，且新商業模式帶來潛在風險，觀望等待下次財報（預計八月）表態。",
+        "name": "輝達",
+        "action": "加碼",
+        "qty": "10股",
+        "price": "194.83",
+        "stop": "190.00",
+        "reason": "分析師目標價具上漲空間，財報前夕逢低加碼，核心邏輯不變。",
         "price_now": "194.83",
         "market": "US"
       },
       {
         "code": "SPCX",
-        "name": "太空探索 SpaceX",
-        "action": "減碼",
-        "qty": "40股",
-        "price": "162.00",
-        "stop": "150.00",
-        "reason": "IPO後股價波動劇烈且估值過高，加上七月底八月初將有財報與內部人閉鎖期解禁風險，先獲利了結部分持股。",
+        "name": "太空探索",
+        "action": "續抱",
+        "qty": "",
+        "price": "",
+        "stop": "",
+        "reason": "Nasdaq-100納入與靜默期結束帶來被動買盤，但估值過高與八月財報風險並存。",
         "price_now": "162.00",
         "market": "US"
       },
       {
         "code": "TSM",
         "name": "台積電ADR",
-        "action": "觀望",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "內部人近期有賣出訊號，且重大財報將於7月16日公布，觀望等待財報結果。",
+        "action": "加碼",
+        "qty": "5股",
+        "price": "434.16",
+        "stop": "425.00",
+        "reason": "傳漲價與高盛調升目標價，內部人加碼，Q2財報前具上漲潛力。",
         "price_now": "434.16",
         "market": "US"
       }
