@@ -117,9 +117,9 @@
     ]
   },
   "us": {
-    "updated_at": "2026-07-07 23:25",
-    "date": "2026-07-07",
-    "market_note": "AI股續強，SPCX重挫需警惕，財報季前審慎選股。",
+    "updated_at": "2026-07-08 22:55",
+    "date": "2026-07-08",
+    "market_note": "AI股財報前波動，留意Alphabet、NVIDIA與台積電ADR的潛在催化劑，SpaceX估值過高需謹慎。",
     "items": [
       {
         "code": "GOOGL",
@@ -128,30 +128,30 @@
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "Google推出新AI模型強化Gemini生態系，AI發展持續推進，Q2財報預計7/22公布，核心邏輯未變。",
-        "price_now": "366.46",
+        "reason": "Google Cloud營收強勁且積壓訂單高，但AI資本支出增加壓抑近期現金流，待7/29 Q2財報釐清。",
+        "price_now": "367.03",
         "market": "US"
       },
       {
         "code": "NVDA",
         "name": "輝達 NVDA",
-        "action": "觀望",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "公司否認Kyber AI機架延遲報導，股價小幅反彈，但市場對AI需求前景仍有疑慮。等待Q2財報表態，預計8/26公布。",
-        "price_now": "195.55",
+        "action": "加碼",
+        "qty": "10股",
+        "price": "196.93",
+        "stop": "189.00",
+        "reason": "AI晶片需求確認達1兆美元，BofA重申買入評級與350美元目標價，股價處於支撐區，逢低加碼。",
+        "price_now": "196.93",
         "market": "US"
       },
       {
         "code": "SPCX",
         "name": "太空探索 SpaceX",
-        "action": "賣",
-        "qty": "80股",
-        "price": "114.90",
-        "stop": "114.90",
-        "reason": "納入Nasdaq 100卻重挫29%，顯示利多出盡或負面因素，核心邏輯受挑戰，應立即停損。",
-        "price_now": "160.42",
+        "action": "減碼",
+        "qty": "20股",
+        "price": "149.47",
+        "stop": "",
+        "reason": "IPO熱潮消退股價回歸發行價，估值過高達營收110倍，且7月底內部人鎖定期將陸續到期，宜減碼降低風險。",
+        "price_now": "149.47",
         "market": "US"
       },
       {
@@ -159,10 +159,10 @@
         "name": "台積電ADR",
         "action": "加碼",
         "qty": "5股",
-        "price": "452.00",
-        "stop": "429.20",
-        "reason": "AI需求強勁、財測上修且股息增加，多重利好催化劑推動股價上漲，核心邏輯強化。Q2財報預計7/16公布。",
-        "price_now": "451.79",
+        "price": "432.57",
+        "stop": "405.50",
+        "reason": "多家分析師上調目標價至590-625美元，預期7/16 Q2財報將上修全年指引與2027年資本支出，AI需求強勁。",
+        "price_now": "432.57",
         "market": "US"
       }
     ]
