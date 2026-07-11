@@ -117,30 +117,30 @@
     ]
   },
   "us": {
-    "updated_at": "2026-07-10 23:12",
-    "date": "2026-07-10",
-    "market_note": "大盤AI題材持續，但個股受消息面影響分歧，操作需謹慎。",
+    "updated_at": "2026-07-11 22:01",
+    "date": "2026-07-11",
+    "market_note": "AI題材續強，精選有未定價催化劑個股，留意內部人賣壓。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
-        "action": "續抱",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "等待新的AI/雲端業務催化劑或內部人/外資籌碼變動。",
-        "price_now": "358.89",
+        "action": "加碼",
+        "qty": "5股",
+        "price": "358.00",
+        "stop": "345.00",
+        "reason": "AI與雲端業務強勁成長，分析師目標價高，股價具上漲潛力。",
+        "price_now": "357.18",
         "market": "US"
       },
       {
         "code": "NVDA",
         "name": "輝達 NVDA",
-        "action": "減碼",
+        "action": "加碼",
         "qty": "10股",
-        "price": "202.78",
-        "stop": "195.00",
-        "reason": "中國H20晶片出口限制導致55億美元損失，影響未來營收與獲利。",
-        "price_now": "202.78",
+        "price": "212.50",
+        "stop": "205.00",
+        "reason": "中國H200需求潛力、800億回購、分析師看漲與低估值。",
+        "price_now": "210.96",
         "market": "US"
       },
       {
@@ -148,21 +148,21 @@
         "name": "太空探索 SpaceX",
         "action": "加碼",
         "qty": "10股",
-        "price": "152.16",
-        "stop": "145.00",
-        "reason": "股價回檔至IPO價附近，分析師目標價高且AI潛力未完全定價。",
-        "price_now": "152.16",
+        "price": "146.00",
+        "stop": "135.00",
+        "reason": "納斯達克100指數納入引發被動買盤，AI合約強勁。",
+        "price_now": "145.30",
         "market": "US"
       },
       {
         "code": "TSM",
         "name": "台積電ADR",
-        "action": "觀望",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "等待7月16日Q2財報公布，觀察管理層對全年營收展望。",
-        "price_now": "436.96",
+        "action": "加碼",
+        "qty": "5股",
+        "price": "435.00",
+        "stop": "420.00",
+        "reason": "7/16分析師會議預期上調財測與資本支出，AI需求強勁。",
+        "price_now": "434.11",
         "market": "US"
       }
     ]
