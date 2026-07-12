@@ -117,18 +117,18 @@
     ]
   },
   "us": {
-    "updated_at": "2026-07-11 22:01",
-    "date": "2026-07-11",
-    "market_note": "AI題材續強，精選有未定價催化劑個股，留意內部人賣壓。",
+    "updated_at": "2026-07-12 22:03",
+    "date": "2026-07-12",
+    "market_note": "大盤AI題材持續，留意TSMC財報與SpaceX解鎖賣壓。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
         "action": "加碼",
         "qty": "5股",
-        "price": "358.00",
-        "stop": "345.00",
-        "reason": "AI與雲端業務強勁成長，分析師目標價高，股價具上漲潛力。",
+        "price": "357.18",
+        "stop": "350.00",
+        "reason": "Gemini 3.5 Pro將於7/17推出，具2M token視窗，有望推動AI服務變現，分析師目標價仍有上漲空間。",
         "price_now": "357.18",
         "market": "US"
       },
@@ -137,31 +137,31 @@
         "name": "輝達 NVDA",
         "action": "加碼",
         "qty": "10股",
-        "price": "212.50",
+        "price": "210.96",
         "stop": "205.00",
-        "reason": "中國H200需求潛力、800億回購、分析師看漲與低估值。",
+        "reason": "AI晶片需求強勁，TSMC財報(7/16)有望驗證產業景氣，分析師目標價仍有39%上漲空間。",
         "price_now": "210.96",
         "market": "US"
       },
       {
         "code": "SPCX",
         "name": "太空探索 SpaceX",
-        "action": "加碼",
-        "qty": "10股",
-        "price": "146.00",
-        "stop": "135.00",
-        "reason": "納斯達克100指數納入引發被動買盤，AI合約強勁。",
+        "action": "減碼",
+        "qty": "20股",
+        "price": "145.30",
+        "stop": "140.00",
+        "reason": "8/11起內部人股票解鎖，恐引發大量賣壓；當前估值過高，盈利能力仍受質疑。",
         "price_now": "145.30",
         "market": "US"
       },
       {
         "code": "TSM",
         "name": "台積電ADR",
-        "action": "加碼",
-        "qty": "5股",
-        "price": "435.00",
-        "stop": "420.00",
-        "reason": "7/16分析師會議預期上調財測與資本支出，AI需求強勁。",
+        "action": "觀望",
+        "qty": "",
+        "price": "",
+        "stop": "",
+        "reason": "7/16將公布Q2財報，市場預期上調全年指引，待財報結果確認AI晶片強勁需求。",
         "price_now": "434.11",
         "market": "US"
       }
