@@ -117,9 +117,9 @@
     ]
   },
   "us": {
-    "updated_at": "2026-07-21 22:34",
-    "date": "2026-07-21",
-    "market_note": "市場在財報週前謹慎輪動，AI股波動加劇，但晶片股領漲。",
+    "updated_at": "2026-07-22 22:34",
+    "date": "2026-07-22",
+    "market_note": "科技股財報季開跑，AI題材續熱，留意個股表現。",
     "items": [
       {
         "code": "GOOGL",
@@ -128,41 +128,41 @@
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "等待明日(7/22)Q2財報結果，AI晶片開發雖是長期利好，但短期市場已部分反映。",
-        "price_now": "351.99",
+        "reason": "等待今日盤後公布的第二季財報，特別關注Google Cloud成長、AI支出效益及Gemini進展。",
+        "price_now": "347.15",
         "market": "US"
       },
       {
         "code": "NVDA",
-        "name": "輝達",
-        "action": "續抱",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "AI生態系持續擴張，NVIDIA領導地位穩固，顯存價格影響有限，長期催化劑仍在。",
-        "price_now": "203.28",
+        "name": "輝達 NVDA",
+        "action": "加碼",
+        "qty": "5股",
+        "price": "207.29",
+        "stop": "195.00",
+        "reason": "Rubin AI晶片出貨與Omniverse生態擴張帶來強勁營運催化劑，且機構法人持續加碼，分析師上調目標價。",
+        "price_now": "207.29",
         "market": "US"
       },
       {
         "code": "SPCX",
-        "name": "太空探索",
-        "action": "加碼",
-        "qty": "10股",
-        "price": "119.00",
-        "stop": "115.00",
-        "reason": "股價觸及技術面支撐，Cathie Wood持續加碼，本週有望重啟星艦發射為潛在催化劑。",
-        "price_now": "119.85",
+        "name": "太空探索 SpaceX",
+        "action": "減碼",
+        "qty": "20股",
+        "price": "123.54",
+        "stop": "130.00",
+        "reason": "財報後將有大量股票解鎖，可能帶來巨大賣壓，且公司估值仍高，短期內獲利前景不明。",
+        "price_now": "123.54",
         "market": "US"
       },
       {
         "code": "TSM",
         "name": "台積電ADR",
-        "action": "加碼",
-        "qty": "5股",
-        "price": "405.00",
-        "stop": "395.00",
-        "reason": "傳聞2027年先進製程將漲價10%，加速亞利桑那廠建置，顯示AI趨勢強勁信心。",
-        "price_now": "402.30",
+        "action": "續抱",
+        "qty": "",
+        "price": "",
+        "stop": "",
+        "reason": "Q2財報強勁且上調全年展望，2027年晶片漲價計畫與內部人加碼皆為正面訊號，核心邏輯未被否定。",
+        "price_now": "424.61",
         "market": "US"
       }
     ]
