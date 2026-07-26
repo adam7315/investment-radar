@@ -117,40 +117,40 @@
     ]
   },
   "us": {
-    "updated_at": "2026-07-25 22:09",
-    "date": "2026-07-25",
-    "market_note": "AI投資熱潮持續，資本支出與回報疑慮並存，謹慎選股。",
+    "updated_at": "2026-07-26 22:08",
+    "date": "2026-07-26",
+    "market_note": "市場消化科技財報與AI投資成本，油價上漲引發通膨擔憂，半導體股反彈但AI支出壓力仍在。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
-        "action": "觀望",
+        "action": "續抱",
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "財報雖佳但AI資本支出大增致自由現金流轉負，市場觀望AI投資回報何時顯現。",
+        "reason": "Q2雲端營收強勁，AI投資長期潛力大，但短期資本支出高導致自由現金流轉負，股價已反映部分利空。",
         "price_now": "319.74",
         "market": "US"
       },
       {
         "code": "NVDA",
         "name": "輝達 NVDA",
-        "action": "觀察",
+        "action": "續抱",
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "AMD與Anthropic達成AI伺服器合作，競爭加劇，需觀察對NVIDIA市場份額影響。",
+        "reason": "AI晶片需求持續強勁，NVIDIA生態系優勢穩固，多數分析師目標價高於現價，長期成長趨勢不變。",
         "price_now": "206.84",
         "market": "US"
       },
       {
         "code": "SPCX",
         "name": "太空探索 SpaceX",
-        "action": "買",
-        "qty": "10股",
-        "price": "115.00",
-        "stop": "105.00",
-        "reason": "Starship成功試飛，大摩看好AI業務被低估，Q2財報前具潛在催化劑。",
+        "action": "觀望",
+        "qty": "",
+        "price": "",
+        "stop": "",
+        "reason": "Q2財報將於8/4公布，且8月有內部人持股解禁壓力。儘管大摩看好AI業務長期潛力，但短期不確定性高，宜觀望財報與籌碼變化。",
         "price_now": "115.07",
         "market": "US"
       },
@@ -159,9 +159,9 @@
         "name": "台積電ADR",
         "action": "加碼",
         "qty": "5股",
-        "price": "405.00",
-        "stop": "385.00",
-        "reason": "Q2財報亮眼且上修全年展望，高管持續買入展現信心，AI需求強勁。",
+        "price": "403.41",
+        "stop": "383.24",
+        "reason": "Q2財報亮眼，上修全年營收指引。2027年先進製程預計漲價5-10%，且亞利桑那廠擴大投資，長期AI/HPC需求明確，ADR折價提供加碼機會。",
         "price_now": "403.41",
         "market": "US"
       }
