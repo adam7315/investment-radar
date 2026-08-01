@@ -117,41 +117,41 @@
     ]
   },
   "us": {
-    "updated_at": "2026-07-31 22:58",
-    "date": "2026-07-31",
-    "market_note": "市場情緒偏多，AI概念股表現強勁，留意個股財報與合作案進展。",
+    "updated_at": "2026-08-01 22:06",
+    "date": "2026-08-01",
+    "market_note": "AI需求續強，高資本支出與解鎖賣壓成焦點。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
-        "action": "觀察",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "Gemini 3.5 Pro延遲發布引發AI競爭疑慮，需觀察市場對此消息的定價與後續發展。",
-        "price_now": "333.66",
+        "action": "減碼",
+        "qty": "5股",
+        "price": "356.00",
+        "stop": "345.00",
+        "reason": "內部人持續賣出，高資本支出展望引擔憂，Reddit協議不確定性增風險。",
+        "price_now": "356.13",
         "market": "US"
       },
       {
         "code": "NVDA",
-        "name": "輝達 NVDA",
-        "action": "加碼",
-        "qty": "10股",
-        "price": "195.04",
-        "stop": "190.00",
-        "reason": "分析師普遍給予強烈買入評級，平均目標價有顯著上漲空間，AI題材持續發酵。",
-        "price_now": "195.04",
-        "market": "US"
-      },
-      {
-        "code": "SPCX",
-        "name": "太空探索 SpaceX",
+        "name": "輝達",
         "action": "觀望",
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "Q2財報將於8月4日公布，鎖定期屆滿可能釋出大量內部人持股，短期波動大。",
-        "price_now": "112.20",
+        "reason": "等待8月26日Q2財報結果，儘管AI題材強勁，但內部人賣出與潛在融資擔憂需觀察。",
+        "price_now": "200.75",
+        "market": "US"
+      },
+      {
+        "code": "SPCX",
+        "name": "太空探索SpaceX",
+        "action": "減碼",
+        "qty": "40股",
+        "price": "108.00",
+        "stop": "100.00",
+        "reason": "8/4財報前夕股價承壓，8/6大量股票解鎖恐引發賣壓，短線風險極高。",
+        "price_now": "108.37",
         "market": "US"
       },
       {
@@ -159,10 +159,10 @@
         "name": "台積電ADR",
         "action": "加碼",
         "qty": "5股",
-        "price": "403.31",
-        "stop": "395.00",
-        "reason": "AI題材強勁，分析師上調目標價，且近期股價大漲顯示市場買盤積極。",
-        "price_now": "403.31",
+        "price": "404.00",
+        "stop": "385.00",
+        "reason": "Q2財報強勁，Q3展望樂觀，AI需求持續增長，且高層有小額買進。",
+        "price_now": "404.25",
         "market": "US"
       }
     ]
