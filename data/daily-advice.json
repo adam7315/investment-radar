@@ -117,30 +117,30 @@
     ]
   },
   "us": {
-    "updated_at": "2026-08-04 23:00",
-    "date": "2026-08-04",
-    "market_note": "今日市場聚焦SpaceX財報與鎖定期解禁，AI股NVDA財報將近，整體宜謹慎觀察。",
+    "updated_at": "2026-08-05 22:54",
+    "date": "2026-08-05",
+    "market_note": "AI股帶動大盤，但部分科技股面臨獲利了結壓力。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
-        "action": "續抱",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "Q2財報大超預期，AI前景樂觀，但近期內部人有大量賣出申報，需觀察後續動向。",
-        "price_now": "373.51",
+        "action": "減碼",
+        "qty": "5股",
+        "price": "377.00",
+        "stop": "350.00",
+        "reason": "內部人近90天大量賣出，且通用汽車將逐步取代Google車載AI系統，增加營運不確定性。",
+        "price_now": "377.65",
         "market": "US"
       },
       {
         "code": "NVDA",
         "name": "輝達 NVDA",
-        "action": "觀望",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "Q2財報將於8/26盤後公布，市場高度關注AI前景，財報前宜觀望等表態。",
-        "price_now": "206.64",
+        "action": "加碼",
+        "qty": "15股",
+        "price": "210.00",
+        "stop": "200.00",
+        "reason": "馬斯克宣布SpaceX未來AI資料中心將獨家採用輝達晶片，為強勁且未定價的催化劑。",
+        "price_now": "211.94",
         "market": "US"
       },
       {
@@ -150,8 +150,8 @@
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "今日盤後將公布首次財報，且8/6有大量內部人股票解鎖，短期波動大，宜觀望。",
-        "price_now": "114.53",
+        "reason": "財報後因AI資本支出大增導致股價重挫，且有股票解禁壓力，需觀察市場消化利空後走勢。",
+        "price_now": "125.33",
         "market": "US"
       },
       {
@@ -159,10 +159,10 @@
         "name": "台積電ADR",
         "action": "加碼",
         "qty": "5股",
-        "price": "408.00",
-        "stop": "395.00",
-        "reason": "Q2財報表現強勁，AI題材持續受市場看好，多家分析師維持買入評級，Cathie Wood亦加碼。",
-        "price_now": "406.11",
+        "price": "415.00",
+        "stop": "400.00",
+        "reason": "Morningstar大幅調升目標價與營收指引，且擴大CoW封裝外包緩解產能瓶頸，具強勁未定價催化劑。",
+        "price_now": "417.17",
         "market": "US"
       }
     ]
