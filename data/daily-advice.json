@@ -117,18 +117,18 @@
     ]
   },
   "us": {
-    "updated_at": "2026-08-09 21:30",
-    "date": "2026-08-09",
-    "market_note": "美股AI板塊分化，關注財報與新題材。",
+    "updated_at": "2026-08-10 21:55",
+    "date": "2026-08-10",
+    "market_note": "AI需求強勁，晶片股財報前觀望，SpaceX鎖定期後反彈。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
-        "action": "減碼",
+        "action": "加碼",
         "qty": "5股",
         "price": "354.30",
         "stop": "345.00",
-        "reason": "AI人才流失、高資本支出致現金流轉負，內部人持續賣出。",
+        "reason": "機構持續加碼，AI基礎設施需求強勁，上調資本支出預期，雲端業務成長動能佳。",
         "price_now": "354.30",
         "market": "US"
       },
@@ -139,18 +139,18 @@
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "等待8/26 Q2財報表態，SpaceX合作與主權AI前景佳。",
+        "reason": "8月26日將公布財報，市場預期高，等待財報結果與Blackwell出貨指引明朗後再動作。",
         "price_now": "223.96",
         "market": "US"
       },
       {
         "code": "SPCX",
         "name": "太空探索",
-        "action": "加碼",
-        "qty": "20股",
-        "price": "133.11",
-        "stop": "120.00",
-        "reason": "限售股解禁未現拋壓，與Tesla合建AI晶圓廠為新催化劑。",
+        "action": "續抱",
+        "qty": "",
+        "price": "",
+        "stop": "",
+        "reason": "Q2財報強勁，首次鎖定期到期未引發拋售，股價從低點反彈，但需觀察後續鎖定期影響。",
         "price_now": "133.11",
         "market": "US"
       },
@@ -161,7 +161,7 @@
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "近期無明確催化劑或籌碼訊號，核心邏輯未變。",
+        "reason": "7月營收創紀錄，AI晶片需求旺盛，上調全年財測與資本支出，核心邏輯未變。",
         "price_now": "420.04",
         "market": "US"
       }
