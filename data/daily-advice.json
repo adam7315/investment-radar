@@ -117,9 +117,9 @@
     ]
   },
   "us": {
-    "updated_at": "2026-08-13 21:57",
-    "date": "2026-08-13",
-    "market_note": "大盤震盪，AI題材持續發酵，具明確AI催化劑持股可考慮加碼。",
+    "updated_at": "2026-08-14 21:53",
+    "date": "2026-08-14",
+    "market_note": "AI與半導體題材持續發酵，Nvidia財報前觀望，Alphabet與台積電有新催化劑可加碼。",
     "items": [
       {
         "code": "GOOGL",
@@ -127,31 +127,31 @@
         "action": "加碼",
         "qty": "5股",
         "price": "345.00",
-        "stop": "330.00",
-        "reason": "Gemini用戶突破十億，AI變現潛力大，股價因資本支出回檔提供加碼點。",
-        "price_now": "343.54",
+        "stop": "335.00",
+        "reason": "Pixel 11新機與AI功能推出，分析師目標價具上漲空間。",
+        "price_now": "346.36",
         "market": "US"
       },
       {
         "code": "NVDA",
-        "name": "輝達",
-        "action": "加碼",
-        "qty": "10股",
-        "price": "225.00",
-        "stop": "215.00",
-        "reason": "多家分析師上調目標價至$275-$350，看好Rubin架構及EPS翻倍潛力。",
-        "price_now": "224.09",
+        "name": "輝達 NVDA",
+        "action": "觀望",
+        "qty": "",
+        "price": "",
+        "stop": "",
+        "reason": "等待8/26 Q2財報表態，AI基礎設施融資與SpaceX合作為潛在利多。",
+        "price_now": "225.30",
         "market": "US"
       },
       {
         "code": "SPCX",
         "name": "太空探索 SpaceX",
-        "action": "加碼",
-        "qty": "20股",
-        "price": "147.00",
-        "stop": "138.00",
-        "reason": "股價突破IPO價，馬斯克強調AI戰略與Grok 4.6發布，空頭回補顯著。",
-        "price_now": "146.15",
+        "action": "觀察",
+        "qty": "",
+        "price": "",
+        "stop": "",
+        "reason": "Cursor合併利多已反映，8/20禁售股解禁恐增賣壓，需觀察籌碼變化。",
+        "price_now": "141.29",
         "market": "US"
       },
       {
@@ -159,10 +159,10 @@
         "name": "台積電ADR",
         "action": "加碼",
         "qty": "5股",
-        "price": "430.00",
+        "price": "432.00",
         "stop": "415.00",
-        "reason": "多家分析師大幅上調目標價至$500-$554，AI晶片需求強勁。",
-        "price_now": "429.15",
+        "reason": "7月營收年增45%超預期，AI晶片需求強勁，分析師目標價上調。",
+        "price_now": "430.49",
         "market": "US"
       }
     ]
