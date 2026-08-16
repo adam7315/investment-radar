@@ -117,18 +117,18 @@
     ]
   },
   "us": {
-    "updated_at": "2026-08-15 21:08",
-    "date": "2026-08-15",
-    "market_note": "AI題材持續發酵，關注財報與新產品動態。",
+    "updated_at": "2026-08-16 21:09",
+    "date": "2026-08-16",
+    "market_note": "AI需求強勁，科技巨頭資本支出續增，但短期市場對高額投資成本反應謹慎。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
         "action": "加碼",
         "qty": "5股",
-        "price": "現價",
-        "stop": "335.00",
-        "reason": "Google發布Gemini 3.7 Flash及Pixel 11系列，AI功能升級且模型降價，有望推動營收成長。",
+        "price": "345.90",
+        "stop": "330.00",
+        "reason": "Q2財報優於預期，AI資本支出續增，股價低於分析師目標價。",
         "price_now": "345.90",
         "market": "US"
       },
@@ -139,29 +139,29 @@
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "等待8月26日公布的2027財年第二季財報，以評估其AI業務展望與營收指引。",
+        "reason": "Q2 2027財報即將公布，市場觀望其對AI需求與未來展望的最新指引。",
         "price_now": "225.16",
         "market": "US"
       },
       {
         "code": "SPCX",
         "name": "太空探索 SpaceX",
-        "action": "加碼",
-        "qty": "10股",
-        "price": "現價",
-        "stop": "135.00",
-        "reason": "馬斯克預期AI將佔SpaceX估值99%，且AI營收9月將超越其他業務，加上併購AI公司Cursor，AI轉型為強勁催化劑。",
+        "action": "減碼",
+        "qty": "20股",
+        "price": "140.00",
+        "stop": "145.00",
+        "reason": "8/20將有大量股票解鎖，短期賣壓沉重，避開潛在下跌風險。",
         "price_now": "140.00",
         "market": "US"
       },
       {
         "code": "TSM",
         "name": "台積電ADR",
-        "action": "續抱",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "AI晶片需求強勁，台積電先進製程與CoWoS產能持續擴張，美國廠進度超前且獲利佳，基本面穩固。",
+        "action": "加碼",
+        "qty": "5股",
+        "price": "426.35",
+        "stop": "400.00",
+        "reason": "Q2財報優於預期，AI需求強勁，資本支出上調，股價具上漲潛力。",
         "price_now": "426.35",
         "market": "US"
       }
