@@ -117,9 +117,9 @@
     ]
   },
   "us": {
-    "updated_at": "2026-08-29 06:32",
-    "date": "2026-08-29",
-    "market_note": "AI需求強勁，NVIDIA與台積電展望樂觀，SpaceX擴大太空AI投資。",
+    "updated_at": "2026-08-31 00:54",
+    "date": "2026-08-31",
+    "market_note": "AI需求強勁，NVIDIA財報與TSMC訂單皆超預期，市場情緒樂觀。",
     "items": [
       {
         "code": "GOOGL",
@@ -128,30 +128,30 @@
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "無近期具體催化劑，等待AI相關新產品或財報消息，核心邏輯未被否定。",
-        "price_now": "345.98",
+        "reason": "近1-3天無明確未定價催化劑或內部人買賣超訊號，等待新AI應用或重大營運消息。",
+        "price_now": "346.59",
         "market": "US"
       },
       {
         "code": "NVDA",
         "name": "輝達 NVDA",
         "action": "加碼",
-        "qty": "5股",
-        "price": "225.00",
-        "stop": "215.00",
-        "reason": "2028財年營收70%成長展望超預期，多數分析師上調目標價，AI需求持續強勁。",
-        "price_now": "218.94",
+        "qty": "10股",
+        "price": "220.00",
+        "stop": "205.00",
+        "reason": "Q2財報大超預期，FY28營收指引70%遠高於市場預期，分析師目標價大幅上調，AI需求強勁且供不應求。",
+        "price_now": "217.55",
         "market": "US"
       },
       {
         "code": "SPCX",
         "name": "太空探索 SpaceX",
-        "action": "加碼",
-        "qty": "10股",
-        "price": "138.00",
-        "stop": "130.00",
-        "reason": "宣布投資千億美元建第三座發射基地，拓展軌道AI數據中心與企業AI市場，並獲UAE Starlink執照。",
-        "price_now": "140.19",
+        "action": "觀望",
+        "qty": "",
+        "price": "",
+        "stop": "",
+        "reason": "等待九月中旬Starship Flight 14首次軌道飛行及V3 Starlink衛星部署結果，此為關鍵未定價催化劑。",
+        "price_now": "141.50",
         "market": "US"
       },
       {
@@ -160,9 +160,9 @@
         "action": "加碼",
         "qty": "5股",
         "price": "420.00",
-        "stop": "400.00",
-        "reason": "AI晶片與先進封裝需求強勁，訂單持續外溢顯示產能滿載，分析師目標價普遍看漲。",
-        "price_now": "420.87",
+        "stop": "390.00",
+        "reason": "受NVIDIA強勁財報與指引帶動，AI晶片需求持續加速。內部人VP Yuan Lipen近期主動加碼，且獲小米3nm新訂單。",
+        "price_now": "417.52",
         "market": "US"
       }
     ]
