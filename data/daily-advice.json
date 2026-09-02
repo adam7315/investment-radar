@@ -117,41 +117,41 @@
     ]
   },
   "us": {
-    "updated_at": "2026-09-02 00:49",
-    "date": "2026-09-02",
-    "market_note": "全球AI需求強勁，晶片股表現亮眼，但需留意地緣政治與品牌形象風險。",
+    "updated_at": "2026-09-03 00:46",
+    "date": "2026-09-03",
+    "market_note": "AI需求強勁但高資本支出與競爭疑慮並存，關注財報與內部人動向。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
-        "action": "觀望",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "等待「Lake America」爭議對品牌形象影響明朗，避免短期波動。",
-        "price_now": "339.35",
+        "action": "減碼",
+        "qty": "5股",
+        "price": "335.00",
+        "stop": "325.00",
+        "reason": "董事Frances Arnold申報賣出，且市場對AI高資本支出反應負面。",
+        "price_now": "335.02",
         "market": "US"
       },
       {
         "code": "NVDA",
         "name": "輝達 NVDA",
-        "action": "加碼",
-        "qty": "5股",
-        "price": "220.00",
-        "stop": "209.00",
-        "reason": "Q2財報與Q3財測強勁，新產品量產，AI題材持續發酵。",
-        "price_now": "220.78",
+        "action": "觀望",
+        "qty": "",
+        "price": "",
+        "stop": "",
+        "reason": "Q2財報雖強勁但市場反應平淡，等待11月Q3財報指引確認AI需求動能。",
+        "price_now": "217.44",
         "market": "US"
       },
       {
         "code": "SPCX",
         "name": "太空探索 SpaceX",
-        "action": "觀望",
+        "action": "觀察",
         "qty": "",
         "price": "",
         "stop": "",
-        "reason": "股價低於均價，市場對估值有分歧，且需觀察更多籌碼變化與機構動向。",
-        "price_now": "143.69",
+        "reason": "9月9日有內部人股票解鎖風險，需觀察賣壓，但Starship發射與AI業務成長為潛在催化劑。",
+        "price_now": "142.23",
         "market": "US"
       },
       {
@@ -159,10 +159,10 @@
         "name": "台積電ADR",
         "action": "加碼",
         "qty": "5股",
-        "price": "415.00",
-        "stop": "394.00",
-        "reason": "億萬富翁Daniel Loeb大幅增持，分析師看好AI驅動成長。",
-        "price_now": "415.32",
+        "price": "414.00",
+        "stop": "395.00",
+        "reason": "AI需求強勁推升營收展望，分析師給予強烈買進評級，且有大股東加碼訊號。",
+        "price_now": "414.00",
         "market": "US"
       }
     ]
