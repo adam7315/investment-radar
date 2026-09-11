@@ -117,19 +117,19 @@
     ]
   },
   "us": {
-    "updated_at": "2026-09-11 00:35",
-    "date": "2026-09-11",
-    "market_note": "AI需求強勁但部分個股面臨籌碼壓力，財報季前宜謹慎。",
+    "updated_at": "2026-09-12 00:40",
+    "date": "2026-09-12",
+    "market_note": "AI需求續強，Nvidia財報亮眼，GOOGL法律風險與內部人賣股需留意。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
         "action": "減碼",
         "qty": "5股",
-        "price": "330.00",
-        "stop": "340.00",
-        "reason": "內部人於9/1申報減持，且AI競爭與高資本支出擔憂持續，股價承壓。",
-        "price_now": "330.65",
+        "price": "332.00",
+        "stop": "345.00",
+        "reason": "內部人持續賣股，歐盟法律風險與潛在巨額賠償未定價。",
+        "price_now": "332.60",
         "market": "US"
       },
       {
@@ -137,32 +137,32 @@
         "name": "輝達 NVDA",
         "action": "加碼",
         "qty": "10股",
-        "price": "224.00",
-        "stop": "215.00",
-        "reason": "Cathie Wood加碼、Lambda大單採購晶片，分析師看好FY28成長潛力。",
-        "price_now": "223.67",
+        "price": "218.00",
+        "stop": "205.00",
+        "reason": "Q2財報超預期，Q3指引強勁，AI基礎設施需求旺盛。",
+        "price_now": "218.36",
         "market": "US"
       },
       {
         "code": "SPCX",
         "name": "太空探索 SpaceX",
-        "action": "減碼",
-        "qty": "20股",
-        "price": "147.00",
-        "stop": "155.00",
-        "reason": "9/9及9/10大量內部人股票解鎖，造成短期賣壓，股價承壓。",
-        "price_now": "147.55",
+        "action": "加碼",
+        "qty": "10股",
+        "price": "148.00",
+        "stop": "140.00",
+        "reason": "IPO後估值被低估，AI算力與晶片製造潛力巨大，分析師目標價高。",
+        "price_now": "148.18",
         "market": "US"
       },
       {
         "code": "TSM",
         "name": "台積電ADR",
-        "action": "觀望",
-        "qty": "",
-        "price": "",
-        "stop": "",
-        "reason": "8月營收創新高，但Q3財報將於9/14公布，觀望財報表態再決定。",
-        "price_now": "435.36",
+        "action": "加碼",
+        "qty": "5股",
+        "price": "427.00",
+        "stop": "405.00",
+        "reason": "AI晶片需求強勁，分析師目標價上調，ADR回檔提供買入機會。",
+        "price_now": "428.03",
         "market": "US"
       }
     ]
