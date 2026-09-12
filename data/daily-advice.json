@@ -117,41 +117,41 @@
     ]
   },
   "us": {
-    "updated_at": "2026-09-12 00:40",
+    "updated_at": "2026-09-12 23:44",
     "date": "2026-09-12",
-    "market_note": "AI需求續強，Nvidia財報亮眼，GOOGL法律風險與內部人賣股需留意。",
+    "market_note": "大盤震盪，AI題材續強，留意監管與解鎖壓力。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
-        "action": "減碼",
+        "action": "加碼",
         "qty": "5股",
-        "price": "332.00",
-        "stop": "345.00",
-        "reason": "內部人持續賣股，歐盟法律風險與潛在巨額賠償未定價。",
-        "price_now": "332.60",
+        "price": "337.00",
+        "stop": "320.00",
+        "reason": "芬蘭151億美元AI基礎設施投資與長期PPA強化AI成長動能，Gemini企業AI業務拓展。",
+        "price_now": "338.50",
         "market": "US"
       },
       {
         "code": "NVDA",
-        "name": "輝達 NVDA",
-        "action": "加碼",
+        "name": "輝達",
+        "action": "減碼",
         "qty": "10股",
-        "price": "218.00",
-        "stop": "205.00",
-        "reason": "Q2財報超預期，Q3指引強勁，AI基礎設施需求旺盛。",
-        "price_now": "218.36",
+        "price": "220.00",
+        "stop": "210.00",
+        "reason": "美國司法部對Groq交易的反壟斷調查帶來不確定性，且內部人申報大量賣出。",
+        "price_now": "218.29",
         "market": "US"
       },
       {
         "code": "SPCX",
         "name": "太空探索 SpaceX",
-        "action": "加碼",
-        "qty": "10股",
-        "price": "148.00",
-        "stop": "140.00",
-        "reason": "IPO後估值被低估，AI算力與晶片製造潛力巨大，分析師目標價高。",
-        "price_now": "148.18",
+        "action": "觀望",
+        "qty": "",
+        "price": "",
+        "stop": "",
+        "reason": "AI業務強勁增長與分析師高目標價為利多，但近期有大量股票解鎖造成賣壓與波動，需觀察。",
+        "price_now": "151.21",
         "market": "US"
       },
       {
@@ -159,10 +159,10 @@
         "name": "台積電ADR",
         "action": "加碼",
         "qty": "5股",
-        "price": "427.00",
-        "stop": "405.00",
-        "reason": "AI晶片需求強勁，分析師目標價上調，ADR回檔提供買入機會。",
-        "price_now": "428.03",
+        "price": "430.00",
+        "stop": "410.00",
+        "reason": "八月營收創紀錄，AI晶片需求強勁；與ASML合作EUV技術強化長期競爭力；內部人持續買進。",
+        "price_now": "433.24",
         "market": "US"
       }
     ]
