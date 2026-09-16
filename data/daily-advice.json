@@ -117,41 +117,41 @@
     ]
   },
   "us": {
-    "updated_at": "2026-09-16 01:11",
-    "date": "2026-09-16",
-    "market_note": "AI需求強勁，但大盤情緒謹慎，擇優加碼。",
+    "updated_at": "2026-09-17 01:13",
+    "date": "2026-09-17",
+    "market_note": "AI主導市場，Google/NVDA利好，SpaceX解鎖賣壓，TSM基本面強勁。",
     "items": [
       {
         "code": "GOOGL",
         "name": "Alphabet",
         "action": "加碼",
         "qty": "5股",
-        "price": "350.00",
-        "stop": "330.00",
-        "reason": "Google Cloud積壓訂單達4600億美元，AI搜尋貨幣化潛力大，分析師目標價仍有上修空間。",
-        "price_now": "349.39",
+        "price": "344.98",
+        "stop": "335.00",
+        "reason": "Gemini 3.8新模型與AI數據中心合作，強化AI領導地位，儘管RSI超買，但長期催化劑強勁。",
+        "price_now": "344.98",
         "market": "US"
       },
       {
         "code": "NVDA",
-        "name": "輝達",
+        "name": "輝達 NVDA",
         "action": "加碼",
         "qty": "10股",
-        "price": "211.00",
-        "stop": "198.00",
-        "reason": "Q2 FY27財報營收與數據中心成長強勁，CEO看好AI轉折點，新平台與產品持續推動需求。",
-        "price_now": "210.96",
+        "price": "212.17",
+        "stop": "205.00",
+        "reason": "與Google合作建AI數據中心，Apple潛在採用其技術，Hugging Face收購強化AI生態。",
+        "price_now": "212.17",
         "market": "US"
       },
       {
         "code": "SPCX",
         "name": "太空探索 SpaceX",
-        "action": "加碼",
-        "qty": "20股",
-        "price": "148.00",
-        "stop": "138.00",
-        "reason": "Starship低成本重複使用潛力巨大，Q2營收成長92%，AI投資與政府合約提供長期催化劑。",
-        "price_now": "148.15",
+        "action": "觀望",
+        "qty": "",
+        "price": "",
+        "stop": "",
+        "reason": "國防合約與星艦試飛雖利好，但9/24將有大量股票解鎖賣壓，待觀察市場反應。",
+        "price_now": "143.49",
         "market": "US"
       },
       {
@@ -159,10 +159,10 @@
         "name": "台積電ADR",
         "action": "加碼",
         "qty": "5股",
-        "price": "418.00",
-        "stop": "395.00",
-        "reason": "領先製程技術（2奈米）需求強勁，Q2財報優異且上調全年營收展望，分析師目標價仍有上漲空間。",
-        "price_now": "418.01",
+        "price": "413.75",
+        "stop": "400.00",
+        "reason": "AI晶片需求強勁，先進封裝產能吃緊，分析師目標價高，近期回檔提供加碼機會。",
+        "price_now": "413.75",
         "market": "US"
       }
     ]
