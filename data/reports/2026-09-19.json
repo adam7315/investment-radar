@@ -1,0 +1,790 @@
+{
+  "date": "2026-09-19",
+  "collected_at": "2026-09-19T07:05",
+  "total_news": 21,
+  "stocks": {
+    "5274": {
+      "name": "信驊科技",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#1",
+        "BMC晶片",
+        "AI伺服器"
+      ],
+      "price": {
+        "price": 19290.0,
+        "change": 1015.0,
+        "change_pct": 5.55
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "無特殊",
+      "attention_reason": "在無新聞情況下，漲幅逾5%顯示市場對其營運或未來展望有正面預期，值得觀察後續動能。",
+      "news_summary": "今日無相關新聞。"
+    },
+    "6515": {
+      "name": "穎崴",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#2",
+        "半導體測試"
+      ],
+      "price": {
+        "price": 6435.0,
+        "change": 315.0,
+        "change_pct": 5.15
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無新聞，但股價漲幅逾5%，可能為市場對其未來展望或技術面表現的反應。",
+      "news_summary": "今日無相關新聞報導。"
+    },
+    "7769": {
+      "name": "鴻勁",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#3",
+        "AI散熱"
+      ],
+      "price": {
+        "price": 6540.0,
+        "change": 405.0,
+        "change_pct": 6.6
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無新聞，但股價漲幅較大，可能為市場資金輪動或小型股活絡。",
+      "news_summary": "今日無相關新聞。"
+    },
+    "6223": {
+      "name": "旺矽",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#4",
+        "探針卡",
+        "半導體"
+      ],
+      "price": {
+        "price": 5800.0,
+        "change": 300.0,
+        "change_pct": 5.45
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "技術突破",
+      "attention_reason": "在無新聞情況下，漲幅逾5%顯示市場對其技術面或潛在利多有反應，值得關注。",
+      "news_summary": "今日無相關新聞報導。"
+    },
+    "2383": {
+      "name": "台光電",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "高價股#5",
+        "CCL基板",
+        "AI伺服器"
+      ],
+      "price": {
+        "price": 4890.0,
+        "change": 195.0,
+        "change_pct": 4.15
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無新聞，但漲幅達4.15%值得關注，可能為市場對未來展望或技術面有所期待。",
+      "news_summary": "今日無相關新聞報導。"
+    },
+    "3443": {
+      "name": "創意",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#6",
+        "IC設計服務"
+      ],
+      "price": {
+        "price": 7150.0,
+        "change": 650.0,
+        "change_pct": 10.0
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 4,
+      "signal_type": "技術突破",
+      "attention_reason": "無新聞下漲停，顯示市場強勁買盤，可能為技術面突破或有潛在利多。",
+      "news_summary": "今日無新聞。"
+    },
+    "6669": {
+      "name": "緯穎",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "高價股#7",
+        "AI伺服器ODM"
+      ],
+      "price": {
+        "price": 2140.0,
+        "change": 5.0,
+        "change_pct": 0.23
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 1,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無特殊新聞或重大事件，股價波動不大，維持區間震盪。",
+      "news_summary": "今日無相關新聞報導。"
+    },
+    "2059": {
+      "name": "川湖",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "高價股#8",
+        "機櫃滑軌",
+        "資料中心"
+      ],
+      "price": {
+        "price": 12495.0,
+        "change": 200.0,
+        "change_pct": 1.63
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 1,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無特殊新聞或重大事件，股價小幅上漲，維持區間震盪。",
+      "news_summary": "今日無相關新聞。"
+    },
+    "2454": {
+      "name": "聯發科",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "高價股#9",
+        "IC設計",
+        "手機SoC"
+      ],
+      "price": {
+        "price": 4710.0,
+        "change": 210.0,
+        "change_pct": 4.67
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "外資買超",
+      "attention_reason": "今日漲幅顯著，無特定新聞下，可能為外資或法人買盤推升，值得觀察後續動能。",
+      "news_summary": "今日無新聞，股價漲幅達4.67%。"
+    },
+    "3661": {
+      "name": "世芯-KY",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#10",
+        "ASIC設計",
+        "HPC"
+      ],
+      "price": {
+        "price": 3540.0,
+        "change": 245.0,
+        "change_pct": 7.44
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 4,
+      "signal_type": "技術突破",
+      "attention_reason": "今日大漲逾7%，可能為技術面突破或資金追捧，值得關注後續動能。",
+      "news_summary": "今日無新聞"
+    },
+    "2330": {
+      "name": "台積電",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "市值第一",
+        "先進製程",
+        "CoWoS"
+      ],
+      "price": {
+        "price": 2460.0,
+        "change": 35.0,
+        "change_pct": 1.44
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "美股漲跌互見！費半強彈近3%　輝達、台積電ADR走高",
+          "url": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E6%BC%B2%E8%B7%8C%E4%BA%92%E8%A6%8B-%E8%B2%BB%E5%8D%8A%E5%BC%B7%E5%BD%88%E8%BF%913-%E8%BC%9D%E9%81%94-%E5%8F%B0%E7%A9%8D%E9%9B%BBadr%E8%B5%B0%E9%AB%98-221116170.html",
+          "date": "2026-09-19",
+          "source": "Yahoo財經"
+        },
+        {
+          "title": "台積電ADR18日上漲4.41美元漲幅1.02%折台股2765.2元",
+          "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BBadr18%E6%97%A5%E4%B8%8A%E6%BC%B24-41%E7%BE%8E%E5%85%83%E6%BC%B2%E5%B9%851-02-%E6%8A%98%E5%8F%B0%E8%82%A12765-2%E5%85%83-215649534.html",
+          "date": "2026-09-19",
+          "source": "Yahoo財經"
+        }
+      ],
+      "attention_score": 3,
+      "signal_type": "突發利多",
+      "attention_reason": "台積電ADR走高，帶動今日台股開盤表現，值得關注。",
+      "news_summary": "美股費半強彈，輝達、台積電ADR走高，台積電ADR上漲1.02%。"
+    },
+    "2327": {
+      "name": "國巨",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "被動元件",
+        "MLCC"
+      ],
+      "price": {
+        "price": 550.0,
+        "change": 21.0,
+        "change_pct": 3.97
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "無特殊",
+      "attention_reason": "國巨今日漲幅近4%，在無特定消息下，可能反映市場對被動元件產業的樂觀預期或資金輪動。",
+      "news_summary": "今日無相關新聞，國巨股價上漲3.97%。"
+    },
+    "3017": {
+      "name": "奇鋐",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "AI散熱",
+        "液冷"
+      ],
+      "price": {
+        "price": 3430.0,
+        "change": 245.0,
+        "change_pct": 7.69
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "技術突破",
+      "attention_reason": "在無新聞情況下，股價大漲逾7%，顯示市場對其未來展望有高度期待，可能為技術面突破。",
+      "news_summary": "今日無相關新聞。"
+    },
+    "8299": {
+      "name": "群聯",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "Flash控制IC",
+        "SSD"
+      ],
+      "price": {
+        "price": 2140.0,
+        "change": 170.0,
+        "change_pct": 8.63
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無新聞，但股價漲幅大，可能為市場情緒或技術面帶動，需觀察後續動能。",
+      "news_summary": "今日無相關新聞。"
+    },
+    "2303": {
+      "name": "聯電",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "成熟製程",
+        "晶圓代工"
+      ],
+      "price": {
+        "price": 156.0,
+        "change": 8.5,
+        "change_pct": 5.76
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "聯電ADR18日上漲0.14美元漲幅0.57%折台股156.56元",
+          "url": "https://tw.stock.yahoo.com/news/%E8%81%AF%E9%9B%BBadr18%E6%97%A5%E4%B8%8A%E6%BC%B20-14%E7%BE%8E%E5%85%83%E6%BC%B2%E5%B9%850-57-%E6%8A%98%E5%8F%B0%E8%82%A1156-56%E5%85%83-223652346.html",
+          "date": "2026-09-19",
+          "source": "Yahoo財經"
+        }
+      ],
+      "attention_score": 3,
+      "signal_type": "突發利多",
+      "attention_reason": "聯電今日漲幅逾5%，ADR昨日小漲，顯示市場對其有正面預期。",
+      "news_summary": "聯電ADR昨日小漲0.57%，折合台股156.56元。"
+    },
+    "3481": {
+      "name": "群創",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "面板",
+        "LCD"
+      ],
+      "price": {
+        "price": 48.25,
+        "change": -0.25,
+        "change_pct": -0.52
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 1,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無特殊新聞或重大事件，股價小幅下跌，維持區間震盪。",
+      "news_summary": "今日無相關新聞。"
+    },
+    "3008": {
+      "name": "大立光",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "光學鏡頭",
+        "Apple供應鏈"
+      ],
+      "price": {
+        "price": 6430.0,
+        "change": 410.0,
+        "change_pct": 6.81
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無新聞，但股價漲幅顯著，可能受市場情緒或內部消息影響，值得觀察後續動態。",
+      "news_summary": "今日無相關新聞。"
+    },
+    "2313": {
+      "name": "華通",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "PCB",
+        "AI基板",
+        "印刷電路板"
+      ],
+      "price": {
+        "price": 228.5,
+        "change": 10.0,
+        "change_pct": 4.58
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無新聞，但股價漲幅較大，可觀察是否為技術性反彈或有潛在利多。",
+      "news_summary": "今日無相關新聞。"
+    },
+    "2308": {
+      "name": "台達電",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "電源模組",
+        "散熱",
+        "AI電源",
+        "工業自動化"
+      ],
+      "price": {
+        "price": 1735.0,
+        "change": 50.0,
+        "change_pct": 2.97
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無特殊新聞，但股價漲幅近3%，可觀察是否為法人買盤或市場情緒帶動。",
+      "news_summary": "今日無相關新聞。"
+    },
+    "0050": {
+      "name": "元大台灣50",
+      "market": "TW",
+      "type": "etf",
+      "tags": [
+        "被動ETF",
+        "壓艙石"
+      ],
+      "price": {
+        "price": 109.85,
+        "change": 1.8,
+        "change_pct": 1.67
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 2,
+      "signal_type": "無特殊",
+      "attention_reason": "0050為追蹤大盤指數的ETF，今日漲幅與大盤連動，無特殊個股消息。",
+      "news_summary": "今日無0050相關新聞。"
+    },
+    "00403A": {
+      "name": "統一台股升級50",
+      "market": "TW",
+      "type": "etf",
+      "tags": [
+        "主動ETF",
+        "台股核心"
+      ],
+      "price": {
+        "price": 10.33,
+        "change": 0.32,
+        "change_pct": 3.2
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 3,
+      "signal_type": "無特殊",
+      "attention_reason": "今日漲幅逾3%，但無新聞事件，可能為市場情緒或成分股表現帶動，值得觀察。",
+      "news_summary": "今日無相關新聞。"
+    },
+    "NVDA": {
+      "name": "NVIDIA",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "GPU",
+        "AI算力",
+        "資料中心"
+      ],
+      "price": {
+        "price": 222.27,
+        "change": 2.93,
+        "change_pct": 1.34
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 1,
+      "signal_type": "無特殊",
+      "attention_reason": "今日漲幅溫和，無特殊新聞或事件，屬正常市場波動。",
+      "news_summary": "今日無NVDA相關新聞。"
+    },
+    "AAPL": {
+      "name": "Apple",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "iPhone",
+        "消費電子",
+        "Apple生態"
+      ],
+      "price": {
+        "price": 336.13,
+        "change": -0.87,
+        "change_pct": -0.26
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 1,
+      "signal_type": "無特殊",
+      "attention_reason": "今日股價小幅下跌，無重大新聞或事件，屬於正常市場波動。",
+      "news_summary": "今日無相關新聞。"
+    },
+    "MSFT": {
+      "name": "Microsoft",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "Azure雲端",
+        "AI Copilot",
+        "企業軟體"
+      ],
+      "price": {
+        "price": 493.78,
+        "change": -3.97,
+        "change_pct": -0.8
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "Trump says U.S. to build a 'large Military presence' in Greenland as part of a security deal with it and Denmark",
+          "url": "https://www.cnbc.com/2026/09/18/trump-greenland-denmark-military-deal.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "OpenAI's latest AI revelation is a 'serious situation,' Microsoft's Suleyman tells CNBC",
+          "url": "https://www.cnbc.com/2026/09/18/microsoft-ai-ceo-openais-latest-ai-revelation-a-serious-situation.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "McDonald's is the new 'Value Meal,' says trader Mike Khouw",
+          "url": "https://www.cnbc.com/2026/09/18/mcdonalds-is-the-new-value-meal-says-trader-mike-khouw.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Fed staff should have known Silicon Valley Bank was vulnerable, new report finds",
+          "url": "https://www.cnbc.com/2026/09/18/fed-silicon-valley-bank.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 3,
+      "signal_type": "題材炒作",
+      "attention_reason": "OpenAI最新AI進展被微軟高層形容為「嚴峻情況」，可能影響市場對AI發展的預期。",
+      "news_summary": "微軟高層稱OpenAI最新AI進展為「嚴峻情況」，可能影響市場對AI的看法。"
+    },
+    "TSM": {
+      "name": "TSMC ADR",
+      "market": "NYSE",
+      "type": "stock",
+      "tags": [
+        "晶圓代工",
+        "ADR",
+        "先進製程"
+      ],
+      "price": {
+        "price": 434.67,
+        "change": 4.41,
+        "change_pct": 1.02
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 1,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無特殊消息或技術面變化，股價小幅上漲，維持近期盤整格局。",
+      "news_summary": "今日無TSM相關新聞發布。"
+    },
+    "AMZN": {
+      "name": "Amazon",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "AWS雲端",
+        "電商",
+        "AI"
+      ],
+      "price": {
+        "price": 253.71,
+        "change": 2.52,
+        "change_pct": 1.0
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "Amazon, Palantir and 12 more top tech stock picks from UBS analysts",
+          "url": "https://www.marketwatch.com/story/amazon-palantir-and-12-more-top-tech-stock-picks-from-ubs-analysts-435244bb?mod=mw_rss_topstories",
+          "date": "2026-09-19",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Anthropic selects Accenture as first embedded evaluator to help implement Amodei's slowdown proposal",
+          "url": "https://www.cnbc.com/2026/09/18/anthropic-accenture-ai-safety.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Disney names CTO for the first time as media giant expands tech push",
+          "url": "https://www.cnbc.com/2026/09/18/disney-cto-tech.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 3,
+      "signal_type": "題材炒作",
+      "attention_reason": "UBS分析師將AMZN列為頂級科技股，加上AI相關合作消息，推升市場關注。",
+      "news_summary": "UBS將AMZN列為頂級科技股，Anthropic與Accenture合作，Disney任命CTO。"
+    },
+    "MU": {
+      "name": "Micron",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "記憶體",
+        "HBM",
+        "DRAM"
+      ],
+      "price": {
+        "price": 1015.8,
+        "change": 38.3,
+        "change_pct": 3.92
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "Trump says U.S. to build a 'large Military presence' in Greenland as part of a security deal with it and Denmark",
+          "url": "https://www.cnbc.com/2026/09/18/trump-greenland-denmark-military-deal.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "OpenAI's latest AI revelation is a 'serious situation,' Microsoft's Suleyman tells CNBC",
+          "url": "https://www.cnbc.com/2026/09/18/microsoft-ai-ceo-openais-latest-ai-revelation-a-serious-situation.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "McDonald's is the new 'Value Meal,' says trader Mike Khouw",
+          "url": "https://www.cnbc.com/2026/09/18/mcdonalds-is-the-new-value-meal-says-trader-mike-khouw.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Fed staff should have known Silicon Valley Bank was vulnerable, new report finds",
+          "url": "https://www.cnbc.com/2026/09/18/fed-silicon-valley-bank.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 1,
+      "signal_type": "無特殊",
+      "attention_reason": "今日無直接影響MU的重大新聞，漲幅可能為市場情緒或技術面因素。",
+      "news_summary": "今日新聞涵蓋川普談格陵蘭、OpenAI新AI、麥當勞價值餐及Fed對SVB報告，無直接MU相關。"
+    },
+    "TSLA": {
+      "name": "Tesla",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "EV",
+        "自駕車",
+        "儲能"
+      ],
+      "price": {
+        "price": 364.27,
+        "change": -1.93,
+        "change_pct": -0.53
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "Rep. Chip Roy doesn't want to regulate AI, but says Congress should have an oversight role",
+          "url": "https://www.cnbc.com/2026/09/18/chip-roy-ai-congress-regulate.html",
+          "date": "2026-09-18",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 1,
+      "signal_type": "無特殊",
+      "attention_reason": "今日股價小幅下跌，無重大公司層面消息，AI監管新聞與TSLA直接關聯性低。",
+      "news_summary": "美國眾議員Chip Roy認為不應監管AI，但國會應有監督角色。"
+    },
+    "DELL": {
+      "name": "Dell",
+      "market": "NYSE",
+      "type": "stock",
+      "tags": [
+        "AI伺服器",
+        "企業IT",
+        "PC"
+      ],
+      "price": {
+        "price": 568.06,
+        "change": -20.34,
+        "change_pct": -3.46
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "Trump says U.S. to build a 'large Military presence' in Greenland as part of a security deal with it and Denmark",
+          "url": "https://www.cnbc.com/2026/09/18/trump-greenland-denmark-military-deal.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "California Gov. Newsom issues executive order to rein in AI 'before it's too late'",
+          "url": "https://www.cnbc.com/2026/09/18/california-newsom-executive-order-ai.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 1,
+      "signal_type": "無特殊",
+      "attention_reason": "今日DELL下跌，但無直接相關的重大公司消息，市場可能受整體科技股或大盤影響。",
+      "news_summary": "川普稱美國將在格陵蘭建立軍事存在；加州州長發布AI行政命令。"
+    },
+    "SPCX": {
+      "name": "SpaceX",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "太空",
+        "Starlink",
+        "火箭",
+        "IPO新股"
+      ],
+      "price": {
+        "price": 152.71,
+        "change": -2.1,
+        "change_pct": -1.36
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "SpaceX scores another $950 million from NASA for 3 more crewed flights to ISS",
+          "url": "https://www.cnbc.com/2026/09/18/spacex-scores-950-million-from-nasa-for-3-more-crewed-flights-to-iss-.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Sportsbooks remain king this football season, but upstarts are making a run for the money",
+          "url": "https://www.cnbc.com/2026/09/18/sportsbooks-remain-king-this-football-season-but-upstarts-are-making-a-run-for-the-money.html",
+          "date": "2026-09-18",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 3,
+      "signal_type": "突發利多",
+      "attention_reason": "SpaceX獲得NASA近10億美元新合約，為其未來營收與業務發展帶來正面影響。",
+      "news_summary": "SpaceX獲NASA近10億美元新合約，將執行3次載人飛行任務至國際太空站。"
+    },
+    "GOOGL": {
+      "name": "Alphabet",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "搜尋引擎",
+        "Google Cloud",
+        "AI Gemini",
+        "廣告",
+        "YouTube"
+      ],
+      "price": {
+        "price": 349.54,
+        "change": 2.21,
+        "change_pct": 0.64
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "I’m in my 50s. My mother died from Alzheimer’s. Do I need long-term-care insurance?",
+          "url": "https://www.marketwatch.com/story/im-in-my-50s-my-mother-died-from-alzheimers-do-i-need-long-term-insurance-14d58069?mod=mw_rss_topstories",
+          "date": "2026-09-19",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "JPMorgan, Citigroup CEOs attending Trump's state dinner for China's Xi: Sources",
+          "url": "https://www.cnbc.com/2026/09/18/trump-xi-state-dinner-jpmorgan-jamie-dimon.html",
+          "date": "2026-09-19",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 1,
+      "signal_type": "無特殊",
+      "attention_reason": "今日股價小幅上漲，但無直接與GOOGL相關的重大新聞或事件，維持正常關注。",
+      "news_summary": "今日新聞主要關於長期照護保險與川普國宴，皆與GOOGL無直接關聯。"
+    }
+  },
+  "top_attention": [
+    "3443",
+    "3661"
+  ],
+  "analyzed_at": "2026-09-19T07:10"
+}
