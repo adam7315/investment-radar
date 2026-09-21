@@ -1,4 +1,4 @@
-name: 每日資料蒐集與AI分析
+name: 每日資料蒐集（AI分析已停用）
 
 on:
   schedule:
@@ -33,10 +33,11 @@ jobs:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: python scripts/collect_data.py
 
-      - name: AI 分析（今日特別關注）
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python scripts/analyze.py
+      # 2026-09-21 他決定不再付 Gemini 費用：AI 分析步驟停用（要恢復把下面三行取消註解）
+      # - name: AI 分析（今日特別關注）
+      #   env:
+      #     GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      #   run: python scripts/analyze.py
 
       - name: VIP 投資動向追蹤
         run: python scripts/collect_vip_moves.py
@@ -46,5 +47,5 @@ jobs:
           git config user.name  "investment-radar-bot"
           git config user.email "bot@investment-radar"
           git add data/reports/ data/vip_moves.json
-          git diff --staged --quiet || git commit -m "📊 每日更新 $(date '+%Y-%m-%d') — 含AI分析+VIP動向"
+          git diff --staged --quiet || git commit -m "📊 每日更新 $(date '+%Y-%m-%d') — 資料+VIP動向（無AI）"
           git push
