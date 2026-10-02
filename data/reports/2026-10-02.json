@@ -1,0 +1,784 @@
+{
+  "date": "2026-10-02",
+  "collected_at": "2026-10-02T08:34",
+  "total_news": 21,
+  "stocks": {
+    "5274": {
+      "name": "信驊科技",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#1",
+        "BMC晶片",
+        "AI伺服器"
+      ],
+      "price": {
+        "price": 19040.0,
+        "change": 290.0,
+        "change_pct": 1.55
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "6515": {
+      "name": "穎崴",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#2",
+        "半導體測試"
+      ],
+      "price": {
+        "price": 5770.0,
+        "change": -160.0,
+        "change_pct": -2.7
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "7769": {
+      "name": "鴻勁",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#3",
+        "AI散熱"
+      ],
+      "price": {
+        "price": 5490.0,
+        "change": -15.0,
+        "change_pct": -0.27
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "6223": {
+      "name": "旺矽",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#4",
+        "探針卡",
+        "半導體"
+      ],
+      "price": {
+        "price": 5030.0,
+        "change": -95.0,
+        "change_pct": -1.85
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "2383": {
+      "name": "台光電",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "高價股#5",
+        "CCL基板",
+        "AI伺服器"
+      ],
+      "price": {
+        "price": 4975.0,
+        "change": 40.0,
+        "change_pct": 0.81
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "3443": {
+      "name": "創意",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#6",
+        "IC設計服務"
+      ],
+      "price": {
+        "price": 7900.0,
+        "change": -140.0,
+        "change_pct": -1.74
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "6669": {
+      "name": "緯穎",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "高價股#7",
+        "AI伺服器ODM"
+      ],
+      "price": {
+        "price": 2110.0,
+        "change": 20.0,
+        "change_pct": 0.96
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "2059": {
+      "name": "川湖",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "高價股#8",
+        "機櫃滑軌",
+        "資料中心"
+      ],
+      "price": {
+        "price": 11835.0,
+        "change": -220.0,
+        "change_pct": -1.82
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "2454": {
+      "name": "聯發科",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "高價股#9",
+        "IC設計",
+        "手機SoC"
+      ],
+      "price": {
+        "price": 4980.0,
+        "change": 60.0,
+        "change_pct": 1.22
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "3661": {
+      "name": "世芯-KY",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "高價股#10",
+        "ASIC設計",
+        "HPC"
+      ],
+      "price": {
+        "price": 3765.0,
+        "change": 25.0,
+        "change_pct": 0.67
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "2330": {
+      "name": "台積電",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "市值第一",
+        "先進製程",
+        "CoWoS"
+      ],
+      "price": {
+        "price": 2510.0,
+        "change": 30.0,
+        "change_pct": 1.21
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "評估德州晶片園區投資上看數百億美元，台積電ADR週四漲0.66%向峰頂挺進",
+          "url": "https://tw.stock.yahoo.com/news/%E8%A9%95%E4%BC%B0%E5%BE%B7%E5%B7%9E%E6%99%B6%E7%89%87%E5%9C%92%E5%8D%80%E6%8A%95%E8%B3%87%E4%B8%8A%E7%9C%8B%E6%95%B8%E7%99%BE%E5%84%84%E7%BE%8E%E5%85%83-%E5%8F%B0%E7%A9%8D%E9%9B%BBadr%E9%80%B1%E5%9B%9B%E6%BC%B20-66-%E5%90%91%E5%B3%B0%E9%A0%82%E6%8C%BA%E9%80%B2-002359957.html",
+          "date": "2026-10-02",
+          "source": "Yahoo財經"
+        },
+        {
+          "title": "台積電擬擴建德州AI晶片廠 投資上看數百億美元",
+          "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%93%AC%E6%93%B4%E5%BB%BA%E5%BE%B7%E5%B7%9Eai%E6%99%B6%E7%89%87%E5%BB%A0-%E6%8A%95%E8%B3%87%E4%B8%8A%E7%9C%8B%E6%95%B8%E7%99%BE%E5%84%84%E7%BE%8E%E5%85%83-001253718.html",
+          "date": "2026-10-02",
+          "source": "Yahoo財經"
+        }
+      ],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "2327": {
+      "name": "國巨",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "被動元件",
+        "MLCC"
+      ],
+      "price": {
+        "price": 602.0,
+        "change": 54.0,
+        "change_pct": 9.85
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "3017": {
+      "name": "奇鋐",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "AI散熱",
+        "液冷"
+      ],
+      "price": {
+        "price": 3510.0,
+        "change": 75.0,
+        "change_pct": 2.18
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "8299": {
+      "name": "群聯",
+      "market": "TWO",
+      "type": "stock",
+      "tags": [
+        "Flash控制IC",
+        "SSD"
+      ],
+      "price": {
+        "price": 2110.0,
+        "change": -40.0,
+        "change_pct": -1.86
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "2303": {
+      "name": "聯電",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "成熟製程",
+        "晶圓代工"
+      ],
+      "price": {
+        "price": 161.5,
+        "change": 7.0,
+        "change_pct": 4.53
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "3481": {
+      "name": "群創",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "面板",
+        "LCD"
+      ],
+      "price": {
+        "price": 52.3,
+        "change": -2.4,
+        "change_pct": -4.39
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "3008": {
+      "name": "大立光",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "光學鏡頭",
+        "Apple供應鏈"
+      ],
+      "price": {
+        "price": 6205.0,
+        "change": 260.0,
+        "change_pct": 4.37
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "2313": {
+      "name": "華通",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "PCB",
+        "AI基板",
+        "印刷電路板"
+      ],
+      "price": {
+        "price": 224.5,
+        "change": -2.0,
+        "change_pct": -0.88
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "2308": {
+      "name": "台達電",
+      "market": "TW",
+      "type": "stock",
+      "tags": [
+        "電源模組",
+        "散熱",
+        "AI電源",
+        "工業自動化"
+      ],
+      "price": {
+        "price": 1905.0,
+        "change": 15.0,
+        "change_pct": 0.79
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "0050": {
+      "name": "元大台灣50",
+      "market": "TW",
+      "type": "etf",
+      "tags": [
+        "被動ETF",
+        "壓艙石"
+      ],
+      "price": {
+        "price": 112.9,
+        "change": 0.85,
+        "change_pct": 0.76
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "00403A": {
+      "name": "統一台股升級50",
+      "market": "TW",
+      "type": "etf",
+      "tags": [
+        "主動ETF",
+        "台股核心"
+      ],
+      "price": {
+        "price": 10.92,
+        "change": 0.13,
+        "change_pct": 1.2
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "NVDA": {
+      "name": "NVIDIA",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "GPU",
+        "AI算力",
+        "資料中心"
+      ],
+      "price": {
+        "price": 230.86,
+        "change": 2.48,
+        "change_pct": 1.09
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "AAPL": {
+      "name": "Apple",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "iPhone",
+        "消費電子",
+        "Apple生態"
+      ],
+      "price": {
+        "price": 330.32,
+        "change": -2.7,
+        "change_pct": -0.81
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "New York City's 'click to cancel' subscription rule takes effect, joining states with similar laws",
+          "url": "https://www.cnbc.com/2026/10/01/new-york-city-click-to-cancel-subscription-rule-in-effect.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Jim Cramer sees a huge catalyst on the horizon for Apple. How to play the stock",
+          "url": "https://www.cnbc.com/2026/10/01/jim-cramer-sees-a-huge-catalyst-on-the-horizon-for-apple-how-to-play-the-stock.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Trump’s AI lunch included every major tech company. Except Apple",
+          "url": "https://www.cnbc.com/2026/09/30/trumps-ai-lunch-included-everyone-but-apple.html",
+          "date": "2026-10-01",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "MSFT": {
+      "name": "Microsoft",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "Azure雲端",
+        "AI Copilot",
+        "企業軟體"
+      ],
+      "price": {
+        "price": 512.8,
+        "change": -0.1,
+        "change_pct": -0.02
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "Trump could target three Fed governors. Removing them may be harder than it looks",
+          "url": "https://www.cnbc.com/2026/10/01/trump-fed-powell-lisa-cook-michael-barr-removal.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Brent oil jumps more than 4% as U.S. reportedly sends third aircraft carrier to Middle East",
+          "url": "https://www.cnbc.com/2026/10/01/oil-prices-today-wti-brent.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Former LinkedIn chief Roslansky to leave Microsoft, following other exec departures",
+          "url": "https://www.cnbc.com/2026/10/01/linkedin-chief-roslansky-microsoft-exit.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Micron beats on earnings and issues strong guidance as data center revenue jumps 11-fold",
+          "url": "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html",
+          "date": "2026-10-01",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "TSM": {
+      "name": "TSMC ADR",
+      "market": "NYSE",
+      "type": "stock",
+      "tags": [
+        "晶圓代工",
+        "ADR",
+        "先進製程"
+      ],
+      "price": {
+        "price": 459.2,
+        "change": 3.01,
+        "change_pct": 0.66
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "AMZN": {
+      "name": "Amazon",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "AWS雲端",
+        "電商",
+        "AI"
+      ],
+      "price": {
+        "price": 248.23,
+        "change": -0.92,
+        "change_pct": -0.37
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "I’m 71 and still working. I earn $108,000 a year. Am I doing the right thing?",
+          "url": "https://www.marketwatch.com/story/im-71-and-still-working-i-earn-108-000-a-year-am-i-doing-the-right-thing-aaedcaa4?mod=mw_rss_topstories",
+          "date": "2026-10-02",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "United Airlines gets aggressive in battle for top Delta, American flyers",
+          "url": "https://www.cnbc.com/2026/10/01/united-airlines-status-match-delta-american.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "MU": {
+      "name": "Micron",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "記憶體",
+        "HBM",
+        "DRAM"
+      ],
+      "price": {
+        "price": 1097.39,
+        "change": 32.28,
+        "change_pct": 3.03
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "Trump could target three Fed governors. Removing them may be harder than it looks",
+          "url": "https://www.cnbc.com/2026/10/01/trump-fed-powell-lisa-cook-michael-barr-removal.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Brent oil jumps more than 4% as U.S. reportedly sends third aircraft carrier to Middle East",
+          "url": "https://www.cnbc.com/2026/10/01/oil-prices-today-wti-brent.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Former LinkedIn chief Roslansky to leave Microsoft, following other exec departures",
+          "url": "https://www.cnbc.com/2026/10/01/linkedin-chief-roslansky-microsoft-exit.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "Micron beats on earnings and issues strong guidance as data center revenue jumps 11-fold",
+          "url": "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html",
+          "date": "2026-10-01",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "TSLA": {
+      "name": "Tesla",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "EV",
+        "自駕車",
+        "儲能"
+      ],
+      "price": {
+        "price": 354.11,
+        "change": -0.7,
+        "change_pct": -0.2
+      },
+      "institutional": {},
+      "news": [],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "DELL": {
+      "name": "Dell",
+      "market": "NYSE",
+      "type": "stock",
+      "tags": [
+        "AI伺服器",
+        "企業IT",
+        "PC"
+      ],
+      "price": {
+        "price": 541.74,
+        "change": 3.79,
+        "change_pct": 0.7
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "The Treasury Department started Trump accounts for 60 million kids — but families still have to take this step if they want one",
+          "url": "https://www.marketwatch.com/story/the-treasury-department-started-trump-accounts-for-60-million-kids-but-families-still-have-to-take-this-step-if-they-want-one-003d9282?mod=mw_rss_topstories",
+          "date": "2026-10-02",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Trump Accounts have auto-enrolled more than 60 million children, Treasury says",
+          "url": "https://www.cnbc.com/2026/10/01/treasury-trump-accounts-auto-enroll-more-than-60-million-children.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "United Airlines gets aggressive in battle for top Delta, American flyers",
+          "url": "https://www.cnbc.com/2026/10/01/united-airlines-status-match-delta-american.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "SPCX": {
+      "name": "SpaceX",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "太空",
+        "Starlink",
+        "火箭",
+        "IPO新股"
+      ],
+      "price": {
+        "price": 148.07,
+        "change": -2.79,
+        "change_pct": -1.85
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "Former LinkedIn chief Roslansky to leave Microsoft, following other exec departures",
+          "url": "https://www.cnbc.com/2026/10/01/linkedin-chief-roslansky-microsoft-exit.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        },
+        {
+          "title": "SpaceX launches Google AI chips into orbit in push toward space-based data centers",
+          "url": "https://www.cnbc.com/2026/10/01/spacex-to-launch-google-ai-chips-to-orbit-with-planet-labs-satellites.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    },
+    "GOOGL": {
+      "name": "Alphabet",
+      "market": "NASDAQ",
+      "type": "stock",
+      "tags": [
+        "搜尋引擎",
+        "Google Cloud",
+        "AI Gemini",
+        "廣告",
+        "YouTube"
+      ],
+      "price": {
+        "price": 338.24,
+        "change": -5.84,
+        "change_pct": -1.7
+      },
+      "institutional": {},
+      "news": [
+        {
+          "title": "South Korean President Lee pushes back on Alaska LNG project after Trump touts Seoul's participation",
+          "url": "https://www.cnbc.com/2026/10/01/trump-south-korea-investment-alaska-lng-nuclear-power.html",
+          "date": "2026-10-02",
+          "source": "CNBC Markets"
+        }
+      ],
+      "attention_score": 0,
+      "signal_type": "待分析",
+      "attention_reason": "",
+      "news_summary": ""
+    }
+  }
+}

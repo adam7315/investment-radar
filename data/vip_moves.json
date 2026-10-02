@@ -1,341 +1,47 @@
 {
-  "updated_at": "2026-10-01T22:10",
+  "updated_at": "2026-10-02T08:39",
   "vips": {
     "buffett": {
       "id": "buffett",
       "name": "巴菲特",
       "title": "Berkshire CEO",
       "icon": "🏦",
-      "news": [
-        {
-          "title": "Red October Sell-Off Could Be Coming: 5 Warren Buffett Dividend Stocks Are Safe Havens - 24/7 Wall St.",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPRWdyTms2dEN1S2hnbV9CcWVLRDdWRXdrM3RwTDlCWUJiU1hhUVVRSDhCNldKNmI5aTJxSlk4cDZ4akUwMXBfN0U5VU1LemlpM2Q4aWJIdkVkZ0xwTHp5SU9XemVlVndaZ084d0V2S25PN29oUk5LalRTQ1d0eXY1ei1aMFFUOG9ZVGQ3NDhxVlJjektrem5UZkJQd1JSUnI3MEdEMUpDR2tLVFhEUDZjSTlXOUU1UGxNamxfMUNfcDk0OFdWMnJORw?oc=5",
-          "date": "2026-09-16",
-          "source": "Google News"
-        },
-        {
-          "title": "Warren Buffett Successor Greg Abel's Top 5 Stock Picks in 2026 | Investing - US News Money",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNWmFXTmlZczBvSktadDY0a1JoSFRjVzhwVndST05fZmkzWVVwUVVvRXhjbEZveFlyQmExMUR2Q3VhMl9RbU1nR1FyLTk4Q091aVpVZEo0R2UyNXRnTU9IMmE3MjBSOTFKS3VTOWpTME9WVC1qTFlnaWZRUU1BeTJyNWZQekp2RktvQjVz?oc=5",
-          "date": "2026-09-11",
-          "source": "Google News"
-        },
-        {
-          "title": "巴菲特大舉加碼「這一檔」！登波克夏「第3大投資」 - Yahoo股市",
-          "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxOT21hQW1hQVFnajdLY2Z6VzFOeTZmR3pCdWUyQnA0SkZ4c0tmbkNrY2Qwb2h3V0NwdzVmMlljQVJhT1dndElRaVZuX1lfZ250WWJUVGNIQmRRM05BY0FOYVg5WDk2WmZoV1FqeEx1ZG1JZ3V3aGNXZFVQU3JwSklhYVBDM04yNTd6bHVibzQ3MFNBNEd6dTJDNHNxRG9pdWxoVEVDZGRrUFVBRnlJRGFON3VJQ0M3WlIzc3ZDMXF6NTdva2VIY3d1UUY2VEJ6TGE0d1lvT09idm43bEVFMkU4QUN2TllSZ3h1YXhCOWM4M0xrS3VtVm9YS0Q2TjIyY3pVamhNaTZyenVJSmRGYlh5SGk3T1BQY3ZUMk44S0w5V2VKRFVEbXQzdGNSbUNZUQ?oc=5",
-          "date": "2026-08-18",
-          "source": "Google News"
-        },
-        {
-          "title": "These Were the Biggest Changes in Berkshire Hathaway's Holdings for Q2 - finance.yahoo.com",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaWl3elpDQk9ub3NrQkFxa0VQY3RjOHV2T0dNbExES3lZTGp3UmhYNmlXMlhnTmU2eGRHOUJPTFlZR0xEVExzWTA5ekc1bTNNTFhqeXBnVzYza2RYV1p0dWNmeERQSGRWYTI1LWZNeFdzMUYwNjVxNUVSMkZvRmJCQ3U4eWxOdVc2OVdTSmJRaW9RTWctLUJZOS1UZkw4WEY2ZWVVV3JQazE?oc=5",
-          "date": "2026-08-18",
-          "source": "Google News"
-        },
-        {
-          "title": "巴菲特大手筆加碼Alphabet　持股暴增83%躍波克夏第3大投資 - finance.ettoday.net",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1KM3ltNmlfb3UzVW5JNXBzWXFKelZaR3pEX3BxRTJXdWhLUW9ZMEU3N1JnNThLV0QybTNqT3Vib1d5eGlDSF83a3A0aUlSUmdrd3fSAVBBVV95cUxNdDk1VUtQLWhRRTlESDZab09wQmlNQlBRSXA2YURZckcyT0V4dkJoOVR4QkN4ZGEzQi04UUhybnU4NmV1U1BFSDU1MnVsVWpDdg?oc=5",
-          "date": "2026-08-17",
-          "source": "Google News"
-        },
-        {
-          "title": "Berkshire Hathaway Turns Buyer As Buffett Backs Alphabet - Forbes",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQnQ3YnRNRmpURVBUTUhndC1mUGJFaEhpYTNEVUlZVFJ4OWQ0Zms4Y3A3Q1VJSzhDSU5aLUkxaWFNUEFuYmV2RGFWc0xiWVQ0OUx6Q05EWnpkOXFKWUdOTGhxOGFQb01RTDJpTGNxdTdMNjl6aDlCNjVUR2pydF9nSUR3MzVSNEFralNzYUlnakR1LU9iZ0NuQW1JY1pEbElEdXp2TjNiaHk4YjZy?oc=5",
-          "date": "2026-08-15",
-          "source": "Google News"
-        },
-        {
-          "title": "股神巴菲特交棒後，波克夏上季13F報告「AI成分」大增！這檔科技股一躍成為第3大持股 - 財訊",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xYVc3SGthYzNBSVpFd2sxVDU0QW4wS29tWjBDNkdrZ19vM1JMLU1vQlUxRHQwRDI4Q3ctZzc0NWdBdDZoZUJqb2VzeU94dE05bjlwWnBIUXVsSG81WDh3bHEzeUFPNWM1ZUh3dGtGdDh6LTdtenJhcDBpUQ?oc=5",
-          "date": "2026-08-14",
-          "source": "Google News"
-        },
-        {
-          "title": "All the Stocks Berkshire Hathaway Bought and Sold in Q2 - Kiplinger",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxONkNMY2tpMXA4OWhHOHhBSXdBNVZqWDNuNHdSUHVvZHpDM3RoS1pRNUY2NkRTMG1DT1UxR0Nkak1hLWtEeTZuRDljcFZuXzlGVGQzR3pQMVNZRWQ1SkRwNUNDemRHZTVRRXFteG1sQjh0aXZsSlA4THdHakUzc2VJUmxlZ1FjcHh1ZllRMnhROTczdw?oc=5",
-          "date": "2026-08-14",
-          "source": "Google News"
-        }
-      ]
+      "news": []
     },
     "huang": {
       "id": "huang",
       "name": "黃仁勳",
       "title": "NVIDIA CEO",
       "icon": "🤖",
-      "news": [
-        {
-          "title": "Nvidia Director Is Cashing Out $300M. Should You Be Worried? - 24/7 Wall St.",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdEM2Rm9EY01LU21OdDNZUG1HY1VDMmh5bTlOMTZmVGxrRU8tWTJ6Y1p5UGJrNW5PSFlNQUgyM3ZfeFZrQnJPVktYZ2ZjU19tVEQteEkyZTVpNDJzaHdzd1FCR1lyUG43dGFJWVlQb0NMQ2tZcWZxbGwyWE9heVNqdW5QZGhoeHN0SHdKdVhjakd0R0hIVk9tMFZsQ3l6NE9aa0Nz?oc=5",
-          "date": "2026-09-23",
-          "source": "Google News"
-        },
-        {
-          "title": "AI hits the brakes, Jensen Huang steps on the gas - 36 Kr",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBQLVN2Tkg1SWllQnU4VW9oc3k1OGZya3R0M2gxeDdvT1RUdWJnMUlGQWdmUWhsenMwSHJwX085UFFGQ0UtdmRMb01DTmo4c1QwTHRB?oc=5",
-          "date": "2026-09-22",
-          "source": "Google News"
-        },
-        {
-          "title": "減持輝達？是繳稅免緊張！黃仁勳被代扣 4.57 萬股，4 名高管合計被扣逾 11.5 萬股 - inside.com.tw",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWmNFbDlLeWJjNXF5eVMyMk1Sekc4VEYtTDAxSUQwQ05qWkFZb3lfcXdrcHB6TmpfMGZURTBpTkFuZXpFOVh1UFdOZzFod2ZSMjNQTGtBSWZYUEJMS3doNWRXWXp5VUZ2YzN0UmM2TDMweG8tNGt4WnRIZmF2OHdpMU5HYW9qUnBsb21ERQ?oc=5",
-          "date": "2026-09-21",
-          "source": "Google News"
-        },
-        {
-          "title": "輝達高層申報處分16萬股 黃仁勳捐43.8萬股作慈善 - BigGo 財經",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB3NHpza2J5OVdCZVg5U05Md0JvczE3SXA2cmttOTN1S2luTDh3emRkWTBoSTlyTV9aZWRQcUxoTWhWUWYxQnMtbDRBWl9NYlpYS2k4Q1M2SkRlUmoycHBaVy1VQ05NSXJwQVNRcThCSXhVNzhEQ3poS09B?oc=5",
-          "date": "2026-09-21",
-          "source": "Google News"
-        },
-        {
-          "title": "Why Nvidia wants Hugging Face — and a bigger say in the future of AI - Business Insider",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNS0R1STlJQ2NSR3FwbmV0OE9sSjR1YnZObFRFRktabHU1MWlsRVEza25XbXJmY3ZzcS1xRm1hN2JwemRpY0NNRWFDNW1ISk1TLTllWGFFOHZqRXc2MlE3N1M1MW1Ib3BHc0NFVGJNb0FwNjB5Y2ZNRV9icHF4S1cyUGk3Zm1uUEo3S1hpcw?oc=5",
-          "date": "2026-09-03",
-          "source": "Google News"
-        },
-        {
-          "title": "Nvidia in Talks to Buy AI Startup Hugging Face, Reports Say - bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNklMUUtoV1ZqazMzekFNb3kwMUQ2MU5pX3hHZmNDTGFJTzVhSGExZW9GT3YwdWdPOTBOZGc0RlBnblRZZUlOd0ZUTWE4bjRuaFlNNkdMQWUyVE5Lb0xObHRwajc1ZlBhTEdJRlBZek5UbzY5Mk5OVUlpS2FUUTN5R0xjZWw4NkVMNTg1bUIxSUJmbmFrNUlPQlFXUjg2bm9ZTE9DZnNtZTRsMUV1dnRlZA?oc=5",
-          "date": "2026-08-27",
-          "source": "Google News"
-        },
-        {
-          "title": "Nvidia agrees to buy Hugging Face for $12.9 billion, The Information reports - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQcnRUV293OVVFOWdRY2o0c0tqNDhzYzRfMHVQdFBrT3ZZdmxiRGVOeDl0d3JiZmN6NnVBY3JvODV5MTdlRXZhWlZuM3ZfcldFSXlDR0RLNHVvYUFrVmR6VXBoR21tWlpXWE1YZ2ItQXJFeHAxWllIVnBtXzB1ci1uUHp2d296ZlRzU0VYOGlkbUlBZnl3X2FtV2tYaE5TdHQ5V1d1MTdVVloyNjhjS19mbkJtbDlBOXBLT2R6ZVdB?oc=5",
-          "date": "2026-08-26",
-          "source": "Google News"
-        },
-        {
-          "title": "Nvidia Just Doubled Its Sales, but Who Sold Over $400 Million of Its Stock the Month Before? - 24/7 Wall St.",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPS3MwSm1tTlpQMkItbGdFM1FUZ0prN1RwMFhnbW1NaVBCOXM4a080bEl4Wk1CTE1UR0hnNEc4TFk4T3Z4cndKdWlCVzlHTS1uYi12UlFYNXg3dU1wWWNIM2wyVFF2Mll0WUJ1NjlZT0NzSXFuOTk3el9FeTNOeDh5VUhSQXVmOFJzS3d6RFBiRWkwLUZuUEhwRlJTMXZfOVRvbDBNOWFVODUwM3RYOTZ3ODRxcmFPb01IQ0F2dkVjaEZIVGU4UXVDNGJGZFY1Zw?oc=5",
-          "date": "2026-08-26",
-          "source": "Google News"
-        }
-      ]
+      "news": []
     },
     "trump": {
       "id": "trump",
       "name": "川普",
       "title": "美國總統",
       "icon": "🦅",
-      "news": [
-        {
-          "title": "Trump’s municipal bond portfolio reaches as much as $1 billion as policy overlaps mount - CNBC",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB1VmlZbWFkRU0xLVkwa19JNmxkR3pFbXBWUkF6dVZ0R1hxOTQ3a1dpdVBSTVdwVDRQSTRVRDFGVjlWUVJfUkxJV2ZRX2Z2a19EMDZFcXNuQ2pKa001aFlQQWNpaExTWmJsbzlFemgxVFY4ajZfd2fSAXtBVV95cUxQdU5acENVY3FuWE00T3dDVFYwaGlxcU5aVUZpRlJSR3gzQ3BKekp2eXlxZDBZeTNwaS1rZTBkdWtscTV6MGJydi1oVFdIS3Y2dkk4TmhQZjZoTHRNbEVrbGV6N0hpN01odmUyUlJQdi0xWG91OS1YZDV5U2s?oc=5",
-          "date": "2026-09-29",
-          "source": "Google News"
-        },
-        {
-          "title": "Trump made over 1,000 July stock trades worth up to $270m, filings reveal - The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQMG00ZkZTSHBpNzY0MFUxeWNqUVdNSnlpeERpWW9FVFNIRUlZakg5c1VqN1V0SFNYMEM0S1BuUVV6SEQ2SlBTS2t2WkxpSzc1LXNKOU1ZWUtqUjc2MmktYnZJODZKeG41SW5JQ001WkJ6V0E4VURseXFjX2xrSWphUVhsZmM?oc=5",
-          "date": "2026-09-24",
-          "source": "Google News"
-        },
-        {
-          "title": "Trump discloses more than 1,100 July trades, including up to $25 million each in sales of Microsoft, Amazon - CNBC",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPRDhjQUdQbl9DazhqUEFYbklmaVhoVXhJOGQtNzEwZ2p1YnBfSXBXejctMWpxY3ltV1BPVElRQnhydm5xdm5vYmFydVVBeHFtcTJraUNFamVRUDFvb0tCMEtDZmtOaGcwWDhDYWQ0d1YycEVmNC1vZnh3VnNOQlFUaUlGLW0xR2FjWm5rWmRibFRhcm1LemZZ0gGcAUFVX3lxTE9YX0VmZjdHQXdGRjVnNFRWQnItRElCWGFFTTZWVWhOTVR6ZTdVR0hzU3dybFc4WXlSR3RSM3kzWVo5SGcyeTRpeFhWcmdXanVJWm9jX2d1bW9zalF1bXN6UEU1M1N6Q2JaSE5rQm9CWHpSM0RtS1hrMFNCaDhya0dneExYOEh1RVgtUzliN1daaU9zazJMQnppV3FkNQ?oc=5",
-          "date": "2026-09-22",
-          "source": "Google News"
-        },
-        {
-          "title": "Donald Trump Stocks: 8 Stocks Owned by the President | Investing - US News Money",
-          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1OM0theVZwbDJHb2Y5M2txNkxtajIwaVFMNk55ZlRuWjR0cnVOTEwyRk9CMU9NbnpLSHRtXzc4N1VrR2ZfZkdnTDhEVzVobThVWVZaNURmTExwNGVEMzEtZmkzMS11VTVFWkFPWHBaSlNaemk3T3RzdzNTclk?oc=5",
-          "date": "2026-09-08",
-          "source": "Google News"
-        },
-        {
-          "title": "川普發文也能「搶先看」 月費10萬美元交易商搶買Truth API - news.cnyes.com",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ka2xSRXhWemg4ejRteDgwZ1lfbFpNRWRzSWNINUx5WjVEVHAtb3pWY044ZW9qYVhFZGRkR0JyNkRjVVpYZXY2bUxjOWxqOVE?oc=5",
-          "date": "2026-08-12",
-          "source": "Google News"
-        },
-        {
-          "title": "Trump Media posts $238 million second-quarter loss as crypto declines - CNBC",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaUJKOUZRUWtycmFLLUp0dGNQendWa1BSS1loQ1I3WldVN01SZ0dWblctX0VfSFlzYUZmMUFfY0dyOWN5OFpSYVE3VFVHR3hEZmtUejFSUldUVElBTUYyQXk3bklkVGl4bUo1WUFKMUhFMVNHaVhEV2FCMXFiYUJDcGdpLXhoT000M1pVSTdhQdIBlAFBVV95cUxPWWtPNTBNeGp2ZjdTNURxaWRIalFOdktsZEZEcy15cU5ha2VuSlB3VGkyMV8zcmNPdUVrZU9sZjR4WDdKWmRLOExPblhyLTNsRXpQLTBCanR0b0V5TlhkUThpNEtSelNJWi1lUUh3S3pKV1pMYy1rSVlpbUNIdTdnVlpHcllWZmtxOXdQZlVscUwweTBR?oc=5",
-          "date": "2026-08-10",
-          "source": "Google News"
-        },
-        {
-          "title": "Trump Media (DJT) logs $238M quarterly loss but holds $2.0B in assets, eyes TAE merger - stocktitan.net",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQU0s3NlppTnVMblN0NGtsQUhFRFZZanVjSjBkUzVZd2haQVNxQ0toT2hSTmQ2UDRYWF83SjFTYWNScTVwUHRBOU13a0xsdnluSjdaTDk3elNGNVd6bGNiZnI2T1NOb1RsUEtmR001NmhjeXR1Rk9Ja3F6U3FET2pYdFZGaFk4VTRGZUZBdkhrTVFicTc4OE14b0hmSlMwaFpBbTJXS1JFZV9WSlRkdGtlQk9Ud3dVY2xFMEptRFpB?oc=5",
-          "date": "2026-08-10",
-          "source": "Google News"
-        },
-        {
-          "title": "Trump Media & Technology Group Announces Inaugural Earnings Call - finance.yahoo.com",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdGFoNHpoZ1o0U1BLc3pzT0ZMTE5rZ3k2TFhsblhTSVlkRVVReGp1TEE0QzNQb2NMUnNyb3hVOFQ5ellNU3BRV181d1k5OEdRYWg4MG1wVlNITjFKeFZKTmFTeFkyMmNyTmNBU1lYRnhCXzJNOTJoZ1NDR2Z0TEZTRk9CZDBDX2xRLUxTMGNpeHpmNms5QWU4SEVxZnZ0RFQwU1h6UlF3?oc=5",
-          "date": "2026-08-05",
-          "source": "Google News"
-        }
-      ]
+      "news": []
     },
     "wei": {
       "id": "wei",
       "name": "魏哲家",
       "title": "台積電 CEO",
       "icon": "💎",
-      "news": [
-        {
-          "title": "TSMC Is Quietly Setting the Price Every AI Chip Company Has to Pay - Startup Fortune",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMnpXcmFfVG15QWt5VHVwcjR4RUY4OFBDcTFORjI3My1TYzlhYU11eGkzMkNqVXFHRFVHWE9iQ2tUT25ON09YcEFpWUVIQktnZjE3LThYRDZya19Td3JIUGlGWXlfaXJiemx3eXhQQWViUkdfV2dpOWRpdTkwSXZja2VjUm01TlBJUWpaenF5UlhvRjViUU5meTVR?oc=5",
-          "date": "2026-09-29",
-          "source": "Google News"
-        },
-        {
-          "title": "台積電飆漲停！董事曾繁城出手豪送「5000張持股」 讓她身價暴增121億 - chinatimes.com",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE04VmxXSi1qRHFfNHNkb2NkNVA2QmUyVVpmMUFwSWdpUmFDOWdhTVloakRzdnRVVzBPWHNqUGFqT1h5S1lVeFI3X0lsQ2xWMy1yT2VYVGhZSm1fUm51ei1xQklia0hzWXU0RktuT1Fn?oc=5",
-          "date": "2026-08-01",
-          "source": "Google News"
-        },
-        {
-          "title": "US Chips Supply Chain: Inside TSMC’s $265bn Arizona Plans - Manufacturing Digital",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQN1ZsNjNCd3J0bjZ2UUZTRjJ6ZDNMUm1kTjhjbjgxME5DRGhWZldGS25qR0FQdW5zTFhPRi1TaExTbURyLS05aWl3Tld2TkxrSEhrSWMwVVFXSElkdDJjNW1teXItX1pxWF91Tl9QZ1RZVDlzMlpCcmd3bFctSGFXeDNuVWYya2ROOHNrcjZJa2g4ZVo3STZGWGdZMTI?oc=5",
-          "date": "2026-07-22",
-          "source": "Google News"
-        },
-        {
-          "title": "TSMC Adds $100 Billion to Its U.S. Spending Plan - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOW9IS3E1SVlKMmNId0I1bDNNbVdFeGN6OEZlZDBNb0c0bHZqQzBWTEp2YnJfdDc4MVBvOWtFMjZhcTFmOFRyMDBRdGRwY1R2NVRWUEVlZGxfdC1zS1ZvS040RDhQZHplZ2JzeFBtd3F3bmkzVnpEemVNT1IwZU5rcWVvWTY?oc=5",
-          "date": "2026-07-17",
-          "source": "Google News"
-        },
-        {
-          "title": "羨慕！台積電副總莊子壽贈兒500張台積電、市值近12億元 還有這些高層都曾贈親友股票 - 鏡報",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE42QlQxbUQ5RGZTZmZtSGRfUXU4Y3RvVjRUdUl3Q0MxMHQ3YVhuR0ItWFpieW1EN3V3bnZiZmxXa3ZpNFFDU0ZEYmZ0NldtQmxmV0E?oc=5",
-          "date": "2026-06-25",
-          "source": "Google News"
-        },
-        {
-          "title": "台積電副總申報贈與500張股票！市值估逾11億 受贈人身分未公開 - Yahoo股市",
-          "url": "https://news.google.com/rss/articles/CBMikANBVV95cUxQdkU2dm1XendVTldFMXZnakVNSU5TZGxyeUFyOXBqcDV2VFBPY3VWbFRQTDhsdzVPQ1k0VzRiQlVwN0JNMWRPNU14cTlTY2RPMU5hb196UnpWR0VTNFM3ZWxzSU5LY2pYYTRLcHZCWld3ZTF5eVRiOG1fVXZfQ1MwdnBMcFo0Qm9sWnJuVkRfUHZuVlpiRnhONTE1clJkYlo5ZmlzLVpGdnhjMXctOEhzOXA2TXUtbWVrY0FHZzhmZUdxQVlPVlB5eU5kc1FGWFgyb1hidkpUVDVab1kyUFJoN2ZTdk83ekxBYnplaXZsbElCSEhsY19kQlNCT3o4eUVNdHlwSHNDQUhDSUs0VGFrSDFFdGR2OFhpNUJDNzVLcXo5MG9sWnJIRE44cU1EaVBkN2lfeHdIM3JGMDFacDdKVjg2Vy11cWl0eEdoZldZZzF3bmtMbDktQzFpNEF3R0NhcllPOEtNclJFczdvWG5LSTJWOWxjOHV4c3ctUEtFY1gweHRneEt0SHNwX0hKbHZk?oc=5",
-          "date": "2026-06-09",
-          "source": "Google News"
-        },
-        {
-          "title": "祕！台積電11億股票直接送出 - 中天新聞網",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE90VFJlSU5CdWJpT3ZPSW5DOFhneUxzYVFNYUc1VWlkLTA3T1VZanM4YlN4azRYRm9QaERxTkpYc096T1dULS04M1lNekpKUzVBMGFj?oc=5",
-          "date": "2026-06-09",
-          "source": "Google News"
-        },
-        {
-          "title": "台積電廠務副總經理莊子壽申報贈與500張持股 市值逾11億元 - 經濟日報",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5CeDl1T19jVDlMZkN4OF9pV2gzemRMUWhZelhad1BlTnpLdjVLbmw0SjdmUHZtaFlhRTl6eDJ5WmtsUWEtNjJJb0IxY3BJbVhUUV9PamZSdFBTQdIBX0FVX3lxTE9uNHl4a01GWnZ5UW5oSW83VnJMV1k4QjJqUXlSN2hpVVNVUkc5TFEyYlBqWXUzSjN3TEVoWHppblpWYlpkb1VaVWRuM1dJWlRFQXpYcFpCNFZTZ1RkRy04?oc=5",
-          "date": "2026-06-08",
-          "source": "Google News"
-        }
-      ]
+      "news": []
     },
     "su": {
       "id": "su",
       "name": "蘇姿丰",
       "title": "AMD CEO",
       "icon": "🔴",
-      "news": [
-        {
-          "title": "AMD為何砸82億買World Labs？李飛飛聯手蘇姿丰內幕一覽 - pocket.tw",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0zelRhRjREZFVTcGZvUkt2ak1OcFNYSW9SUHA3dlJWejZtYWYySTJudm0xTlU4YlgyNVBVNUEwck1tSTRtYVZUdC1VZjB1bUMwNUhDbUlZWS1acURZbGNR?oc=5",
-          "date": "2026-09-29",
-          "source": "Google News"
-        },
-        {
-          "title": "Advanced Micro Devices Inc(AMD)股票9月15日盤中上漲3.26%：投資者必看的核心資訊 - TradingKey",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNeVhJTVlYQzZxeTlBRXlSTWZWYnF0MWE5UnlUZUR3TjlWZzVnNzNGbjVQMDl0dTRiLVNDQmdzWjRsZXI5cXFmYmZjYWdvR0dIQk4zU05CemRCOTB6bGpvQmsyWG92ZERrYmZ6S2FNcUVVV3l2OG5VNlNla0pSLURRQU1IV0xIWXRNQ2N6c0RUbEh6dnBO?oc=5",
-          "date": "2026-09-15",
-          "source": "Google News"
-        },
-        {
-          "title": "AMD (NASDAQ: AMD) CEO sells stock in $500-plus trades - stocktitan.net",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWTVKVEVwVFhTMzhrS0JncWoyZ3R0SERvRGZnQmpWeDlYUW1EMHd6MWJMNnlqZjEzU1pmWW5hWDNsZU9scm1MbWx3Zml2LUVKZWpyU0tQR1p3QUdOdUVJY2dqc1lFcVZTbWVsZWM0RTJQQUpwS0I1ZjBXRTcxNlZjWDRiNkdoaGQybTkySktNRzA4MVo4dTlrdzdjQWtGODBNZE1pbjhYdlBnbVpyYTJfU0d6ckRfS01EaFlz?oc=5",
-          "date": "2026-09-14",
-          "source": "Google News"
-        },
-        {
-          "title": "Advanced Micro Devices (NASDAQ: AMD) sees Lisa Su family trust plan stock sale - stocktitan.net",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUFNFcUJTSXJpeHpBVVk3Q3hwd0p6M29sOURfV0JEWHlCYncxVTQyZ08yaHVoM2Z4UFM4LUt0VWg4U09SQ3I1T0dGS19MZ184WmVaUkV3T3pBVW45U2NmczJ2a3d5T1k2N0pDQUVrbTdjWWVqUEFmTnhjQ3JhTjNaeWZVNE05WkRjRmhnUDdwSGRUV1lmOHViQ2ZYSm0tY256MTZVMw?oc=5",
-          "date": "2026-09-10",
-          "source": "Google News"
-        },
-        {
-          "title": "Multimillion-dollar stock sale ahead for AMD (NASDAQ: AMD) CEO Lisa Su - stocktitan.net",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQdEhaTEtmazF5YjdUT1EzZEt1WlY0NWtOM2lmekt5QlJjNS1fZDFfZGJQNEdfa1JxdmNmZUU1aWxYVTMza3VFSVYtRm9kUmJrZlAybzVxTHkwOWlwWTN3dXFzZ3RrYk0tckRzWEVXUzRnYjhIQldram55OXpoUHp6bHppdXNqalBQLUVjdmhUNEZlQWxpR09ELWxydWRSRzYzdkM4bg?oc=5",
-          "date": "2026-09-10",
-          "source": "Google News"
-        },
-        {
-          "title": "JPP-KY現增訂價每股250元、折價17％　8月25日除權交易 - finance.ettoday.net",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1mVkxidDcweGlTcmlmMFoyU2FRMGt6TlFJY3pGSXpDQ3hxZk05Tk5Bdlo4M1JEenZrcTdDNXNqd3FWRktjYlRUcS05Vzl0c3R3eFHSAVBBVV95cUxNbm4xUFV4bmFxWGZDOEl6M2ZlRGRBR3BNNEM5b1VKNFFuZkdwMU55QWd4eWJHMDBjOUpBSXoyMUY5NkZDdFA1VVYwajBzeTJVcg?oc=5",
-          "date": "2026-08-18",
-          "source": "Google News"
-        },
-        {
-          "title": "AMD: On Dilution And Insider Sales (NASDAQ:AMD) - Seeking Alpha",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5fWWVFSW5tNVBPY0l6T3RyRkNFMzFwWjFyaEg4Z2dOS0c4SFZjT1lza0otUTJFd1dLMVBaSUtsZmx3eWJtdmdRMU0wcEVPNG9vSVcyb1VTVVl0Und0LTYwbGF5UUxJMHhIU2dVQzJfNF9xUnlrck5GeEZwRlJRNFk?oc=5",
-          "date": "2026-08-18",
-          "source": "Google News"
-        },
-        {
-          "title": "亞馬遜貝索斯高位撤退，瘋狂套現3000億 - hao.cnyes.com",
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE96U1pGanRwYXFIV0M2Y1JpZmNYSzVKUFRSSk1tWXdNY0dKYTFyem1tdG0wRDdBX1ZQUERQeFAyeXZZT2V0VDVUTA?oc=5",
-          "date": "2026-08-06",
-          "source": "Google News"
-        }
-      ]
+      "news": []
     },
     "musk": {
       "id": "musk",
       "name": "馬斯克",
       "title": "Tesla / SpaceX / X",
       "icon": "🚀",
-      "news": [
-        {
-          "title": "川普7月股票交易整理：買入微策略、Marvell，大賣微軟等6檔股票 - 加密城市CryptoCity",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE03RFY0czcwdHdiVG9qNjktNWxBcWs1ZzNSRHk0bWY5cHMxNlJPdERoazRBNklpV0FOb2JsM2QzOG5WR1ZnZktGdmFFMy1kWnY1aHE4NEpKUXFiZEY4dWdLVWhEY19kMlkzUFA1VGt1eUIxd3JJd1JHRXlGbFBnY00?oc=5",
-          "date": "2026-09-24",
-          "source": "Google News"
-        },
-        {
-          "title": "川普投顧大換股：7月狂交易千筆、買SpaceX輝達- 新聞 - moneydj.com",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQWhEZUFXQy1ycHhpdGxWVXlXZkdxaHRKcVloRXZURFFYNHFXQjBxY2ZWSmdVc2tJamlRMVcyTUNLeTFZYnR2bzQ1WndwcUxfdElYYXdTWDB3eXlVR0M1SmcxaENvSDNnczhaWnE4d1pmYUFwcGpfREF3WXZzU2ItS24zR1lxa1dCVWFNNFk5RlZDdw?oc=5",
-          "date": "2026-09-23",
-          "source": "Google News"
-        },
-        {
-          "title": "敏感時機引關注！川普7月買進最多5萬美元Space X股票 隨後逢高減碼 - news.cnyes.com",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jMFdmY2c1VUVtNmU3OEp2YmZBNWotTFVnWmZXODgyS1U3QzFKVHdRdFI1T0dvcXQ4Wko2TmZjb1hydVU1SDdudmRBdEZoRlE?oc=5",
-          "date": "2026-09-23",
-          "source": "Google News"
-        },
-        {
-          "title": "利益衝突｜披露7月股票交易 涉及最高2.7億美元 特朗普大手沽微軟及亞馬遜 - Yahoo 財經",
-          "url": "https://news.google.com/rss/articles/CBMizwNBVV95cUxQVDRkMTlzVEVkVkJaY09KdDFJc0VLOWRmVHJDT1BaTVBPeVk4X0V0amRPdWNVcmt6RGRiUy0xVnQzMWdSYUZ5cUl6MGZid25zOWhaUEp2eHpFWWVvV1RPcFNiUUJ1RWVvdklyY2lSTWtrY04yNmhObDlkUXQ2OEVyd19VQTVtS3c5a210VjhpZndLbTBKVlVlMC1tUFBxam1jMVg1ZFh2ZVVXRDl4NVh4SURiWUxDY2FWeDVHNXBKOWliNldRTFRydUx5MTBWMko4ZWZPY0x2eS1BZFdacGJCSjBFMlhWd2pZLUVybHlybzAzb3ZwTkJacXdBUWhUVVBQb3kwaXF5NEY1T1diMl9VWm1mQUVPS3dzWFFNNGJlaWx0b0tnYlJXaUZhTU1EWGpFZGNGTEhBb3JSY2ZvaGFZZ0YtM1duT096MHBvVHhva1lmaW1vVjB6M3Q3TzRWS1k5Q0xxd3hzZTA0dkRHVll6RWlMNU03Y1lyYTVqTFFXLWVDV1VlYk95RF9jcklsMXp4YXN4aHMyd1JzSHZaRmxDUXBMSXFhR0h5V0xjVzlRMzNCZFVVeVFLZEpha0hIQ0kwbER1VWVtRUtBRm1oY2tr?oc=5",
-          "date": "2026-09-23",
-          "source": "Google News"
-        },
-        {
-          "title": "【Donald Trump】特朗普7月申報1156宗證券交易涉資最高2.7億美元減持微軟亞馬遜、買入英偉達SpaceX - 香港經濟日報HKET",
-          "url": "https://news.google.com/rss/articles/CBMimgRBVV95cUxNWHVYZE94alYtSjNHVi1XUG02azYwRXpBWEs3NnFIRzh2bVJYcnpRaTlBX1d2VW5wSWhhblZqb3dHdTFmaFY2bmQyTTNQcFZ5S0dlc0JYQWJaTDI4TklMOGM4aTJQZktjQmE2NVlCWGF4MDFmVFlYMTBpZGo0c2NNMnhNSDRpcUY0eHlhTExEdEh4Rko0VXNxMjlrSXEteHNGaU9tblVfOFFHNDl2LVdKNnE2WWFUbzQwU2ZhcHZlNDFQVHJyNV9xeXQ3RHBaNGhaanlwd3UzQTMyVTcyWVE5M0NZNW9ZalY5UjB0VnlTTmhlckI2eFFKOHd2UzVyLXJnb2c2VnNYd3NtbGNpTVR6Q2lFd3NxbGI3WjJRM2NPN1k3ck1RWmtBckVQSEs4bVZxaFBHa1RUYnNOSDd3eDJPckZoSF9WUG04ZmR6TENvbElySWpBZzItYkNpQ3pHSU9oZE83V0VzRGl5VFo1Q2l3RmZvbGI5UHBLemhXck1ONVk4S0drV002by1kZ0tBQTZxSEJRQlpydmYxU1djUTNJVHJreFVnNVVLeV83TGlQUURmaGNTMUxGTmRDNXU5UzZianNwci1GY1FaWHZ4MDJpMG1JcFhuMlNWTXJlQWRJNVMyQXdhV3BrUmRDejBpSUNzdmhRMGRpOGVsYUhaNjUwTkFlMFpwQmxVZlZxM1d6bmhVbkh4TzBLdW9B?oc=5",
-          "date": "2026-09-23",
-          "source": "Google News"
-        },
-        {
-          "title": "SpaceX (SPCX) President Gwynne Shotwell files to sell $52M worth of the company's shares - Tesla Oracle",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdUxkY2REU2VmOUZUYUR4dkJSOWVUVjZ3Uk5IWFprblA1WDNqejh6Z1I1MDlRM0pzd0tWeXg0Z200NUE2NVNNY3BsV204SkR3cmwydEJJek5RRUFRLXRBVFFrYkpNd29xYXRXOHRYV1VFWVNDZWVoQ0FiLTNHUTlnQ2hkVm9ZRzRjeXU2MkRrUzJzbHlGS0VCRHpLamFidFJOSWh5VUFTd0VtX3prZDFTTjQ5VW5CNTJIa05ieWtEMjVEZw?oc=5",
-          "date": "2026-09-23",
-          "source": "Google News"
-        },
-        {
-          "title": "How to Buy SpaceX Stock (SPCX) in 2026 - fool.com",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNWVlkQ1JxWVFwaWJlUDVEV3RUcWNua2hMcnNmZi1fbnAyYzI1akEtY2pETGYwRzI3eEpfSlRmWTFzUGFaMzdzRV8wZC0wWTVTc3J1ZDk2eHdad3IzUl9SejBhcld0SDhLM0NYTHk5cktQU3Z0ZS1sMm5GVWJKa1VSbWRBV1pWQlJRQWc?oc=5",
-          "date": "2026-09-02",
-          "source": "Google News"
-        },
-        {
-          "title": "Harvard fund discloses $2.2 billion stake in Musk’s SpaceX - fortune.com",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOc21ydU1FRWEyRzl1eXFHUzk5QVYzeUlTQi1JQTkwRGIxUFdSTk9lZ05uMTdXWkYtWGNmU3A0Wkdlb3dTdnBWM1hWSWpUQ282V2ZQc055cTF2ZG9IN2h1Y3NEXzctQlk2YUx4UVdoc3FmUW83Wm5QZ1JsQkFLeXNKb2VpRmxvWWNqSFpsV1pkVFUtWVJXbTBPMkdpb1lFVWZ5bm5Gc0hNbmc0TlMyRVBfQzY5WFJjZw?oc=5",
-          "date": "2026-08-15",
-          "source": "Google News"
-        }
-      ]
+      "news": []
     }
   }
 }
